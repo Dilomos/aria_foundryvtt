@@ -1,0 +1,61 @@
+<div class="flexrow top">
+    <div class="flex1" style="margin-right: 5px;">
+         <div class="flex1 center">
+                <span class="charlemagne titre-general field-label">{{ localize 'ARIA.ui.adventurer' }}</span>
+         </div>
+        <!-- NAME -->
+        <div class="flexrow">
+            <div class="flex1 center">
+                <span class="field-label">{{ localize 'ARIA.details.name' }}</span>
+            </div>
+            <div class="flex2 center cell">
+                <input class="field-value" name="name" type="text" value="{{actor.name}}" placeholder="Name" data-dtype="String"/>
+            </div>
+        </div>
+        <!-- /NAME -->
+        <!-- AGE -->
+        <div class="flexrow">
+            <div class="flex1 center">
+                <span class="field-label">{{ localize 'ARIA.attributes.age.label' }}</span>
+            </div>
+            <div class="flex2 center cell">
+                <input class="field-value" name="data.attributes.age.value" type="text" value="{{actor.data.attributes.age.value}}" placeholder="Age" data-dtype="Number"/>
+            </div>
+        </div>
+        <!-- /AGE -->
+    </div>
+    <div class="flex1">
+         <div class="flex1 center">
+                <span class="charlemagne titre-general field-label">{{ localize 'ARIA.ui.liveordie' }}</span>
+         </div>
+         <!-- PROFILE -->
+        <div class="flexrow">
+            <div class="flex4 center cell drop-field compendium-pack" data-pack="aria.profiles" data-open="0">
+                {{#with (getProfile actor.items)}}
+                    <div class="flex5 field-value sans">
+                        <div class="profession">
+                        {{name}}
+                        </div>
+                    </div>
+                    <div class="profile-controls item" data-item-id="{{_id}}" style="padding-right:5px;">
+                        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-times"></i></a>
+                    </div>
+                {{/with}}
+            </div>
+        </div>
+        <!-- /PROFILE -->
+        <!-- SPECIES -->
+        <div class="flexrow">
+            <div class="flex2 center cell drop-field compendium-pack" data-pack="cof.species" data-open="0">
+                {{#with (getSpecies actor.items)}}
+                    <div class="flex5 field-value sans">{{name}}</div>
+                    <div class="species-controls item" data-item-id="{{_id}}" style="padding-right:5px;">
+                        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-times"></i></a>
+                    </div>
+                {{/with}}
+            </div>
+        </div>
+        <!-- /SPECIES -->
+
+    </div>
+</div>

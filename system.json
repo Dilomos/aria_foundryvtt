@@ -1,0 +1,75 @@
+{
+  "name": "aria",
+  "title": "Aria - Game of Roles",
+  "description": "<p>Système Foundry VTT pour Aria.</p>",
+  "version": "0.0.1",
+  "minimumCoreVersion": "0.7.3",
+  "compatibleCoreVersion": "0.7.8",
+  "templateVersion": 2,
+  "author": "Dilomos",
+  "esmodules": [
+    "module/aria.js",
+    "module/hooks/system-ready.js",
+    "module/hooks/chat-message.js",
+    "module/hooks/hotbar-drop.js"
+  ],
+  "scripts": [],
+  "styles": [
+    "./css/aria.css"
+  ],
+  "packs": [
+    {
+      "name": "capacities",
+      "label": "Capacités",
+      "system": "aria",
+      "path": "./packs/capacities.db",
+      "entity": "Item",
+      "tag" : "capacity"
+    },
+    {
+      "name": "items",
+      "label": "Equipement",
+      "system": "aria",
+      "path": "./packs/items.db",
+      "entity": "Item",
+      "tag" : "item"
+    },
+    {
+      "name": "profiles",
+      "label": "Professions",
+      "system": "aria",
+      "path": "./packs/profiles.db",
+      "entity": "Item",
+      "tag" : "profile"
+    },
+    {
+      "name": "species",
+      "label": "Origine",
+      "system": "aria",
+      "path": "./packs/species.db",
+      "entity": "Item",
+      "tag" : "species"
+    }
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "fr",
+      "name": "Français",
+      "path": "lang/fr.json"
+    }
+  ],
+  "socket": true,
+  "gridDistance": 1.5,
+  "gridUnits": "m",
+  "primaryTokenAttribute": "attributes.hp",
+  "secondaryTokenAttribute": null,
+  "url": "https://github.com/Dilomos/aria_foundryvtt",
+  "manifest": "https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/master/system.json",
+  "download": "https://github.com/Dilomos/aria_foundryvtt/archive/main.zip",
+  "license": "licence.txt"
+}

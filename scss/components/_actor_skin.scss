@@ -1,0 +1,370 @@
+/* ----------------------------------------- */
+/*  Layout                                   */
+/* ----------------------------------------- */
+.window-content {
+  &>form {
+    .wrap {
+      color: $c-black;
+      //color: $c-darkbrown;
+      background: url("../ui/background.jpg");
+      background-size: cover;
+
+      font-family: $font-primary;
+      font-weight: bolder;
+      font-size: 16px;
+      #logo-banner>img {
+        border:none;
+      }
+
+      .field-label {
+        background: none;
+        margin: 0;
+        min-height: 28px;
+        padding: 5px;
+        flex-grow: 2;
+        vertical-align: middle;
+      }
+
+      .field-label-icon {
+        margin-bottom: 20px;
+        margin-right: 5px;
+        min-width: 42px;
+        width: 42px;
+        max-width: 42px;
+      }
+
+      .field-value {
+        width: 100%;
+        min-height: 26px;
+        height: 26px;
+        max-height: 26px;
+        vertical-align: middle;
+        padding: 5px;
+      }
+
+      .sans{
+        min-height: 36px;
+        height: 36px;
+        max-height: 36px;
+      }
+
+      .carac{
+        min-width: 162px;
+        width: 162px;
+        max-width: 162px;
+      }
+
+      .caracvalue{
+        min-width: 36px;
+        width: 36px;
+        max-width: 36px;
+      }
+
+      .caracname{
+        min-width: 120px;
+        width: 120px;
+        max-width: 120px;
+        font-size: 20px;
+      }
+
+      .icon_d100{
+        background: center / contain no-repeat url("../ui/d100.png");
+        min-width: 16px;
+        width: 16px;
+        max-width: 16px;
+        min-height: 16px;
+        height: 16px;
+        max-height: 16px;
+        margin-top:9px;
+      }
+
+      .cancel_margin_top{
+        margin-top:3px;
+      }
+
+      .capacity_name{
+        margin: 0 0 0 0;
+        padding-left: 5px;
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .header {
+        //background: url("../ui/green-leather-bg.png") repeat-x white;
+          //background: url("../ui/background.jpg") repeat-x white;
+          #banner-left {
+            background: url("../ui/deco-aria.png") no-repeat;
+          }
+          #banner-right {
+            background: url("../ui/deco-aria.png") no-repeat;
+          }
+      }
+      .main {
+        
+        .sidebar {
+          
+        }
+        .content{
+          .drop-field {
+            background-color: rgba(255, 255, 255, 0);
+            .field-value {
+              background: transparent;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#life_icon{
+  background: center / contain no-repeat url("../ui/pv.png");
+  min-height: 100px;
+  height: 100px;
+  max-height: 100px;
+  font-size: 30px;
+}
+
+#hit_icon{
+  background: center / contain no-repeat url("../ui/blessure.png");
+  min-height: 100px;
+  height: 100px;
+  max-height: 100px;
+  font-size: 30px;
+}
+
+#protection_icon{
+  background: center / contain no-repeat url("../ui/protection.png");
+  min-height: 100px;
+  height: 100px;
+  max-height: 100px;
+  font-size: 30px;
+}
+
+#degat_icon{
+  background: center / contain no-repeat url("../ui/degats.png");
+  min-height: 100px;
+  height: 100px;
+  max-height: 100px;
+  min-width: 112px;
+  width: 112px;
+  max-width: 112px;
+  font-size: 30px;
+}
+
+.area-value {
+  border: none;
+  background: $c-white;
+  font-size: 1em;
+}
+
+.ellipsis {
+  @include ellipsis;
+}
+
+.charlemagne {
+  font: 14px $font-secondary;
+}
+
+.titre-general{
+  font-size: 20px;
+} 
+
+.profession{
+  font-size: 30px;
+}
+
+.field-value {
+  border: none;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 0;
+  color: $c-greenblue;
+  font-weight: 700;
+  font: bold 20px $font-handwrite;
+}
+
+.box-shadow {
+  box-shadow: 1px 1px 2px gray;
+}
+
+.field-area {
+  border: none;
+  width: 100%;
+  vertical-align: middle;
+  background: transparent;
+  font-family: $font-primary;
+  font-size: 13px;
+}
+
+.compendium-pack {
+  cursor: pointer;
+}
+
+.row {
+  margin-top: 1px;
+  background: transparent;
+}
+
+.cell {
+  margin-left: 1px;
+}
+
+.btn {
+  cursor: pointer;
+  font-family: $font-primary;
+  color: $c-darkbrown;
+  border: 1px solid $c-border;
+  box-shadow: 0 0 10px $c-shadow inset;
+  background:rgba(0,0,0,0.05);
+  margin-left: 1px;
+  &:hover{
+    color: $c-darkbrown;
+    background:rgba(0,0,0,0.3);
+    text-shadow: none;
+    border: 1px outset $c-border;
+  }
+  &:active{
+    border: 1px inset $c-border;
+    background:rgba(0,0,0,0.3);
+    color: $c-darkbrown;
+  }
+}
+
+
+.tabs {
+  font: 14px $font-primary;
+  color: $c-darkbrown;
+  text-align: center;
+  margin: 0 0;
+
+  .item {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 0;
+    border: 1px solid $c-border;
+    margin: 0;
+    height: 28px;
+    box-shadow: 0 0 10px $c-shadow inset;
+    /*padding: 3px 3px 0 3px;*/
+    background:rgba(0,0,0,0.05);
+    &:hover {
+      color: $c-darkbrown;
+      background:rgba(0,0,0,0.2);
+      text-shadow: none;
+    }
+    &.active {
+      color: $c-darkbrown;
+      border: 1px inset $c-border;
+      background:$c-greenbluetrans;
+      text-shadow: none;
+    }
+  }
+}
+
+
+/* -------------------
+ * PATH LIST
+ * -------------------*/
+.path-card {
+  margin-bottom: 5px;
+  .path-name {
+    //font-family: $font-secondary;
+    font-weight: bold;
+    font-size: 16px;
+    min-height:28px;
+  }
+  .path-description {
+    font-size: 12px;
+    //font-family: $font-secondary;
+  }
+}
+
+.path-controls {
+  text-align: right;
+}
+
+/* ----------------------------------------- */
+/*  Sidebar                                  */
+/* ----------------------------------------- */
+
+.species-controls,
+.path-controls,
+.profile-controls {
+  color: $c-darkbrown;
+  visibility: hidden;
+  flex: 0 0 18px;
+  border:1px solid transparent;
+}
+div:hover>div.species-controls,
+div:hover>span.path-controls,
+div:hover>div.profile-controls {
+  visibility: visible;
+}
+
+.sidebar .charname{
+  font-family: $font-charname;
+  font-size: 2.5em;
+
+  -webkit-text-fill-color: $c-white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: $c-darkgreen;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 3px 3px 10px $c-black;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  min-height: 80px;
+  /*color: $c-darkgreen;*/
+  background-color: transparent;
+}
+
+
+/* ----------------------------------------- */
+/*  Custom classes                           */
+/* ----------------------------------------- */
+.inventory h2{
+  font-family: $font-primary;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: $c-darkbrown;
+  border-bottom: 1px solid $c-lightg;
+}
+
+label.input-label{
+  border:1px solid red;
+  text-align: center;
+  vertical-align: center;
+  padding-bottom:7px;
+  margin:0;
+}
+
+.readonly {
+  box-shadow: 0 0 10px $c-shadow inset;
+  cursor:not-allowed;
+}
+
+
+.label-text {
+  font-family: $font-primary;
+  font-size: 14px;
+  color: $c-darkbrown;
+  text-align: center;
+  border: 1px solid $c-border;
+  margin: 0;
+  height: 28px;
+  box-shadow: 0 0 10px $c-shadow inset;
+  padding: 3px 3px 0 3px;
+  flex-grow: 2;
+  background: none;
+}
+
+strong{
+  //font-family: $font-secondary;
+  font-weight: bold;
+}
+
+.collapsed {
+  display: none;
+}
+

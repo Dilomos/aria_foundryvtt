@@ -1,0 +1,268 @@
+{
+  "Actor": {
+    "types": [
+      "character",
+      "npc"
+    ],
+    "templates": {
+      "stats": {
+        "stats": {
+          "str" : {
+            "key" : "str",
+            "label" : "ARIA.stats.str.label",
+            "abbrev" : "ARIA.stats.str.abbrev",
+            "base": 10,
+            "racial": 0,
+            "bonus": 0,
+            "value": 10
+          },
+          "dex" : {
+            "key" : "dex",
+            "label" : "ARIA.stats.dex.label",
+            "abbrev" : "ARIA.stats.dex.abbrev",
+            "base": 10,
+            "racial": 0,
+            "bonus": 0,
+            "value": 10
+          },
+          "end" : {
+            "key" : "end",
+            "label" : "ARIA.stats.end.label",
+            "abbrev" : "ARIA.stats.end.abbrev",
+            "base": 10,
+            "racial": 0,
+            "bonus": 0,
+            "value": 10
+          },
+          "int" : {
+            "key" : "int",
+            "label" : "ARIA.stats.int.label",
+            "abbrev" : "ARIA.stats.int.abbrev",
+            "base": 10,
+            "racial": 0,
+            "bonus": 0,
+            "value": 10
+          },
+          "cha" : {
+            "key" : "cha",
+            "label" : "ARIA.stats.cha.label",
+            "abbrev" : "ARIA.stats.cha.abbrev",
+            "base": 10,
+            "racial": 0,
+            "bonus": 0,
+            "value": 10
+          }
+        }
+      },
+      "common": {
+        "description": "",
+        "attributes": {
+          "hp": {
+            "key" : "hp",
+            "label" : "ARIA.attributes.hp.label",
+            "abbrev" : "ARIA.attributes.hp.abbrev",
+            "base": 0,
+            "bonus": 0,
+            "value": 0,
+            "max": 0
+          },
+          "age": {
+            "key" : "age",
+            "label" : "ARIA.attributes.age.label",
+            "abbrev" : "ARIA.attributes.age.abbrev",
+            "value": 25,
+            "max": 999
+          },
+          "def": {
+            "key" : "def",
+            "label" : "ARIA.attributes.def.label",
+            "abbrev" : "ARIA.attributes.def.abbrev",
+            "base": 10,
+            "bonus": 0,
+            "value": 10
+          },
+          "hit": {
+            "key" : "hit",
+            "label" : "ARIA.attributes.hit.label",
+            "abbrev" : "ARIA.attributes.hit.abbrev",
+            "base": 0,
+            "bonus": 0,
+            "value": 0
+          }
+        },
+        "currency": {
+          "pp": {
+            "key" : "pp",
+            "label" : "ARIA.currency.pp.label",
+            "abbrev" : "ARIA.currency.pp.abbrev",
+            "qty" : 0
+          },
+          "gp": {
+            "key" : "gp",
+            "label" : "ARIA.currency.gp.label",
+            "abbrev" : "ARIA.currency.gp.abbrev",
+            "qty" : 0
+          },
+          "sp": {
+            "key" : "sp",
+            "label" : "ARIA.currency.sp.label",
+            "abbrev" : "ARIA.currency.sp.abbrev",
+            "qty" : 0
+          },
+          "cp": {
+            "key" : "cp",
+            "label" : "ARIA.currency.cp.label",
+            "abbrev" : "ARIA.currency.cp.abbrev",
+            "qty" : 0
+          }
+        },
+        "alert": {
+          "type": "error",
+          "msg": ""
+        }
+      }
+    },
+    "character": {
+      "templates": [
+        "stats",
+        "attacks",
+        "xp",
+        "common"
+      ]
+    },
+    "npc": {
+      "templates": [
+        "stats",
+        "attacks",
+        "xp",
+        "common"
+      ]
+    }
+  },
+  "Item": {
+    "types": [
+      "item",
+      "capacity",
+      "species",
+      "profile"
+    ],
+    "templates": {
+      "base" : {
+        "description" : "",
+        "source" : ""
+      },
+      "equipment" : {
+        "def" : 0,
+        "defBase" : 0,
+        "defBonus" : 0,
+        "dr" : 0,
+        "dmg": "",
+        "dmgBase": "",
+        "dmgStat": "",
+        "dmgBonus": 0,
+        "skill": "",
+        "skillBonus" : 0,
+        "critrange": "20",
+        "hands": 1,
+        "range": 0,
+        "reload": "",
+        "worn": false,
+        "slot": "",
+        "qty" : 1,
+        "stacksize" : null,
+        "price": 0,
+        "rarity" : "common",
+        "properties": {
+          "predilection": false,
+          "ranged": false,
+          "equipable": false,
+          "stackable": false,
+          "activable" : false,
+          "unique" : false,
+          "tailored" : false,
+          "2H" : false,
+          "proficient" : false,
+          "finesse" : false,
+          "equipment" : false,
+          "weapon" : false,
+          "protection" : false,
+          "reloadable" : false,
+          "bow" : false,
+          "crossbow" : false,
+          "powder" : false,
+          "throwing" : false,
+          "dr" : false,
+          "sneak" : false,
+          "powerful" : false,
+          "critscience" : false,
+          "specialization" : false,
+          "effects" : false,
+          "13strmin" : false,
+          "bashing" : false,
+          "sling" : false,
+          "spell" : false
+        }
+      }
+    },
+    "item" : {
+      "templates": [
+        "base",
+        "equipment"
+      ],
+      "subtype" : ""
+    },
+    "capacity": {
+      "templates": [
+        "base"
+      ],
+      "key": "",
+      "summary" : "",
+      "link1": "",
+      "link2": "",
+      "score": 0
+    },
+    "profile": {
+      "templates": [
+        "base"
+      ],
+      "key": "",
+      "dv": "",
+      "spellcasting": "",
+      "proficiencies" : {
+        "daggers" : false,
+        "swords" : false,
+        "axes" : false,
+        "staves" : false,
+        "clubs" : false,
+        "hammers" : false,
+        "katanas" : false,
+        "2-hands" : false,
+        "slings" : false,
+        "bows" : false,
+        "crossbows" : false,
+        "throwing-weapons" : false,
+        "powder-weapons" : false,
+        "soft-leather" : false,
+        "studded-leather" : false,
+        "mail" : false,
+        "half-plate" : false,
+        "full-plate" : false,
+        "shield" : false
+      }
+    },
+    "species": {
+      "templates": [
+        "base"
+      ],
+      "key": "",
+      "bonuses": {
+        "str" : 0,
+        "dex" : 0,
+        "end" : 0,
+        "int" : 0,
+        "cha" : 0
+      },
+      "capacities": []
+    }
+  }
+}

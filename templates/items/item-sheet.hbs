@@ -1,0 +1,42 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header flexrow header-background no-wrap">
+        <img class="profile" src="{{item.img}}" title="{{item.name}}" data-edit="img">
+        <div class="header-details flexrow">
+            <h1 class="charname">
+                <input name="name" type="text" value="{{item.name}}" placeholder="Item Name"/>
+            </h1>
+            <div class="item-subtitle">
+                <h4 class="item-type">{{localize (concat "ARIA.category." item.type)}}</h4>
+                <span class="item-status">
+                    {{#if item.subtype}}
+                        {{localize (concat "ARIA.category." item.subtype)}}
+                    {{/if}}
+                </span>
+            </div>
+        </div>
+    </header>
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+        <div class="flexrow">
+            {{> "systems/aria/templates/items/parts/properties/item-properties.hbs"}}
+            {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+        </div>
+        <div class="details">
+            {{#if (equals item.type "item")}}
+                {{> "systems/aria/templates/items/parts/details/item-details.hbs"}}
+            {{/if}}
+            {{#if (equals item.type "capacity")}}
+                {{> "systems/aria/templates/items/parts/details/capacity-details.hbs"}}
+            {{/if}}
+            {{#if (equals item.type "path")}}
+                {{> "systems/aria/templates/items/parts/details/path-details.hbs"}}
+            {{/if}}
+            {{#if (equals item.type "profile")}}
+                {{> "systems/aria/templates/items/parts/details/profile-details.hbs"}}
+            {{/if}}
+            {{#if (equals item.type "species")}}
+                {{> "systems/aria/templates/items/parts/details/species-details.hbs"}}
+            {{/if}}
+        </div>
+    </section>
+</form>

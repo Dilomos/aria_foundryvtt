@@ -1,0 +1,68 @@
+<h3 class="form-header">Type d'équipement</h3>
+<div class="form-group">
+    <label>Sous-catégorie</label>
+    <div class="form-fields">
+        <select name="data.subtype" data-type="String" style="width:100%">
+            {{#select data.subtype}}
+                <option value="">{{localize "ARIA.None"}}</option>
+                <option value="armor">{{localize "ARIA.category.armor"}}</option>
+                <option value="melee">{{localize "ARIA.category.melee"}}</option>
+                <option value="ranged">{{localize "ARIA.category.ranged"}}</option>
+                <option value="shield">{{localize "ARIA.category.shield"}}</option>
+                <option value="spell">{{localize "ARIA.category.spell"}}</option>
+                <option value="jewel">{{localize "ARIA.category.jewel"}}</option>
+                <option value="ammunition">{{localize "ARIA.category.ammunition"}}</option>
+                <option value="container">{{localize "ARIA.category.container"}}</option>
+                <option value="mount">{{localize "ARIA.category.mount"}}</option>
+                <option value="currency">{{localize "ARIA.category.currency"}}</option>
+                <option value="trapping">{{localize "ARIA.category.other"}}</option>
+            {{/select}}
+        </select>
+    </div>
+</div>
+
+<div class="form-group stacked">
+    <label>Traits</label>
+    <div class="form-fields">
+        <label class="checkbox">
+            <input type="checkbox" name="data.properties.equipment" {{checked data.properties.equipment}}> {{localize "ARIA.properties.equipment"}}
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" name="data.properties.weapon" {{checked data.properties.weapon}}> {{localize "ARIA.properties.weapon"}}
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" name="data.properties.protection" {{checked data.properties.protection}}> {{localize "ARIA.properties.protection"}}
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" name="data.properties.ranged" {{checked data.properties.ranged}}> {{localize "ARIA.properties.ranged"}}
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" name="data.properties.spell" {{checked data.properties.spell}}> {{localize "ARIA.properties.spell"}}
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" name="data.properties.effects" {{checked data.properties.effects}}> {{localize "ARIA.properties.effects"}}
+        </label>
+    </div>
+</div>
+
+{{#if data.properties.equipment}}
+    {{> "systems/aria/templates/items/parts/details/equipment-details.hbs"}}
+{{/if}}
+{{#if data.properties.weapon}}
+    {{> "systems/aria/templates/items/parts/details/weapon-details.hbs"}}
+{{/if}}
+{{#if data.properties.protection}}
+    {{> "systems/aria/templates/items/parts/details/protection-details.hbs"}}
+{{/if}}
+{{#if data.properties.ranged}}
+    {{> "systems/aria/templates/items/parts/details/ranged-details.hbs"}}
+{{/if}}
+{{#if data.properties.spell}}
+    {{> "systems/aria/templates/items/parts/details/spell-details.hbs"}}
+{{/if}}
+{{#if actor}}
+{{> "systems/aria/templates/items/parts/details/usage-details.hbs"}}
+{{/if}}
+{{#if data.properties.effects}}
+{{> "systems/aria/templates/items/parts/details/effects-details.hbs"}}
+{{/if}}

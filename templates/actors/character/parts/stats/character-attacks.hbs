@@ -1,0 +1,16 @@
+<div class="flexcol no-wrap">
+{{#each (getEquipedWeapons actor.items) as |weapon id|}}
+    <div class="flexrow no-wrap">
+        <div class="flex1 right">
+            {{weapon.name}}
+        </div>
+        <div id="degat_icon" class="flex1 center">
+            <div class="field-label-icon field-value">
+               {{weapon.data.dmgBase}}
+            </div>
+        </div>
+    </div>
+{{/each}}
+</div>
+
+

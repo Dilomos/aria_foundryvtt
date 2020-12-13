@@ -1,0 +1,68 @@
+<h3 class="form-header">Propriétés d'armes</h3>
+<div class="form-group">
+    <label>{{localize "ARIA.ui.dmgBase"}}</label>
+    <div class="form-fields">
+        <input name="data.dmgBase" type="text" value="{{data.dmgBase}}" placeholder="{{localize "ARIA.ui.dmgBase"}}" data-dtype="String">
+    </div>
+</div>
+
+<div class="form-group">
+    <label>{{localize "ARIA.ui.dmgStat"}}</label>
+    <div class="form-fields">
+        <select name="data.dmgStat" data-type="String" style="width:100%">
+            {{#select data.dmgStat}}
+                <option value="">{{localize "ARIA.None"}}</option>
+                <option value="@stats.str.mod">{{localize "ARIA.stats.str.label"}}</option>
+                <option value="@stats.dex.mod">{{localize "ARIA.stats.dex.label"}}</option>
+                <option value="@stats.end.mod">{{localize "ARIA.stats.end.label"}}</option>
+                <option value="@stats.int.mod">{{localize "ARIA.stats.int.label"}}</option>
+                <option value="@stats.cha.mod">{{localize "ARIA.stats.cha.label"}}</option>
+            {{/select}}
+        </select>
+    </div>
+</div>
+
+<div class="form-group">
+    <label>{{localize "ARIA.ui.dmgBonus"}}</label>
+    <div class="form-fields">
+        <input name="data.dmgBonus" type="text" value="{{numberFormat data.dmgBonus decimals=0 sign=true}}" placeholder="{{localize "ARIA.ui.dmgBonus"}}" data-dtype="Number">
+    </div>
+</div>
+
+<div class="form-group">
+    <label>{{localize "ARIA.ui.skill"}}</label>
+    <div class="form-fields">
+        <select name="data.skill" data-type="String" style="width:100%">
+            {{#select data.skill}}
+                <option value="@attacks.melee.mod">{{localize "ARIA.attacks.melee.label"}}</option>
+                <option value="@attacks.ranged.mod">{{localize "ARIA.attacks.ranged.label"}}</option>
+                <option value="@attacks.magic.mod">{{localize "ARIA.attacks.magic.label"}}</option>
+            {{/select}}
+        </select>
+    </div>
+</div>
+
+<div class="form-group">
+    <label>{{localize "ARIA.ui.skillBonus"}}</label>
+    <div class="form-fields">
+        <input name="data.skillBonus" type="text" value="{{numberFormat data.skillBonus decimals=0 sign=true}}" placeholder="{{localize "ARIA.ui.skillBonus"}}" data-dtype="Number">
+    </div>
+</div>
+
+<div class="form-group">
+    <label>{{localize "ARIA.ui.critrange"}}</label>
+    <div class="form-fields">
+        <input name="data.critrange" type="text" value="{{data.critrange}}" placeholder="{{localize "ARIA.ui.critrange"}}" data-dtype="String">
+    </div>
+</div>
+<div class="form-group">
+    <label>{{localize "ARIA.ui.properties"}}</label>
+    <div class="form-fields">
+        <label class="checkbox">
+            <input type="checkbox" name="data.properties.bashing" {{checked item.data.properties.bashing}}> {{localize "ARIA.properties.bashing"}}
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" name="data.properties.13strmin" {{checked item.data.properties.13strmin}}> {{localize "ARIA.properties.13strmin"}}
+        </label>
+    </div>
+</div>
