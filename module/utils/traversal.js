@@ -13,34 +13,6 @@ export class Traversal {
         return entity;
     }
 
-    // static async getEntity(id, type, pack) {
-    //     let entity = null;
-    //     // Target 1 - Compendium Link
-    //     if ( pack ) {
-    //         const pack = game.packs.get(pack);
-    //         await pack.getIndex();
-    //         entity = id ? await pack.getEntity(id) : null;
-    //     }
-    //     // Target 2 - World Entity Link
-    //     else {
-    //         if(type==="item") entity = game.items.get(id);
-    //         else if(type==="journal") entity = game.journal.get(id);
-    //         else if(type==="actor") entity = game.actors.get(id);
-    //     }
-    //     // if ( !entity ) return;
-    //     // // Action 1 - Execute an Action
-    //     // if ( entity.entity === "Macro" ) {
-    //     //     if ( !entity.hasPerm(game.user, "LIMITED") ) {
-    //     //         return ui.notifications.warn(`You do not have permission to use this ${entity.entity}.`);
-    //     //     }
-    //     //     return entity.execute();
-    //     // }
-    //     //
-    //     // // Action 2 - Render the Entity sheet
-    //     // return entity.sheet.render(true);
-    //     return entity;
-    // }
-
     static getAllEntitiesOfType(type, pack) {
         const compendium = game.packs.get(pack).getContent();
         const ingame = game.items.filter(item => item.type === type);

@@ -50,9 +50,4 @@ export class Capacity {
             return actor.createOwnedItem(toAdd);
         }
     }
-
-    // static removeFromActor(actor, event, entity) {
-    //     return actor.deleteOwnedItem(entity._id);
-    // }
-
 }
