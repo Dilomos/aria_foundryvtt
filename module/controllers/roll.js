@@ -1,4 +1,3 @@
-import {CharacterGeneration} from "../system/chargen.js";
 import {AriaSkillRoll} from "../system/skill-roll.js";
 import {AriaDamageRoll} from "../system/dmg-roll.js";
 
@@ -39,13 +38,13 @@ export class AriaRoll {
      * @private
      */
     static rollWeapon(data, actor, event) {
-        const li = $(event.currentTarget).parents(".item");
-        let item = actor.getOwnedItem(li.data("itemId"));
-        const itemData = item.data;
-        let label = itemData.name;
-        let critrange = itemData.data.critrange;
-        let dmg = itemData.data.dmg;
-        return this.rollWeaponDialog(actor, label,0, critrange, dmg);
+
+        const elt = $(event.currentTarget)[0];
+        let formula = elt.attributes["data-roll-formula"].value;
+        let label = elt.attributes["data-roll-weapon-name"].value;
+
+        let r = new AriaDamageRoll(label,formula,);
+        r.roll(actor);
     }
 
     /* -------------------------------------------- */

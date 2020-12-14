@@ -10,7 +10,6 @@
   "esmodules": [
     "module/aria.js",
     "module/hooks/system-ready.js",
-    "module/hooks/chat-message.js",
     "module/hooks/hotbar-drop.js"
   ],
   "scripts": [],

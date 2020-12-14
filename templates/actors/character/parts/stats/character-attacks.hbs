@@ -1,6 +1,6 @@
 <div class="flexcol no-wrap">
 {{#each (getEquipedWeapons actor.items) as |weapon id|}}
-    <div class="flexrow no-wrap">
+    <div class="flexrow rollable no-wrap" data-roll-formula="{{weapon.data.dmgBase}}" data-roll-weapon-name="{{weapon.name}}" data-roll-type="weapon">
         <div class="flex1 right">
             {{weapon.name}}
         </div>
