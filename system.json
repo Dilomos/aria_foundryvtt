@@ -2,7 +2,7 @@
   "name": "aria",
   "title": "Aria - Game of Roles",
   "description": "<p>Système Foundry VTT pour Aria.</p>",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "minimumCoreVersion": "0.7.3",
   "compatibleCoreVersion": "0.7.8",
   "templateVersion": 2,
