@@ -11,4 +11,5 @@ Jeu publié chez [Elder Craft](https://www.elder-craft.com/).
 **Suggestions et bugs** : [https://gitreports.com/issue/Dilomos/aria_foundryvtt](https://gitreports.com/issue/Dilomos/aria_foundryvtt).
 
 Manifest : [https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/master/system.json](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/master/system.json).
+
 Projet : [https://github.com/Dilomos/aria_foundryvtt](https://github.com/Dilomos/aria_foundryvtt).
