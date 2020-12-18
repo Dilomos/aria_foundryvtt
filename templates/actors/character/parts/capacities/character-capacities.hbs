@@ -1,34 +1,37 @@
-{{!#if (isEmpty (getActiveCapacities actor.items))}}
-<!--<p class="empty">Aucune capacité n'a été sélectionnée pour le moment</p>-->
-{{!else}}
-    <ol class="inventory-list capacity-list">
-        <li class="inventory-header flexrow">
-            <h3 class="item-name flexrow">{{ localize "ARIA.ui.skill" }}</h3>
-            <div class="item-detail">{{ localize "ARIA.ui.link" }}</div>
-            <div class="item-detail">{{ localize "ARIA.ui.score" }}</div>
-            <div class="item-controls">
-                <a class="item-control item-create compendium-pack" data-pack="aria.capacities" data-open="0" title="Ajouter une capacité"><i class="fas fa-plus"></i>&nbsp; Ajouter</a>
-            </div>
-        </li>
-        {{#each (getCapacities actor.items) as |capacity id|}}
-            <ol class="item-list">
-                <li class="item flexrow" data-item-id="{{capacity._id}}" data-item-type="item">
-                   <div class="flex1 rollable no-wrap cancel_margin_top icon_d100" title="{{capacity.name}}" data-rolling-value="{{capacity.data.score}}" data-roll-type="competencycheck">
-                    </div>
-                    <div class="item-name flexrow capacity_name">
-                        {{capacity.name}}
-                    </div>
-                    <div class="item-detail">{{#if capacity.data.link1}}{{capacity.data.link1}}{{/if}} / {{#if capacity.data.link2}}{{capacity.data.link2}}{{/if}}</div>
-                    <div class="item-detail flexrow">
-                        <div class="field-value flex2"> {{capacity.data.score}} </div>
-                        <div class="flex1">%</div>
-                    </div>
-                    <div class="item-controls">
-                        <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-                        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
-                    </div>
-                </li>
-            </ol>
-        {{/each}}
-    </ol>
-{{!/if}}
+<div class="flexrow">
+    <div class="flexcol">
+        <ol class="inventory-list capacity-list">
+            <li class="inventory-header flexrow">
+                <h3 class="item-name flexrow">{{ localize "ARIA.ui.skill" }}</h3>
+                <div class="item-detail">{{ localize "ARIA.ui.link" }}</div>
+                <div class="item-detail">{{ localize "ARIA.ui.score" }}</div>
+                <div class="item-controls">
+                    <!--<a class="item-control item-create compendium-pack" data-pack="aria.capacities" data-open="0" title="Ajouter une capacité"><i class="fas fa-plus"></i>&nbsp; Ajouter</a>-->
+                    <a class="item-control item-create new-capa" title="Ajouter une capacité"><i class="fas fa-plus"></i></a>    
+                    <a class="item-control item-create compendium-pack" title="Ajouter une capacité du compendium" data-pack="aria.capacities" data-open="0"><i class="fas fa-folder-plus"></i></a>
+                </div>
+            </li>
+            {{#each (getCapacities actor.items) as |capacity id|}}
+                <ol class="item-list">
+                    <li class="item flexrow" data-item-id="{{capacity._id}}" data-item-type="item">
+                        <div class="flex1 rollable no-wrap cancel_margin_top icon_d100" title="{{capacity.name}}" data-rolling-value="{{capacity.data.score}}" data-roll-type="competencycheck">
+                        </div>
+                        <div class="item-name flexrow capacity_name">
+                            {{capacity.name}}
+                        </div>
+                        <div class="item-detail">{{#if capacity.data.link1}}{{capacity.data.link1}}{{/if}} / {{#if capacity.data.link2}}{{capacity.data.link2}}{{/if}}</div>
+                        <div class="item-detail flexrow">
+                            <div class="field-value flex1 capa_score"> {{capacity.data.score}} </div>
+                            <div class="flex1 capa_percent">%</div>
+                        </div>
+                        <div class="item-controls">
+                            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </li>
+                </ol>
+            {{/each}}
+        </ol>
+    </div>
+    
+</div>

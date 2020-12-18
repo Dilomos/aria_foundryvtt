@@ -15,6 +15,9 @@
       #logo-banner>img {
         border:none;
       }
+      #logo-orbe>img {
+        border:none;
+      }
 
       .field-label {
         background: none;
@@ -40,18 +43,65 @@
         max-height: 26px;
         vertical-align: middle;
         padding: 5px;
+
+        border: none;
+        background: rgba(255, 255, 255, 0);
+        border-radius: 0;
+        color: $c-greenblue;
+        font-weight: 700;
+        font: bold 20px $font-handwrite;
       }
 
-      .sans{
-        min-height: 36px;
-        height: 36px;
-        max-height: 36px;
+      .field-value.charname{
+        font-size: 30px;
+        min-height: 26px;
+      }
+
+      .empty{
+        background-color:$c-greenblue;
+        color:darkred;
+        min-height: 30px;
+        min-width: 200px;
+        padding-top: 5px;
+      }
+
+      .profession{
+        
+        width: 100%;
+        min-height: 26px;
+        height: 26px;
+        max-height: 26px;
+        vertical-align: middle;
+        padding: 5px;
+
+        border: none;
+        background: rgba(255, 255, 255, 0);
+        border-radius: 0;
+        color: $c-greenblue;
+        font-weight: 700;
+        font: bold 30px $font-handwrite;
+      }
+
+      .capa_score {
+        padding: 0 0 0 0;
+      }
+
+      .capa_percent{
+        padding-top: 3px;
+        font-size: 16px;
+      }
+
+      .origine_name{
+        vertical-align: middle;
+        margin-top: -10px;
+        padding: 0;
       }
 
       .carac{
         min-width: 162px;
         width: 162px;
         max-width: 162px;
+        position: relative;
       }
 
       .caracvalue{
@@ -90,20 +140,24 @@
       }
 
       .header {
-        //background: url("../ui/green-leather-bg.png") repeat-x white;
-          //background: url("../ui/background.jpg") repeat-x white;
           #banner-left {
-            background: url("../ui/deco-aria.png") no-repeat;
+            margin-top: 30px;
+            background: url("../ui/deco-aria.png");
           }
           #banner-right {
-            background: url("../ui/deco-aria.png") no-repeat;
+            margin-top: 30px;
+            background: url("../ui/deco-aria.png");
+          }
+          #banner-bot-left {
+            margin-top: 50px;
+            background: url("../ui/deco-aria.png");
+          }
+          #banner-bot-right {
+            margin-top: 50px;
+            background: url("../ui/deco-aria.png");
           }
       }
       .main {
-        
-        .sidebar {
-          
-        }
         .content{
           .drop-field {
             background-color: rgba(255, 255, 255, 0);
@@ -170,19 +224,6 @@
   font-size: 20px;
 } 
 
-.profession{
-  font-size: 30px;
-}
-
-.field-value {
-  border: none;
-  background: rgba(255, 255, 255, 0);
-  border-radius: 0;
-  color: $c-greenblue;
-  font-weight: 700;
-  font: bold 20px $font-handwrite;
-}
-
 .box-shadow {
   box-shadow: 1px 1px 2px gray;
 }
@@ -198,6 +239,7 @@
 
 .compendium-pack {
   cursor: pointer;
+  min-height: 26px;
 }
 
 .row {

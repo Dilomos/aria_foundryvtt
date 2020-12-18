@@ -5,6 +5,11 @@
 
 export class AriaItem extends Item {
 
+    static createForActor(actor, event) {
+        const data = {name: "Nom de l'objet", type: "item", data: {checked: true}};
+        return actor.createOwnedItem(data, {renderSheet: true}); // Returns one Entity, saved to the database
+    }
+
     initialize() {
         try {
             this.prepareData();

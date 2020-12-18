@@ -7,6 +7,7 @@ import {Profile} from "../controllers/profile.js";
 import {Species} from "../controllers/species.js";
 import {AriaRoll} from "../controllers/roll.js";
 import {Traversal} from "../utils/traversal.js";
+import { AriaItem } from "../items/item.js";
 
 export class AriaActorSheet extends ActorSheet {
 
@@ -27,7 +28,7 @@ export class AriaActorSheet extends ActorSheet {
                 pack.render(true);
             }
         });
-
+        
         // Click to open
         html.find('.item-create.compendium-pack').click(ev => {
             ev.preventDefault();
@@ -37,6 +38,17 @@ export class AriaActorSheet extends ActorSheet {
                 li.attr("data-open", "1");
                 pack.render(true);
             }
+        });
+
+        // Click to open
+        html.find('.item-create.new-capa').click(ev => {
+            ev.preventDefault();
+            return Capacity.create(this.actor);
+        });
+
+        html.find('.item-create.new-item').click(ev => {
+            ev.preventDefault();
+            return AriaItem.createForActor(this.actor);
         });
 
         // Initiate a roll

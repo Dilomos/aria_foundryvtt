@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ----------------------------------------- */
 /*  Premade colors                           */
 /* ----------------------------------------- */
@@ -218,6 +219,7 @@ strong {
 
 .window-app.aria.sheet.actor {
   min-width: 765px;
+  width: 765px;
   overflow: hidden;
 }
 
@@ -623,45 +625,68 @@ strong {
   overflow: hidden;
 }
 
+.aria.actor .window-content > form .wrap .header {
+  min-height: 60px;
+  height: 60px;
+  max-height: 60px;
+}
+
 .aria.actor .window-content > form .wrap .header #banner {
-  min-height: 75px;
-  height: 75px;
-  max-height: 75px;
+  max-height: 60px;
 }
 
 .aria.actor .window-content > form .wrap .header #banner-left {
-  min-width: 331px;
-  width: 331px;
-  max-width: 331px;
-  min-height: 75px;
-  height: 75px;
-  max-height: 75px;
+  min-height: 3px;
+  height: 3px;
+  max-height: 60px;
 }
 
 .aria.actor .window-content > form .wrap .header #banner-right {
   float: right;
-  min-width: 331px;
-  width: 331px;
-  max-width: 331px;
-  min-height: 75px;
-  height: 75px;
-  max-height: 75px;
+  min-height: 3px;
+  height: 3px;
+  max-height: 60px;
+}
+
+.aria.actor .window-content > form .wrap .header #banner-bot-left {
+  min-height: 3px;
+  height: 3px;
+  max-height: 60px;
+}
+
+.aria.actor .window-content > form .wrap .header #banner-bot-right {
+  float: right;
+  min-height: 3px;
+  height: 3px;
+  max-height: 60px;
 }
 
 .aria.actor .window-content > form .wrap .header #logo-banner {
-  margin-top: -55px;
-  min-height: 75px;
-  height: 75px;
-  max-height: 75px;
+  max-width: 85px;
+  max-height: 60px;
 }
 
 .aria.actor .window-content > form .wrap .header #logo-banner > img {
-  min-width: 125px;
-  width: 125px;
-  max-width: 125px;
-  min-height: 100px;
-  height: 100px;
-  max-height: 100px;
+  min-width: 75px;
+  width: 75px;
+  max-width: 75px;
+  min-height: 60px;
+  height: 60px;
+  max-height: 60px;
+}
+
+.aria.actor .window-content > form .wrap .header #logo-orbe {
+  max-width: 95px;
+  max-height: 76px;
+}
+
+.aria.actor .window-content > form .wrap .header #logo-orbe > img {
+  min-width: 95px;
+  width: 95px;
+  max-width: 95px;
+  min-height: 76px;
+  height: 76px;
+  max-height: 76px;
 }
 
 .aria.actor .window-content > form .wrap .main {
@@ -669,22 +694,24 @@ strong {
   flex-wrap: nowrap;
   padding: 0;
   overflow: hidden;
-  margin: -10px 0 0 0;
-  height: calc(100% - 300px);
-  min-height: calc(100% - 300px);
-  max-height: calc(100% - 300px);
+  margin: 0 0 0 0;
+  height: calc(100% - 241px);
+  min-height: calc(100% - 241px);
+  max-height: calc(100% - 241px);
 }
 
 .aria.actor .window-content > form .wrap .main .sidebar {
   max-width: 250px;
-  padding: 0 5px 0 5px;
+  padding: 0 0px 0 0px;
+  margin-left: 5px;
   height: 100%;
+  position: relative;
 }
 
 .aria.actor .window-content > form .wrap .main .sidebar .profile-img {
   cursor: pointer;
   border: none;
-  margin-top: 5px;
+  margin-top: 0;
   margin-left: 0;
   -webkit-box-flex: 0;
   -ms-flex: 0 0 240px;
@@ -693,7 +720,7 @@ strong {
 
 .aria.actor .window-content > form .wrap .main .content {
   margin: 0;
-  padding: 10px 5px 5px 5px;
+  padding: 5px 5px 5px 5px;
   height: 100%;
   min-height: 100%;
   max-height: 100%;
@@ -706,9 +733,9 @@ strong {
 .aria.actor .window-content > form .wrap .main .content .sheet-body {
   padding: 0;
   margin: 0;
-  min-height: calc(100% - 135px);
-  height: calc(100% - 135px);
-  max-height: calc(100% - 135px);
+  min-height: calc(100% - 100px);
+  height: calc(100% - 100px);
+  max-height: calc(100% - 100px);
   overflow: auto;
 }
 
@@ -719,6 +746,14 @@ strong {
   overflow: auto;
   margin: 0;
   padding: 0 0 0 0;
+}
+
+.aria.actor .window-content > form .wrap .main .content .sheet-body .tab .coin {
+  margin-left: 10px;
+}
+
+.aria.actor .window-content > form .wrap .main .content .sheet-body .tab .coin-field {
+  min-width: 50px;
 }
 
 .aria.actor .window-content > form .wrap .main .content .sheet-body .tab.capacities {
@@ -777,42 +812,12 @@ strong {
   overflow: auto;
 }
 
-.aria.actor .window-content > form .wrap .main .content .sheet-body .tab.capacities .capacity-list.p0 {
-  min-height: calc(100% - 15px);
-  height: calc(100% - 15px);
-  max-height: calc(100% - 15px);
-}
-
-.aria.actor .window-content > form .wrap .main .content .sheet-body .tab.capacities .capacity-list.p1 {
-  min-height: calc(100% - 120px);
-  height: calc(100% - 120px);
-  max-height: calc(100% - 120px);
-}
-
-.aria.actor .window-content > form .wrap .main .content .sheet-body .tab.capacities .capacity-list.p2 {
-  min-height: calc(100% - 145px);
-  height: calc(100% - 145px);
-  max-height: calc(100% - 145px);
-}
-
-.aria.actor .window-content > form .wrap .main .content .sheet-body .tab.capacities .capacity-list.p3 {
-  min-height: calc(100% - 170px);
-  height: calc(100% - 170px);
-  max-height: calc(100% - 170px);
-}
-
-.aria.actor .window-content > form .wrap .main .content .sheet-body .tab.capacities .capacity-list.p4 {
-  min-height: calc(100% - 195px);
-  height: calc(100% - 195px);
-  max-height: calc(100% - 195px);
-}
-
 .aria.actor .window-content > form .wrap .main .content .sheet-body .tab.description .editor {
   margin: 0;
   overflow: hidden;
-  min-height: calc(100% - 225px);
-  height: calc(100% - 225px);
-  max-height: calc(100% - 225px);
+  min-height: calc(100% - 114px);
+  height: calc(100% - 114px);
+  max-height: calc(100% - 114px);
 }
 
 .aria.actor .window-content > form .wrap .main .content .sheet-body .tab.description .editor .editor-content {
@@ -822,6 +827,25 @@ strong {
   height: 100%;
   min-height: 100%;
   max-height: 100%;
+}
+
+.aria.actor .hpcol {
+  max-width: 300px;
+  min-width: 140;
+}
+
+.aria.actor .degatcol {
+  max-width: 300px;
+}
+
+.aria.actor .attrvertalign {
+  position: absolute;
+  top: 50%;
+  /* poussé de la moitié de hauteur du référent */
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  /* tiré de la moitié de sa propre hauteur */
 }
 
 .aria.actor .table-header {
@@ -874,6 +898,10 @@ strong {
   border: none;
 }
 
+.aria.actor .window-content > form .wrap #logo-orbe > img {
+  border: none;
+}
+
 .aria.actor .window-content > form .wrap .field-label {
   background: none;
   margin: 0;
@@ -900,18 +928,62 @@ strong {
   max-height: 26px;
   vertical-align: middle;
   padding: 5px;
+  border: none;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 0;
+  color: #4f7783;
+  font-weight: 700;
+  font: bold 20px "Caveat", cursive;
 }
 
-.aria.actor .window-content > form .wrap .sans {
-  min-height: 36px;
-  height: 36px;
-  max-height: 36px;
+.aria.actor .window-content > form .wrap .field-value.charname {
+  font-size: 30px;
+  min-height: 26px;
+}
+
+.aria.actor .window-content > form .wrap .empty {
+  background-color: #4f7783;
+  color: darkred;
+  min-height: 30px;
+  min-width: 200px;
+  padding-top: 5px;
+}
+
+.aria.actor .window-content > form .wrap .profession {
+  width: 100%;
+  min-height: 26px;
+  height: 26px;
+  max-height: 26px;
+  vertical-align: middle;
+  padding: 5px;
+  border: none;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 0;
+  color: #4f7783;
+  font-weight: 700;
+  font: bold 30px "Caveat", cursive;
+}
+
+.aria.actor .window-content > form .wrap .capa_score {
+  padding: 0 0 0 0;
+}
+
+.aria.actor .window-content > form .wrap .capa_percent {
+  padding-top: 3px;
+  font-size: 16px;
+}
+
+.aria.actor .window-content > form .wrap .origine_name {
+  vertical-align: middle;
+  margin-top: -10px;
+  padding: 0;
 }
 
 .aria.actor .window-content > form .wrap .carac {
   min-width: 162px;
   width: 162px;
   max-width: 162px;
+  position: relative;
 }
 
 .aria.actor .window-content > form .wrap .caracvalue {
@@ -950,11 +1022,23 @@ strong {
 }
 
 .aria.actor .window-content > form .wrap .header #banner-left {
-  background: url("../ui/deco-aria.png") no-repeat;
+  margin-top: 30px;
+  background: url("../ui/deco-aria.png");
 }
 
 .aria.actor .window-content > form .wrap .header #banner-right {
-  background: url("../ui/deco-aria.png") no-repeat;
+  margin-top: 30px;
+  background: url("../ui/deco-aria.png");
+}
+
+.aria.actor .window-content > form .wrap .header #banner-bot-left {
+  margin-top: 50px;
+  background: url("../ui/deco-aria.png");
+}
+
+.aria.actor .window-content > form .wrap .header #banner-bot-right {
+  margin-top: 50px;
+  background: url("../ui/deco-aria.png");
 }
 
 .aria.actor .window-content > form .wrap .main .content .drop-field {
@@ -1021,19 +1105,6 @@ strong {
   font-size: 20px;
 }
 
-.aria.actor .profession {
-  font-size: 30px;
-}
-
-.aria.actor .field-value {
-  border: none;
-  background: rgba(255, 255, 255, 0);
-  border-radius: 0;
-  color: #4f7783;
-  font-weight: 700;
-  font: bold 20px "Caveat", cursive;
-}
-
 .aria.actor .box-shadow {
   -webkit-box-shadow: 1px 1px 2px gray;
   box-shadow: 1px 1px 2px gray;
@@ -1050,6 +1121,7 @@ strong {
 
 .aria.actor .compendium-pack {
   cursor: pointer;
+  min-height: 26px;
 }
 
 .aria.actor .row {
@@ -1351,7 +1423,7 @@ strong {
 }
 
 .aria.item .window-content .sheet-navigation {
-  background-image: url("../ui/separator-h.png");
+  background-image: url("../ui/deco-aria.png");
   background-repeat: repeat-x;
   background-position: top;
   margin-top: -2px;
@@ -1992,12 +2064,6 @@ strong {
   padding-left: 5px;
   font-size: 16px;
   font-weight: bold;
-}
-
-.aria .inventory-list .inventory-header .item-controls a.item-create {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 100%;
-  flex: 0 0 100%;
 }
 
 .aria .inventory-list .item-name {

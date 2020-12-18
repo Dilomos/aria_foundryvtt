@@ -1,10 +1,10 @@
-<div class="flexcol no-wrap">
+<div class="flexcol no-wrap center">
 {{#each (getEquipedWeapons actor.items) as |weapon id|}}
     <div class="flexrow rollable no-wrap" data-roll-formula="{{weapon.data.dmgBase}}" data-roll-weapon-name="{{weapon.name}}" data-roll-type="weapon">
-        <div class="flex1 right">
+        <div class="flex1 center">
             {{weapon.name}}
         </div>
-        <div id="degat_icon" class="flex1 center">
+        <div id="degat_icon" class="flex2 center">
             <div class="field-label-icon field-value">
                {{weapon.data.dmgBase}}
             </div>

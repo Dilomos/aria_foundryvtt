@@ -7,7 +7,7 @@ export class Capacity {
      * @private
      */
     static create(actor, event) {
-        const data = {name: "New Capacity", type: "capacity", data: {checked: true}};
+        const data = {name: "Nom de la Capacitée", type: "capacity", data: {checked: true}};
         return actor.createOwnedItem(data, {renderSheet: true}); // Returns one Entity, saved to the database
     }
 

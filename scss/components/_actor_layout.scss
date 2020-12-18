@@ -26,46 +26,66 @@
       overflow: hidden;
 
       .header {
+        min-height: 60px;
+        height: 60px;
+        max-height: 60px;
           #banner {
-            min-height: 75px;
-            height: 75px;
-            max-height: 75px;
+            max-height: 60px;
           }
 
           #banner-left {
             //float:right;
-            min-width: 331px;
-            width: 331px;
-            max-width: 331px;
-            min-height: 75px;
-            height: 75px;
-            max-height: 75px;
+            min-height: 3px;
+            height: 3px;
+            max-height: 60px;
           }
 
           #banner-right {
             float: right;
-            min-width: 331px;
-            width: 331px;
-            max-width: 331px;
-            min-height: 75px;
-            height: 75px;
-            max-height: 75px;
+            min-height: 3px;
+            height: 3px;
+            max-height: 60px;
+          }
+
+          #banner-bot-left {
+            //float:right;
+            min-height: 3px;
+            height: 3px;
+            max-height: 60px;
+          }
+
+          #banner-bot-right {
+            float: right;
+            min-height: 3px;
+            height: 3px;
+            max-height: 60px;
           }
         
 
         #logo-banner {
-          margin-top: -55px;
-          min-height: 75px;
-          height: 75px;
-          max-height: 75px;
-
+          max-width: 85px;
+          max-height: 60px;
           & > img {
-            min-width: 125px;
-            width: 125px;
-            max-width: 125px;
-            min-height: 100px;
-            height: 100px;
-            max-height: 100px;
+            min-width: 75px;
+            width: 75px;
+            max-width: 75px;
+            min-height: 60px;
+            height: 60px;
+            max-height: 60px;
+            
+          }
+        }
+        
+        #logo-orbe {
+          max-width: 95px;
+          max-height: 76px;
+          & > img {
+            min-width: 95px;
+            width: 95px;
+            max-width: 95px;
+            min-height: 76px;
+            height: 76px;
+            max-height: 76px;
           }
         }
       }
@@ -74,20 +94,22 @@
         flex-wrap: nowrap;
         padding: 0;
         overflow: hidden;
-        margin: -10px 0 0 0;
-        height: calc(100% - 300px);
-        min-height: calc(100% - 300px);
-        max-height: calc(100% - 300px);
+        margin: 0 0 0 0;
+        height: calc(100% - 241px);
+        min-height: calc(100% - 241px);
+        max-height: calc(100% - 241px);
 
         .sidebar {
           max-width: 250px;
-          padding: 0 5px 0 5px;
+          padding: 0 0px 0 0px;
+          margin-left: 5px;
           height: 100%;
+          position: relative;
 
           .profile-img {
             cursor: pointer;
             border: none;
-            margin-top: 5px;
+            margin-top: 0;
             margin-left: 0;
             flex: 0 0 240px;
           }
@@ -96,7 +118,7 @@
 
         .content {
           margin: 0;
-          padding: 10px 5px 5px 5px;
+          padding: 5px 5px 5px 5px;
           height: 100%;
           min-height: 100%;
           max-height: 100%;
@@ -108,9 +130,9 @@
           .sheet-body {
             padding: 0;
             margin: 0;
-            min-height: calc(100% - 135px);
-            height: calc(100% - 135px);
-            max-height: calc(100% - 135px);
+            min-height: calc(100% - 100px);
+            height: calc(100% - 100px);
+            max-height: calc(100% - 100px);
             overflow: auto;
 
             .tab {
@@ -121,6 +143,14 @@
               margin: 0;
               //padding:5px;
               padding: 0 0 0 0;
+
+              .coin{
+                margin-left: 10px;
+              }
+
+              .coin-field{
+                min-width: 50px;
+              }
 
               &.capacities {
                 overflow: auto;
@@ -179,129 +209,16 @@
                   height:100%;
                   max-height:100%;
                   overflow: auto;
-                  &.p0{
-                    min-height:calc(100% - 15px);
-                    height:calc(100% - 15px);
-                    max-height:calc(100% - 15px);
-                  }
-                  &.p1{
-                    min-height:calc(100% - 120px);
-                    height:calc(100% - 120px);
-                    max-height:calc(100% - 120px);
-                  }
-                  &.p2{
-                    min-height:calc(100% - 145px);
-                    height:calc(100% - 145px);
-                    max-height:calc(100% - 145px);
-                  }
-                  &.p3{
-                    min-height:calc(100% - 170px);
-                    height:calc(100% - 170px);
-                    max-height:calc(100% - 170px);
-                  }
-                  &.p4{
-                    min-height:calc(100% - 195px);
-                    height:calc(100% - 195px);
-                    max-height:calc(100% - 195px);
-                  }
                 }
-                //.capacity-list {
-                //  gap: 3px;
-                //  padding: 5px;
-                //  margin: 0;
-                //  min-height: calc(100% - 215px);
-                //  height: calc(100% - 215px);
-                //  max-height: calc(100% - 215px);
-                //  overflow: auto;
-                //
-                //  .capacity {
-                //    margin: 0 0 5px 0;
-                //    padding: 0;
-                //    border: 1px solid $c-border;
-                //    border-radius: 3px;
-                //    color: $c-darkgreen;
-                //    box-shadow: 0 0 10px $c-shadow inset;
-                //    background: rgba(0, 0, 0, 0.02);
-                //
-                //    .capacity-title {
-                //      margin: 0;
-                //      padding: 0;
-                //      min-height:24px;
-                //      height:24px;
-                //      max-height:24px;
-                //      align-items : center;
-                //      box-shadow: 0 0 10px $c-shadow inset;
-                //      background: rgba(0, 0, 0, 0.02);
-                //
-                //      .capacity-icon{
-                //        flex: 0 0 24px;
-                //        min-height:24px;
-                //        height:24px;
-                //        max-height:24px;
-                //        min-with:24px;
-                //        with:24px;
-                //        max-with:24px;
-                //
-                //        &>img {
-                //          min-height:24px;
-                //          height:24px;
-                //          max-height:24px;
-                //          min-with:24px;
-                //          with:24px;
-                //          max-with:24px;
-                //          border:none;
-                //        }
-                //      }
-                //
-                //      .capacity-label {
-                //        height:24px;
-                //        min-height:24px;
-                //        max-height:24px;
-                //        margin: 0;
-                //        padding: 0 0 0 5px;
-                //        align-items : center;
-                //        vertical-align: middle;
-                //        line-height:24px; /* centrage vertical */
-                //      }
-                //
-                //      .capacity-control {
-                //        flex: 0 0 18px;
-                //      }
-                //    }
-                //
-                //    .capacity-description {
-                //      border-top: 1px solid $c-border;
-                //      display: none;
-                //      padding: 5px;
-                //      text-align: justify;
-                //      font-size: 12px;
-                //      //font-family: $font-secondary;
-                //    }
-                //  }
-                //
-                //  &.encounter {
-                //    min-height: calc(100% - 175px);
-                //    height: calc(100% - 175px);
-                //    max-height: calc(100% - 175px);
-                //    overflow: auto;
-                //  }
-                //
-                //  &.encounter.nopath {
-                //    min-height: calc(100% - 75px);
-                //    height: calc(100% - 75px);
-                //    max-height: calc(100% - 75px);
-                //    overflow: auto;
-                //  }
-                //}
               }
 
               &.description {
                 .editor {
                   margin: 0;
                   overflow: hidden;
-                  min-height: calc(100% - 225px);
-                  height: calc(100% - 225px);
-                  max-height: calc(100% - 225px);
+                  min-height: calc(100% - 114px);
+                  height: calc(100% - 114px);
+                  max-height: calc(100% - 114px);
 
                   .editor-content {
                     padding: 5px;
@@ -321,11 +238,21 @@
   }
 }
 
-//.area-value {
-//  width: 100%;
-//  height: 100%;
-//  overflow: auto;
-//}
+.hpcol{
+  max-width:300px;
+  min-width:140;
+}
+
+.degatcol{
+  max-width:300px;
+}
+
+.attrvertalign{
+  position: absolute;
+  top: 50%; /* poussé de la moitié de hauteur du référent */
+  transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
+}
+
 
 .table-header {
   font-weight: bold;

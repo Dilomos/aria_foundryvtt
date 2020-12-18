@@ -66,13 +66,6 @@
             "value": 0,
             "max": 0
           },
-          "age": {
-            "key" : "age",
-            "label" : "ARIA.attributes.age.label",
-            "abbrev" : "ARIA.attributes.age.abbrev",
-            "value": 25,
-            "max": 999
-          },
           "def": {
             "key" : "def",
             "label" : "ARIA.attributes.def.label",
@@ -91,12 +84,6 @@
           }
         },
         "currency": {
-          "pp": {
-            "key" : "pp",
-            "label" : "ARIA.currency.pp.label",
-            "abbrev" : "ARIA.currency.pp.abbrev",
-            "qty" : 0
-          },
           "gp": {
             "key" : "gp",
             "label" : "ARIA.currency.gp.label",
@@ -113,6 +100,12 @@
             "key" : "cp",
             "label" : "ARIA.currency.cp.label",
             "abbrev" : "ARIA.currency.cp.abbrev",
+            "qty" : 0
+          },
+          "fp": {
+            "key" : "fp",
+            "label" : "ARIA.currency.fp.label",
+            "abbrev" : "ARIA.currency.fp.abbrev",
             "qty" : 0
           }
         },

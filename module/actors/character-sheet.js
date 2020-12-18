@@ -12,8 +12,8 @@ export class AriaCharacterSheet extends AriaActorSheet {
         return mergeObject(super.defaultOptions, {
             classes: ["aria", "sheet", "actor", "character"],
             template: System.templatesPath + "/actors/character/character-sheet.hbs",
-            width: 950,
-            height: 670,
+            width: 765,
+            height: 748,
             tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "stats"}],
             dragDrop: [{dragSelector: ".item-list .item", dropSelector: null}]
         });
