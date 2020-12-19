@@ -1,6 +1,6 @@
 export const System = {};
 
-System.label = "Chroniques Oubliées Fantasy";
+System.label = "Aria";
 System.abbrev = "ARIA VTT";
 System.name = "aria";
 System.rootPath = "/systems/" + System.name;

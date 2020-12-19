@@ -5,16 +5,19 @@
  */
 
 // Import Modules
+import {System, ARIA} from "./config.js";
+import { registerSystemSettings } from "./settings.js";
+import { preloadHandlebarsTemplates } from "./templates.js";
+import { getBarAttribute } from "./canvas.js";
+
 import {AriaActor} from "./actors/actor.js";
 import {AriaItem} from "./items/item.js";
 
 import {AriaItemSheet} from "./items/item-sheet.js";
 import {AriaCharacterSheet} from "./actors/character-sheet.js";
 
-import { preloadHandlebarsTemplates } from "./templates.js";
 import { registerHandlebarsHelpers } from "./helpers.js";
-import { registerSystemSettings } from "./settings.js";
-import {System, ARIA} from "./config.js";
+
 import {Macros} from "./system/macros.js";
 
 
@@ -70,3 +73,8 @@ Hooks.once("init", async function () {
     registerHandlebarsHelpers();
 
 });
+
+Hooks.on("canvasInit", function() {
+    // Extend Token Resource Bars
+  Token.prototype.getBarAttribute = getBarAttribute;
+  });

@@ -9,14 +9,10 @@ export class AriaActor extends Actor {
     /** @override */
     prepareBaseData() {
         super.prepareBaseData();
-        
-        //this._prepareBaseCharacterData(actorData);
     }
 
     prepareData() {
         super.prepareData();
-        /*let actorData = this.data;
-        this._prepareBaseCharacterData(actorData);*/
     }
 
     /* -------------------------------------------- */
@@ -24,27 +20,7 @@ export class AriaActor extends Actor {
     /** @override */
     prepareDerivedData() {
         super.prepareDerivedData();
-
-        let actorData = this.data;
-        let attributes = actorData.data.attributes;
-
-        //attributes.hp.value = attributes.hp.max - attributes.hit.value;
-
-        //let actorData = this.data;
-        //this._prepareDerivedCharacterData(actorData);
     }
-
-    /* -------------------------------------------- */
-
-    _prepareBaseCharacterData(actorData) {
-        this.computeModsAndAttributes(actorData);
-    }
-
-    /* -------------------------------------------- */
-
-    _prepareDerivedCharacterData(actorData) {
-    }
-
 
     /* -------------------------------------------- */
 
@@ -65,8 +41,17 @@ export class AriaActor extends Actor {
     }
 
 
-    /* -------------------------------------------- */
+      /** @override */
+  async modifyTokenAttribute(attribute, value, isDelta, isBar) {
+    if ( attribute === "attributes.hp" ) {
+      const hp = getProperty(this.data.data, attribute);
 
-    computeModsAndAttributes(actorData) {
+      let actorData = this.data;
+      let attributes = actorData.data.attributes;
+
+      attributes.hp.bonus = attributes.hp.max - value;
+      return this.update({'data.attributes.hp.bonus': attributes.hp.bonus});
     }
+    return super.modifyTokenAttribute(attribute, value, isDelta, isBar);
+  }
 }
