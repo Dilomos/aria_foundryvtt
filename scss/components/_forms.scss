@@ -137,13 +137,14 @@ label.checkbox {
 }
 
 .form-header {
-  margin: 0 0 0.25em 0;
+  margin: 0 0 0 0;
   padding: 2px 0;
   border-top: $borderGroove;
   border-bottom: $borderGroove;
   font-family: $font-tertiary;
   font-size: 20px;
   font-weight: 700;
+  max-height: 29px;
 }
 
 .tag {

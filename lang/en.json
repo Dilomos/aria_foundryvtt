@@ -51,6 +51,7 @@
   "ARIA.ui.defBase": "Defence (Base)",
   "ARIA.ui.defBonus": "Defence (Bonus)",
   "ARIA.ui.skill": "Skill",
+  "ARIA.ui.specialskill": "Special skill",
   "ARIA.ui.skillBonus": "Skill (Bonus)",
   "ARIA.ui.price": "Price",
   "ARIA.ui.weight": "Weight",

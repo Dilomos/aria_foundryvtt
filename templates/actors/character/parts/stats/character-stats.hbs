@@ -1,14 +1,21 @@
 <div class="flexrow no-wrap">
-    <div class="flex1 layout carac">
-        <!-- STATS -->
-        {{> "systems/aria/templates/actors/character/parts/stats/character-attributes.hbs"}}
+
+    <div class="sidebar flex1">
+        <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}"/>
     </div>
-        <div class="flex1 layout hpcol">
-        <!-- HP -->
-        {{> "systems/aria/templates/actors/character/parts/stats/character-hp.hbs"}}
-    </div>
-    <div class="flex1 layout degatcol">
-        <!-- ATTAQUES -->
-        {{> "systems/aria/templates/actors/character/parts/stats/character-attacks.hbs"}}
+
+    <div class="flexrow flex3 no-wrap">
+        <div class="flex1 layout carac">
+            <!-- STATS -->
+            {{> "systems/aria/templates/actors/character/parts/stats/character-attributes.hbs"}}
+        </div>
+            <div class="flex1 layout hpcol">
+            <!-- HP -->
+            {{> "systems/aria/templates/actors/character/parts/stats/character-hp.hbs"}}
+        </div>
+        <div class="flex1 layout degatcol">
+            <!-- ATTAQUES -->
+            {{> "systems/aria/templates/actors/character/parts/stats/character-attacks.hbs"}}
+        </div>
     </div>
 </div>

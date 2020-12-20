@@ -13,7 +13,7 @@ export class AriaCharacterSheet extends AriaActorSheet {
             classes: ["aria", "sheet", "actor", "character"],
             template: System.templatesPath + "/actors/character/character-sheet.hbs",
             width: 765,
-            height: 748,
+            height: 700,
             tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "stats"}],
             dragDrop: [{dragSelector: ".item-list .item", dropSelector: null}]
         });

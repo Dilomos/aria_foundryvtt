@@ -8,17 +8,11 @@
                 <div class="flex1 right" id="banner-right"></div>
             </div>
         </div>
-
+        
+{{> "systems/aria/templates/actors/character/parts/character-header.hbs"}}
 
         <div class="flexrow main">
-
-            <div class="sidebar flex1">
-                <img class="profile-img attrvertalign" src="{{actor.img}}" data-edit="img" title="{{actor.name}}"/>
-            </div>
-
             <div class="content flex3">
-                {{> "systems/aria/templates/actors/character/parts/character-header.hbs"}}
-                <div class="flexrow"><div class="flex1 half-spacer"></div></div>
                 {{!-- Sheet Tab Navigation --}}
                 <nav class="sheet-tabs tabs" data-group="primary">
                     <a class="item charlemagne" data-tab="stats">{{ localize "ARIA.tabs.stats" }}</a>
@@ -45,30 +39,6 @@
                         {{> "systems/aria/templates/actors/character/parts/character-description.hbs"}}
                     </div>
                 </section>
-            </div>
-        </div>
-
-
-
-        <div class="flexrow no-wrap">
-            <div class="flexcol">
-                <div class="flex1 center">
-                    <span class="field-label">JE SUIS GENIAL.E<br> PARCE QUE ...</span>
-                </div>  
-                <div class="flex1 center">
-                        <input class="field-value" name="genial" type="text" value="Je suis un magicien prometteur ..." placeholder="Génial" data-dtype="String"/>
-                </div>
-            </div>
-             <div class="flexcol"id="logo-sceptre">
-                    <img class="img" src="/systems/aria/ui/sceptre.png"/>
-            </div>
-            <div class="flexcol">
-                <div class="flex1 center">
-                    <span class="field-label">MAIS LA SOCIETE A DES PROBLEMES <br> AVEC MOI PARCE QUE...</span>
-                </div> 
-                <div class="flex1 center">
-                    <input class="field-value" name="genial" type="text" value="Je n'ai pas étudié la magie selon les règles." placeholder="Génial" data-dtype="String"/>
-                </div>
             </div>
         </div>
 

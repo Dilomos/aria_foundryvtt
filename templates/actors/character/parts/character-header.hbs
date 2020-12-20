@@ -1,7 +1,6 @@
 <div class="flexrow top">
 
-    <div class="flex1" style="margin-right: 5px;">
-
+    <div class="flexcol">
          <div class="flex1 center">
                 <span class="charlemagne titre-general field-label">{{ localize 'ARIA.ui.adventurer' }}</span>
          </div>
@@ -12,9 +11,19 @@
             </div>
         </div>
         <!-- /NAME -->
+        <div class="flex1 center">
+            <span class="field-label"><br>JE SUIS GENIAL.E<br> PARCE QUE ...</span>
+        </div>  
+        <div class="flex1 center">
+                <input class="field-value" name="genial" type="text" value="Je suis un magicien prometteur ..." placeholder="Génial" data-dtype="String"/>
+        </div>
     </div>
 
-    <div class="flex1">
+    <div class="flexcol"id="logo-sceptre">
+            <img class="img" src="/systems/aria/ui/sceptre.png"/>
+    </div>
+
+    <div class="flexcol">
          <div class="flex1 center">
                 <span class="charlemagne titre-general field-label">{{ localize 'ARIA.ui.liveordie' }}</span>
          </div>
@@ -34,6 +43,12 @@
             </div>
         </div>
         <!-- /PROFILE -->
+        <div class="flex1 center">
+            <span class="field-label"><br>MAIS LA SOCIETE A DES PROBLEMES <br> AVEC MOI PARCE QUE...</span>
+        </div> 
+        <div class="flex1 center">
+            <input class="field-value" name="genial" type="text" value="Je n'ai pas étudié la magie selon les règles." placeholder="Génial" data-dtype="String"/>
+        </div>
     </div>
 
 </div>

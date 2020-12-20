@@ -1,16 +1,20 @@
-<div class="flexcol no-wrap center">
-{{#each (getEquipedWeapons actor.items) as |weapon id|}}
-    <div class="flexrow rollable no-wrap" data-roll-formula="{{weapon.data.dmgBase}}" data-roll-weapon-name="{{weapon.name}}" data-roll-type="weapon">
-        <div class="flex1 center">
-            {{weapon.name}}
-        </div>
-        <div id="degat_icon" class="flex2 center">
-            <div class="field-label-icon field-value">
-               {{weapon.data.dmgBase}}
+<div class="attrvertalign">
+    {{#if (notEmpty (getInventory actor.items))}}
+    {{#each (getEquipedWeapons actor.items) as |weapon id|}}
+        <div class="flexrow rollable no-wrap" data-roll-formula="{{weapon.data.dmgBase}}" data-roll-weapon-name="{{weapon.name}}" data-roll-type="weapon">
+            <div class="flex1 center">
+                {{weapon.name}}
+            </div>
+            <div id="degat_icon" class="flex2 center">
+                <div class="field-label-icon field-value">
+                {{weapon.data.dmgBase}}
+                </div>
             </div>
         </div>
-    </div>
-{{/each}}
+    {{/each}}
+    {{else}}
+        <p>Aucune arme équipée</p>
+    {{/if}}
 </div>
 
 

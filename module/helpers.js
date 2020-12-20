@@ -41,9 +41,11 @@ export const registerHandlebarsHelpers = function () {
     Handlebars.registerHelper('getProfile', function (items) {
         return items.find(item => item.type === "profile");
     });
-
+      
     Handlebars.registerHelper('getCapacities', function (items) {
-        let caps = items.filter(item => item.type === "capacity");
+        let caps = items.filter(item => item.type === "capacity").sort(function (a, b) {
+            return a.name.localeCompare(b.name);
+          });
         return caps;
     });
 
