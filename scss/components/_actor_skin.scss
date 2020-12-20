@@ -18,6 +18,9 @@
       #logo-orbe>img {
         border:none;
       }
+      #logo-sceptre>img {
+        border:none;
+      }
 
       .field-label {
         background: none;
@@ -54,7 +57,7 @@
 
       .field-value.charname{
         font-size: 30px;
-        min-height: 26px;
+        min-height: 34px;
       }
 
       .empty{
@@ -157,7 +160,14 @@
             background: url("../ui/deco-aria.png");
           }
       }
+      
       .main {
+
+        #banner-top {
+          margin-top: 30px;
+          background: center / contain no-repeat url("../ui/deco-aria-vert.png");
+        }
+
         .content{
           .drop-field {
             background-color: rgba(255, 255, 255, 0);
@@ -173,25 +183,25 @@
 
 #life_icon{
   background: center / contain no-repeat url("../ui/pv.png");
-  min-height: 100px;
-  height: 100px;
-  max-height: 100px;
+  min-height: 80px;
+  height: 80px;
+  max-height: 80px;
   font-size: 30px;
 }
 
 #hit_icon{
   background: center / contain no-repeat url("../ui/blessure.png");
-  min-height: 100px;
-  height: 100px;
-  max-height: 100px;
+  min-height: 80px;
+  height: 80px;
+  max-height: 80px;
   font-size: 30px;
 }
 
 #protection_icon{
   background: center / contain no-repeat url("../ui/protection.png");
-  min-height: 100px;
-  height: 100px;
-  max-height: 100px;
+  min-height: 80px;
+  height: 80px;
+  max-height: 80px;
   font-size: 30px;
 }
 

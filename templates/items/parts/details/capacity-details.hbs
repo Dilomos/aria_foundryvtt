@@ -1,13 +1,12 @@
 <h3 class="form-header">{{localize "ARIA.ui.properties"}}</h3>
 <input class="field-value" name="data.key" type="hidden" value="{{data.key}}" placeholder="{{ localize "ARIA.ui.key" }}" data-dtype="String">
 <div class="form-group stacked">
-    <label>{{localize "ARIA.ui.properties"}}</label>
     <div class="form-fields">
-        <input name="data.score" type="text" value="{{data.score}}" placeholder="{{localize "ARIA.ui.score"}}" data-dtype="Number">
+        <label>{{localize "ARIA.ui.score"}}</label><input name="data.score" type="text" value="{{data.score}}" placeholder="{{localize "ARIA.ui.score"}}" data-dtype="Number">
     </div>
 
     <div class="form-fields">
-        <select name="data.link1" data-type="String" style="width:100%">
+        <label>{{localize "ARIA.ui.score"}}</label><select name="data.link1" data-type="String" style="width:100%">
             {{#select data.link1}}
                 <option value="">{{localize "ARIA.None"}}</option>
                 <option value="{{localize "ARIA.stats.str.abbrev"}}">{{localize "ARIA.stats.str.label"}}</option>
@@ -20,7 +19,7 @@
     </div>
 
     <div class="form-fields">
-        <select name="data.link2" data-type="String" style="width:100%">
+        <label>{{localize "ARIA.ui.score"}}</label><select name="data.link2" data-type="String" style="width:100%">
             {{#select data.link2}}
                 <option value="">{{localize "ARIA.None"}}</option>
                 <option value="{{localize "ARIA.stats.str.abbrev"}}">{{localize "ARIA.stats.str.label"}}</option>

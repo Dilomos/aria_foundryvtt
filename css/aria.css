@@ -662,31 +662,45 @@ strong {
 }
 
 .aria.actor .window-content > form .wrap .header #logo-banner {
-  max-width: 85px;
-  max-height: 60px;
+  max-width: 63px;
+  max-height: 50px;
 }
 
 .aria.actor .window-content > form .wrap .header #logo-banner > img {
-  min-width: 75px;
-  width: 75px;
-  max-width: 75px;
-  min-height: 60px;
-  height: 60px;
-  max-height: 60px;
+  min-width: 63px;
+  width: 63px;
+  max-width: 63px;
+  min-height: 50px;
+  height: 50px;
+  max-height: 50px;
 }
 
 .aria.actor .window-content > form .wrap .header #logo-orbe {
-  max-width: 95px;
-  max-height: 76px;
+  max-width: 83px;
+  max-height: 66px;
 }
 
 .aria.actor .window-content > form .wrap .header #logo-orbe > img {
-  min-width: 95px;
-  width: 95px;
-  max-width: 95px;
-  min-height: 76px;
-  height: 76px;
-  max-height: 76px;
+  min-width: 83px;
+  width: 83px;
+  max-width: 83px;
+  min-height: 66px;
+  height: 66px;
+  max-height: 66px;
+}
+
+.aria.actor .window-content > form .wrap #logo-sceptre {
+  max-width: 30px;
+  max-height: 116px;
+}
+
+.aria.actor .window-content > form .wrap #logo-sceptre > img {
+  min-width: 30px;
+  width: 30px;
+  max-width: 30px;
+  min-height: 116px;
+  height: 116px;
+  max-height: 116px;
 }
 
 .aria.actor .window-content > form .wrap .main {
@@ -695,9 +709,18 @@ strong {
   padding: 0;
   overflow: hidden;
   margin: 0 0 0 0;
-  height: calc(100% - 241px);
-  min-height: calc(100% - 241px);
-  max-height: calc(100% - 241px);
+  height: calc(100% - 283px);
+  min-height: calc(100% - 283px);
+  max-height: calc(100% - 283px);
+}
+
+.aria.actor .window-content > form .wrap .main #banner-top {
+  min-width: 32px;
+  width: 32px;
+  max-width: 32px;
+  min-height: 100%;
+  height: 100%;
+  max-height: 100%;
 }
 
 .aria.actor .window-content > form .wrap .main .sidebar {
@@ -902,6 +925,10 @@ strong {
   border: none;
 }
 
+.aria.actor .window-content > form .wrap #logo-sceptre > img {
+  border: none;
+}
+
 .aria.actor .window-content > form .wrap .field-label {
   background: none;
   margin: 0;
@@ -938,7 +965,7 @@ strong {
 
 .aria.actor .window-content > form .wrap .field-value.charname {
   font-size: 30px;
-  min-height: 26px;
+  min-height: 34px;
 }
 
 .aria.actor .window-content > form .wrap .empty {
@@ -1041,6 +1068,11 @@ strong {
   background: url("../ui/deco-aria.png");
 }
 
+.aria.actor .window-content > form .wrap .main #banner-top {
+  margin-top: 30px;
+  background: center/contain no-repeat url("../ui/deco-aria-vert.png");
+}
+
 .aria.actor .window-content > form .wrap .main .content .drop-field {
   background-color: rgba(255, 255, 255, 0);
 }
@@ -1051,25 +1083,25 @@ strong {
 
 .aria.actor #life_icon {
   background: center/contain no-repeat url("../ui/pv.png");
-  min-height: 100px;
-  height: 100px;
-  max-height: 100px;
+  min-height: 80px;
+  height: 80px;
+  max-height: 80px;
   font-size: 30px;
 }
 
 .aria.actor #hit_icon {
   background: center/contain no-repeat url("../ui/blessure.png");
-  min-height: 100px;
-  height: 100px;
-  max-height: 100px;
+  min-height: 80px;
+  height: 80px;
+  max-height: 80px;
   font-size: 30px;
 }
 
 .aria.actor #protection_icon {
   background: center/contain no-repeat url("../ui/protection.png");
-  min-height: 100px;
-  height: 100px;
-  max-height: 100px;
+  min-height: 80px;
+  height: 80px;
+  max-height: 80px;
   font-size: 30px;
 }
 
@@ -1344,10 +1376,10 @@ strong {
 
 .aria.item .window-content .sheet-header img.profile {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 100px;
-  flex: 0 0 100px;
-  max-width: 100px;
-  height: 100px;
+  -ms-flex: 0 0 64px;
+  flex: 0 0 64px;
+  max-width: 64px;
+  height: 64px;
   -o-object-fit: contain;
   object-fit: contain;
   border: none;
@@ -1453,6 +1485,7 @@ strong {
   min-height: calc(100% - 120px);
   height: calc(100% - 120px);
   max-height: calc(100% - 120px);
+  margin-left: 5px;
   /* ----------------------------------------- */
   /*  Item Details Form                        */
   /* ----------------------------------------- */
@@ -1495,19 +1528,19 @@ strong {
   line-height: 18px;
 }
 
-.aria.item .window-content .sheet-body .editor {
+.aria.item .window-content .sheet-body .description {
+  height: 100px;
+  min-height: 100px;
+  max-height: 100px;
+}
+
+.aria.item .window-content .sheet-body .description .editor {
   height: 100%;
   min-height: 100%;
   max-height: 100%;
 }
 
-.aria.item .window-content .sheet-body .editor .editor-content {
-  height: 100%;
-  min-height: 100%;
-  max-height: 100%;
-}
-
-.aria.item .window-content .sheet-body .editor .tox-tinymce {
+.aria.item .window-content .sheet-body .description .editor .editor-content {
   height: 100%;
   min-height: 100%;
   max-height: 100%;
@@ -2000,9 +2033,9 @@ strong {
 
 .aria .inventory-list .item .item-name .item-image {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 30px;
-  flex: 0 0 30px;
-  background-size: 30px;
+  -ms-flex: 0 0 22px;
+  flex: 0 0 22px;
+  background-size: 22px;
   margin-right: 5px;
 }
 

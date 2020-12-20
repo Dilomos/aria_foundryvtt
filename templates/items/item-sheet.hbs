@@ -17,7 +17,8 @@
     </header>
     {{!-- Sheet Body --}}
     <section class="sheet-body">
-        <div class="flexrow">
+        <h3 class="form-header">{{localize "ARIA.details.description"}}</h3>
+        <div class="flexrow description">
             {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
         </div>
         <div class="details">

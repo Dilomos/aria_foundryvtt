@@ -4,7 +4,7 @@
   "description": "<p>Système Foundry VTT pour Aria.</p>",
   "version": "0.0.6",
   "minimumCoreVersion": "0.7.3",
-  "compatibleCoreVersion": "0.7.8",
+  "compatibleCoreVersion": "0.7.9",
   "templateVersion": 2,
   "author": "Dilomos",
   "esmodules": [
