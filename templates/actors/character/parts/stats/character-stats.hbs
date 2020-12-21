@@ -1,21 +1,28 @@
-<div class="flexrow no-wrap">
-
-    <div class="sidebar flex1">
-        <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}"/>
+<div class="flexrow no-wrap stats">
+    <div class="sidebar flex1 pos_relative">
+        <div class="attrvertalign">
+            <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}"/>
+        </div>
     </div>
-
-    <div class="flexrow flex3 no-wrap">
-        <div class="flex1 layout carac">
+    <div class="flexrow flex3">
+        <div class="flex1 layout center carac pos_relative">
             <!-- STATS -->
             {{> "systems/aria/templates/actors/character/parts/stats/character-attributes.hbs"}}
         </div>
-            <div class="flex1 layout hpcol">
+            <div class="flex1 layout center hpcol pos_relative">
             <!-- HP -->
             {{> "systems/aria/templates/actors/character/parts/stats/character-hp.hbs"}}
         </div>
-        <div class="flex1 layout degatcol">
+        <div class="flex1 layout center degatcol pos_relative">
             <!-- ATTAQUES -->
             {{> "systems/aria/templates/actors/character/parts/stats/character-attacks.hbs"}}
         </div>
+    </div>
+</div>
+
+<div class="flexrow no-wrap description_row">
+    <div class="flexcol"> 
+        <h3 class="form-header">{{ localize "ARIA.details.description" }}</h3>
+        {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
     </div>
 </div>

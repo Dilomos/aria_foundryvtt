@@ -2,9 +2,22 @@
  * Extend the base Actor entity by defining a custom roll data structure which is ideal for the Simple system.
  * @extends {Actor}
  */
-import {Stats} from "../system/stats.js";
+
+import {Traversal} from "../utils/traversal.js";
 
 export class AriaActor extends Actor {
+
+    /** @override */
+  static async create(data, options={}) {
+    data.items = data.items || [];
+    if ( data.type === "character" ) {
+        let caps = Traversal.getAllCapacitiesData();
+        mergeObject(data.items, caps, {overwrite: false});
+    }
+    let enti = super.create(data, options);
+
+    return enti;
+  }
 
     /** @override */
     prepareBaseData() {

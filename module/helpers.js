@@ -46,7 +46,17 @@ export const registerHandlebarsHelpers = function () {
         let caps = items.filter(item => item.type === "capacity").sort(function (a, b) {
             return a.name.localeCompare(b.name);
           });
-        return caps;
+        let caps_normal = caps.filter(item => item.data.special === false);
+        return caps_normal;
+    });
+
+    Handlebars.registerHelper('getCapacitiesSpe', function (items) {
+        let caps = items.filter(item => item.type === "capacity").sort(function (a, b) {
+            return a.name.localeCompare(b.name);
+          });
+          
+          let caps_special = caps.filter(item => item.data.special === true);
+          return caps_special;
     });
 
     Handlebars.registerHelper('getWeapons', function (items) {

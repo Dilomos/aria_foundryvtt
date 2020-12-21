@@ -1,11 +1,9 @@
 <div class="flexrow no-wrap description_row">
-
-    <div class="sidebar flex1">
-        <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}"/>
-    </div>
-
     <div class="flexcol flex3">
-        <div class="flexrow">
+        
+        <h3 class="form-header">{{ localize "ARIA.details.description" }}</h3>
+
+        <div class="flexrow detail_row">
             <div class="flexcol">
                 <div class="flexrow">
                     <div class="flex1 center">
@@ -81,7 +79,6 @@
 
         </div>
 
-        <h3 class="form-header">{{ localize "ARIA.details.description" }}</h3>
         {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
     </div>
 </div>

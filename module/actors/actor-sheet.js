@@ -46,6 +46,12 @@ export class AriaActorSheet extends ActorSheet {
             return Capacity.create(this.actor);
         });
 
+        // Click to open
+        html.find('.item-create.new-capa-spe').click(ev => {
+            ev.preventDefault();
+            return Capacity.create(this.actor,true);
+        });
+
         html.find('.item-create.new-item').click(ev => {
             ev.preventDefault();
             return AriaItem.createForActor(this.actor);

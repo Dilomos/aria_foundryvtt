@@ -1,8 +1,8 @@
 {
   "name": "aria",
-  "title": "Aria - Game of Roles",
-  "description": "<p>Système Foundry VTT pour Aria.</p>",
-  "version": "0.0.6",
+  "title": "Aria",
+  "description": "<p>Système Foundry VTT pour Aria le jeu de role de FibreTigre edité par Elder Craft.</p>",
+  "version": "0.0.7",
   "minimumCoreVersion": "0.7.3",
   "compatibleCoreVersion": "0.7.9",
   "templateVersion": 2,
@@ -69,6 +69,6 @@
   "secondaryTokenAttribute": null,
   "url": "https://github.com/Dilomos/aria_foundryvtt",
   "manifest": "https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/master/system.json",
-  "download": "https://github.com/Dilomos/aria_foundryvtt/archive/v0.0.6.zip",
+  "download": "https://github.com/Dilomos/aria_foundryvtt/archive/v0.0.7.zip",
   "license": "licence.txt"
 }

@@ -6,9 +6,17 @@ export class Capacity {
      * @param event the create event
      * @private
      */
-    static create(actor, event) {
-        const data = {name: "Nom de la Capacitée", type: "capacity", data: {checked: true}};
-        return actor.createOwnedItem(data, {renderSheet: true}); // Returns one Entity, saved to the database
+    static create(actor, special=false) {
+        if(special)
+        {
+            const data = {name: "Nom de la Capacitée", type: "capacity", data: {special: true}};
+            return actor.createOwnedItem(data, {renderSheet: true}); // Returns one Entity, saved to the database
+        }
+        else
+        {
+            const data = {name: "Nom de la Capacitée", type: "capacity", data: {}};
+            return actor.createOwnedItem(data, {renderSheet: true}); // Returns one Entity, saved to the database
+        }
     }
 
     static toggleCheck(actor, event, isUncheck) {
