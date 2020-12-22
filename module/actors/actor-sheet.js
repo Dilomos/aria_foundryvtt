@@ -143,13 +143,10 @@ export class AriaActorSheet extends ActorSheet {
                 return this.actor.deleteOwnedItem(itemId);
                 // return Capacity.removeFromActor(this.actor, event, entity);
                 break;
-            case "path" :
-                return Path.removeFromActor(this.actor, event, entity);
-                break;
             case "profession" :
                 return Profession.removeFromActor(this.actor, event, entity);
                 break;
-            case "origines" :
+            case "origine" :
                 return Origines.removeFromActor(this.actor, event, entity);
                 break;
             default: {
@@ -234,13 +231,8 @@ export class AriaActorSheet extends ActorSheet {
         switch (itemData.type) {
             case "profession" :
                 return await Profession.addToActor(this.actor, event, itemData);
-            case "origines" :
+            case "origine" :
                 return await Origines.addToActor(this.actor, event, itemData);
-            case "capacity" :
-            case "shield" :
-            case "armor" :
-            case "melee" :
-            case "ranged" :
             default:
                 // activate the capacity as it is droped on an actor sheet
                 // if (itemData.type === "capacity") itemData.data.checked = true;

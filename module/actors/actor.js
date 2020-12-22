@@ -44,7 +44,7 @@ export class AriaActor extends Actor {
     /* -------------------------------------------- */
 
     getOrigines(items) {
-        return items.find(i => i.type === "origines")
+        return items.find(i => i.type === "origine")
     }
 
     /* -------------------------------------------- */

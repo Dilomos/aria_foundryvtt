@@ -324,33 +324,11 @@
 }
 
 
-/* -------------------
- * PATH LIST
- * -------------------*/
-.path-card {
-  margin-bottom: 5px;
-  .path-name {
-    //font-family: $font-secondary;
-    font-weight: bold;
-    font-size: 16px;
-    min-height:28px;
-  }
-  .path-description {
-    font-size: 12px;
-    //font-family: $font-secondary;
-  }
-}
-
-.path-controls {
-  text-align: right;
-}
-
 /* ----------------------------------------- */
 /*  Sidebar                                  */
 /* ----------------------------------------- */
 
 .origines-controls,
-.path-controls,
 .profession-controls {
   color: $c-darkbrown;
   visibility: hidden;
@@ -358,7 +336,6 @@
   border:1px solid transparent;
 }
 div:hover>div.origines-controls,
-div:hover>span.path-controls,
 div:hover>div.profession-controls {
   visibility: visible;
 }

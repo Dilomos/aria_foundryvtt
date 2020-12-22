@@ -116,11 +116,9 @@ export class AriaItemSheet extends ItemSheet {
         const item = await Item.fromDropData(data);
         const itemData = duplicate(item.data);
         switch (itemData.type) {
-            case "path"    :
-                return await this._onDropPathItem(event, itemData);
             case "profession" :
                 return await this._onDropProfessionItem(event, itemData);
-            case "origines" :
+            case "origine" :
                 return await this._onDropOriginesItem(event, itemData);
             case "capacity" :
                 return await this._onDropCapacityItem(event, itemData);
@@ -153,22 +151,6 @@ export class AriaItemSheet extends ItemSheet {
 
     /* -------------------------------------------- */
 
-    _onDropPathItem(event, itemData) {
-        event.preventDefault();
-        let data = duplicate(this.item.data);
-        const id = itemData._id;
-        if(data.type === "profession" || data.type === "origines"){
-            if(!data.data.paths.includes(id)){
-                data.data.paths.push(id);
-                return this.item.update(data);
-            }
-            else ui.notifications.error("Cette profession contient déjà cette voie.")
-        }
-        return false;
-    }
-
-    /* -------------------------------------------- */
-
     _onDropCapacityItem(event, itemData) {
         event.preventDefault();
         let data = duplicate(this.item.data);
@@ -190,9 +172,8 @@ export class AriaItemSheet extends ItemSheet {
         const itemType = li.data("itemType");
         let pack = null;
         switch(itemType){
-            case "origines" : pack = "aria.origines"; break;
+            case "origine" : pack = "aria.origines"; break;
             case "profession" : pack = "aria.professions"; break;
-            case "path" : pack = "aria.paths"; break;
             case "capacity" : pack = "aria.capacities"; break;
         }
         if(pack) return Traversal.getEntity(id, "item", pack).then(e => { if(e) e.sheet.render(true) });
@@ -208,7 +189,6 @@ export class AriaItemSheet extends ItemSheet {
         const itemType = li.data("itemType");
         let array = null;
         switch(itemType){
-            case "path" : array = data.data.paths; break;
             case "capacity" : array = data.data.capacities; break;
         }
         if(array && array.includes(id)) {

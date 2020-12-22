@@ -11,7 +11,7 @@ export const registerHandlebarsHelpers = function () {
 
 
     Handlebars.registerHelper('getOrigines', function (items) {
-        return items.find(item => item.type === "origines");
+        return items.find(item => item.type === "origine");
     });
 
     Handlebars.registerHelper('getInventory', function (items) {

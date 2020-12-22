@@ -23,10 +23,6 @@ export class Traversal {
         let compendium = [];
         let ingame = [];
         switch(type){
-            case "path" :
-                compendium = game.aria.config.paths;
-                ingame = game.items.filter(item => item.type === "path").map(entity => entity.data);
-                break;
             case "capacity" :
                 compendium = game.aria.config.capacities;
                 ingame = game.items.filter(item => item.type === "capacity").map(entity => entity.data);
@@ -49,12 +45,6 @@ export class Traversal {
         return ingame.concat(compendium);
     }
 
-    static getAllPathsData () {
-        const compendium = game.aria.config.paths;
-        const ingame = this.getInGameEntitiesDataOfType("path");
-        return ingame.concat(compendium);
-    }
-
     static getAllProfessionsData () {
         const compendium = game.aria.config.professions;
         const ingame = this.getInGameEntitiesDataOfType("profession");
@@ -66,9 +56,4 @@ export class Traversal {
         const ingame = this.getInGameEntitiesDataOfType("origines");
         return ingame.concat(compendium);
     }
-
-    static findPathDataByKey (key) {
-        return this.getAllPathsData().find(entity => entity.data.key === key);
-    }
-
 }

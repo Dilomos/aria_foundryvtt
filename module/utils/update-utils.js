@@ -3,19 +3,12 @@ import {Traversal} from "./traversal.js";
 export class UpdateUtils {
 
     static updateCapacities() {
-        Traversal.getAllCapacitiesData().forEach(cap => {
-            let path = Traversal.findPathDataByKey(cap.data.path);
-        });
     }
 
     static updateProfessions() {
         game.packs.get("aria.professions").getContent().then(index => {
             index.forEach(entity => {
-                const paths = game.aria.config.paths.filter(p => {
-                    return p.data.profession === entity.data.data.key;
-                });
                 let profession = duplicate(entity.data);
-                profession.data.paths = paths.map(c => c._id);
                 entity.update(profession);
             })
         });
@@ -38,18 +31,12 @@ export class UpdateUtils {
                         "cha": 6
                     },
                     capacities: spec.data.capacities,
-                    paths: []
                 }
                 // Manage bonuses
                 const keys = Object.keys(data.bonuses);
                 for (let i = 0; i < bonuses.length; i++) {
                     data.bonuses[keys[i]] = bonuses[i]
                 }
-                // Manage paths
-                const paths = game.aria.config.paths.filter(e => {
-                    return e.data.scope === "origines" && e.data.origines.includes(spec.data.key);
-                });
-                data.paths = paths.map(e => e._id);
 
                 // Manage capacities
                 const caps = game.aria.config.capacities.filter(e => {
@@ -106,20 +93,6 @@ export class UpdateUtils {
                     const key = cname.slugify({strict: true});
                     return encounterCaps.find(e => e.data.key === key);
                 });
-                const paths = data.data.paths;
-                const pathCaps2add = paths.map(p => {
-                    let tokens = p.key.split("-");
-                    const rank = tokens.pop();
-                    const pathKey = tokens.join("-");
-                    const path = game.aria.config.paths.find(e => e.data.key === pathKey);
-                    if (path && rank > 0 && path.data.capacities.length >= rank) {
-                        return game.aria.config.capacities.find(c => path.data.capacities[rank - 1].includes(c._id));
-                    } else console.error(pathKey, rank);
-                });
-                let items = caps2add.concat(pathCaps2add).flat()
-                if (items.length > 0) {
-                    entity.update({"items": items});
-                }
             }
         });
     }

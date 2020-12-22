@@ -27,7 +27,7 @@
     },
     {
       "name": "items",
-      "label": "Equipement",
+      "label": "Equipements",
       "system": "aria",
       "path": "./packs/items.db",
       "entity": "Item",
@@ -43,7 +43,7 @@
     },
     {
       "name": "origines",
-      "label": "Origine",
+      "label": "Origines",
       "system": "aria",
       "path": "./packs/origines.db",
       "entity": "Item",

@@ -3,7 +3,7 @@ import {Traversal} from "../utils/traversal.js";
 export class Origines {
 
     static addToActor(actor, event, itemData) {
-        if (actor.items.filter(item => item.type === "origines").length > 0) {
+        if (actor.items.filter(item => item.type === "origine").length > 0) {
             ui.notifications.error("Vous avez déjà une race.");
             return false;
         } else {
@@ -23,7 +23,7 @@ export class Origines {
                 const caps = Traversal.getItemsOfType("capacity").filter(c => originesData.data.capacities.includes(c._id));
                 const capsKeys = caps.map(c => c.data.key);
                 const capsIds = actorData.items.filter(item => capsKeys.includes(item.data.key) && item.type === "capacity").map(c => c._id);
-                let items = capsIds;//.concat(pathsIds);
+                let items = capsIds;
 
                 items.push(entity.data._id);
                 return actor.deleteOwnedItem(items);
