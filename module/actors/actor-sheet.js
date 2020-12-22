@@ -4,7 +4,7 @@
  */
 import {Capacity} from "../controllers/capacity.js";
 import {Profession} from "../controllers/profession.js";
-import {Species} from "../controllers/species.js";
+import {Origines} from "../controllers/origines.js";
 import {AriaRoll} from "../controllers/roll.js";
 import {Traversal} from "../utils/traversal.js";
 import { AriaItem } from "../items/item.js";
@@ -149,8 +149,8 @@ export class AriaActorSheet extends ActorSheet {
             case "profession" :
                 return Profession.removeFromActor(this.actor, event, entity);
                 break;
-            case "species" :
-                return Species.removeFromActor(this.actor, event, entity);
+            case "origines" :
+                return Origines.removeFromActor(this.actor, event, entity);
                 break;
             default: {
                 return this.actor.deleteOwnedItem(itemId);
@@ -234,8 +234,8 @@ export class AriaActorSheet extends ActorSheet {
         switch (itemData.type) {
             case "profession" :
                 return await Profession.addToActor(this.actor, event, itemData);
-            case "species" :
-                return await Species.addToActor(this.actor, event, itemData);
+            case "origines" :
+                return await Origines.addToActor(this.actor, event, itemData);
             case "capacity" :
             case "shield" :
             case "armor" :

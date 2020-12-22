@@ -10,8 +10,8 @@ export const registerHandlebarsHelpers = function () {
     });
 
 
-    Handlebars.registerHelper('getSpecies', function (items) {
-        return items.find(item => item.type === "species");
+    Handlebars.registerHelper('getOrigines', function (items) {
+        return items.find(item => item.type === "origines");
     });
 
     Handlebars.registerHelper('getInventory', function (items) {
@@ -160,8 +160,8 @@ export const registerHandlebarsHelpers = function () {
         return Traversal.getAllProfessionsData()
     });
 
-    Handlebars.registerHelper('listSpecies', function () {
-        return Traversal.getAllSpeciesData()
+    Handlebars.registerHelper('listOrigines', function () {
+        return Traversal.getAllOriginesData()
     });
 
     Handlebars.registerHelper('findCapacity', function (key) {

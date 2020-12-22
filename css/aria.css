@@ -1311,7 +1311,7 @@ strong {
   text-align: right;
 }
 
-.aria.actor .species-controls,
+.aria.actor .origines-controls,
 .aria.actor .path-controls,
 .aria.actor .profession-controls {
   color: #464331c4;
@@ -1322,7 +1322,7 @@ strong {
   border: 1px solid transparent;
 }
 
-.aria.actor div:hover > div.species-controls,
+.aria.actor div:hover > div.origines-controls,
 .aria.actor div:hover > span.path-controls,
 .aria.actor div:hover > div.profession-controls {
   visibility: visible;

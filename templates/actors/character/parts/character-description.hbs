@@ -63,11 +63,11 @@
                 <div class="flex1 center">
                     <span class="field-label">Origine</span>
                 </div>
-                <div class="flex2 center cell drop-field compendium-pack" data-pack="aria.species" data-open="0">
-                    {{#if (getSpecies actor.items)}}
-                        {{#with (getSpecies actor.items)}}
+                <div class="flex2 center cell drop-field compendium-pack" data-pack="aria.origines" data-open="0">
+                    {{#if (getOrigines actor.items)}}
+                        {{#with (getOrigines actor.items)}}
                             <span class="flex5 field-value origine_name">{{name}}</span>
-                            <div class="species-controls item" data-item-id="{{_id}}" style="padding-right:5px;">
+                            <div class="origines-controls item" data-item-id="{{_id}}" style="padding-right:5px;">
                                 <a class="item-control item-delete" title="Delete Item"><i class="fas fa-times"></i></a>
                             </div>
                         {{/with}}

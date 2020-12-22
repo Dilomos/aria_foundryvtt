@@ -21,8 +21,8 @@ export class UpdateUtils {
         });
     }
 
-    static updateSpecies() {
-        game.packs.get("aria.species").getContent().then(index => {
+    static updateOrigines() {
+        game.packs.get("aria.origines").getContent().then(index => {
             index.forEach(entity => {
                 let spec = duplicate(entity.data);
                 let bonuses = spec.data.bonuses
@@ -47,7 +47,7 @@ export class UpdateUtils {
                 }
                 // Manage paths
                 const paths = game.aria.config.paths.filter(e => {
-                    return e.data.scope === "species" && e.data.species.includes(spec.data.key);
+                    return e.data.scope === "origines" && e.data.origines.includes(spec.data.key);
                 });
                 data.paths = paths.map(e => e._id);
 

@@ -124,7 +124,7 @@
     "types": [
       "item",
       "capacity",
-      "species",
+      "origines",
       "profession"
     ],
     "templates": {
@@ -232,7 +232,7 @@
         "shield" : false
       }
     },
-    "species": {
+    "origines": {
       "templates": [
         "base"
       ],

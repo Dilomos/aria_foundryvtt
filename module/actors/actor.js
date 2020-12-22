@@ -43,8 +43,8 @@ export class AriaActor extends Actor {
 
     /* -------------------------------------------- */
 
-    getSpecies(items) {
-        return items.find(i => i.type === "species")
+    getOrigines(items) {
+        return items.find(i => i.type === "origines")
     }
 
     /* -------------------------------------------- */

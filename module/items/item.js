@@ -33,7 +33,7 @@ export class AriaItem extends Item {
             case "capacity" :
             case "path" :
             case "profession" :
-            case "species" :
+            case "origines" :
                 itemData.data.key = itemData.name.slugify({strict: true});
                 break;
             case "trapping" :

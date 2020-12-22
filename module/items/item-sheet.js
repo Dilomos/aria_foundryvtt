@@ -120,8 +120,8 @@ export class AriaItemSheet extends ItemSheet {
                 return await this._onDropPathItem(event, itemData);
             case "profession" :
                 return await this._onDropProfessionItem(event, itemData);
-            case "species" :
-                return await this._onDropSpeciesItem(event, itemData);
+            case "origines" :
+                return await this._onDropOriginesItem(event, itemData);
             case "capacity" :
                 return await this._onDropCapacityItem(event, itemData);
             default:
@@ -147,7 +147,7 @@ export class AriaItemSheet extends ItemSheet {
 
     /* -------------------------------------------- */
 
-    _onDropSpeciesItem(event, itemData) {
+    _onDropOriginesItem(event, itemData) {
         return false;
     }
 
@@ -157,7 +157,7 @@ export class AriaItemSheet extends ItemSheet {
         event.preventDefault();
         let data = duplicate(this.item.data);
         const id = itemData._id;
-        if(data.type === "profession" || data.type === "species"){
+        if(data.type === "profession" || data.type === "origines"){
             if(!data.data.paths.includes(id)){
                 data.data.paths.push(id);
                 return this.item.update(data);
@@ -190,7 +190,7 @@ export class AriaItemSheet extends ItemSheet {
         const itemType = li.data("itemType");
         let pack = null;
         switch(itemType){
-            case "species" : pack = "aria.species"; break;
+            case "origines" : pack = "aria.origines"; break;
             case "profession" : pack = "aria.professions"; break;
             case "path" : pack = "aria.paths"; break;
             case "capacity" : pack = "aria.capacities"; break;

@@ -61,9 +61,9 @@ export class Traversal {
         return ingame.concat(compendium);
     }
 
-    static getAllSpeciesData () {
-        const compendium = game.aria.config.species;
-        const ingame = this.getInGameEntitiesDataOfType("species");
+    static getAllOriginesData () {
+        const compendium = game.aria.config.origines;
+        const ingame = this.getInGameEntitiesDataOfType("origines");
         return ingame.concat(compendium);
     }
 

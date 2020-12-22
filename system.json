@@ -42,12 +42,12 @@
       "tag" : "profession"
     },
     {
-      "name": "species",
+      "name": "origines",
       "label": "Origine",
       "system": "aria",
-      "path": "./packs/species.db",
+      "path": "./packs/origines.db",
       "entity": "Item",
-      "tag" : "species"
+      "tag" : "origines"
     }
   ],
   "languages": [
