@@ -51,7 +51,7 @@ ARIA.itemProperties = {
 
 ARIA.professions = [];
 ARIA.origines = [];
-ARIA.capacities = [];
+ARIA.competences = [];
 
 // Mise en cache des données de profession
 ARIA.getProfessions = async function () {
@@ -60,7 +60,7 @@ ARIA.getProfessions = async function () {
     console.debug("Professions loaded");
 };
 
-// Mise en cache des données de races
+// Mise en cache des données d'origine
 ARIA.getOrigines = async function () {
     let origines = await game.packs.get("aria.origines").getContent().then(index => index.map(entity => entity.data));
     ARIA.origines = origines;
@@ -68,17 +68,17 @@ ARIA.getOrigines = async function () {
 };
 
 
-// Mise en cache des données de capacités
-ARIA.getCapacities = async function () {
-    let capacities = await game.packs.get("aria.capacities").getContent().then(index => index.map(entity => entity.data));
-    ARIA.capacities = capacities;
-    console.debug("Capacities loaded");
+// Mise en cache des données de compétences
+ARIA.getCompetences = async function () {
+    let competences = await game.packs.get("aria.competences").getContent().then(index => index.map(entity => entity.data));
+    ARIA.competences = competences;
+    console.debug("Competences loaded");
 };
 
 ARIA.itemTypes = {
     "origines": "ARIA.category.origines",
     "profession": "ARIA.category.profession",
-    "capacity": "ARIA.category.capacity",
+    "competence": "ARIA.category.competence",
     "trapping": "ARIA.category.trapping",
     "melee": "ARIA.category.melee",
     "armor": "ARIA.category.armor",

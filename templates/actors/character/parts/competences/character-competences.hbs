@@ -1,32 +1,31 @@
-<div class="flexrow capacity_row">
+<div class="flexrow competence_row">
     <div class="flexcol">
-        <ol class="inventory-list capacity-list">
+        <ol class="inventory-list competence-list">
             <li class="inventory-header flexrow">
                 <h3 class="item-name flexrow">{{ localize "ARIA.ui.skill" }}</h3>
                 <div class="item-detail">{{ localize "ARIA.ui.link" }}</div>
                 <div class="item-detail">{{ localize "ARIA.ui.score" }}</div>
                 <div class="item-controls">
-                    <!--<a class="item-control item-create compendium-pack" data-pack="aria.capacities" data-open="0" title="Ajouter une capacité"><i class="fas fa-plus"></i>&nbsp; Ajouter</a>-->
-                    <a class="item-control item-create new-capa" title="Ajouter une capacité"><i class="fas fa-plus"></i></a>    
-                    <a class="item-control item-create compendium-pack" title="Ajouter une capacité du compendium" data-pack="aria.capacities" data-open="0"><i class="fas fa-folder-plus"></i></a>
+                    <a class="item-control item-create new-capa" title="Ajouter une compétence"><i class="fas fa-plus"></i></a>    
+                    <a class="item-control item-create compendium-pack" title="Ajouter une compétence du compendium" data-pack="aria.competences" data-open="0"><i class="fas fa-folder-plus"></i></a>
                 </div>
             </li>
-            {{#each (getCapacities actor.items) as |capacity id|}}
+            {{#each (getCompetences actor.items) as |competence id|}}
                 <ol class="item-list">
-                    <li class="item flexrow" data-item-id="{{capacity._id}}" data-item-type="item">
-                        <div class="rollable no-wrap" title="{{capacity.name}}" data-rolling-value="{{capacity.data.score}}" data-roll-type="competencycheck">
+                    <li class="item flexrow" data-item-id="{{competence._id}}" data-item-type="item">
+                        <div class="rollable no-wrap" title="{{competence.name}}" data-rolling-value="{{competence.data.score}}" data-roll-type="competencycheck">
                             <div class="flexrow no-wrap ">
-                                <div class="icon_d100" title="{{capacity.name}}">
+                                <div class="icon_d100" title="{{competence.name}}">
                                 </div>
-                                <div class="field-label no-wrap left capacity_name" title="{{capacity.name}}">
-                                    {{capacity.name}}
+                                <div class="field-label no-wrap left competence_name" title="{{competence.name}}">
+                                    {{competence.name}}
                                 </div>
                             </div>
                         </div>
                         
-                        <div class="item-detail">{{#if capacity.data.link1}}{{capacity.data.link1}}{{/if}} / {{#if capacity.data.link2}}{{capacity.data.link2}}{{/if}}</div>
+                        <div class="item-detail">{{#if competence.data.link1}}{{competence.data.link1}}{{/if}} / {{#if competence.data.link2}}{{competence.data.link2}}{{/if}}</div>
                         <div class="item-detail flexrow">
-                            <div class="field-value flex1 capa_score"> {{capacity.data.score}} </div>
+                            <div class="field-value flex1 capa_score"> {{competence.data.score}} </div>
                             <div class="flex1 capa_percent">%</div>
                         </div>
                         <div class="item-controls">
@@ -40,34 +39,33 @@
     </div>
     
         <div class="flexcol">
-        <ol class="inventory-list capacity-list">
+        <ol class="inventory-list competence-list">
             <li class="inventory-header flexrow">
                 <h3 class="item-name flexrow">{{ localize "ARIA.ui.specialskill" }}</h3>
                 <div class="item-detail">{{ localize "ARIA.ui.link" }}</div>
                 <div class="item-detail">{{ localize "ARIA.ui.score" }}</div>
                 <div class="item-controls">
-                    <!--<a class="item-control item-create compendium-pack" data-pack="aria.capacities" data-open="0" title="Ajouter une capacité"><i class="fas fa-plus"></i>&nbsp; Ajouter</a>-->
-                    <a class="item-control item-create new-capa-spe" title="Ajouter une capacité"><i class="fas fa-plus"></i></a>    
-                    <!--<a class="item-control item-create compendium-pack" title="Ajouter une capacité du compendium" data-pack="aria.capacities" data-open="0"><i class="fas fa-folder-plus"></i></a>-->
+                    <a class="item-control item-create new-capa-spe" title="Ajouter une compétence spéciale"><i class="fas fa-plus"></i></a>    
+                    <!--<a class="item-control item-create compendium-pack" title="Ajouter une compétence spéciale du compendium" data-pack="aria.competences" data-open="0"><i class="fas fa-folder-plus"></i></a>-->
                 </div>
             </li>
-            {{#each (getCapacitiesSpe actor.items) as |capacity id|}}
+            {{#each (getCompetencesSpe actor.items) as |competence id|}}
                 <ol class="item-list">
-                    <li class="item flexrow" data-item-id="{{capacity._id}}" data-item-type="item">
+                    <li class="item flexrow" data-item-id="{{competence._id}}" data-item-type="item">
                         
-                        <div class="flex1 rollable no-wrap" title="{{capacity.name}}" data-rolling-value="{{capacity.data.score}}" data-roll-type="competencycheck">
+                        <div class="flex1 rollable no-wrap" title="{{competence.name}}" data-rolling-value="{{competence.data.score}}" data-roll-type="competencycheck">
                             <div class="flexrow no-wrap ">
-                                <div class="icon_d100" title="{{capacity.name}}">
+                                <div class="icon_d100" title="{{competence.name}}">
                                 </div>
-                                <div class="field-label no-wrap left capacity_name" title="{{capacity.name}}">
-                                    {{capacity.name}}
+                                <div class="field-label no-wrap left competence_name" title="{{competence.name}}">
+                                    {{competence.name}}
                                 </div>
                             </div>
                         </div>
 
-                        <div class="item-detail">{{#if capacity.data.link1}}{{capacity.data.link1}}{{/if}} / {{#if capacity.data.link2}}{{capacity.data.link2}}{{/if}}</div>
+                        <div class="item-detail">{{#if competence.data.link1}}{{competence.data.link1}}{{/if}} / {{#if competence.data.link2}}{{competence.data.link2}}{{/if}}</div>
                         <div class="item-detail flexrow">
-                            <div class="field-value flex1 capa_score"> {{capacity.data.score}} </div>
+                            <div class="field-value flex1 capa_score"> {{competence.data.score}} </div>
                             <div class="flex1 capa_percent">%</div>
                         </div>
                         <div class="item-controls">

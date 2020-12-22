@@ -16,7 +16,7 @@
                 {{!-- Sheet Tab Navigation --}}
                 <nav class="sheet-tabs tabs" data-group="primary">
                     <a class="item charlemagne" data-tab="stats">{{ localize "ARIA.tabs.stats" }}</a>
-                    <a class="item compendium-pack charlemagne" data-pack="aria.capacities" data-open="0" data-tab="capacities">{{ localize "ARIA.tabs.capacities" }}</a>
+                    <a class="item compendium-pack charlemagne" data-pack="aria.competences" data-open="0" data-tab="competences">{{ localize "ARIA.tabs.competences" }}</a>
                     <a class="item compendium-pack charlemagne" data-pack="aria.items" data-open="0" data-tab="inventory">{{ localize "ARIA.tabs.inventory" }}</a>
                 </nav>
                 {{!-- Sheet Body --}}
@@ -25,9 +25,9 @@
                     <div class="tab stats" data-group="primary" data-tab="stats">
                         {{> "systems/aria/templates/actors/character/parts/stats/character-stats.hbs"}}
                     </div>
-                    {{!-- Capacitites Tab --}}
-                    <div class="tab capacities" data-group="primary" data-tab="capacities">
-                        {{> "systems/aria/templates/actors/character/parts/capacities/character-capacities.hbs"}}
+                    {{!-- Competences Tab --}}
+                    <div class="tab competences" data-group="primary" data-tab="competences">
+                        {{> "systems/aria/templates/actors/character/parts/competences/character-competences.hbs"}}
                     </div>
                     {{!-- Inventory Tab --}}
                     <div class="tab inventory" data-group="primary" data-tab="inventory">

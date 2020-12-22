@@ -30,7 +30,7 @@ export class AriaItem extends Item {
                 this._prepareArmorData(itemData, actorData);
                 this._prepareWeaponData(itemData, actorData);
                 break;
-            case "capacity" :
+            case "competence" :
             case "profession" :
             case "origine" :
                 itemData.data.key = itemData.name.slugify({strict: true});

@@ -18,12 +18,12 @@
   ],
   "packs": [
     {
-      "name": "capacities",
-      "label": "Capacités",
+      "name": "competences",
+      "label": "Compétences",
       "system": "aria",
-      "path": "./packs/capacities.db",
+      "path": "./packs/competences.db",
       "entity": "Item",
-      "tag" : "capacity"
+      "tag" : "competence"
     },
     {
       "name": "items",

@@ -36,17 +36,17 @@
 
 <ol class="inventory-list">
     <li class="inventory-header flexrow">
-        <h3 class="item-name flexrow">Capacités raciales</h3>
+        <h3 class="item-name flexrow">Compétence liées à l'origine</h3>
         <div class="item-controls">
-            <a class="item-control item-create compendium-pack" data-pack="aria.capacities" data-open="0" title="Ajouter une capacité"><i class="fas fa-plus"></i>&nbsp; Add</a>
+            <a class="item-control item-create compendium-pack" data-pack="aria.competences" data-open="0" title="Ajouter une compétence"><i class="fas fa-plus"></i>&nbsp; Add</a>
         </div>
     </li>
-    {{#each (getEmbeddedItems "capacity" data.capacities) as |capacity id|}}
+    {{#each (getEmbeddedItems "competence" data.competences) as |competence id|}}
         <ol class="item-list">
-            <li class="item flexrow" data-item-id="{{capacity._id}}" data-item-type="capacity" data-key="{{capacity.data.key}}" draggable="true">
+            <li class="item flexrow" data-item-id="{{competence._id}}" data-item-type="competence" data-key="{{competence.data.key}}" draggable="true">
                 <div class="item-name flexrow">
-                    <div class="item-image" style="background-image: url('{{capacity.img}}')"></div>
-                    <h4>{{capacity.name}}</h4>
+                    <div class="item-image" style="background-image: url('{{competence.img}}')"></div>
+                    <h4>{{competence.name}}</h4>
                 </div>
                 <div class="item-controls">
                     <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>

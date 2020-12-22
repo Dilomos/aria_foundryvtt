@@ -7,7 +7,7 @@ export class Origines {
             ui.notifications.error("Vous avez déjà une race.");
             return false;
         } else {
-            let items = game.aria.config.capacities.filter(e => itemData.data.capacities.includes(e._id));
+            let items = game.aria.config.competences.filter(e => itemData.data.competences.includes(e._id));
             items.push(itemData);
             return actor.createOwnedItem(items);
         }
@@ -20,9 +20,9 @@ export class Origines {
             title: "Supprimer la race ?",
             content: `<p>Etes-vous sûr de vouloir supprimer la race de ${actor.name} ?</p>`,
             yes: () => {
-                const caps = Traversal.getItemsOfType("capacity").filter(c => originesData.data.capacities.includes(c._id));
+                const caps = Traversal.getItemsOfType("competence").filter(c => originesData.data.competences.includes(c._id));
                 const capsKeys = caps.map(c => c.data.key);
-                const capsIds = actorData.items.filter(item => capsKeys.includes(item.data.key) && item.type === "capacity").map(c => c._id);
+                const capsIds = actorData.items.filter(item => capsKeys.includes(item.data.key) && item.type === "competence").map(c => c._id);
                 let items = capsIds;
 
                 items.push(entity.data._id);

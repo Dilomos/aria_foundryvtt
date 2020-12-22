@@ -2,7 +2,7 @@
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
  */
-import {Capacity} from "../controllers/capacity.js";
+import {Competence} from "../controllers/competence.js";
 import {Profession} from "../controllers/profession.js";
 import {Origines} from "../controllers/origines.js";
 import {AriaRoll} from "../controllers/roll.js";
@@ -43,13 +43,13 @@ export class AriaActorSheet extends ActorSheet {
         // Click to open
         html.find('.item-create.new-capa').click(ev => {
             ev.preventDefault();
-            return Capacity.create(this.actor);
+            return Competence.create(this.actor);
         });
 
         // Click to open
         html.find('.item-create.new-capa-spe').click(ev => {
             ev.preventDefault();
-            return Capacity.create(this.actor,true);
+            return Competence.create(this.actor,true);
         });
 
         html.find('.item-create.new-item').click(ev => {
@@ -63,14 +63,14 @@ export class AriaActorSheet extends ActorSheet {
             return this._onRoll(ev);
         });
 
-        html.find('.capacity-create').click(ev => {
+        html.find('.competence-create').click(ev => {
             ev.preventDefault();
-            return Capacity.create(this.actor, ev);
+            return Competence.create(this.actor, ev);
         });
-        html.find('.capacity-toggle').click(ev => {
+        html.find('.competence-toggle').click(ev => {
             ev.preventDefault();
-            const li = $(ev.currentTarget).closest(".capacity");
-            li.find(".capacity-description").slideToggle(200);
+            const li = $(ev.currentTarget).closest(".competence");
+            li.find(".competence-description").slideToggle(200);
         });
 
         // Equip/Unequip items
@@ -139,9 +139,9 @@ export class AriaActorSheet extends ActorSheet {
         const itemId = li.data("itemId");
         const entity = this.actor.items.find(item => item._id === itemId);
         switch (entity.data.type) {
-            case "capacity" :
+            case "competence" :
                 return this.actor.deleteOwnedItem(itemId);
-                // return Capacity.removeFromActor(this.actor, event, entity);
+                // return Competence.removeFromActor(this.actor, event, entity);
                 break;
             case "profession" :
                 return Profession.removeFromActor(this.actor, event, entity);
@@ -234,8 +234,8 @@ export class AriaActorSheet extends ActorSheet {
             case "origine" :
                 return await Origines.addToActor(this.actor, event, itemData);
             default:
-                // activate the capacity as it is droped on an actor sheet
-                // if (itemData.type === "capacity") itemData.data.checked = true;
+                // activate the competence as it is droped on an actor sheet
+                // if (itemData.type === "competence") itemData.data.checked = true;
                 // Handle item sorting within the same Actor
                 const actor = this.actor;
                 let sameActor = (data.actorId === actor._id) || (actor.isToken && (data.tokenId === actor.token.id));

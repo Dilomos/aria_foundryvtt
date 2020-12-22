@@ -120,8 +120,8 @@ export class AriaItemSheet extends ItemSheet {
                 return await this._onDropProfessionItem(event, itemData);
             case "origine" :
                 return await this._onDropOriginesItem(event, itemData);
-            case "capacity" :
-                return await this._onDropCapacityItem(event, itemData);
+            case "competence" :
+                return await this._onDropCompetenceItem(event, itemData);
             default:
                 return;
         }
@@ -151,16 +151,16 @@ export class AriaItemSheet extends ItemSheet {
 
     /* -------------------------------------------- */
 
-    _onDropCapacityItem(event, itemData) {
+    _onDropCompetenceItem(event, itemData) {
         event.preventDefault();
         let data = duplicate(this.item.data);
         const id = itemData._id;
-        if(data.data.capacities && !data.data.capacities.includes(id)){
-            let caps = data.data.capacities;
+        if(data.data.competences && !data.data.competences.includes(id)){
+            let caps = data.data.competences;
             caps.push(id);
             return this.item.update(data);
         }
-        else ui.notifications.error("Cette voie contient déjà cette capacité.")
+        else ui.notifications.error("Ajout de cette compétence impossible.")
     }
 
     /* -------------------------------------------- */
@@ -174,7 +174,7 @@ export class AriaItemSheet extends ItemSheet {
         switch(itemType){
             case "origine" : pack = "aria.origines"; break;
             case "profession" : pack = "aria.professions"; break;
-            case "capacity" : pack = "aria.capacities"; break;
+            case "competence" : pack = "aria.competences"; break;
         }
         if(pack) return Traversal.getEntity(id, "item", pack).then(e => { if(e) e.sheet.render(true) });
     }
@@ -189,7 +189,7 @@ export class AriaItemSheet extends ItemSheet {
         const itemType = li.data("itemType");
         let array = null;
         switch(itemType){
-            case "capacity" : array = data.data.capacities; break;
+            case "competence" : array = data.data.competences; break;
         }
         if(array && array.includes(id)) {
             ArrayUtils.remove(array, id)

@@ -23,9 +23,9 @@ export class Traversal {
         let compendium = [];
         let ingame = [];
         switch(type){
-            case "capacity" :
-                compendium = game.aria.config.capacities;
-                ingame = game.items.filter(item => item.type === "capacity").map(entity => entity.data);
+            case "competence" :
+                compendium = game.aria.config.competences;
+                ingame = game.items.filter(item => item.type === "competence").map(entity => entity.data);
                 break;
         }
         return ingame.concat(compendium);
@@ -39,9 +39,9 @@ export class Traversal {
         return game.items.filter(item => item.type === type).map(entity => entity.data);
     }
 
-    static getAllCapacitiesData () {
-        const compendium = game.aria.config.capacities;
-        const ingame = this.getInGameEntitiesDataOfType("capacity");
+    static getAllCompetencesData () {
+        const compendium = game.aria.config.competences;
+        const ingame = this.getInGameEntitiesDataOfType("competence");
         return ingame.concat(compendium);
     }
 

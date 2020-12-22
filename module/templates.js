@@ -16,7 +16,7 @@ export const preloadHandlebarsTemplates = async function () {
         "systems/aria/templates/actors/character/parts/stats/character-attributes.hbs",
         "systems/aria/templates/actors/character/parts/stats/character-stats.hbs",
 
-        "systems/aria/templates/actors/character/parts/capacities/character-capacities.hbs",
+        "systems/aria/templates/actors/character/parts/competences/character-competences.hbs",
 
         "systems/aria/templates/actors/character/parts/combat/character-combat.hbs",
         "systems/aria/templates/actors/character/parts/combat/character-combat-item.hbs",
@@ -26,7 +26,7 @@ export const preloadHandlebarsTemplates = async function () {
 
         // ITEMS DETAILS
         "systems/aria/templates/items/parts/details/item-details.hbs",
-        "systems/aria/templates/items/parts/details/capacity-details.hbs",
+        "systems/aria/templates/items/parts/details/competence-details.hbs",
         "systems/aria/templates/items/parts/details/profession-details.hbs",
         "systems/aria/templates/items/parts/details/protection-details.hbs",
         "systems/aria/templates/items/parts/details/ranged-details.hbs",

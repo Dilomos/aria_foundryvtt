@@ -8,7 +8,7 @@ import {UpdateUtils} from "../utils/update-utils.js";
 Hooks.once("ready", async () => {
     await game.aria.config.getProfessions();
     await game.aria.config.getOrigines();
-    await game.aria.config.getCapacities();
+    await game.aria.config.getCompetences();
 
     console.info("System Initialized.");
 

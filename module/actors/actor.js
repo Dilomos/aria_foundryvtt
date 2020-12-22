@@ -11,7 +11,7 @@ export class AriaActor extends Actor {
   static async create(data, options={}) {
     data.items = data.items || [];
     if ( data.type === "character" ) {
-        let caps = Traversal.getAllCapacitiesData();
+        let caps = Traversal.getAllCompetencesData();
         mergeObject(data.items, caps, {overwrite: false});
     }
     let enti = super.create(data, options);
@@ -49,8 +49,8 @@ export class AriaActor extends Actor {
 
     /* -------------------------------------------- */
 
-    getActiveCapacities(items) {
-        return items.filter(i => i.type === "capacity" && i.data.rank)
+    getActiveCompetences(items) {
+        return items.filter(i => i.type === "competence" && i.data.rank)
     }
 
 

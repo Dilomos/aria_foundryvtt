@@ -42,16 +42,16 @@ export const registerHandlebarsHelpers = function () {
         return items.find(item => item.type === "profession");
     });
       
-    Handlebars.registerHelper('getCapacities', function (items) {
-        let caps = items.filter(item => item.type === "capacity").sort(function (a, b) {
+    Handlebars.registerHelper('getCompetences', function (items) {
+        let caps = items.filter(item => item.type === "competence").sort(function (a, b) {
             return a.name.localeCompare(b.name);
           });
         let caps_normal = caps.filter(item => item.data.special === false);
         return caps_normal;
     });
 
-    Handlebars.registerHelper('getCapacitiesSpe', function (items) {
-        let caps = items.filter(item => item.type === "capacity").sort(function (a, b) {
+    Handlebars.registerHelper('getCompetencesSpe', function (items) {
+        let caps = items.filter(item => item.type === "competence").sort(function (a, b) {
             return a.name.localeCompare(b.name);
           });
           
@@ -72,9 +72,9 @@ export const registerHandlebarsHelpers = function () {
         return equipedWeapons;
     });
 
-    Handlebars.registerHelper('getCapacitiesByIds', function (ids) {
+    Handlebars.registerHelper('getCompetencesByIds', function (ids) {
         if (ids) {
-            const caps = Traversal.getItemsOfType("capacity").filter(c => ids.includes(c._id));
+            const caps = Traversal.getItemsOfType("competence").filter(c => ids.includes(c._id));
             caps.sort(function (a, b) {
                 const indexA = ids.indexOf(a._id);
                 const indexB = ids.indexOf(b._id);
@@ -164,8 +164,8 @@ export const registerHandlebarsHelpers = function () {
         return Traversal.getAllOriginesData()
     });
 
-    Handlebars.registerHelper('findCapacity', function (key) {
-        return Traversal.getAllCapacitiesData().find(c => c.data.key === key);
+    Handlebars.registerHelper('findCompetence', function (key) {
+        return Traversal.getAllCompetencesData().find(c => c.data.key === key);
     });
 
     // If you need to add Handlebars helpers, here are a few useful examples:
