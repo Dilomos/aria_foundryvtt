@@ -12,8 +12,6 @@
             "label" : "ARIA.stats.str.label",
             "abbrev" : "ARIA.stats.str.abbrev",
             "base": 10,
-            "racial": 0,
-            "bonus": 0,
             "value": 10
           },
           "dex" : {
@@ -21,8 +19,6 @@
             "label" : "ARIA.stats.dex.label",
             "abbrev" : "ARIA.stats.dex.abbrev",
             "base": 10,
-            "racial": 0,
-            "bonus": 0,
             "value": 10
           },
           "end" : {
@@ -30,8 +26,6 @@
             "label" : "ARIA.stats.end.label",
             "abbrev" : "ARIA.stats.end.abbrev",
             "base": 10,
-            "racial": 0,
-            "bonus": 0,
             "value": 10
           },
           "int" : {
@@ -39,8 +33,6 @@
             "label" : "ARIA.stats.int.label",
             "abbrev" : "ARIA.stats.int.abbrev",
             "base": 10,
-            "racial": 0,
-            "bonus": 0,
             "value": 10
           },
           "cha" : {
@@ -48,14 +40,14 @@
             "label" : "ARIA.stats.cha.label",
             "abbrev" : "ARIA.stats.cha.abbrev",
             "base": 10,
-            "racial": 0,
-            "bonus": 0,
             "value": 10
           }
         }
       },
       "common": {
         "description": "",
+        "genial": "",
+        "mais": "",
         "attributes": {
           "hp": {
             "key" : "hp",
@@ -118,16 +110,12 @@
     "character": {
       "templates": [
         "stats",
-        "attacks",
-        "xp",
         "common"
       ]
     },
     "npc": {
       "templates": [
         "stats",
-        "attacks",
-        "xp",
         "common"
       ]
     }
