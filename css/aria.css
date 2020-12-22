@@ -786,7 +786,7 @@ strong {
   padding: 0 0px 0 0px;
 }
 
-.aria.actor .window-content > form .wrap .main .sidebar .profile-img {
+.aria.actor .window-content > form .wrap .main .sidebar .profession-img {
   cursor: pointer;
   border: none;
   max-height: 330px;
@@ -1313,7 +1313,7 @@ strong {
 
 .aria.actor .species-controls,
 .aria.actor .path-controls,
-.aria.actor .profile-controls {
+.aria.actor .profession-controls {
   color: #464331c4;
   visibility: hidden;
   -webkit-box-flex: 0;
@@ -1324,7 +1324,7 @@ strong {
 
 .aria.actor div:hover > div.species-controls,
 .aria.actor div:hover > span.path-controls,
-.aria.actor div:hover > div.profile-controls {
+.aria.actor div:hover > div.profession-controls {
   visibility: visible;
 }
 
@@ -1443,7 +1443,7 @@ strong {
   flex: 1;
 }
 
-.aria.item .window-content .sheet-header img.profile {
+.aria.item .window-content .sheet-header img.profession {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 64px;
   flex: 0 0 64px;

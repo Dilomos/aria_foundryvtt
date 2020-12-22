@@ -38,8 +38,8 @@ export const registerHandlebarsHelpers = function () {
         return items.filter(item => item.type === "item");
     });
 
-    Handlebars.registerHelper('getProfile', function (items) {
-        return items.find(item => item.type === "profile");
+    Handlebars.registerHelper('getProfession', function (items) {
+        return items.find(item => item.type === "profession");
     });
       
     Handlebars.registerHelper('getCapacities', function (items) {
@@ -156,8 +156,8 @@ export const registerHandlebarsHelpers = function () {
         return str.split(separator)[keep];
     });
 
-    Handlebars.registerHelper('listProfiles', function () {
-        return Traversal.getAllProfilesData()
+    Handlebars.registerHelper('listProfessions', function () {
+        return Traversal.getAllProfessionsData()
     });
 
     Handlebars.registerHelper('listSpecies', function () {

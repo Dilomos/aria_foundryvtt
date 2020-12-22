@@ -8,15 +8,15 @@ export class UpdateUtils {
         });
     }
 
-    static updateProfiles() {
-        game.packs.get("aria.profiles").getContent().then(index => {
+    static updateProfessions() {
+        game.packs.get("aria.professions").getContent().then(index => {
             index.forEach(entity => {
                 const paths = game.aria.config.paths.filter(p => {
-                    return p.data.profile === entity.data.data.key;
+                    return p.data.profession === entity.data.data.key;
                 });
-                let profile = duplicate(entity.data);
-                profile.data.paths = paths.map(c => c._id);
-                entity.update(profile);
+                let profession = duplicate(entity.data);
+                profession.data.paths = paths.map(c => c._id);
+                entity.update(profession);
             })
         });
     }

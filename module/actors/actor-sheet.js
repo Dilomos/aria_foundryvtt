@@ -3,7 +3,7 @@
  * @extends {ActorSheet}
  */
 import {Capacity} from "../controllers/capacity.js";
-import {Profile} from "../controllers/profile.js";
+import {Profession} from "../controllers/profession.js";
 import {Species} from "../controllers/species.js";
 import {AriaRoll} from "../controllers/roll.js";
 import {Traversal} from "../utils/traversal.js";
@@ -146,8 +146,8 @@ export class AriaActorSheet extends ActorSheet {
             case "path" :
                 return Path.removeFromActor(this.actor, event, entity);
                 break;
-            case "profile" :
-                return Profile.removeFromActor(this.actor, event, entity);
+            case "profession" :
+                return Profession.removeFromActor(this.actor, event, entity);
                 break;
             case "species" :
                 return Species.removeFromActor(this.actor, event, entity);
@@ -232,8 +232,8 @@ export class AriaActorSheet extends ActorSheet {
         const item = await Item.fromDropData(data);
         const itemData = duplicate(item.data);
         switch (itemData.type) {
-            case "profile" :
-                return await Profile.addToActor(this.actor, event, itemData);
+            case "profession" :
+                return await Profession.addToActor(this.actor, event, itemData);
             case "species" :
                 return await Species.addToActor(this.actor, event, itemData);
             case "capacity" :

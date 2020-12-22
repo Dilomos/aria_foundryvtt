@@ -125,7 +125,7 @@
       "item",
       "capacity",
       "species",
-      "profile"
+      "profession"
     ],
     "templates": {
       "base" : {
@@ -203,7 +203,7 @@
       "link2": "",
       "score": 0
     },
-    "profile": {
+    "profession": {
       "templates": [
         "base"
       ],

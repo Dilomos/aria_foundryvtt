@@ -118,8 +118,8 @@ export class AriaItemSheet extends ItemSheet {
         switch (itemData.type) {
             case "path"    :
                 return await this._onDropPathItem(event, itemData);
-            case "profile" :
-                return await this._onDropProfileItem(event, itemData);
+            case "profession" :
+                return await this._onDropProfessionItem(event, itemData);
             case "species" :
                 return await this._onDropSpeciesItem(event, itemData);
             case "capacity" :
@@ -141,7 +141,7 @@ export class AriaItemSheet extends ItemSheet {
 
     /* -------------------------------------------- */
 
-    _onDropProfileItem(event, itemData) {
+    _onDropProfessionItem(event, itemData) {
         return false;
     }
 
@@ -157,12 +157,12 @@ export class AriaItemSheet extends ItemSheet {
         event.preventDefault();
         let data = duplicate(this.item.data);
         const id = itemData._id;
-        if(data.type === "profile" || data.type === "species"){
+        if(data.type === "profession" || data.type === "species"){
             if(!data.data.paths.includes(id)){
                 data.data.paths.push(id);
                 return this.item.update(data);
             }
-            else ui.notifications.error("Ce profil contient déjà cette voie.")
+            else ui.notifications.error("Cette profession contient déjà cette voie.")
         }
         return false;
     }
@@ -191,7 +191,7 @@ export class AriaItemSheet extends ItemSheet {
         let pack = null;
         switch(itemType){
             case "species" : pack = "aria.species"; break;
-            case "profile" : pack = "aria.profiles"; break;
+            case "profession" : pack = "aria.professions"; break;
             case "path" : pack = "aria.paths"; break;
             case "capacity" : pack = "aria.capacities"; break;
         }

@@ -34,12 +34,12 @@
       "tag" : "item"
     },
     {
-      "name": "profiles",
+      "name": "professions",
       "label": "Professions",
       "system": "aria",
-      "path": "./packs/profiles.db",
+      "path": "./packs/professions.db",
       "entity": "Item",
-      "tag" : "profile"
+      "tag" : "profession"
     },
     {
       "name": "species",

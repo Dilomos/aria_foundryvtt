@@ -24,15 +24,10 @@ export const preloadHandlebarsTemplates = async function () {
         "systems/aria/templates/actors/character/parts/inventory/character-inventory.hbs",
         "systems/aria/templates/actors/character/parts/inventory/character-inventory-item.hbs",
 
-        // ITEMS PROPERTIES
-        "systems/aria/templates/items/parts/properties/item-properties.hbs",
-        "systems/aria/templates/items/parts/properties/capacity-properties.hbs",
-        "systems/aria/templates/items/parts/properties/profile-properties.hbs",
-
         // ITEMS DETAILS
         "systems/aria/templates/items/parts/details/item-details.hbs",
         "systems/aria/templates/items/parts/details/capacity-details.hbs",
-        "systems/aria/templates/items/parts/details/profile-details.hbs",
+        "systems/aria/templates/items/parts/details/profession-details.hbs",
         "systems/aria/templates/items/parts/details/protection-details.hbs",
         "systems/aria/templates/items/parts/details/ranged-details.hbs",
         "systems/aria/templates/items/parts/details/species-details.hbs",

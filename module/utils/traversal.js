@@ -55,9 +55,9 @@ export class Traversal {
         return ingame.concat(compendium);
     }
 
-    static getAllProfilesData () {
-        const compendium = game.aria.config.profiles;
-        const ingame = this.getInGameEntitiesDataOfType("profile");
+    static getAllProfessionsData () {
+        const compendium = game.aria.config.professions;
+        const ingame = this.getInGameEntitiesDataOfType("profession");
         return ingame.concat(compendium);
     }
 

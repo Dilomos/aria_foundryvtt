@@ -1,6 +1,6 @@
 <form class="{{cssClass}}" autocomplete="off">
     <header class="sheet-header flexrow header-background no-wrap">
-        <img class="profile" src="{{item.img}}" title="{{item.name}}" data-edit="img">
+        <img class="profession" src="{{item.img}}" title="{{item.name}}" data-edit="img">
         <div class="header-details flexrow">
             <h1 class="charname">
                 <input name="name" type="text" value="{{item.name}}" placeholder="Item Name"/>
@@ -28,8 +28,8 @@
             {{#if (equals item.type "capacity")}}
                 {{> "systems/aria/templates/items/parts/details/capacity-details.hbs"}}
             {{/if}}
-            {{#if (equals item.type "profile")}}
-                {{> "systems/aria/templates/items/parts/details/profile-details.hbs"}}
+            {{#if (equals item.type "profession")}}
+                {{> "systems/aria/templates/items/parts/details/profession-details.hbs"}}
             {{/if}}
             {{#if (equals item.type "species")}}
                 {{> "systems/aria/templates/items/parts/details/species-details.hbs"}}

@@ -58,7 +58,7 @@ Hooks.once("init", async function () {
     });
     // Register item sheets
     Items.registerSheet("aria", AriaItemSheet, {
-        types: ["item", "capacity", "profile", "species"],
+        types: ["item", "capacity", "profession", "species"],
         makeDefault: true,
         label: "ARIA.SheetClassItem"
     });

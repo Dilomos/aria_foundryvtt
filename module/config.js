@@ -42,22 +42,22 @@ ARIA.itemProperties = {
     "bashing": "ARIA.properties.bashing",
     "sling": "ARIA.properties.sling",
     "spell": "ARIA.properties.spell",
-    "profile": "ARIA.properties.profile",
+    "profession": "ARIA.properties.profession",
     "prestige": "ARIA.properties.prestige",
     "alternative": "ARIA.properties.alternative",
     "racial": "ARIA.properties.racial",
     "creature" : "ARIA.properties.creature"
 };
 
-ARIA.profiles = [];
+ARIA.professions = [];
 ARIA.species = [];
 ARIA.capacities = [];
 
-// Mise en cache des données de profil
-ARIA.getProfiles = async function () {
-    let profiles = await game.packs.get("aria.profiles").getContent().then(index => index.map(entity => entity.data));
-    ARIA.profiles = profiles;
-    console.debug("Profiles loaded");
+// Mise en cache des données de profession
+ARIA.getProfessions = async function () {
+    let professions = await game.packs.get("aria.professions").getContent().then(index => index.map(entity => entity.data));
+    ARIA.professions = professions;
+    console.debug("Professions loaded");
 };
 
 // Mise en cache des données de races
@@ -77,7 +77,7 @@ ARIA.getCapacities = async function () {
 
 ARIA.itemTypes = {
     "species": "ARIA.category.species",
-    "profile": "ARIA.category.profile",
+    "profession": "ARIA.category.profession",
     "capacity": "ARIA.category.capacity",
     "trapping": "ARIA.category.trapping",
     "melee": "ARIA.category.melee",

@@ -351,7 +351,7 @@
 
 .species-controls,
 .path-controls,
-.profile-controls {
+.profession-controls {
   color: $c-darkbrown;
   visibility: hidden;
   flex: 0 0 18px;
@@ -359,7 +359,7 @@
 }
 div:hover>div.species-controls,
 div:hover>span.path-controls,
-div:hover>div.profile-controls {
+div:hover>div.profession-controls {
   visibility: visible;
 }
 
