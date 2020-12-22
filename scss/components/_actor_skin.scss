@@ -149,6 +149,73 @@
         font-size: 16px;
         font-weight: bold;
         color: $c-black;
+        position: relative;
+      }
+
+      .competence_name .comp_tooltiptext {
+        visibility: hidden;
+        width: 500px;
+        //background-color: $c-greenbluelowtrans;
+        background: url("../ui/fond_hover_comp.png");
+        background-size: cover;
+        color: #fffdea;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 10;
+        bottom: 0;
+        left: 182%;
+        margin-left: 0px;
+        opacity: 0;
+      }
+
+      
+      .competence_name:hover .comp_tooltiptext {
+        visibility: visible;
+        opacity: 1;
+        transition: 1s;
+        p{
+          margin:0 5px 0 5px;
+          text-shadow: initial;
+          cursor: auto;
+          font-weight: 100;
+          line-height: 18px;
+        }
+      }
+
+      .competence_name .compspe_tooltiptext {
+        visibility: hidden;
+        width: 445px;
+        //background-color: $c-greenbluelowtrans;
+        background: url("../ui/fond_hover_comp.png");
+        background-size: cover;
+        color: #fffdea;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 10;
+        top: 0%;
+        left: 0%;
+        margin-left: -465px;
+        opacity: 0;
+      }
+
+      
+      .competence_name:hover .compspe_tooltiptext {
+        visibility: visible;
+        opacity: 1;
+        transition: 1s;
+        p{
+          margin:0 5px 0 5px;
+          text-shadow: initial;
+          cursor: auto;
+          font-weight: 100;
+          line-height: 18px;
+        }
+      }
+
+      .item-delete:hover{
+        text-shadow: 0 0 8px $c-red;
       }
 
       .header {

@@ -15,10 +15,10 @@
                     <li class="item flexrow" data-item-id="{{competence._id}}" data-item-type="item">
                         <div class="rollable no-wrap" title="{{competence.name}}" data-rolling-value="{{competence.data.score}}" data-roll-type="competencycheck">
                             <div class="flexrow no-wrap ">
-                                <div class="icon_d100" title="{{competence.name}}">
+                                <div class="icon_d100">
                                 </div>
-                                <div class="field-label no-wrap left competence_name" title="{{competence.name}}">
-                                    {{competence.name}}
+                                <div class="field-label no-wrap left competence_name">{{competence.name}}
+                                    <span class="comp_tooltiptext">{{{competence.data.description}}}</span>
                                 </div>
                             </div>
                         </div>
@@ -55,10 +55,10 @@
                         
                         <div class="flex1 rollable no-wrap" title="{{competence.name}}" data-rolling-value="{{competence.data.score}}" data-roll-type="competencycheck">
                             <div class="flexrow no-wrap ">
-                                <div class="icon_d100" title="{{competence.name}}">
+                                <div class="icon_d100">
                                 </div>
-                                <div class="field-label no-wrap left competence_name" title="{{competence.name}}">
-                                    {{competence.name}}
+                                <div class="field-label no-wrap left competence_name">{{competence.name}}
+                                    <span class="compspe_tooltiptext">{{{competence.data.description}}}</span>
                                 </div>
                             </div>
                         </div>

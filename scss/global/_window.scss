@@ -2,14 +2,14 @@
 
 
   a:hover {
-    text-shadow: 0 0 8px $c-linkshadow;
+    text-shadow: 0 0 8px $c-greenblue;
   }
 
   .rollable {
     &:hover,
     &:focus {
       //color: #000;
-      text-shadow: 0 0 8px $c-linkshadow;
+      text-shadow: 0 0 8px $c-greenblue;
       cursor: pointer;
     }
   }

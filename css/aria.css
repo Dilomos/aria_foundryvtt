@@ -209,11 +209,11 @@ strong {
 
 /* Global styles */
 .window-app a:hover {
-  text-shadow: 0 0 8px gray;
+  text-shadow: 0 0 8px #4f7783;
 }
 
 .window-app .rollable:hover, .window-app .rollable:focus {
-  text-shadow: 0 0 8px gray;
+  text-shadow: 0 0 8px #4f7783;
   cursor: pointer;
 }
 
@@ -1084,6 +1084,75 @@ strong {
   font-size: 16px;
   font-weight: bold;
   color: #000;
+  position: relative;
+}
+
+.aria.actor .window-content > form .wrap .competence_name .comp_tooltiptext {
+  visibility: hidden;
+  width: 500px;
+  background: url("../ui/fond_hover_comp.png");
+  background-size: cover;
+  color: #fffdea;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  left: 182%;
+  margin-left: 0px;
+  opacity: 0;
+}
+
+.aria.actor .window-content > form .wrap .competence_name:hover .comp_tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+
+.aria.actor .window-content > form .wrap .competence_name:hover .comp_tooltiptext p {
+  margin: 0 5px 0 5px;
+  text-shadow: initial;
+  cursor: auto;
+  font-weight: 100;
+  line-height: 18px;
+}
+
+.aria.actor .window-content > form .wrap .competence_name .compspe_tooltiptext {
+  visibility: hidden;
+  width: 445px;
+  background: url("../ui/fond_hover_comp.png");
+  background-size: cover;
+  color: #fffdea;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 10;
+  top: 0%;
+  left: 0%;
+  margin-left: -465px;
+  opacity: 0;
+}
+
+.aria.actor .window-content > form .wrap .competence_name:hover .compspe_tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+
+.aria.actor .window-content > form .wrap .competence_name:hover .compspe_tooltiptext p {
+  margin: 0 5px 0 5px;
+  text-shadow: initial;
+  cursor: auto;
+  font-weight: 100;
+  line-height: 18px;
+}
+
+.aria.actor .window-content > form .wrap .item-delete:hover {
+  text-shadow: 0 0 8px #cd071e;
 }
 
 .aria.actor .window-content > form .wrap .header #banner-left {
@@ -2025,11 +2094,22 @@ strong {
   padding: 5px;
 }
 
+.aria .inventory-list:before,
+.aria .inventory-list:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+.aria .inventory-list:after {
+  clear: both;
+}
+
 .aria .inventory-list {
   list-style: none;
   margin: 0;
   padding: 0 5px;
-  overflow-y: auto;
   scrollbar-width: thin;
   color: #7a7971;
 }
@@ -2069,14 +2149,6 @@ strong {
   white-space: nowrap;
 }
 
-.aria .inventory-list .item .item-name.rollable:hover .item-image {
-  background-image: url("../../../icons/svg/d20-grey.svg") !important;
-}
-
-.aria .inventory-list .item .item-name.rollable .item-image:hover {
-  background-image: url("../../../icons/svg/d20-black.svg") !important;
-}
-
 .aria .inventory-list .item .item-name i.attuned {
   color: #7a7971;
 }
@@ -2101,7 +2173,8 @@ strong {
 }
 
 .aria .inventory-list .inventory-header {
-  margin: 2px 0;
+  margin-top: 2px;
+  margin-bottom: -5px;
   padding: 0;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2129,6 +2202,7 @@ strong {
   -ms-flex: 0 0 80px;
   flex: 0 0 80px;
   font-size: 12px;
+  margin-top: 4px;
   color: #000;
   text-align: center;
   border-right: 1px solid #c9c7b8;
@@ -2210,6 +2284,10 @@ strong {
   -webkit-box-flex: 4;
   -ms-flex: 4;
   flex: 4;
+}
+
+.aria .inventory-list .item-controls .item-control {
+  margin-top: 6px;
 }
 
 .aria .inventory-list .item-controls a {
