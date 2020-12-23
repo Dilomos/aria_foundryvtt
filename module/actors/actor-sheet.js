@@ -100,6 +100,16 @@ export class AriaActorSheet extends ActorSheet {
             return this.actor.updateOwnedItem(itemData).then(() => this.render(true));
         });
 
+        html.find('.capa_score').change(ev => {
+            ev.preventDefault();
+            const li = $(ev.currentTarget).closest(".item");
+            const item = this.actor.getOwnedItem(li.data("itemId"));
+            let itemData = item.data;
+            itemData.data.score = ev.currentTarget.value;
+            return this.actor.updateOwnedItem(itemData).then(() => this.render(true));
+        });
+        
+
         html.find('.item-name, .item-edit').click(this._onEditItem.bind(this));
         
         html.find('.item-delete').click(ev => {

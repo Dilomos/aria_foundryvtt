@@ -1119,6 +1119,14 @@ strong {
   line-height: 18px;
 }
 
+.aria.actor .window-content > form .wrap .competence_name:hover .comp_tooltiptext h1 {
+  margin: 0 5px 0 5px;
+  font-weight: 700;
+  line-height: 18px;
+  font-size: 16px;
+  border-bottom: 1px solid #000000;
+}
+
 .aria.actor .window-content > form .wrap .competence_name .compspe_tooltiptext {
   visibility: hidden;
   width: 445px;
@@ -1149,6 +1157,14 @@ strong {
   cursor: auto;
   font-weight: 100;
   line-height: 18px;
+}
+
+.aria.actor .window-content > form .wrap .competence_name:hover .compspe_tooltiptext h1 {
+  margin: 0 5px 0 5px;
+  font-weight: 700;
+  line-height: 18px;
+  font-size: 16px;
+  border-bottom: 1px solid #000000;
 }
 
 .aria.actor .window-content > form .wrap .item-delete:hover {
