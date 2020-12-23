@@ -30,7 +30,6 @@ export const preloadHandlebarsTemplates = async function () {
         "systems/aria/templates/items/parts/details/origines-details.hbs",
         "systems/aria/templates/items/parts/details/equipment-details.hbs",
         "systems/aria/templates/items/parts/details/weapon-details.hbs",
-        "systems/aria/templates/items/parts/details/usage-details.hbs",
         "systems/aria/templates/items/parts/details/effects-details.hbs",
     ];
 

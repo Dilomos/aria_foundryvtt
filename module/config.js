@@ -16,7 +16,7 @@ ARIA.itemProperties = {
     "stackable": "ARIA.properties.stackable",
     "unique": "ARIA.properties.unique",
     "tailored": "ARIA.properties.tailored",
-    "2h": "ARIA.properties.2H",
+    "2h": "ARIA.properties.2Handed",
     "predilection": "ARIA.properties.predilection",
     "ranged": "ARIA.properties.ranged",
     "proficient": "ARIA.properties.proficient",
@@ -37,7 +37,7 @@ ARIA.itemProperties = {
     "specialization": "ARIA.properties.specialization",
     "effects": "ARIA.properties.effects",
     "activable": "ARIA.properties.activable",
-    "2H": "ARIA.properties.2H",
+    "2Handed": "ARIA.properties.2Handed",
     "13strmin": "ARIA.properties.13strmin",
     "bashing": "ARIA.properties.bashing",
     "sling": "ARIA.properties.sling",
@@ -76,7 +76,7 @@ ARIA.getCompetences = async function () {
 };
 
 ARIA.itemTypes = {
-    "origines": "ARIA.category.origines",
+    "origine": "ARIA.category.origines",
     "profession": "ARIA.category.profession",
     "competence": "ARIA.category.competence",
     "trapping": "ARIA.category.trapping",

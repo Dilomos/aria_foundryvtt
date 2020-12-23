@@ -79,7 +79,7 @@ export class AriaActorSheet extends ActorSheet {
             const elt = $(ev.currentTarget).parents(".item");
             const item = this.actor.getOwnedItem(elt.data("itemId"));
             let itemData = item.data;
-            itemData.data.worn = !itemData.data.worn;
+            itemData.data.equiped = !itemData.data.equiped;
             return this.actor.updateOwnedItem(itemData).then(() => this.render(true));
         });
 

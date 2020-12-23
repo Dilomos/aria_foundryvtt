@@ -24,14 +24,14 @@ export const registerHandlebarsHelpers = function () {
         return inventory;
     });
 
-    Handlebars.registerHelper('getWorn', function (items) {
-        let worn = items.filter(item => item.type === "item" && item.data.worn);
-        worn.sort(function (a, b) {
+    Handlebars.registerHelper('getEquiped', function (items) {
+        let equiped = items.filter(item => item.type === "item" && item.data.equiped);
+        equiped.sort(function (a, b) {
             const aKey = a.data.subtype + "-" + a.name.slugify({strict: true});
             const bKey = b.data.subtype + "-" + b.name.slugify({strict: true});
             return (aKey > bKey) ? 1 : -1
         });
-        return worn;
+        return equiped;
     });
 
     Handlebars.registerHelper('getItems', function (items) {
@@ -68,7 +68,7 @@ export const registerHandlebarsHelpers = function () {
     Handlebars.registerHelper('getEquipedWeapons', function (items) {
         let caps = items.filter(item => item.type === "item");
         let weapons = caps.filter(item => item.data.properties.weapon === true);
-        let equipedWeapons = weapons.filter(item => item.data.worn === true);
+        let equipedWeapons = weapons.filter(item => item.data.equiped === true);
         return equipedWeapons;
     });
 

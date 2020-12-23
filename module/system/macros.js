@@ -19,7 +19,7 @@ export class Macros {
         if (!item) return ui.notifications.warn(`${game.i18n.localize("ARIA.notification.MacroItemMissing")}: "${itemName}"`);
         const itemData = item.data;
         if(itemData.data.properties.weapon){
-            if(itemData.data.worn){
+            if(itemData.data.equiped){
                 let label = itemData.name;
                 let mod = itemData.data.mod;
                 let critrange = itemData.data.critrange;
