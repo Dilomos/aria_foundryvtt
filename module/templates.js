@@ -18,9 +18,6 @@ export const preloadHandlebarsTemplates = async function () {
 
         "systems/aria/templates/actors/character/parts/competences/character-competences.hbs",
 
-        "systems/aria/templates/actors/character/parts/combat/character-combat.hbs",
-        "systems/aria/templates/actors/character/parts/combat/character-combat-item.hbs",
-
         "systems/aria/templates/actors/character/parts/inventory/character-inventory.hbs",
         "systems/aria/templates/actors/character/parts/inventory/character-inventory-item.hbs",
 
