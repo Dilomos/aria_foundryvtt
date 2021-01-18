@@ -8,8 +8,8 @@
             <div class="item-subtitle">
                 <h4 class="item-type">{{localize (concat "ARIA.category." item.type)}}</h4>
                 <span class="item-status">
-                    {{#if item.subtype}}
-                        {{localize (concat "ARIA.category." item.subtype)}}
+                    {{#if item.data.subtype}}
+                        {{localize (concat "ARIA.category." item.data.subtype)}}
                     {{/if}}
                 </span>
             </div>

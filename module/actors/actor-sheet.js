@@ -105,7 +105,8 @@ export class AriaActorSheet extends ActorSheet {
             const li = $(ev.currentTarget).closest(".item");
             const item = this.actor.getOwnedItem(li.data("itemId"));
             let itemData = item.data;
-            itemData.data.score = ev.currentTarget.value;
+            itemData.data.score = (ev.currentTarget.value > 0) ? ev.currentTarget.value : 0;
+            itemData.data.score = (itemData.data.score < 100) ? itemData.data.score : 100;
             return this.actor.updateOwnedItem(itemData).then(() => this.render(true));
         });
         

@@ -2143,7 +2143,7 @@ strong {
 
 .aria .inventory-list .item .item-name {
   cursor: pointer;
-  max-height: 22px;
+  max-height: 25px;
   overflow: hidden;
 }
 
@@ -2153,6 +2153,7 @@ strong {
   flex: 0 0 22px;
   background-size: 22px;
   margin-right: 5px;
+  padding: 1px;
 }
 
 .aria .inventory-list .item .item-name h4 {
@@ -2190,7 +2191,6 @@ strong {
 
 .aria .inventory-list .inventory-header {
   margin-top: 2px;
-  margin-bottom: -5px;
   padding: 0;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2213,6 +2213,12 @@ strong {
   border-right: 1px solid #c9c7b8;
 }
 
+.aria .inventory-list .item-name .item-category {
+  text-align: left;
+  padding-right: 5px;
+  font-weight: 100;
+}
+
 .aria .inventory-list .item-detail {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 80px;
@@ -2225,6 +2231,7 @@ strong {
   word-break: break-word;
   white-space: nowrap;
   overflow: hidden;
+  max-height: 25px;
 }
 
 .aria .inventory-list .item-detail:last-child {
@@ -2270,6 +2277,7 @@ strong {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
+  max-height: 25px;
 }
 
 .aria .inventory-list .item-controls > * {

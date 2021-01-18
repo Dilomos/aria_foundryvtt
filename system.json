@@ -26,12 +26,60 @@
       "tag" : "competence"
     },
     {
-      "name": "items",
-      "label": "Equipements",
+      "name": "accessoires",
+      "label": "Accessoires",
       "system": "aria",
-      "path": "./packs/items.db",
+      "path": "./packs/accessoires.db",
       "entity": "Item",
-      "tag" : "item"
+      "tag" : "accessoires"
+    },
+    {
+      "name": "arme",
+      "label": "Armes",
+      "system": "aria",
+      "path": "./packs/armes.db",
+      "entity": "Item",
+      "tag" : "armes"
+    },
+    {
+      "name": "armesdist",
+      "label": "Armes à distance",
+      "system": "aria",
+      "path": "./packs/armes_distance.db",
+      "entity": "Item",
+      "tag" : "armes"
+    },
+    {
+      "name": "armure",
+      "label": "Armures",
+      "system": "aria",
+      "path": "./packs/armures.db",
+      "entity": "Item",
+      "tag" : "armures"
+    },
+    {
+      "name": "vetement",
+      "label": "Vêtements",
+      "system": "aria",
+      "path": "./packs/vetements.db",
+      "entity": "Item",
+      "tag" : "vetements"
+    },
+    {
+      "name": "nourriture",
+      "label": "Nourriture",
+      "system": "aria",
+      "path": "./packs/nourritures.db",
+      "entity": "Item",
+      "tag" : "nourritures"
+    },
+    {
+      "name": "deplacement",
+      "label": "Déplacements",
+      "system": "aria",
+      "path": "./packs/deplacements.db",
+      "entity": "Item",
+      "tag" : "deplacements"
     },
     {
       "name": "professions",

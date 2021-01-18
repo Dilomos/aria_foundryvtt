@@ -1,10 +1,14 @@
 <ol class="item-list">
     <li class="item flexrow" data-item-id="{{_id}}" draggable="true">
         <div class="item-name flexrow">
-            <div class="item-image" style="background-image: url('{{img}}')"></div>
+            <div class="item-image flex1" style="background: center/contain no-repeat url('{{img}}')"></div>
             <h4>{{name}}</h4>
+
+             {{#if data.subtype}}
+                <div class="item-category flex2">{{localize (concat "ARIA.category." data.subtype)}}</div>
+            {{/if}}
         </div>
-        {{localize (concat "ARIA.category." data.subtype)}}
+           
         <div class="item-detail {{#if data.properties.stackable}}item-qty unlocked{{else}}locked{{/if}}">
             {{#if data.properties.stackable}}{{data.qty}}{{/if}}
         </div>

@@ -13,8 +13,8 @@ export class AriaItemSheet extends ItemSheet {
         return mergeObject(super.defaultOptions, {
             classes: ["aria", "sheet", "item", this.type],
             template: System.templatesPath + "/items/item-sheet.hbs",
-            width: 600,
-            height: 600,
+            width: 530,
+            height: 800,
             tabs: [{navSelector: ".sheet-navigation", contentSelector: ".sheet-body", initial: "description"}],
             dragDrop: [{dragSelector: ".item-list .item", dropSelector: null}]
         });
