@@ -60,7 +60,13 @@ export class AriaActorSheet extends ActorSheet {
         // Initiate a roll
         html.find('.rollable').click(ev => {
             ev.preventDefault();
-            return this._onRoll(ev);
+            return this._onRoll(ev,false);
+        });
+
+        // Initiate a roll
+        html.find('.rollable').contextmenu(ev => {
+            ev.preventDefault();
+            return this._onRoll(ev,true);
         });
 
         html.find('.competence-create').click(ev => {
@@ -175,14 +181,97 @@ export class AriaActorSheet extends ActorSheet {
      * @param event the roll event
      * @private
      */
-    _onRoll(event) {
+    _onRoll(event,forceConfig) {
         const elt = $(event.currentTarget)[0];
         const rolltype = elt.attributes["data-roll-type"].value;
         switch (rolltype) {
             case "skillcheck" :
-                return AriaRoll.skillCheck(this.getData().data, this.actor, event);
+                let chooseDifDialog = new Dialog({
+                    title: "Difficulté",
+                    content: "<p>Choisissez le multiple de caractéristique</p>",
+                    buttons: {
+                     one: {
+                      icon: '<i class="fas fa-times"></i>',
+                      label: "1",
+                      callback: () => AriaRoll.skillCheck(this.getData().data, this.actor, event, 1)
+                     },
+                     two: {
+                      icon: '<i class="fas fa-times"></i>',
+                      label: "2",
+                      callback: () => AriaRoll.skillCheck(this.getData().data, this.actor, event, 2)
+                     },
+                     three: {
+                      icon: '<i class="fas fa-times"></i>',
+                      label: "3",
+                      callback: () => AriaRoll.skillCheck(this.getData().data, this.actor, event, 3)
+                     },
+                     four: {
+                      icon: '<i class="fas fa-times"></i>',
+                      label: "4",
+                      callback: () => AriaRoll.skillCheck(this.getData().data, this.actor, event, 4)
+                     },
+                     five: {
+                      icon: '<i class="fas fa-times"></i>',
+                      label: "5",
+                      callback: () => AriaRoll.skillCheck(this.getData().data, this.actor, event, 5)
+                     },
+                    },
+                    default: "five",
+                   });
+               chooseDifDialog.render(true);
+               break;
+
+                //return AriaRoll.skillCheck(this.getData().data, this.actor, event);
             case "competencycheck" :
-                return AriaRoll.competencyCheck(this.getData().items, this.actor, event);
+                if(forceConfig)
+                {
+                    let chooseDifDialog = new Dialog({
+                        title: "Modificateur de difficulté",
+                        content: "<p>Choisissez le modificateur à appliquer au jet de compétence</p>",
+                        buttons: {
+                         one: {
+                          icon: '<i class="fas fa-minus"></i>',
+                          label: "30",
+                          callback: () => AriaRoll.competencyCheck(this.getData().items, this.actor, event, -30)
+                         },
+                         two: {
+                          icon: '<i class="fas fa-minus"></i>',
+                          label: "20",
+                          callback: () => AriaRoll.competencyCheck(this.getData().items, this.actor, event, -20)
+                         },
+                         three: {
+                          icon: '<i class="fas fa-minus"></i>',
+                          label: "10",
+                          callback: () => AriaRoll.competencyCheck(this.getData().items, this.actor, event, -10)
+                         },
+                         four: {
+                          label: "aucun",
+                          callback: () => AriaRoll.competencyCheck(this.getData().items, this.actor, event, +0)
+                         },
+                         five: {
+                          icon: '<i class="fas fa-plus"></i>',
+                          label: "10",
+                          callback: () => AriaRoll.competencyCheck(this.getData().items, this.actor, event, +10)
+                         },
+                         six: {
+                            icon: '<i class="fas fa-plus"></i>',
+                            label: "20",
+                            callback: () => AriaRoll.competencyCheck(this.getData().items, this.actor, event, +20)
+                           },
+                        seven: {
+                            icon: '<i class="fas fa-plus"></i>',
+                            label: "30",
+                            callback: () => AriaRoll.competencyCheck(this.getData().items, this.actor, event, +30)
+                           },
+                        },
+                        default: "five",
+                       });
+                   chooseDifDialog.render(true);
+                   break;
+                }
+                else{
+                    return AriaRoll.competencyCheck(this.getData().items, this.actor, event,0);
+                }
             case "weapon" :
                 return AriaRoll.rollWeapon(this.getData().data, this.actor, event);
         }

@@ -1,5 +1,5 @@
 {
-  "ARIA.title": "Chroniques Oubliées Fantasy",
+  "ARIA.title": "Aria",
 
   "ARIA.ui.na": "N.A.",
   "ARIA.ui.cancel": "Cancel",
@@ -19,6 +19,7 @@
   "ARIA.ui.bonus": "Bonus",
   "ARIA.ui.malus": "Malus",
   "ARIA.ui.difficulty": "Difficulty",
+  "ARIA.ui.roll": "Roll",
   "ARIA.ui.kh": "Keep Highest",
   "ARIA.ui.kl": "Keep Lowest",
   "ARIA.ui.base": "Base",

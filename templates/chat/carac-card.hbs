@@ -1,0 +1,30 @@
+<div class="chat-card" data-actor-id="{{actor._id}}">
+    <header class="card-header flexrow">
+        <img src="{{actor.img}}" title="{{actor.name}}"/>
+         <div class="flexcol">
+            <div>
+                <h2>Jet = 
+                {{#if isSuccess}}
+                    {{#if isCritical}} 
+                        <span class="success critical">{{result}} : Critique !!</span>
+                    {{else}}
+                        <span class="success">{{result}} : Succès !</span>
+                    {{/if}}
+                {{else}}
+                    {{#if isFumble}}
+                        <span class="failure fumble">{{result}} : Echec critique !!</span>
+                    {{else}}
+                        <span class="failure">{{result}} : Echec...</span>
+                    {{/if}}
+                {{/if}}   
+                </h2>
+            </div>
+            <div>
+              <p>
+                  <strong>{{label}}</strong><br>
+                  Difficulté : {{calcLabel}} = <strong>{{cmpValue}}</strong>
+                </p>
+            </div>
+         </div>
+    </header>
+</div>

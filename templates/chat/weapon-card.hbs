@@ -1,0 +1,26 @@
+<div class="chat-card" data-actor-id="{{actor._id}}">
+    <header class="card-header flexrow">
+        <img src="{{actor.img}}" title="{{actor.name}}"/>
+        
+        <div class="flexcol">
+            <div class="flexrow">
+                 <h2>Jet de Dégats = 
+                 {{#if isFumble}}
+                   <span class="failure">
+                {{else}}
+                     <span class="success">
+                {{/if}}
+                {{result}}</span></h2>
+            </div>
+            <div class="flexrow">
+                <div class="flexcol">
+                <strong class="item-name">{{label}}</strong>
+                <br>
+                {{formula}}
+                </div>
+                <img class="item-img" src="{{img}}" title="{{label}}"/>
+            </div>
+        </div>
+        
+    </header>
+</div>

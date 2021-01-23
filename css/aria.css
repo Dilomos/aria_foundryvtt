@@ -542,34 +542,80 @@ strong {
   flex-wrap: nowrap !important;
 }
 
-.message-header h2.damage {
+.chat-card {
+  font-style: normal;
+  font-size: 14px;
+}
+
+.chat-card .card-header {
+  padding: 3px 0;
+  border-top: 2px groove #FFF;
+  border-bottom: 2px groove #FFF;
+}
+
+.chat-card .card-header img {
+  margin-right: 5px;
+  display: block;
+  max-width: 64px;
+  max-height: 128px;
+  width: auto;
+  height: auto;
+}
+
+.chat-card .card-header .item-img {
+  max-width: 64px;
+  max-height: 64px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.chat-card .card-header .item-name {
+  line-height: 48px;
+}
+
+.chat-card .card-header h3 {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin: 0;
+}
+
+.chat-card .card-header h2 {
+  max-height: 27px;
+}
+
+.chat-card .card-header .damage {
   color: orangered;
   font-weight: bold;
 }
 
-.message-header h2.critical {
+.chat-card .card-header .critical {
   color: green;
   font-weight: bold;
 }
 
-.message-header h2.fumble {
+.chat-card .card-header .fumble {
   color: red;
   font-weight: bold;
 }
 
-.message-header h2.success {
+.chat-card .card-header .success {
   color: darkgreen;
   font-weight: bold;
 }
 
-.message-header h2.failure {
+.chat-card .card-header .failure {
   color: darkred;
   font-weight: bold;
 }
 
-.message-header h2.roll {
+.chat-card .card-header .roll {
   color: darkslategrey;
   font-weight: bold;
+}
+
+.chat-message.message-header.message-sender {
+  color: red;
 }
 
 /* Styles limited to aria sheets */

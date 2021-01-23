@@ -134,7 +134,7 @@
       },
       "equipment" : {
         "def" : 0,
-        "dmg": "",
+        "dmgBase": "",
         "hands": 1,
         "range": 0,
         "equiped": false,

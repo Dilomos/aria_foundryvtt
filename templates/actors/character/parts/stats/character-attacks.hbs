@@ -1,7 +1,7 @@
 <div class="attrvertalign">
     {{#if (notEmpty (getInventory actor.items))}}
     {{#each (getEquipedWeapons actor.items) as |weapon id|}}
-        <div class="flexrow rollable no-wrap" data-roll-formula="{{weapon.data.dmgBase}}" data-roll-weapon-name="{{weapon.name}}" data-roll-type="weapon">
+        <div class="flexrow rollable no-wrap" data-roll-formula="{{weapon.data.dmgBase}}" data-roll-weapon-name="{{weapon.name}}" data-roll-weapon-img="{{weapon.img}}" data-roll-type="weapon">
             <div class="flex1 center">
                 {{weapon.name}}
             </div>

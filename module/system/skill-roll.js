@@ -2,53 +2,60 @@ import {AriaDamageRoll} from "./dmg-roll.js";
 
 export class AriaSkillRoll {
 
-    constructor(label,cmpValue){
+    constructor(label,calcLabel,cmpValue){
         this._label = label;
+        this._calcLabel = calcLabel;
         this._formula = "1d100";
         this._isCritical = false;
         this._isFumble = false;
         this._isSuccess = false;
         this._msgFlavor = "";
         this._cmpValue = cmpValue;
+        this._result = 0;
     }
 
-    roll(actor){
+    async roll(actor){
+        const messageTemplate = "systems/aria/templates/chat/carac-card.hbs";
+
+        let rollData = {
+            user: game.user._id,
+            speaker: ChatMessage.getSpeaker({actor: actor}),
+        };
+
         let r = new Roll(this._formula);
         r.roll();
+
+        let renderedRoll = await r.render();
+
         this._isSuccess = r.total <= this._cmpValue;
         
         const result = r.terms[0].results.find(r => r.active).result;
         this._isFumble = (result >= 95);
         this._isCritical = (result <= 5);
-        this._msgFlavor = this._buildRollMessage();
+    
+        
 
-        r.toMessage({
+        let templateContextData = {
+            actor: actor,
+            label: this._label,
+            calcLabel: this._calcLabel,
+            cmpValue: this._cmpValue,
+
+            isCritical: this._isCritical,
+            isFumble: this._isFumble,
+            isSuccess: this._isSuccess,
+            result: result,
+        };
+
+        let chatData = {
             user: game.user._id,
-            flavor: this._msgFlavor,
-            speaker: ChatMessage.getSpeaker({actor: actor})
-        });
-    }
-
-    weaponRoll(actor, formula){
-        this.roll(actor);
-        if (this._difficulty) {
-            if(this._isSuccess){
-                let r = new AriaDamageRoll(this._label, formula, this._isCritical);
-                r.roll(actor);
-            }
-        }
-        else {
-            let r = new AriaDamageRoll(this._label, formula, this._isCritical);
-            r.roll(actor);
-        }
-    }
-    /* -------------------------------------------- */
-
-    _buildRollMessage() {
-        let subtitle = `<h3><strong>${this._label}</strong> ${game.i18n.localize("ARIA.ui.difficulty")} <strong>${this._cmpValue}</strong></h3>`;
-        if (this._isCritical) return `<h2 class="success critical">${game.i18n.localize("ARIA.roll.critical")} !!</h2>${subtitle}`;
-        if (this._isFumble) return `<h2 class="failure fumble">${game.i18n.localize("ARIA.roll.fumble")} !!</h2>${subtitle}`;
-        if (this._isSuccess) return `<h2 class="success">${game.i18n.localize("ARIA.roll.success")} !</h2>${subtitle}`;
-        else return `<h2 class="failure">${game.i18n.localize("ARIA.roll.failure")}...</h2>${subtitle}`;
+            speaker: ChatMessage.getSpeaker({actor: actor}),
+            roll: r,
+            content: await renderTemplate(messageTemplate,templateContextData),
+            sound: CONFIG.sounds.dice,
+            type: CONST.CHAT_MESSAGE_TYPES.ROLL
+        };
+      
+        ChatMessage.create(chatData);
     }
 }

@@ -1,26 +1,68 @@
-.message-header {
-  h2.damage{
-    color: $colorDamage;
-    font-weight: bold;
+.chat-card {
+  font-style: normal;
+  font-size: 14px;
+
+  .card-header {
+    padding: 3px 0;
+    border-top: 2px groove #FFF;
+    border-bottom: 2px groove #FFF;
+
+    img {
+      margin-right: 5px;
+      display: block;
+      max-width:64px;
+      max-height:128px;
+      width: auto;
+      height: auto;
+    }
+
+    .item-img{
+      max-width:64px;
+      max-height:64px;
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+
+    .item-name{
+      line-height: 48px;
+    }
+
+    h3 {
+      flex: 1;
+      margin: 0;
+    }
+
+    h2{
+      max-height: 27px;
+    }
+
+    .damage{
+      color: $colorDamage;
+      font-weight: bold;
+    }
+    .critical{
+      color: $colorCritical;
+      font-weight: bold;
+    }
+    .fumble{
+      color: $colorFumble;
+      font-weight: bold;
+    }
+    .success{
+      color: $colorSuccess;
+      font-weight: bold;
+    }
+    .failure{
+      color: $colorFailure;
+      font-weight: bold;
+    }
+    .roll{
+      color: $colorRoll;
+      font-weight: bold;
+    }
   }
-  h2.critical{
-    color: $colorCritical;
-    font-weight: bold;
-  }
-  h2.fumble{
-    color: $colorFumble;
-    font-weight: bold;
-  }
-  h2.success{
-    color: $colorSuccess;
-    font-weight: bold;
-  }
-  h2.failure{
-    color: $colorFailure;
-    font-weight: bold;
-  }
-  h2.roll{
-    color: $colorRoll;
-    font-weight: bold;
-  }
+}
+
+.chat-message.message-header.message-sender {
+  color:red;
 }

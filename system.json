@@ -2,11 +2,11 @@
   "name": "aria",
   "title": "Aria",
   "description": "<p>Système Foundry VTT pour Aria le jeu de role de FibreTigre edité par Elder Craft.</p>",
-  "version": "0.2.1",
+  "version": "0.5.0",
   "minimumCoreVersion": "0.7.3",
   "compatibleCoreVersion": "0.7.9",
   "templateVersion": 2,
-  "author": "Dilomos",
+  "author": "Dilomos/Jonathan BERNARD",
   "esmodules": [
     "module/aria.js",
     "module/hooks/system-ready.js",
@@ -90,6 +90,22 @@
       "tag" : "profession"
     },
     {
+      "name": "professionsactualplay",
+      "label": "Professions de l'Actual Play",
+      "system": "aria",
+      "path": "./packs/professionsactualplay.db",
+      "entity": "Item",
+      "tag" : "professionsactualplay"
+    },
+    {
+      "name": "professionsexceptions",
+      "label": "Professions des personnages d'exception",
+      "system": "aria",
+      "path": "./packs/professionsexceptions.db",
+      "entity": "Item",
+      "tag" : "professionsexceptions"
+    },
+    {
       "name": "origines",
       "label": "Origines",
       "system": "aria",
@@ -100,13 +116,13 @@
   ],
   "languages": [
     {
-      "lang": "en",
-      "name": "English",
-      "path": "lang/en.json"
-    },
-    {
       "lang": "fr",
       "name": "Français",
+      "path": "lang/fr.json"
+    },
+    {
+      "lang": "en",
+      "name": "English",
       "path": "lang/fr.json"
     }
   ],
@@ -117,6 +133,6 @@
   "secondaryTokenAttribute": null,
   "url": "https://github.com/Dilomos/aria_foundryvtt",
   "manifest": "https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/master/system.json",
-  "download": "https://github.com/Dilomos/aria_foundryvtt/archive/v0.2.1.zip",
+  "download": "https://github.com/Dilomos/aria_foundryvtt/archive/v0.5.0.zip",
   "license": "licence.txt"
 }
