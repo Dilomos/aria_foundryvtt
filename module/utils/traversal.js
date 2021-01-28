@@ -39,18 +39,22 @@ export class Traversal {
         return game.items.filter(item => item.type === type).map(entity => entity.data);
     }
 
+    //world + compendium can create duplicate
     static getAllCompetencesData () {
         const compendium = game.aria.config.competences;
+        const compendiumSpe = game.aria.config.competencesSpe;
         const ingame = this.getInGameEntitiesDataOfType("competence");
-        return ingame.concat(compendium);
+        return ingame.concat(compendium).concat(compendiumSpe);
     }
 
+    //world + compendium can create duplicate
     static getAllProfessionsData () {
         const compendium = game.aria.config.professions;
         const ingame = this.getInGameEntitiesDataOfType("profession");
         return ingame.concat(compendium);
     }
 
+    //world + compendium can create duplicate
     static getAllOriginesData () {
         const compendium = game.aria.config.origines;
         const ingame = this.getInGameEntitiesDataOfType("origines");

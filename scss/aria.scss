@@ -20,7 +20,7 @@
 
   &.item {
     @import 'components/item_layout';
-    //@import 'components/item_skin';
+    @import 'components/item_skin';
   }
 
   @import 'components/forms';

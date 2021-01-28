@@ -2,6 +2,141 @@
 /*  SKIN                                     */
 /* ----------------------------------------- */
 .window-content {
+  font-family: $font-primary;
+  
+  .field-value {
+    width: 100%;
+    min-height: 26px;
+    height: 26px;
+    max-height: 26px;
+    vertical-align: middle;
+    padding: 5px;
+
+    border: none;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 0;
+    color: $c-greenblue;
+    font-weight: 700;
+    font: bold 20px $font-handwrite;
+  }
+
+  .field-value.charname{
+    font-size: 30px;
+    min-height: 34px;
+  }
+  
+  .capa_score {
+    padding: 0 0 0 0;
+  }
+
+  .capa_percent{
+    padding-top: 3px;
+    font-size: 16px;
+  }
+
+  .icon_d100{
+    background: center / contain no-repeat url("../ui/d100.png");
+    min-width: 16px;
+    width: 16px;
+    max-width: 16px;
+    min-height: 16px;
+    height: 16px;
+    max-height: 16px;
+    margin-top:9px;
+  }
+
+  .cancel_margin_top{
+    margin-top:3px;
+  }
+
+  .competence_name{
+    margin: 0 0 0 0;
+    padding-left: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: $c-black;
+    position: relative;
+  }
+
+  .competence_name .comp_tooltiptext {
+    visibility: hidden;
+    width: 480px;
+    //background-color: $c-greenbluelowtrans;
+    background: url("../ui/fond_hover_comp.png");
+    background-size: cover;
+    color: #fffdea;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 10;
+    bottom: 200%;
+    left: 0;
+    margin-left: 0px;
+    opacity: 0;
+  }
+
+  
+  .competence_name:hover .comp_tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    transition: 1s;
+    p{
+      margin:0 5px 0 5px;
+      text-shadow: initial;
+      cursor: auto;
+      font-weight: 100;
+      line-height: 18px;
+    }
+    h1{
+      margin:0 5px 0 5px;
+      font-weight: 700;
+      line-height: 18px;
+      font-size: 16px;
+      border-bottom: 1px solid #000000;
+    }
+  }
+
+  .competence_name .compspe_tooltiptext {
+    visibility: hidden;
+    width: 445px;
+    //background-color: $c-greenbluelowtrans;
+    background: url("../ui/fond_hover_comp.png");
+    background-size: cover;
+    color: #fffdea;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 10;
+    top: 0%;
+    left: 0%;
+    margin-left: -465px;
+    opacity: 0;
+  }
+
+  
+  .competence_name:hover .compspe_tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    transition: 1s;
+    p{
+      margin:0 5px 0 5px;
+      text-shadow: initial;
+      cursor: auto;
+      font-weight: 100;
+      line-height: 18px;
+    }
+    h1{
+      margin:0 5px 0 5px;
+      font-weight: 700;
+      line-height: 18px;
+      font-size: 16px;
+      border-bottom: 1px solid #000000;
+    }
+  }
+
+  .item-delete:hover{
+    text-shadow: 0 0 8px $c-red;
+  }
 }
 
 .box-shadow {

@@ -6,4 +6,18 @@ export class ArrayUtils {
             array.splice(index, 1);
         }
     }
+
+    static removeObjectById(array, elem) {
+        let index;
+        array.forEach(element => {
+            if(element._id == elem)
+            {
+                index = array.indexOf(element);
+            }
+        });
+
+        if (index > -1) {
+            array.splice(index, 1);
+        }
+    }
 }

@@ -27,9 +27,10 @@ export class AriaSkillRoll {
 
         let renderedRoll = await r.render();
 
-        this._isSuccess = r.total <= this._cmpValue;
         
-        const result = r.terms[0].results.find(r => r.active).result;
+        
+        const result = r.total;
+        this._isSuccess = result <= this._cmpValue;
         this._isFumble = (result >= 95);
         this._isCritical = (result <= 5);
     

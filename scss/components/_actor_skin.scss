@@ -32,15 +32,20 @@
       }
 
       .field-label-icon-attack {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         margin-right: 5px;
         min-width: 42px;
         width: 42px;
         max-width: 42px;
       }
 
+      .weaponMod{
+        max-width: 20px;
+        margin-left: -40px;
+      }
+
       .field-label-icon-hp {
-        margin-bottom: 27px;
+        margin-bottom: 30px;
         margin-right: 5px;
         min-width: 42px;
         width: 42px;
@@ -54,7 +59,7 @@
         max-width: 42px;
       }
       .field-label-icon-prot {
-        margin-bottom: 5px;
+        margin-bottom: 8px;
         margin-right: 5px;
         min-width: 42px;
         width: 42px;
@@ -74,7 +79,7 @@
         border-radius: 0;
         color: $c-greenblue;
         font-weight: 700;
-        font: bold 20px $font-handwrite;
+        font: bold 24px $font-handwrite;
       }
 
       .field-value.charname{

@@ -11,7 +11,7 @@ export class AriaActor extends Actor {
   static async create(data, options={}) {
     data.items = data.items || [];
     if ( data.type === "character" ) {
-        let caps = Traversal.getAllCompetencesData();
+        let caps = game.aria.config.competences;
         mergeObject(data.items, caps, {overwrite: false});
     }
     let enti = super.create(data, options);

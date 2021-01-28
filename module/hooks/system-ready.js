@@ -9,6 +9,7 @@ Hooks.once("ready", async () => {
     await game.aria.config.getProfessions();
     await game.aria.config.getOrigines();
     await game.aria.config.getCompetences();
+    await game.aria.config.getCompetencesSpe();
 
     console.info("System Initialized.");
 

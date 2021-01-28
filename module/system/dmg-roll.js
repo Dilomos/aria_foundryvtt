@@ -17,9 +17,13 @@ export class AriaDamageRoll {
         let r = new Roll(this._formula);
         r.roll();
 
+        const calc = r.result;
+        const mod = (r.terms.length > 1);
+
         let renderedRoll = await r.render();  
         
-        const result = r.terms[0].results.find(r => r.active).result;
+        
+        const result = r.total;
 
         this._isFumble = (result == 0);
 
@@ -31,6 +35,8 @@ export class AriaDamageRoll {
             isFumble:this._isFumble,
             formula: this._formula,
             result: result,
+            calc:calc,
+            mod:mod,
         };
 
         let chatData = {

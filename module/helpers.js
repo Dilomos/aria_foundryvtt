@@ -72,6 +72,16 @@ export const registerHandlebarsHelpers = function () {
         return equipedWeapons;
     });
 
+    Handlebars.registerHelper('splitWeaponDice', function (formula) {
+        let terms = formula.split("+");
+        return terms[0];
+    });
+
+    Handlebars.registerHelper('splitWeaponMod', function (formula) {
+        let terms = formula.split("+");
+        return terms[1];
+    });
+
     Handlebars.registerHelper('getCompetencesByIds', function (ids) {
         if (ids) {
             const caps = Traversal.getItemsOfType("competence").filter(c => ids.includes(c._id));

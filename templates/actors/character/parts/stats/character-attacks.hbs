@@ -7,7 +7,14 @@
             </div>
             <div id="degat_icon" class="flex2 center">
                 <div class="field-label-icon-attack field-value">
-                {{weapon.data.dmgBase}}
+                {{ splitWeaponDice weapon.data.dmgBase }}
+                </div>
+            </div>
+            <div class="center">
+                <div class="field-label-icon-attack field-value weaponMod">
+                     {{#if (splitWeaponMod weapon.data.dmgBase) }}
+                     +{{ splitWeaponMod weapon.data.dmgBase }}
+                     {{/if}}
                 </div>
             </div>
         </div>

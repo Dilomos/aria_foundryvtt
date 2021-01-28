@@ -1,4 +1,5 @@
-<h3 class="form-header">Bonus raciaux</h3>
+<!--
+<h3 class="form-header">Bonus</h3>
 <input class="field-value" name="data.key" type="hidden" value="{{item.data.key}}" placeholder="{{ localize "ARIA.ui.key" }}" data-dtype="String">
 
 <div class="form-group">
@@ -31,28 +32,37 @@
         <input class="field-value" name="data.bonuses.cha" type="text" value="{{numberFormat data.bonuses.cha decimals=0 sign=true}}" placeholder="{{localize "ARIA.stats.cha.label"}}" data-dtype="Number">
     </div>
 </div>
+-->
 
-<h3 class="form-header">Ressources</h3>
+<h3 class="form-header">Compétences Spéciales</h3>
 
-<ol class="inventory-list">
-    <li class="inventory-header flexrow">
-        <h3 class="item-name flexrow">Compétence liées à l'origine</h3>
-        <div class="item-controls">
-            <a class="item-control item-create compendium-pack" data-pack="aria.competences" data-open="0" title="Ajouter une compétence"><i class="fas fa-plus"></i>&nbsp; Add</a>
-        </div>
-    </li>
-    {{#each (getEmbeddedItems "competence" data.competences) as |competence id|}}
-        <ol class="item-list">
-            <li class="item flexrow" data-item-id="{{competence._id}}" data-item-type="competence" data-key="{{competence.data.key}}" draggable="true">
-                <div class="item-name flexrow">
-                    <div class="item-image" style="background-image: url('{{competence.img}}')"></div>
-                    <h4>{{competence.name}}</h4>
-                </div>
+ <div class="flexcol">
+        <ol class="inventory-list competence-list">
+            <li class="inventory-header flexrow">
+                <h3 class="item-name flexrow">{{ localize "ARIA.ui.skill" }}</h3>
+                <div class="item-detail">{{ localize "ARIA.ui.score" }}</div>
                 <div class="item-controls">
-                    <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-                    <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
                 </div>
             </li>
+            {{#each this.data.competences}}
+                <ol class="item-list">
+                    <li class="item flexrow" data-item-id="{{_id}}" data-item-type="competence">
+                        <div class="rollable no-wrap" title="{{name}}" data-rolling-value="{{data.score}}" data-roll-type="competencycheck">
+                            <div class="flexrow no-wrap ">
+                                <div class="field-label no-wrap left competence_name">{{name}}
+                                    <span class="comp_tooltiptext"><h1>{{name}} :</h1>{{{data.description}}}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-detail flexrow">
+                            <div class="field-value flex1 capa_score">{{data.score}}</div>
+                            <div class="flex1 capa_percent">%</div>
+                        </div>
+                        <div class="item-controls">
+                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </li>
+                </ol>
+            {{/each}}
         </ol>
-    {{/each}}
-</ol>
+    </div>

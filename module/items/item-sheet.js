@@ -81,7 +81,7 @@ export class AriaItemSheet extends ItemSheet {
     /* -------------------------------------------- */
 
     /** @override */
-    _onDrop(event) {
+    async _onDrop(event) {
         event.preventDefault();
         if (!this.options.editable) return false;
         // Get dropped data
@@ -116,10 +116,6 @@ export class AriaItemSheet extends ItemSheet {
         const item = await Item.fromDropData(data);
         const itemData = duplicate(item.data);
         switch (itemData.type) {
-            case "profession" :
-                return await this._onDropProfessionItem(event, itemData);
-            case "origine" :
-                return await this._onDropOriginesItem(event, itemData);
             case "competence" :
                 return await this._onDropCompetenceItem(event, itemData);
             default:
@@ -139,25 +135,13 @@ export class AriaItemSheet extends ItemSheet {
 
     /* -------------------------------------------- */
 
-    _onDropProfessionItem(event, itemData) {
-        return false;
-    }
-
-    /* -------------------------------------------- */
-
-    _onDropOriginesItem(event, itemData) {
-        return false;
-    }
-
-    /* -------------------------------------------- */
-
     _onDropCompetenceItem(event, itemData) {
         event.preventDefault();
         let data = duplicate(this.item.data);
         const id = itemData._id;
-        if(data.data.competences && !data.data.competences.includes(id)){
+        if(data.data.competences){
             let caps = data.data.competences;
-            caps.push(id);
+            caps.push(itemData);
             return this.item.update(data);
         }
         else ui.notifications.error("Ajout de cette compétence impossible.")
@@ -191,8 +175,8 @@ export class AriaItemSheet extends ItemSheet {
         switch(itemType){
             case "competence" : array = data.data.competences; break;
         }
-        if(array && array.includes(id)) {
-            ArrayUtils.remove(array, id)
+        if(array) {
+            ArrayUtils.removeObjectById(array, id)
             return this.item.update(data);
         }
     }

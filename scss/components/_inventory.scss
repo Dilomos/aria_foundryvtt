@@ -139,7 +139,7 @@
   .item-controls {
     flex: 0 0 60px;
     @include flexrow;
-    justify-content: flex-end;
+    justify-content: center;
     max-height: 25px;
     .item-control {
       margin-top: 6px;

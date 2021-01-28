@@ -7,7 +7,9 @@ export class Profession {
             ui.notifications.error("Vous avez déjà une profession.");
             return false;
         } else {
-            return actor.createOwnedItem(itemData)
+            let competences = duplicate(itemData.data.competences);
+            competences.push(itemData);
+            return actor.createOwnedItem(competences)
         }
     }
 

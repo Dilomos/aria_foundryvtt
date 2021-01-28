@@ -10,7 +10,11 @@
                 {{else}}
                      <span class="success">
                 {{/if}}
-                {{result}}</span></h2>
+                {{result}}
+                {{#if mod}}
+                <span class="mini">({{calc}})</span>
+                {{/if}}
+                </span></h2>
             </div>
             <div class="flexrow">
                 <div class="flexcol">

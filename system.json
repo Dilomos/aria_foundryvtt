@@ -2,7 +2,7 @@
   "name": "aria",
   "title": "Aria",
   "description": "<p>Système Foundry VTT pour Aria le jeu de role de FibreTigre edité par Elder Craft.</p>",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "minimumCoreVersion": "0.7.3",
   "compatibleCoreVersion": "0.7.9",
   "templateVersion": 2,
@@ -24,6 +24,22 @@
       "path": "./packs/competences.db",
       "entity": "Item",
       "tag" : "competence"
+    },
+    {
+      "name": "competencesspepretire",
+      "label": "Compétences spéciales prétirés",
+      "system": "aria",
+      "path": "./packs/competencesspepretire.db",
+      "entity": "Item",
+      "tag" : "competencesspepretire"
+    },
+    {
+      "name": "competencesspeexception",
+      "label": "Compétences spéciales exceptions",
+      "system": "aria",
+      "path": "./packs/competencesspeexception.db",
+      "entity": "Item",
+      "tag" : "competencesspeexception"
     },
     {
       "name": "accessoires",
@@ -133,6 +149,6 @@
   "secondaryTokenAttribute": null,
   "url": "https://github.com/Dilomos/aria_foundryvtt",
   "manifest": "https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/master/system.json",
-  "download": "https://github.com/Dilomos/aria_foundryvtt/archive/v0.5.0.zip",
+  "download": "https://github.com/Dilomos/aria_foundryvtt/archive/v0.6.0.zip",
   "license": "licence.txt"
 }
