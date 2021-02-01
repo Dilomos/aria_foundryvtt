@@ -133,7 +133,7 @@
         "source" : ""
       },
       "equipment" : {
-        "def" : 0,
+        "defBase" : 0,
         "dmgBase": "",
         "hands": 1,
         "range": 0,

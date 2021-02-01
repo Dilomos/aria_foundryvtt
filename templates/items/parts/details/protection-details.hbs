@@ -1,11 +1,8 @@
 <h3 class="form-header">Protection</h3>
 <div class="form-group">
-    <label>{{localize "ARIA.ui.defBase"}}</label>
+    <label>Protection</label>
     <div class="form-fields">
-        {{#if (isNull data.defBase)}}
-            <input name="data.defBase" type="text" value="" placeholder="{{localize "ARIA.ui.defBase"}}" data-dtype="Number">
-        {{else}}
-            <input name="data.defBase" type="text" value="{{numberFormat data.defBase decimals=0 sign=true}}" placeholder="{{localize "ARIA.ui.defBase"}}" data-dtype="Number">
-        {{/if}}
+        {{log data}}
+            <input name="data.defBase" type="number" value="{{data.defBase}}" placeholder="{{localize "ARIA.ui.defBase"}}" data-dtype="Number">
     </div>
 </div>
