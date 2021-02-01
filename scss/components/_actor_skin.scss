@@ -51,6 +51,9 @@
         width: 42px;
         max-width: 42px;
       }
+
+      
+
       .field-label-icon-hit {
         margin-bottom: -2px;
         margin-right: 5px;
@@ -80,6 +83,10 @@
         color: $c-greenblue;
         font-weight: 700;
         font: bold 24px $font-handwrite;
+      }
+
+      .dead-color{
+        color:red;
       }
 
       .field-value.charname{

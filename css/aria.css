@@ -1071,6 +1071,10 @@ strong {
   font: bold 24px "Caveat", cursive;
 }
 
+.aria.actor .window-content > form .wrap .dead-color {
+  color: red;
+}
+
 .aria.actor .window-content > form .wrap .field-value.charname {
   font-size: 30px;
   min-height: 34px;
