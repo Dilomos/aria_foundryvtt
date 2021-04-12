@@ -3,10 +3,6 @@
         <div class="item-name flexrow">
             <div class="item-image flex1" style="background: center/contain no-repeat url('{{img}}')"></div>
             <h4>{{name}}</h4>
-
-             {{#if data.subtype}}
-                <div class="item-category flex2">{{localize (concat "ARIA.category." data.subtype)}}</div>
-            {{/if}}
         </div>
            
         <div class="item-detail {{#if data.properties.stackable}}item-qty unlocked{{else}}locked{{/if}}">

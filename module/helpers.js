@@ -24,6 +24,117 @@ export const registerHandlebarsHelpers = function () {
         return inventory;
     });
 
+    Handlebars.registerHelper('getRanged', function (items) {
+        let caps = items.filter(item => item.type === "item");
+        let weapons = caps.filter(item => item.data.subtype == "ranged");
+        weapons.sort(function (a, b) {
+            const aKey = a.name.slugify({strict: true});
+            const bKey = b.name.slugify({strict: true});
+            return (aKey > bKey) ? 1 : -1
+        });
+        return weapons;
+    });
+
+    Handlebars.registerHelper('getAmmunition', function (items) {
+        let caps = items.filter(item => item.type === "item");
+        let weapons = caps.filter(item => item.data.subtype == "ammunition");
+        weapons.sort(function (a, b) {
+            const aKey = a.name.slugify({strict: true});
+            const bKey = b.name.slugify({strict: true});
+            return (aKey > bKey) ? 1 : -1
+        });
+        return weapons;
+    });
+
+    Handlebars.registerHelper('getMelee', function (items) {
+        let caps = items.filter(item => item.type === "item");
+        let weapons = caps.filter(item => item.data.subtype == "melee");
+        weapons.sort(function (a, b) {
+            const aKey = a.name.slugify({strict: true});
+            const bKey = b.name.slugify({strict: true});
+            return (aKey > bKey) ? 1 : -1
+        });
+        return weapons;
+    });
+
+
+    Handlebars.registerHelper('getArmor', function (items) {
+        let caps = items.filter(item => item.type === "item");
+        let weapons = caps.filter(item => item.data.subtype == "armor");
+        weapons.sort(function (a, b) {
+            const aKey = a.name.slugify({strict: true});
+            const bKey = b.name.slugify({strict: true});
+            return (aKey > bKey) ? 1 : -1
+        });
+        return weapons;
+    });
+
+    Handlebars.registerHelper('getShield', function (items) {
+        let caps = items.filter(item => item.type === "item");
+        let weapons = caps.filter(item => item.data.subtype == "shield");
+        weapons.sort(function (a, b) {
+            const aKey = a.name.slugify({strict: true});
+            const bKey = b.name.slugify({strict: true});
+            return (aKey > bKey) ? 1 : -1
+        });
+        return weapons;
+    });
+
+    Handlebars.registerHelper('getJewel', function (items) {
+        let caps = items.filter(item => item.type === "item");
+        let weapons = caps.filter(item => item.data.subtype == "jewel");
+        weapons.sort(function (a, b) {
+            const aKey = a.name.slugify({strict: true});
+            const bKey = b.name.slugify({strict: true});
+            return (aKey > bKey) ? 1 : -1
+        });
+        return weapons;
+    });  
+    
+    Handlebars.registerHelper('getCloath', function (items) {
+        let caps = items.filter(item => item.type === "item");
+        let weapons = caps.filter(item => item.data.subtype == "cloath");
+        weapons.sort(function (a, b) {
+            const aKey = a.name.slugify({strict: true});
+            const bKey = b.name.slugify({strict: true});
+            return (aKey > bKey) ? 1 : -1
+        });
+        return weapons;
+    });
+
+    Handlebars.registerHelper('getMount', function (items) {
+        let caps = items.filter(item => item.type === "item");
+        let weapons = caps.filter(item => item.data.subtype == "mount");
+        weapons.sort(function (a, b) {
+            const aKey = a.name.slugify({strict: true});
+            const bKey = b.name.slugify({strict: true});
+            return (aKey > bKey) ? 1 : -1
+        });
+        return weapons;
+    });
+
+    Handlebars.registerHelper('getTrapping', function (items) {
+        let caps = items.filter(item => item.type === "item");
+        let weapons = caps.filter(item => item.data.subtype == "trapping");
+        weapons.sort(function (a, b) {
+            const aKey = a.name.slugify({strict: true});
+            const bKey = b.name.slugify({strict: true});
+            return (aKey > bKey) ? 1 : -1
+        });
+        return weapons;
+    });
+
+    Handlebars.registerHelper('getOtherItem', function (items) {
+        let caps = items.filter(item => item.type === "item");
+        let weapons = caps.filter(item => item.data.subtype == "");
+        weapons.sort(function (a, b) {
+            const aKey = a.name.slugify({strict: true});
+            const bKey = b.name.slugify({strict: true});
+            return (aKey > bKey) ? 1 : -1
+        });
+        return weapons;
+    });
+
     Handlebars.registerHelper('getEquiped', function (items) {
         let equiped = items.filter(item => item.type === "item" && item.data.equiped);
         equiped.sort(function (a, b) {
@@ -61,13 +172,13 @@ export const registerHandlebarsHelpers = function () {
 
     Handlebars.registerHelper('getWeapons', function (items) {
         let caps = items.filter(item => item.type === "item");
-        let weapons = caps.filter(item => item.data.properties.weapon === true);
+        let weapons = caps.filter(item => item.data.properties.weapon === true ||  item.data.subtype == "melee" ||  item.data.subtype == "ranged");
         return weapons;
     });
 
     Handlebars.registerHelper('getEquipedWeapons', function (items) {
         let caps = items.filter(item => item.type === "item");
-        let weapons = caps.filter(item => item.data.properties.weapon === true);
+        let weapons = caps.filter(item => item.data.properties.weapon === true ||  item.data.subtype == "melee" ||  item.data.subtype == "ranged");
         let equipedWeapons = weapons.filter(item => item.data.equiped === true);
         return equipedWeapons;
     });

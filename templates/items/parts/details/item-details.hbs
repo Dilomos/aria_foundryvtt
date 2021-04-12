@@ -1,4 +1,4 @@
-<h3 class="form-header">Type d'équipement</h3>
+<h3 class="form-header">Type d'objet</h3>
 <div class="form-group">
     <label>Sous-catégorie</label>
     <div class="form-fields">
@@ -19,33 +19,16 @@
     </div>
 </div>
 
-<div class="form-group stacked">
-    <label>Traits</label>
-    <div class="form-fields">
-        <label class="checkbox">
-            <input type="checkbox" name="data.properties.equipment" {{checked data.properties.equipment}}> {{localize "ARIA.properties.equipment"}}
-        </label>
-        <label class="checkbox">
-            <input type="checkbox" name="data.properties.weapon" {{checked data.properties.weapon}}> {{localize "ARIA.properties.weapon"}}
-        </label>
-        <label class="checkbox">
-            <input type="checkbox" name="data.properties.protection" {{checked data.properties.protection}}> {{localize "ARIA.properties.protection"}}
-        </label>
-        <label class="checkbox">
-            <input type="checkbox" name="data.properties.ranged" {{checked data.properties.ranged}}> {{localize "ARIA.properties.ranged"}}
-        </label>
-    </div>
-</div>
+{{> "systems/aria/templates/items/parts/details/equipment-details.hbs"}}
 
-{{#if data.properties.equipment}}
-    {{> "systems/aria/templates/items/parts/details/equipment-details.hbs"}}
-{{/if}}
-{{#if data.properties.weapon}}
+{{#if (or (or (equals data.subtype "melee") (equals data.subtype "ranged")) data.properties.weapon) }}
     {{> "systems/aria/templates/items/parts/details/weapon-details.hbs"}}
 {{/if}}
-{{#if data.properties.protection}}
-    {{> "systems/aria/templates/items/parts/details/protection-details.hbs"}}
-{{/if}}
-{{#if data.properties.ranged}}
+{{#if (or (equals data.subtype "ranged") data.properties.ranged) }}
     {{> "systems/aria/templates/items/parts/details/ranged-details.hbs"}}
 {{/if}}
+{{#if (or (or (equals data.subtype "armor") (equals data.subtype "shield")) data.properties.protection) }}
+    {{> "systems/aria/templates/items/parts/details/protection-details.hbs"}}
+{{/if}}
+
+

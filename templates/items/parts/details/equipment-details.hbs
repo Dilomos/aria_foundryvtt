@@ -1,5 +1,3 @@
-<h3 class="form-header">{{localize "ARIA.ui.equipment"}}</h3>
-
 <div class="form-group">
     <label>{{localize "ARIA.ui.properties"}}</label>
     <div class="form-fields">
@@ -11,7 +9,15 @@
         <label class="checkbox"> <input type="checkbox" name="data.properties.unique"    {{checked data.properties.unique}}> Unique </label>
 {{/if}}
         <label class="checkbox"><input type="checkbox" name="data.properties.2h" {{checked data.properties.2h}}> {{localize "ARIA.ui.2Handed"}}</label>
-    </div>
+
+{{#if (not (or (equals data.subtype "melee") (equals data.subtype "ranged")) ) }}
+        <label class="checkbox"><input type="checkbox" name="data.properties.weapon" {{checked data.properties.weapon}}> {{localize "ARIA.properties.damage"}}</label>
+        <label class="checkbox"><input type="checkbox" name="data.properties.ranged" {{checked data.properties.ranged}}> {{localize "ARIA.properties.ranged"}}</label>
+ {{/if}}
+ {{#if (not (or (equals data.subtype "shield") (equals data.subtype "armor")) ) }}
+        <label class="checkbox"><input type="checkbox" name="data.properties.protection" {{checked data.properties.protection}}> {{localize "ARIA.properties.protection"}}</label>
+ {{/if}}
+   </div>
 </div>
 {{#if data.properties.equipable}}
     <div class="form-group">
