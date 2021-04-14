@@ -5,7 +5,7 @@
  */
 
 // Import Modules
-import {System, ARIA} from "./config.js";
+import {System,ARIA} from "./config.js";
 import { registerSystemSettings } from "./settings.js";
 import { preloadHandlebarsTemplates } from "./templates.js";
 import { getBarAttribute } from "./canvas.js";
@@ -35,6 +35,7 @@ Hooks.once("init", async function () {
         decimals: 2
     };
 
+    CONFIG.ARIA = ARIA;
     // Define custom Entity classes
     CONFIG.Actor.entityClass = AriaActor;
     CONFIG.Item.entityClass = AriaItem;
@@ -73,6 +74,31 @@ Hooks.once("init", async function () {
     registerHandlebarsHelpers();
 
 });
+
+Hooks.once("setup", function() {
+
+    const toLocalize = [
+        "itemProperties", "languages"
+      ];
+
+  // Exclude some from sorting where the default order matters
+  const noSort = [
+    "itemProperties", "languages"
+  ];
+
+  // Localize and sort CONFIG objects
+  for ( let o of toLocalize ) {
+    const localized = Object.entries(CONFIG.ARIA[o]).map(e => {
+      return [e[0], game.i18n.localize(e[1])];
+    });
+    if ( !noSort.includes(o) ) localized.sort((a, b) => a[1].localeCompare(b[1]));
+    CONFIG.ARIA[o] = localized.reduce((obj, e) => {
+      obj[e[0]] = e[1];
+      return obj;
+    }, {});
+  }
+
+  });
 
 Hooks.on("canvasInit", function() {
     // Extend Token Resource Bars

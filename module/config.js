@@ -22,6 +22,23 @@ ARIA.itemProperties = {
     "2Handed": "ARIA.properties.2Handed"
 };
 
+// Languages
+ARIA.languages = {
+    "common": "ARIA.languages.Common",
+    "kohestien": "ARIA.languages.Kohestien",
+    "aqab": "ARIA.languages.Aqab",
+    "staum": "ARIA.languages.Staum",
+    "osmanlien": "ARIA.languages.Osmanlien",
+    "mon": "ARIA.languages.Mon",
+    "nok": "ARIA.languages.Nok",
+    "carredass": "ARIA.languages.Carredass",
+    "blanc": "ARIA.languages.Blanc",
+    "knigien": "ARIA.languages.Knigien",
+    "esperan": "ARIA.languages.Esperan",
+    "altabiancais": "ARIA.languages.Altabiancais",
+    "altanegrais": "ARIA.languages.Altanegrais"
+  };
+
 ARIA.professions = [];
 ARIA.origines = [];
 ARIA.competences = [];

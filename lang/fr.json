@@ -78,6 +78,7 @@
   "ARIA.ui.liveordie" : "Vivre ou mourir",
   "ARIA.ui.link" : "Liens",
   "ARIA.ui.score" : "Score",
+  "ARIA.ui.language": "Langue",
   "ARIA.placeholders.qtymax" : "Quantité infinie si vide",
 
   "ARIA.roll.success" : "Succès",
@@ -281,6 +282,20 @@
   "ARIA.SheetClassCharacter" : "Fiche de Personnage ARIA par défaut",
   "ARIA.SheetClassEncounter" : "Fiche de Rencontre ARIA par défaut",
   "ARIA.SheetClassItem" : "Fiche d'Objet ARIA par défaut",
+
+  "ARIA.languages.Common" : "Aria (Commun)",
+  "ARIA.languages.Kohestien" : "Kohestien",
+  "ARIA.languages.Aqab" : "Aqab",
+  "ARIA.languages.Staum" : "Staum",
+  "ARIA.languages.Osmanlien" : "Osmanlien",
+  "ARIA.languages.Mon" : "Môn",
+  "ARIA.languages.Nok" : "Nok",
+  "ARIA.languages.Carredass" : "Carredass",
+  "ARIA.languages.Blanc" : "Blanc",
+  "ARIA.languages.Knigien" : "Knigien",
+  "ARIA.languages.Esperan" : "Esperan",
+  "ARIA.languages.Altabiancais" : "Altabiancais",
+  "ARIA.languages.Altanegrais" : "Altanegrais",
 
   "ARIA.notification.MacroItemMissing" : "Le personnage ne possède pas cet objet",
   "ARIA.notification.MacroItemUnequiped" : "L'objet n'est pas équipé"

@@ -78,6 +78,7 @@
   "ARIA.ui.liveordie" : "Live or Die",
   "ARIA.ui.link" : "Links",
   "ARIA.ui.score" : "Score",
+  "ARIA.ui.language": "Language",
   "ARIA.placeholders.qtymax" : "Infinite if empty",
 
   "ARIA.roll.success" : "Success",
@@ -281,6 +282,20 @@
   "ARIA.SheetClassCharacter" : "Default ARIA Character Sheet",
   "ARIA.SheetClassEncounter" : "Default ARIA Encounter Sheet",
   "ARIA.SheetClassItem" : "Default ARIA Item Sheet",
+
+  "ARIA.languages.Common" : "Aria (Commun)",
+  "ARIA.languages.Kohestien" : "Kohestien",
+  "ARIA.languages.Aqab" : "Aqab",
+  "ARIA.languages.Staum" : "Staum",
+  "ARIA.languages.Osmanlien" : "Osmanlien",
+  "ARIA.languages.Mon" : "Môn",
+  "ARIA.languages.Nok" : "Nok",
+  "ARIA.languages.Carredass" : "Carredass",
+  "ARIA.languages.Blanc" : "Blanc",
+  "ARIA.languages.Knigien" : "Knigien",
+  "ARIA.languages.Esperan" : "Esperan",
+  "ARIA.languages.Altabiancais" : "Altabiancais",
+  "ARIA.languages.Altanegrais" : "Altanegrais",
 
   "ARIA.notification.MacroItemMissing" : "Your controlled Actor does not have such an item.",
   "ARIA.notification.MacroItemUnequiped" : "Item is unequiped"
