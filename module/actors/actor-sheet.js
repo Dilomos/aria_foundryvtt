@@ -19,7 +19,7 @@ export class AriaActorSheet extends ActorSheet {
         if (!this.options.editable) return;
 
         // Click to open
-        html.find('.compendium-pack').dblclick(ev => {
+        html.find('.compendium-pack').click(ev => {
             ev.preventDefault();
             let li = $(ev.currentTarget), pack = game.packs.get(li.data("pack"));
             if (li.attr("data-open") === "1") pack.close();

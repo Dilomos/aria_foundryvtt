@@ -1020,7 +1020,6 @@ strong {
 }
 
 .aria.actor .locked {
-  cursor: not-allowed;
   color: lightgray;
 }
 
@@ -1564,7 +1563,6 @@ strong {
 .aria.actor .readonly {
   -webkit-box-shadow: 0 0 10px #00000052 inset;
   box-shadow: 0 0 10px #00000052 inset;
-  cursor: not-allowed;
 }
 
 .aria.actor .label-text {

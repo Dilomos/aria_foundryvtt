@@ -23,9 +23,9 @@
     </div>
 
     {{#if (isAriaTypeSetting "aria")}}
-            <div class="flexcol"id="logo-sceptre">
+        <div class="flexcol"id="logo-sceptre">
             <img class="img" src="/systems/aria/ui/sceptre.png"/>
-    </div>
+        </div>
     {{/if}}
 
     <div class="flexcol">
@@ -34,10 +34,18 @@
          </div>
          <!-- PROFESSION -->
         <div class="flexrow">
+            {{#if (isAriaTypeSetting "aria")}}
                 <div class="flex4 center cell drop-field compendium-pack" data-pack="aria.professions" data-open="0">
+            {{/if}}
+            {{#if (isAriaTypeSetting "stars")}}
+                <div class="flex4 center cell drop-field compendium-pack" data-pack="aria.professionsstars" data-open="0">
+            {{/if}}
+            {{#if (isAriaTypeSetting "contemporain")}}
+                <div class="flex4 center cell drop-field compendium-pack" data-pack="aria.professionscont" data-open="0">
+            {{/if}}
                 {{#if (getProfession actor.items)}}
                     {{#with (getProfession actor.items)}}
-                        <input class="field-value charname" name="profession_name" type="text" value="{{name}}" placeholder="Profession Name" data-dtype="String" readonly="true"/>
+                        <span class="field-value charname"/>{{name}}</span>
                         <div class="profession-controls item" data-item-id="{{_id}}" style="padding-right:5px;">
                             <a class="item-control item-delete" title="Delete Item"><i class="fas fa-times"></i></a>
                         </div>

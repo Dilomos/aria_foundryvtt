@@ -42,8 +42,18 @@
             <div class="item-detail">Qté</div>
             <div class="item-detail">Equiper</div>
             <div class="item-controls">
-                <a class="item-control item-create new-item" title="Ajouter un objet"><i class="fas fa-plus"></i></a>    
-                <a class="item-control item-create compendium-pack" data-pack="aria.arme" data-open="0" title="Ajouter un objet"><i class="fas fa-folder-plus"></i></a>
+                <a class="item-control item-create new-item" title="Ajouter un objet"><i class="fas fa-plus"></i></a>   
+        {{#if (isAriaTypeSetting "aria")}}
+                <a class="item-control item-create compendium-pack" data-pack="aria.arme" data-open="0" title="Ajouter un objet">
+        {{/if}}
+        {{#if (isAriaTypeSetting "stars")}}
+                <a class="item-control item-create compendium-pack" data-pack="aria.objetsstars" data-open="0" title="Ajouter un objet">
+        {{/if}}
+        {{#if (isAriaTypeSetting "contemporain")}}
+                <a class="item-control item-create compendium-pack" data-pack="aria.objetscont" data-open="0" title="Ajouter un objet">
+        {{/if}} 
+                    <i class="fas fa-folder-plus"></i>
+                </a>
             </div>
         </li>
         {{#if (notEmpty (getInventory actor.items))}}

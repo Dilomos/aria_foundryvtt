@@ -9,8 +9,7 @@ export const preloadHandlebarsTemplates = async function () {
     const templatePaths = [
         // ACTOR
         "systems/aria/templates/actors/character/parts/character-header.hbs",
-        "systems/aria/templates/actors/character/parts/character-description.hbs",
-
+        
         "systems/aria/templates/actors/character/parts/stats/character-attacks.hbs",
         "systems/aria/templates/actors/character/parts/stats/character-hp.hbs",
         "systems/aria/templates/actors/character/parts/stats/character-attributes.hbs",

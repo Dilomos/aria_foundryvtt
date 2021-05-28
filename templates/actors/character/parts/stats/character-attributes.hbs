@@ -21,7 +21,16 @@
         <div class="flex1 center">
             <span class="field-label">Origine</span>
         </div>
-        <div class="flex2 center cell drop-field compendium-pack" data-pack="aria.origines" data-open="0">
+
+        {{#if (isAriaTypeSetting "aria")}}
+                <div class="flex2 center cell drop-field compendium-pack" data-pack="aria.origines" data-open="0">
+        {{/if}}
+        {{#if (isAriaTypeSetting "stars")}}
+                <div class="flex2 center cell drop-field compendium-pack" data-pack="aria.originesstars" data-open="0">
+        {{/if}}
+        {{#if (isAriaTypeSetting "contemporain")}}
+               <div class="flex2 center cell drop-field compendium-pack" data-pack="aria.originescont" data-open="0">
+        {{/if}} 
             {{#if (getOrigines actor.items)}}
                 {{#with (getOrigines actor.items)}}
                     <span class="flex5 field-value origine_name">{{name}}</span>
