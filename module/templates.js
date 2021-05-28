@@ -9,15 +9,11 @@ export const preloadHandlebarsTemplates = async function () {
     const templatePaths = [
         // ACTOR
         "systems/aria/templates/actors/character/parts/character-header.hbs",
-        "systems/aria/templates/actors/character/parts/character-header_modern.hbs",
-        "systems/aria/templates/actors/character/parts/character-header_stars.hbs",
-        
         "systems/aria/templates/actors/character/parts/character-description.hbs",
 
         "systems/aria/templates/actors/character/parts/stats/character-attacks.hbs",
         "systems/aria/templates/actors/character/parts/stats/character-hp.hbs",
         "systems/aria/templates/actors/character/parts/stats/character-attributes.hbs",
-        "systems/aria/templates/actors/character/parts/stats/character-attributes_stars.hbs",
 
         "systems/aria/templates/actors/character/parts/stats/attributes/character-attributes-str.hbs",
         "systems/aria/templates/actors/character/parts/stats/attributes/character-attributes-dex.hbs",
@@ -27,15 +23,11 @@ export const preloadHandlebarsTemplates = async function () {
         "systems/aria/templates/actors/character/parts/stats/attributes/character-attributes-intu.hbs",
 
         "systems/aria/templates/actors/character/parts/stats/character-stats.hbs",
-        "systems/aria/templates/actors/character/parts/stats/character-stats_modern.hbs",
-        "systems/aria/templates/actors/character/parts/stats/character-stats_stars.hbs",
 
         "systems/aria/templates/actors/character/parts/competences/character-competences.hbs",
 
         "systems/aria/templates/actors/character/parts/inventory/character-inventory.hbs",
-        "systems/aria/templates/actors/character/parts/inventory/character-inventory_stars.hbs",
         "systems/aria/templates/actors/character/parts/inventory/character-inventory-item.hbs",
-        "systems/aria/templates/actors/character/parts/inventory/character-inventory_modern.hbs",
 
         // ITEMS DETAILS
         "systems/aria/templates/items/item-sheet.hbs",

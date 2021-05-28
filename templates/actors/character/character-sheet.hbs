@@ -1,17 +1,41 @@
 <form class="{{cssClass}}" autocomplete="off">
+    {{#if (isAriaTypeSetting "aria")}}
     <div class="wrap aria-bg-std">
+    {{/if}}
+    {{#if (isAriaTypeSetting "stars")}}
+    <div class="wrap aria-bg-stars">
+    {{/if}}
+    {{#if (isAriaTypeSetting "contemporain")}}
+    <div class="wrap aria-bg-modern">
+    {{/if}}   
 
         <div class="header">
             <div class="flexrow no-wrap">
                 <div class="flex1 left" id="banner-left"></div>
-                 <div class="flex1 center" id="logo-banner"><img src="/systems/aria/ui/couronne.png"/></div>
+                    {{#if (isAriaTypeSetting "aria")}}
+                    <div class="flex1 center" id="logo-banner"><img src="/systems/aria/ui/couronne.png"/></div>
+                    {{/if}}
+                    {{#if (isAriaTypeSetting "stars")}}
+                    <div class="flex1 center" id="logo-stars"><img src="/systems/aria/ui/STARS.webp"/></div>
+                    {{/if}}
+                    {{#if (isAriaTypeSetting "contemporain")}}
+                    <div class="flex1 center" id="logo-modern"><img src="/systems/aria/ui/contemporain.webp"/></div>
+                    {{/if}}                   
                 <div class="flex1 right" id="banner-right"></div>
             </div>
         </div>
         
 {{> "systems/aria/templates/actors/character/parts/character-header.hbs"}}
 
-        <div class="flexrow main mainHeight_std">
+    {{#if (isAriaTypeSetting "aria")}}
+    <div class="flexrow main mainHeight_std">
+    {{/if}}
+    {{#if (isAriaTypeSetting "stars")}}
+    <div class="flexrow main mainHeight_stars">
+    {{/if}}
+    {{#if (isAriaTypeSetting "contemporain")}}
+    <div class="flexrow main mainHeight_modern">
+    {{/if}}  
             <div class="content flex3">
                 {{!-- Sheet Tab Navigation --}}
                 <nav class="sheet-tabs tabs" data-group="primary">
@@ -37,6 +61,7 @@
             </div>
         </div>
 
+        {{#if (isAriaTypeSetting "aria")}}
         <div class="header">
             <div class="flexrow no-wrap">
                 <div class="flex1 left" id="banner-bot-left"></div>
@@ -44,6 +69,7 @@
                 <div class="flex1 right" id="banner-bot-right"></div>
             </div>
         </div>
+        {{/if}}
     </div>
 </form>
 

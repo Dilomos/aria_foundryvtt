@@ -1,12 +1,23 @@
 
 <div class="attrvertalign">
+
 {{> "systems/aria/templates/actors/character/parts/stats/attributes/character-attributes-str.hbs"}}
 {{> "systems/aria/templates/actors/character/parts/stats/attributes/character-attributes-dex.hbs"}}
 {{> "systems/aria/templates/actors/character/parts/stats/attributes/character-attributes-end.hbs"}}
 {{> "systems/aria/templates/actors/character/parts/stats/attributes/character-attributes-int.hbs"}}
-{{> "systems/aria/templates/actors/character/parts/stats/attributes/character-attributes-cha.hbs"}}
+    {{#if (isAriaTypeSetting "aria")}}
+    {{> "systems/aria/templates/actors/character/parts/stats/attributes/character-attributes-cha.hbs"}}
+    {{/if}}
+    {{#if (isAriaTypeSetting "stars")}}
+    {{> "systems/aria/templates/actors/character/parts/stats/attributes/character-attributes-intu.hbs"}}
+    {{/if}}
 
+    {{#if (isAriaTypeSetting "aria")}}
     <div class="flexcol origine">
+    {{/if}}
+    {{#if (isAriaTypeSetting "stars")}}
+    <div class="flexcol">
+    {{/if}}
         <div class="flex1 center">
             <span class="field-label">Origine</span>
         </div>
@@ -23,5 +34,15 @@
             {{/if}}
         </div>
     </div>
-    
+
+ {{#if (isAriaTypeSetting "stars")}}  
+    <div class="flexcol no-wrap">
+        <div id="mental_icon" class="flex1 center">
+            <input class="field-label-icon-mental field-value" name="data.attributes.mental.value" type="text" value="{{actor.data.attributes.mental.value}}" placeholder="0" data-dtype="Number"/>
+        </div>
+        <div class="flex1 center">
+            <div class="field-label">{{ localize 'ARIA.attributes.mental.label' }}</div>
+        </div>
+    </div>
+    {{/if}} 
 </div>

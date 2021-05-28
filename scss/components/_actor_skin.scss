@@ -170,9 +170,28 @@
         position: relative;
       }
 
+      .competence_name .comp_tooltiptextwidth {
+        width: calc(100% + 250px);
+      }
+      .competence_name .comp_tooltiptextleft {
+        left: calc(100% + 220px);
+      }
+      .competence_name .compspe_tooltiptextleft {
+        left: calc(-100% - 268px);
+      }
+
+      .competence_name .comp_tooltiptextwidth_noLinkCol {
+        width: calc(100% + 170px);
+      }
+      .competence_name .comp_tooltiptextleft_noLinkCol {
+        left: calc(100% + 140px);
+      }
+      .competence_name .compspe_tooltiptextleft_noLinkCol {
+        left: calc(-100% - 188px);
+      }
+
       .competence_name .comp_tooltiptext {
         visibility: hidden;
-        width: 500px;
         //background-color: $c-greenbluelowtrans;
         background: url("../ui/fond_hover_comp.png");
         background-size: cover;
@@ -181,9 +200,8 @@
         padding: 5px 0;
         position: absolute;
         z-index: 10;
-        bottom: 0;
-        left: 182%;
         margin-left: 0px;
+        bottom:0;
         opacity: 0;
       }
 
@@ -210,7 +228,6 @@
 
       .competence_name .compspe_tooltiptext {
         visibility: hidden;
-        width: 445px;
         //background-color: $c-greenbluelowtrans;
         background: url("../ui/fond_hover_comp.png");
         background-size: cover;
@@ -219,9 +236,7 @@
         padding: 5px 0;
         position: absolute;
         z-index: 10;
-        top: 0%;
-        left: 0%;
-        margin-left: -465px;
+        bottom:0;
         opacity: 0;
       }
 

@@ -4,9 +4,6 @@
 .window-content {
   padding: 0;
   margin: 0;
-  min-height: 100%;
-  height: 100%;
-  max-height: 100%;
   overflow: hidden;
 
   &>form {
@@ -103,21 +100,21 @@
       }
 
       .mainHeight_std{
-        height: calc(100% - 330px);
-        min-height: calc(100% - 330px);
-        max-height: calc(100% - 330px);
+        height: calc(100% - 300px);
+        min-height: calc(100% - 300px);
+        max-height: calc(100% - 300px);
       }
 
       .mainHeight_stars{
-        height: calc(100% - 260px);
-        min-height: calc(100% - 260px);
-        max-height: calc(100% - 260px);
+        height: calc(100% - 230px);
+        min-height: calc(100% - 230px);
+        max-height: calc(100% - 230px);
       }
 
       .mainHeight_modern{
-        height: calc(100% - 180px);
-        min-height: calc(100% - 180px);
-        max-height: calc(100% - 180px);
+        height: calc(100% - 150px);
+        min-height: calc(100% - 150px);
+        max-height: calc(100% - 150px);
       }
 
       .main {

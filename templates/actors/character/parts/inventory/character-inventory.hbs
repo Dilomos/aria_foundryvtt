@@ -1,5 +1,6 @@
 <div class="flexrow no-wrap currencies" style="max-height:20px">
-    <div class="flex1 center">Bourse</div>
+    {{#if (isAriaTypeSetting "aria")}}
+     <div class="flex1 center">Bourse</div>
     <div class="flex1 center coin">
         <i title="Couronne" class="fas fa-coins" style="color:goldenrod"></i>
         <input class="field-value coin-field" name="data.currency.gp.qty" type="number" value="{{actor.data.currency.gp.qty}}" placeholder="Couronne" data-dtype="Number"/>
@@ -16,6 +17,23 @@
         <i title="Roi" class="fas fa-coins" style="color:dimgray"></i>
         <input class="field-value coin-field" name="data.currency.fp.qty" type="number" value="{{actor.data.currency.fp.qty}}" placeholder="Roi" data-dtype="Number"/>
     </div>
+
+    {{else}}
+
+    <div class="flex4 center"> </div>
+    <div class="flex4 center"> </div>
+    {{#if (isAriaTypeSetting "stars")}}
+    <div class="flex1 center">Crédits</div>
+    {{/if}}
+    {{#if (isAriaTypeSetting "contemporain")}}
+    <div class="flex1 center">Francs</div>
+    {{/if}} 
+    
+    <div class="flex2 center coin">
+         <input class="field-value coin-field" name="data.currency.fp.qty" type="number" value="{{actor.data.currency.fp.qty}}" placeholder="0" data-dtype="Number"/>
+        <i title="Credits" class="fas fa-coins" style="color:dimgray"></i>
+    </div>
+    {{/if}} 
 </div>
 
     <ol class="inventory-list">

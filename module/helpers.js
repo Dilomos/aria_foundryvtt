@@ -273,6 +273,10 @@ export const registerHandlebarsHelpers = function () {
         return game.settings.get("aria", configKey);
     });
 
+    Handlebars.registerHelper('isAriaTypeSetting', function (configKey) {
+        return (game.settings.get("aria", "ariaVersion") == configKey);
+    });
+
     Handlebars.registerHelper('split', function (str, separator, keep) {
         return str.split(separator)[keep];
     });

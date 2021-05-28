@@ -10,18 +10,23 @@
                 <input class="field-value charname" name="name" type="text" value="{{actor.name}}" placeholder="Name" data-dtype="String"/>
             </div>
         </div>
-        <!-- /NAME -->
+
+    {{#if (or (isAriaTypeSetting "aria") (isAriaTypeSetting "stars"))}}
+            <!-- /NAME -->
         <div class="flex1 center">
             <span class="field-label"><br>JE SUIS GENIAL.E<br> PARCE QUE ...</span>
         </div>  
         <div class="flex1 center">
                 <input class="field-value" name="data.genial" type="text" value="{{data.genial}}" placeholder="..." data-dtype="String"/>
         </div>
+    {{/if}}
     </div>
 
-    <div class="flexcol"id="logo-sceptre">
+    {{#if (isAriaTypeSetting "aria")}}
+            <div class="flexcol"id="logo-sceptre">
             <img class="img" src="/systems/aria/ui/sceptre.png"/>
     </div>
+    {{/if}}
 
     <div class="flexcol">
          <div class="flex1 center">
@@ -42,13 +47,15 @@
                 {{/if}}
             </div>
         </div>
-        <!-- /PROFESSION -->
+        
+        {{#if (or (isAriaTypeSetting "aria") (isAriaTypeSetting "stars"))}}
         <div class="flex1 center">
             <span class="field-label"><br>MAIS LA SOCIETE A DES PROBLEMES <br> AVEC MOI PARCE QUE...</span>
         </div> 
         <div class="flex1 center">
             <input class="field-value" name="data.mais" type="text" value="{{data.mais}}" placeholder="..." data-dtype="String"/>
         </div>
+        {{/if}}
     </div>
 
 </div>

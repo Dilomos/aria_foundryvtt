@@ -5,11 +5,13 @@
         </div>
     </div>
     <div class="flexrow flex3">
+        {{#if (or (isAriaTypeSetting "aria") (isAriaTypeSetting "stars"))}}
         <div class="flex1 layout center carac pos_relative">
             <!-- STATS -->
             {{> "systems/aria/templates/actors/character/parts/stats/character-attributes.hbs"}}
         </div>
-            <div class="flex1 layout center hpcol pos_relative">
+        {{/if}}
+        <div class="flex1 layout center hpcol pos_relative">
             <!-- HP -->
             {{> "systems/aria/templates/actors/character/parts/stats/character-hp.hbs"}}
         </div>

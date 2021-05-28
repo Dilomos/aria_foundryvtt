@@ -3,7 +3,10 @@
         <ol class="inventory-list competence-list">
             <li class="inventory-header flexrow">
                 <h3 class="item-name flexrow">{{ localize "ARIA.ui.skill" }}</h3>
+                {{#if (isAriaTypeSetting "contemporain")}}
+                {{else}}
                 <div class="item-detail">{{ localize "ARIA.ui.link" }}</div>
+                {{/if}}  
                 <div class="item-detail">{{ localize "ARIA.ui.score" }}</div>
                 <div class="item-controls">
                     <a class="item-control item-create new-capa" title="Ajouter une compétence"><i class="fas fa-plus"></i></a>    
@@ -18,17 +21,22 @@
                                 <div class="icon_d100">
                                 </div>
                                 <div class="field-label no-wrap left competence_name">{{competence.name}}
-                                    <span class="comp_tooltiptext"><h1>{{competence.name}} :</h1>{{{competence.data.description}}}</span>
+                                {{#if (isAriaTypeSetting "contemporain")}}
+                                    <span class="comp_tooltiptext comp_tooltiptextwidth_noLinkCol comp_tooltiptextleft_noLinkCol">
+                                {{else}}
+                                    <span class="comp_tooltiptext comp_tooltiptextwidth comp_tooltiptextleft">
+                                {{/if}}  
+                                        <h1>{{competence.name}} :</h1>{{{competence.data.description}}}
+                                    </span>
                                 </div>
                             </div>
                         </div>
-                        
+                        {{#if (isAriaTypeSetting "contemporain")}}
+                        {{else}}
                         <div class="item-detail">{{#if competence.data.link1}}{{competence.data.link1}}{{/if}} / {{#if competence.data.link2}}{{competence.data.link2}}{{/if}}</div>
+                        {{/if}}  
                         <div class="item-detail flexrow">
-                            <!--<div class="field-value flex1 capa_score"> {{competence.data.score}} </div>-->
-
                             <input class="field-value flex1 capa_score" name="competence.data.score" type="text" value="{{competence.data.score}}" placeholder="" data-dtype="Number"/>
-                            
                             <div class="flex1 capa_percent">%</div>
                         </div>
                         <div class="item-controls">
@@ -45,31 +53,39 @@
         <ol class="inventory-list competence-list">
             <li class="inventory-header flexrow">
                 <h3 class="item-name flexrow">{{ localize "ARIA.ui.specialskill" }}</h3>
+                {{#if (isAriaTypeSetting "contemporain")}}
+                {{else}}
                 <div class="item-detail">{{ localize "ARIA.ui.link" }}</div>
+                {{/if}}  
                 <div class="item-detail">{{ localize "ARIA.ui.score" }}</div>
                 <div class="item-controls">
                     <a class="item-control item-create new-capa-spe" title="Ajouter une compétence spéciale"><i class="fas fa-plus"></i></a>    
-                    <!--<a class="item-control item-create compendium-pack" title="Ajouter une compétence spéciale du compendium" data-pack="aria.competences" data-open="0"><i class="fas fa-folder-plus"></i></a>-->
                 </div>
             </li>
             {{#each (getCompetencesSpe actor.items) as |competence id|}}
                 <ol class="item-list">
                     <li class="item flexrow" data-item-id="{{_id}}" data-item-type="item">
-                        
                         <div class="flex1 rollable no-wrap" title="{{competence.name}}" data-rolling-value="{{competence.data.score}}" data-roll-type="competencycheck">
                             <div class="flexrow no-wrap ">
                                 <div class="icon_d100">
                                 </div>
                                 <div class="field-label no-wrap left competence_name">{{competence.name}}
-                                    <span class="compspe_tooltiptext"><h1>{{competence.name}} :</h1>{{{competence.data.description}}}</span>
+                                {{#if (isAriaTypeSetting "contemporain")}}
+                                    <span class="compspe_tooltiptext comp_tooltiptextwidth_noLinkCol compspe_tooltiptextleft_noLinkCol">
+                                {{else}}
+                                    <span class="compspe_tooltiptext comp_tooltiptextwidth compspe_tooltiptextleft">
+                                {{/if}}
+                                        <h1>{{competence.name}} :</h1>{{{competence.data.description}}}
+                                    </span>
                                 </div>
                             </div>
                         </div>
 
+                        {{#if (isAriaTypeSetting "contemporain")}}
+                        {{else}}
                         <div class="item-detail">{{#if competence.data.link1}}{{competence.data.link1}}{{/if}} / {{#if competence.data.link2}}{{competence.data.link2}}{{/if}}</div>
+                        {{/if}}
                         <div class="item-detail flexrow">
-                            <!--<div class="field-value flex1 capa_score"> {{competence.data.score}} </div>-->
-
                             <input class="field-value flex1 capa_score" name="competence.data.score" type="text" value="{{competence.data.score}}" placeholder="" data-dtype="Number"/>
 
                             <div class="flex1 capa_percent">%</div>
