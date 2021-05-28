@@ -1,0 +1,2 @@
+{"name":"Artisanat / Construire","permission":{"default":0,"2iWYjvpZCb5uRmvI":3},"type":"competence","data":{"description":"<p>Permet de fabriquer des objets manuellement, pour peu que l’on dispose du matériel et des outils nécessaires.</p>","source":"ARIA","key":"artisanat","language":false,"link1":"DEX","link2":"INT","score":0},"flags":{},"img":"/systems/aria/ui/icons/competences/competences.webp","_id":"06xWRI72g0dFiUeV"}
+{"$$deleted":true,"_id":"06xWRI72g0dFiUeV"}

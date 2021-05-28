@@ -1,0 +1,16 @@
+<div class="flexrow no-wrap">
+    <div class="caracname">
+            <div class="flex1 rollable no-wrap" data-rolling="data.stats.dex" data-roll-type="skillcheck" data-rolling-value="{{data.stats.dex.base}}">
+                <div class="flexrow no-wrap ">
+                    <div class="icon_d100" title="{{ localize data.stats.dex.label }}">
+                    </div>
+                    <div class="field-label no-wrap left" title="{{ localize data.stats.dex.label }}">
+                        {{ localize data.stats.dex.label }}
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="flex1 center cell caracvalue">
+        <input class="field-value" name="data.stats.dex.base" type="text" value="{{data.stats.dex.base}}" data-dtype="Number"/>
+    </div>
+</div>

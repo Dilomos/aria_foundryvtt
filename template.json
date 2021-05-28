@@ -41,6 +41,13 @@
             "abbrev" : "ARIA.stats.cha.abbrev",
             "base": 10,
             "value": 10
+          },
+          "intu" : {
+            "key" : "intu",
+            "label" : "ARIA.stats.intu.label",
+            "abbrev" : "ARIA.stats.intu.abbrev",
+            "base": 10,
+            "value": 10
           }
         }
       },
@@ -70,6 +77,14 @@
             "key" : "hit",
             "label" : "ARIA.attributes.hit.label",
             "abbrev" : "ARIA.attributes.hit.abbrev",
+            "base": 0,
+            "bonus": 0,
+            "value": 0
+          },
+          "mental": {
+            "key" : "mental",
+            "label" : "ARIA.attributes.mental.label",
+            "abbrev" : "ARIA.attributes.mental.abbrev",
             "base": 0,
             "bonus": 0,
             "value": 0

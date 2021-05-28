@@ -47,7 +47,6 @@ select {
   //-moz-appearance: none;
   //color: $c-black;
   color: $colorDark;
-  font-family: $font-primary;
   font-size: 14px;
   text-align: center;
   text-align-last: center;
@@ -142,7 +141,6 @@ label.checkbox {
   padding: 2px 0;
   border-top: $borderGroove;
   border-bottom: $borderGroove;
-  font-family: $font-tertiary;
   font-size: 20px;
   font-weight: 700;
   max-height: 29px;

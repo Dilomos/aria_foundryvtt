@@ -1,0 +1,51 @@
+<div class="flexrow top">
+
+    <div class="flexcol">
+         <div class="flex1 center">
+                <span class="titleFont titre-general field-label">{{ localize 'ARIA.ui.adventurer' }}</span>
+         </div>
+        <!-- NAME -->
+        <div class="flexrow">
+            <div class="flex4 center cell">
+                <input class="field-value charname" name="name" type="text" value="{{actor.name}}" placeholder="Name" data-dtype="String"/>
+            </div>
+        </div>
+        <!-- /NAME -->
+        <div class="flex1 center">
+            <span class="field-label"><br>JE SUIS GENIAL.E<br> PARCE QUE ...</span>
+        </div>  
+        <div class="flex1 center">
+                <input class="field-value" name="data.genial" type="text" value="{{data.genial}}" placeholder="..." data-dtype="String"/>
+        </div>
+    </div>
+
+
+    <div class="flexcol">
+         <div class="flex1 center">
+                <span class="titleFont titre-general field-label">{{ localize 'ARIA.ui.liveordie' }}</span>
+         </div>
+         <!-- PROFESSION -->
+        <div class="flexrow">
+                <div class="flex4 center cell drop-field compendium-pack" data-pack="aria.professions" data-open="0">
+                {{#if (getProfession actor.items)}}
+                    {{#with (getProfession actor.items)}}
+                        <input class="field-value charname" name="profession_name" type="text" value="{{name}}" placeholder="Profession Name" data-dtype="String" readonly="true"/>
+                        <div class="profession-controls item" data-item-id="{{_id}}" style="padding-right:5px;">
+                            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-times"></i></a>
+                        </div>
+                    {{/with}}
+                {{else}}
+                    <div class="empty">Ajoutez une Profession</div>
+                {{/if}}
+            </div>
+        </div>
+        <!-- /PROFESSION -->
+        <div class="flex1 center">
+            <span class="field-label"><br>MAIS LA SOCIETE A DES PROBLEMES <br> AVEC MOI PARCE QUE...</span>
+        </div> 
+        <div class="flex1 center">
+            <input class="field-value" name="data.mais" type="text" value="{{data.mais}}" placeholder="..." data-dtype="String"/>
+        </div>
+    </div>
+
+</div>

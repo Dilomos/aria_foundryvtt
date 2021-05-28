@@ -135,6 +135,13 @@
 }
 
 @font-face {
+  font-family: "HelveticaNeueLT";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/HelveticaNeueLTStd-Cn.otf");
+}
+
+@font-face {
   font-family: "PermanentMarker";
   font-style: normal;
   font-weight: 700;
@@ -672,12 +679,6 @@ strong {
   overflow: hidden;
 }
 
-.aria.actor .window-content > form .wrap .header {
-  min-height: 45px;
-  height: 45px;
-  max-height: 45px;
-}
-
 .aria.actor .window-content > form .wrap .header #banner {
   max-height: 45px;
 }
@@ -750,15 +751,30 @@ strong {
   max-height: 162px;
 }
 
+.aria.actor .window-content > form .wrap .mainHeight_std {
+  height: calc(100% - 330px);
+  min-height: calc(100% - 330px);
+  max-height: calc(100% - 330px);
+}
+
+.aria.actor .window-content > form .wrap .mainHeight_stars {
+  height: calc(100% - 260px);
+  min-height: calc(100% - 260px);
+  max-height: calc(100% - 260px);
+}
+
+.aria.actor .window-content > form .wrap .mainHeight_modern {
+  height: calc(100% - 180px);
+  min-height: calc(100% - 180px);
+  max-height: calc(100% - 180px);
+}
+
 .aria.actor .window-content > form .wrap .main {
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   padding: 0;
   overflow: hidden;
   margin: 0 0 0 0;
-  height: calc(100% - 315px);
-  min-height: calc(100% - 315px);
-  max-height: calc(100% - 315px);
 }
 
 .aria.actor .window-content > form .wrap .main #banner-top {
@@ -950,6 +966,35 @@ strong {
   max-height: 100%;
 }
 
+.aria.actor #logo-stars {
+  max-width: 216px;
+  max-height: 50px;
+}
+
+.aria.actor #logo-stars > img {
+  min-width: 216px;
+  width: 216px;
+  max-width: 216px;
+  min-height: 50px;
+  height: 50px;
+  max-height: 50px;
+}
+
+.aria.actor #logo-modern {
+  max-width: 126px;
+  max-height: 60px;
+  padding-top: 10px;
+}
+
+.aria.actor #logo-modern > img {
+  min-width: 126px;
+  width: 126px;
+  max-width: 126px;
+  min-height: 60px;
+  height: 60px;
+  max-height: 60px;
+}
+
 .aria.actor .table-header {
   font-weight: bold;
   min-height: 28px;
@@ -989,9 +1034,6 @@ strong {
 
 .aria.actor .window-content > form .wrap {
   color: #000;
-  background: url("../ui/background.jpg");
-  background-size: cover;
-  font-family: "AGaramondPro", serif;
   font-weight: bolder;
   font-size: 16px;
 }
@@ -1035,6 +1077,14 @@ strong {
 .aria.actor .window-content > form .wrap .field-label-icon-hp {
   margin-bottom: 30px;
   margin-right: 5px;
+  min-width: 42px;
+  width: 42px;
+  max-width: 42px;
+}
+
+.aria.actor .window-content > form .wrap .field-label-icon-mental {
+  margin-bottom: 7px;
+  margin-right: 10px;
   min-width: 42px;
   width: 42px;
   max-width: 42px;
@@ -1263,11 +1313,59 @@ strong {
   background: transparent;
 }
 
+.aria.actor .window-content > form .aria-bg-std {
+  background: url("../ui/bgNormal.webp");
+  background-size: cover;
+  font-family: "AGaramondPro", serif;
+}
+
+.aria.actor .window-content > form .aria-bg-std .titleFont {
+  font-family: "CharlemagneStd", serif;
+  line-height: 22px;
+}
+
+.aria.actor .window-content > form .aria-bg-modern {
+  background: url("../ui/bgModern.webp");
+  background-size: cover;
+  font-family: "HelveticaNeueLT", serif;
+}
+
+.aria.actor .window-content > form .aria-bg-modern .titleFont {
+  font-family: "HelveticaNeueLT", serif;
+  line-height: 22px;
+}
+
+.aria.actor .window-content > form .aria-bg-stars {
+  background: url("../ui/bgStars.webp");
+  background-size: cover;
+  font-family: "HelveticaNeueLT", serif;
+}
+
+.aria.actor .window-content > form .aria-bg-stars .titleFont {
+  font-family: "HelveticaNeueLT", serif;
+  line-height: 22px;
+}
+
+.aria.actor #logo-stars > img {
+  border: none;
+}
+
+.aria.actor #logo-modern > img {
+  border: none;
+}
+
 .aria.actor #life_icon {
   background: center/contain no-repeat url("../ui/pv.png");
   min-height: 80px;
   height: 80px;
   max-height: 80px;
+  font-size: 30px;
+}
+
+.aria.actor #mental_icon {
+  background: center/contain no-repeat url("../ui/sante_mentale.png");
+  min-height: 60px;
+  max-height: 60px;
   font-size: 30px;
 }
 
@@ -1311,10 +1409,6 @@ strong {
   white-space: nowrap;
 }
 
-.aria.actor .charlemagne {
-  font: 14px "CharlemagneStd", serif;
-}
-
 .aria.actor .titre-general {
   font-size: 20px;
 }
@@ -1329,7 +1423,6 @@ strong {
   width: 100%;
   vertical-align: middle;
   background: transparent;
-  font-family: "AGaramondPro", serif;
   font-size: 13px;
 }
 
@@ -1349,7 +1442,6 @@ strong {
 
 .aria.actor .btn {
   cursor: pointer;
-  font-family: "AGaramondPro", serif;
   color: #464331c4;
   border: 1px solid #736953a6;
   -webkit-box-shadow: 0 0 10px #00000052 inset;
@@ -1372,7 +1464,7 @@ strong {
 }
 
 .aria.actor .tabs {
-  font: 14px "AGaramondPro", serif;
+  font-size: 14px;
   color: #464331c4;
   text-align: center;
   margin: 0 0;
@@ -1422,7 +1514,7 @@ strong {
 }
 
 .aria.actor .sidebar .charname {
-  font-family: "PermanentMarker", cursive;
+  font-family: "Caveat", cursive;
   font-size: 2.5em;
   -webkit-text-fill-color: #fff;
   /* Will override color (regardless of order) */
@@ -1439,7 +1531,6 @@ strong {
 }
 
 .aria.actor .inventory h2 {
-  font-family: "AGaramondPro", serif;
   font-size: 16px;
   text-transform: uppercase;
   color: #464331c4;
@@ -1461,7 +1552,6 @@ strong {
 }
 
 .aria.actor .label-text {
-  font-family: "AGaramondPro", serif;
   font-size: 14px;
   color: #464331c4;
   text-align: center;
@@ -1498,17 +1588,56 @@ strong {
   padding: 0;
   margin: 0;
   overflow-y: hidden;
-  background: url("../ui/background.jpg") no-repeat white;
   font-size: 13px;
   color: #000;
-  background: url("../ui/background.jpg");
+  /* ----------------------------------------- */
+  /*  Item Actions                             */
+  /* ----------------------------------------- */
+  /* ----------------------------------------- */
+  /*  Item Actions                             */
+  /* ----------------------------------------- */
+}
+
+.aria.item .window-content .wrap {
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+  height: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.aria.item .window-content .aria-bg-std {
+  background: url("../ui/bgNormal.webp");
   background-size: cover;
-  /* ----------------------------------------- */
-  /*  Item Actions                             */
-  /* ----------------------------------------- */
-  /* ----------------------------------------- */
-  /*  Item Actions                             */
-  /* ----------------------------------------- */
+  font-family: "AGaramondPro", serif;
+}
+
+.aria.item .window-content .aria-bg-std .titleFont {
+  font-family: "CharlemagneStd", serif;
+  line-height: 22px;
+}
+
+.aria.item .window-content .aria-bg-modern {
+  background: url("../ui/bgModern.webp");
+  background-size: cover;
+  font-family: "HelveticaNeueLT", serif;
+}
+
+.aria.item .window-content .aria-bg-modern .titleFont {
+  font-family: "HelveticaNeueLT", serif;
+  line-height: 22px;
+}
+
+.aria.item .window-content .aria-bg-stars {
+  background: url("../ui/bgStars.webp");
+  background-size: cover;
+  font-family: "HelveticaNeueLT", serif;
+}
+
+.aria.item .window-content .aria-bg-stars .titleFont {
+  font-family: "HelveticaNeueLT", serif;
+  line-height: 22px;
 }
 
 .aria.item .window-content .sheet-header {
@@ -1551,7 +1680,6 @@ strong {
 }
 
 .aria.item .window-content .sheet-header .header-details {
-  font-family: "Modesto Condensed", "Palatino Linotype", serif;
   font-size: 20px;
   font-weight: 700;
 }
@@ -1628,7 +1756,6 @@ strong {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 20px;
   flex: 0 0 20px;
-  font-family: "Modesto Condensed", "Palatino Linotype", serif;
   font-size: 20px;
   font-weight: 700;
 }
@@ -2067,7 +2194,6 @@ strong {
 
 .aria select {
   color: #191813;
-  font-family: "AGaramondPro", serif;
   font-size: 14px;
   text-align: center;
   text-align-last: center;
@@ -2192,7 +2318,6 @@ strong {
   padding: 2px 0;
   border-top: 2px groove #eeede0;
   border-bottom: 2px groove #eeede0;
-  font-family: "Modesto Condensed", "Palatino Linotype", serif;
   font-size: 20px;
   font-weight: 700;
   max-height: 29px;
@@ -2280,7 +2405,7 @@ strong {
 }
 
 .aria nav.sheet-tabs.tabs {
-  font: 14px "AGaramondPro", serif;
+  font-size: 14px;
   color: #464331c4;
   text-align: center;
   border: none;

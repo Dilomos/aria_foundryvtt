@@ -74,8 +74,8 @@
   "ARIA.ui.qtymax" : "Max quantity",
   "ARIA.ui.competence" : "Compétence",
   "ARIA.ui.competences" : "Compétences",
-  "ARIA.ui.adventurer" : "Adventurer",
-  "ARIA.ui.liveordie" : "Live or Die",
+  "ARIA.ui.adventurer" : "ADVENTURER",
+  "ARIA.ui.liveordie" : "LIVE OR SURVIVE",
   "ARIA.ui.link" : "Links",
   "ARIA.ui.score" : "Score",
   "ARIA.ui.language": "Language",
@@ -130,6 +130,8 @@
   "ARIA.stats.int.abbrev" : "INT",
   "ARIA.stats.cha.label" : "Charisma",
   "ARIA.stats.cha.abbrev" : "CHA",
+  "ARIA.stats.intu.label" : "Intuition",
+  "ARIA.stats.intu.abbrev" : "INTU",
 
   "ARIA.attributes.base.abbrev" : "Base",
   "ARIA.attributes.value.abbrev": "Value",
@@ -156,6 +158,8 @@
   "ARIA.attributes.sc.abbrev": "SPELL",
   "ARIA.attributes.hit.label": "Hit",
   "ARIA.attributes.hit.abbrev": "HIT",
+  "ARIA.attributes.mental.label": "Sanity",
+  "ARIA.attributes.mental.abbrev": "SAN", 
 
   "ARIA.attacks.label": "ATTACKS",
   "ARIA.attacks.name.abbrev" : "Name",

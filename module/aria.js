@@ -13,8 +13,8 @@ import { getBarAttribute } from "./canvas.js";
 import {AriaActor} from "./actors/actor.js";
 import {AriaItem} from "./items/item.js";
 
-import {AriaItemSheet} from "./items/item-sheet.js";
-import {AriaCharacterSheet} from "./actors/character-sheet.js";
+import {AriaItemSheet,AriaModernItemSheet,AriaStarsItemSheet} from "./items/item-sheet.js";
+import {AriaCharacterSheet,AriaStarsCharacterSheet,AriaModernCharacterSheet} from "./actors/character-sheet.js";
 
 import { registerHandlebarsHelpers } from "./helpers.js";
 
@@ -24,6 +24,9 @@ import {Macros} from "./system/macros.js";
 Hooks.once("init", async function () {
 
     console.info("Aria System Initializing...");
+
+    // Register System Settings
+    registerSystemSettings();
 
     /**
      * Set an initiative formula for the system
@@ -51,21 +54,54 @@ Hooks.once("init", async function () {
     Actors.unregisterSheet("core", ActorSheet);
     Items.unregisterSheet("core", ItemSheet);
 
-    // Register actor sheets
-    Actors.registerSheet("aria", AriaCharacterSheet, {
-        types: ["character", "npc"], 
+    if(game.settings.get("aria", "ariaVersion") == "aria"){
+      // Register item sheets
+      Items.registerSheet("aria", AriaItemSheet, {
+          types: ["item", "competence", "profession", "origine"],
+          makeDefault: true,
+          label: "ARIA.SheetClassItem"
+      });
+
+          // Register actor sheets
+      Actors.registerSheet("aria", AriaCharacterSheet, {
+          types: ["character"], 
+          makeDefault: true,
+          label: "ARIA.SheetClassCharacter"
+      });
+
+    }
+
+    if(game.settings.get("aria", "ariaVersion") == "stars"){
+        // Register item sheets
+      Items.registerSheet("aria", AriaStarsItemSheet, {
+          types: ["item", "competence", "profession", "origine"],
+          makeDefault: true,
+          label: "ARIA.SheetStarsClassItem"
+      });
+
+      Actors.registerSheet("aria", AriaStarsCharacterSheet, {
+        types: ["character"], 
         makeDefault: true,
-        label: "ARIA.SheetClassCharacter"
-    });
-    // Register item sheets
-    Items.registerSheet("aria", AriaItemSheet, {
+        label: "ARIA.SheetStarsClassCharacter"
+      });
+
+    }
+
+    if(game.settings.get("aria", "ariaVersion") == "contemporain"){
+          // Register item sheets
+      Items.registerSheet("aria", AriaModernItemSheet, {
         types: ["item", "competence", "profession", "origine"],
         makeDefault: true,
-        label: "ARIA.SheetClassItem"
-    });
+        label: "ARIA.SheetModernClassItem"
+      });
 
-    // Register System Settings
-    registerSystemSettings();
+      Actors.registerSheet("aria", AriaModernCharacterSheet, {
+        types: ["character"], 
+        makeDefault: true,
+        label: "ARIA.SheetModernClassCharacter"
+      });
+
+    }
 
     // Preload Handlebars Templates
     preloadHandlebarsTemplates();

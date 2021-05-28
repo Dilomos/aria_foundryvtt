@@ -1,1 +1,1 @@
-/systems/aria/ui/icons/competences/competences.jpg
+/systems/aria/ui/icons/competences/competences.webp

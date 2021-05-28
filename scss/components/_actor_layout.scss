@@ -26,9 +26,7 @@
       overflow: hidden;
 
       .header {
-        min-height: 45px;
-        height: 45px;
-        max-height: 45px;
+
           #banner {
             max-height: 45px;
           }
@@ -73,9 +71,8 @@
             height: 50px;
             max-height: 50px;
             
-          }
+          }          
         }
-
         
         #logo-orbe {
           max-width: 83px;
@@ -105,15 +102,30 @@
         }
       }
 
+      .mainHeight_std{
+        height: calc(100% - 330px);
+        min-height: calc(100% - 330px);
+        max-height: calc(100% - 330px);
+      }
+
+      .mainHeight_stars{
+        height: calc(100% - 260px);
+        min-height: calc(100% - 260px);
+        max-height: calc(100% - 260px);
+      }
+
+      .mainHeight_modern{
+        height: calc(100% - 180px);
+        min-height: calc(100% - 180px);
+        max-height: calc(100% - 180px);
+      }
+
       .main {
         flex-wrap: nowrap;
         padding: 0;
         overflow: hidden;
         margin: 0 0 0 0;
-        height: calc(100% - 315px);
-        min-height: calc(100% - 315px);
-        max-height: calc(100% - 315px);
-        
+
         #banner-top {
           min-width: 32px;
           width: 32px;
@@ -295,6 +307,34 @@
   }
 }
 
+#logo-stars {
+  max-width: 216px;
+  max-height: 50px;
+  & > img {
+    min-width: 216px;
+    width: 216px;
+    max-width: 216px;
+    min-height: 50px;
+    height: 50px;
+    max-height: 50px;
+    
+  }
+}
+
+#logo-modern {
+  max-width: 126px;
+  max-height: 60px;
+  padding-top: 10px;
+  & > img {
+    min-width: 126px;
+    width: 126px;
+    max-width: 126px;
+    min-height: 60px;
+    height: 60px;
+    max-height: 60px;
+    
+  }
+}
 
 .table-header {
   font-weight: bold;

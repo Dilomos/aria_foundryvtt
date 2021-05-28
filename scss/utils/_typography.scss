@@ -40,6 +40,13 @@
 }
 
 @font-face {
+  font-family: "HelveticaNeueLT";
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/HelveticaNeueLTStd-Cn.otf');
+}
+
+@font-face {
   font-family: "PermanentMarker";
   font-style: normal;
   font-weight: 700;
@@ -108,9 +115,9 @@
 
 $font-primary: 'AGaramondPro', serif;
 $font-secondary: 'CharlemagneStd', serif;
-$font-tertiary: "Modesto Condensed", "Palatino Linotype", serif;
-$font-charname: "PermanentMarker", cursive;
 $font-handwrite: "Caveat", cursive;
+
+$font-modern: 'HelveticaNeueLT', serif;
 
 .empty {
   //font: 14px $font-secondary;

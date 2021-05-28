@@ -74,8 +74,8 @@
   "ARIA.ui.equipable" :  "Équipable",
   "ARIA.ui.stackable" : "Empilable",
   "ARIA.ui.qtymax" : "Quantité max",
-  "ARIA.ui.adventurer" : "Aventurier",
-  "ARIA.ui.liveordie" : "Vivre ou mourir",
+  "ARIA.ui.adventurer" : "AVENTURIER",
+  "ARIA.ui.liveordie" : "VIVRE OU SURVIVRE",
   "ARIA.ui.link" : "Liens",
   "ARIA.ui.score" : "Score",
   "ARIA.ui.language": "Langue",
@@ -130,6 +130,9 @@
   "ARIA.stats.int.abbrev" : "INT",
   "ARIA.stats.cha.label" : "Charisme",
   "ARIA.stats.cha.abbrev" : "CHA",
+  "ARIA.stats.intu.label" : "Intuition",
+  "ARIA.stats.intu.abbrev" : "INTU",
+  
 
   "ARIA.attributes.base.abbrev" : "Base",
   "ARIA.attributes.value.abbrev": "Valeur",
@@ -156,6 +159,8 @@
   "ARIA.attributes.sc.abbrev": "INCANT",
   "ARIA.attributes.hit.label": "Blessures",
   "ARIA.attributes.hit.abbrev": "BLES",
+  "ARIA.attributes.mental.label": "Santé Mentale",
+  "ARIA.attributes.mental.abbrev": "SANT.MENT",  
 
   "ARIA.attacks.label": "ATTAQUES",
   "ARIA.attacks.name.abbrev" : "Nom",
@@ -280,8 +285,12 @@
   "ARIA.properties.creature" : "Créature",
 
   "ARIA.SheetClassCharacter" : "Fiche de Personnage ARIA par défaut",
+  "ARIA.SheetStarsClassCharacter" : "Fiche de Personnage STARS",
+  "ARIA.SheetModernClassCharacter" : "Fiche de Personnage ARIA Contemporain",
   "ARIA.SheetClassEncounter" : "Fiche de Rencontre ARIA par défaut",
   "ARIA.SheetClassItem" : "Fiche d'Objet ARIA par défaut",
+  "ARIA.SheetStarsClassItem" : "Fiche d'Objet STARS",
+  "ARIA.SheetModernClassItem" : "Fiche d'Objet ARIA Contemporain",
 
   "ARIA.languages.Common" : "Aria (Commun)",
   "ARIA.languages.Kohestien" : "Kohestien",

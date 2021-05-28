@@ -46,16 +46,26 @@ ARIA.competencesSpe = [];
 
 // Mise en cache des données de profession
 ARIA.getProfessions = async function () {
-    let professions = await game.packs.get("aria.professions").getContent().then(index => index.map(entity => entity.data));
-    let professionsactualplay = await game.packs.get("aria.professionsactualplay").getContent().then(index => index.map(entity => entity.data));
-    let professionsexceptions = await game.packs.get("aria.professionsexceptions").getContent().then(index => index.map(entity => entity.data));
+    let professions;
+    let professionsactualplay;
+    let professionsexceptions;
+
+    if(game.settings.get("aria", "ariaVersion") == "aria"){
+        professions = await game.packs.get("aria.professions").getContent().then(index => index.map(entity => entity.data));
+        professionsactualplay = await game.packs.get("aria.professionsactualplay").getContent().then(index => index.map(entity => entity.data));
+        professionsexceptions = await game.packs.get("aria.professionsexceptions").getContent().then(index => index.map(entity => entity.data));
+    }
     ARIA.professions = professions.concat(professionsactualplay).concat(professionsexceptions);
     console.debug("Professions loaded");
 };
 
 // Mise en cache des données d'origine
 ARIA.getOrigines = async function () {
-    let origines = await game.packs.get("aria.origines").getContent().then(index => index.map(entity => entity.data));
+    let origines;
+    
+    if(game.settings.get("aria", "ariaVersion") == "aria"){
+        origines = await game.packs.get("aria.origines").getContent().then(index => index.map(entity => entity.data));
+    }
     ARIA.origines = origines;
     console.debug("Origines loaded");
 };
@@ -63,15 +73,24 @@ ARIA.getOrigines = async function () {
 
 // Mise en cache des données de compétences
 ARIA.getCompetences = async function () {
-    let competences = await game.packs.get("aria.competences").getContent().then(index => index.map(entity => entity.data));
+    let competences;
+
+    if(game.settings.get("aria", "ariaVersion") == "aria"){
+        competences = await game.packs.get("aria.competences").getContent().then(index => index.map(entity => entity.data));
+    }
     ARIA.competences = competences;
     console.debug("Competences loaded");
 };
 
 // Mise en cache des données de compétences
 ARIA.getCompetencesSpe = async function () {
-    let competencesspepretire = await game.packs.get("aria.competencesspepretire").getContent().then(index => index.map(entity => entity.data));
-    let competencesspeexception = await game.packs.get("aria.competencesspeexception").getContent().then(index => index.map(entity => entity.data));
+    let competencesspepretire;
+    let competencesspeexception;
+    
+    if(game.settings.get("aria", "ariaVersion") == "aria"){
+        competencesspepretire = await game.packs.get("aria.competencesspepretire").getContent().then(index => index.map(entity => entity.data));
+        competencesspeexception = await game.packs.get("aria.competencesspeexception").getContent().then(index => index.map(entity => entity.data));
+    }
     ARIA.competencesSpe = competencesspepretire.concat(competencesspeexception);
     console.debug("Competences loaded");
 };

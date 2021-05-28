@@ -5,16 +5,13 @@
   &>form {
     .wrap {
       color: $c-black;
-      //color: $c-darkbrown;
-      background: url("../ui/background.jpg");
-      background-size: cover;
-
-      font-family: $font-primary;
       font-weight: bolder;
       font-size: 16px;
+
       #logo-banner>img {
         border:none;
       }
+
       #logo-orbe>img {
         border:none;
       }
@@ -47,6 +44,14 @@
       .field-label-icon-hp {
         margin-bottom: 30px;
         margin-right: 5px;
+        min-width: 42px;
+        width: 42px;
+        max-width: 42px;
+      }
+
+      .field-label-icon-mental {
+        margin-bottom: 7px;
+        margin-right: 10px;
         min-width: 42px;
         width: 42px;
         max-width: 42px;
@@ -131,6 +136,7 @@
       .origine{
         margin-top: 20px;
       }
+
 
       .origine_name{
         vertical-align: middle;
@@ -280,7 +286,45 @@
         }
       }
     }
+    .aria-bg-std{
+      background: url("../ui/bgNormal.webp");
+      background-size: cover;
+
+      font-family: $font-primary;
+      .titleFont {
+        font-family: $font-secondary;
+        line-height: 22px;
+      }
+    }
+    .aria-bg-modern{
+      background: url("../ui/bgModern.webp");
+      background-size: cover;
+
+      font-family: $font-modern;
+      .titleFont {
+        font-family: $font-modern;
+        line-height: 22px;
+      }
+    }
+    .aria-bg-stars{
+      background: url("../ui/bgStars.webp");
+      background-size: cover;
+
+      font-family: $font-modern;
+      .titleFont {
+        font-family: $font-modern;
+        line-height: 22px;
+      }
+    }
   }
+}
+
+#logo-stars>img {
+  border:none;
+}
+
+#logo-modern>img {
+  border:none;
 }
 
 #life_icon{
@@ -288,6 +332,13 @@
   min-height: 80px;
   height: 80px;
   max-height: 80px;
+  font-size: 30px;
+}
+
+#mental_icon{
+  background: center / contain no-repeat url("../ui/sante_mentale.png");
+  min-height: 60px;
+  max-height: 60px;
   font-size: 30px;
 }
 
@@ -328,10 +379,6 @@
   @include ellipsis;
 }
 
-.charlemagne {
-  font: 14px $font-secondary;
-}
-
 .titre-general{
   font-size: 20px;
 } 
@@ -345,7 +392,6 @@
   width: 100%;
   vertical-align: middle;
   background: transparent;
-  font-family: $font-primary;
   font-size: 13px;
 }
 
@@ -365,7 +411,6 @@
 
 .btn {
   cursor: pointer;
-  font-family: $font-primary;
   color: $c-darkbrown;
   border: 1px solid $c-border;
   box-shadow: 0 0 10px $c-shadow inset;
@@ -386,7 +431,7 @@
 
 
 .tabs {
-  font: 14px $font-primary;
+  font-size: 14px;
   color: $c-darkbrown;
   text-align: center;
   margin: 0 0;
@@ -434,7 +479,7 @@ div:hover>div.profession-controls {
 }
 
 .sidebar .charname{
-  font-family: $font-charname;
+  font-family: $font-handwrite;
   font-size: 2.5em;
 
   -webkit-text-fill-color: $c-white; /* Will override color (regardless of order) */
@@ -455,7 +500,6 @@ div:hover>div.profession-controls {
 /*  Custom classes                           */
 /* ----------------------------------------- */
 .inventory h2{
-  font-family: $font-primary;
   font-size: 16px;
   text-transform: uppercase;
   color: $c-darkbrown;
@@ -477,7 +521,6 @@ label.input-label{
 
 
 .label-text {
-  font-family: $font-primary;
   font-size: 14px;
   color: $c-darkbrown;
   text-align: center;
@@ -491,7 +534,6 @@ label.input-label{
 }
 
 strong{
-  //font-family: $font-secondary;
   font-weight: bold;
 }
 

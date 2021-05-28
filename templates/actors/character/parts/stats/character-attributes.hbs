@@ -1,23 +1,10 @@
 
 <div class="attrvertalign">
-{{#each actor.data.stats as |stat id|}}
-<div class="flexrow no-wrap">
-    <div class="caracname">
-            <div class="flex1 rollable no-wrap" data-rolling="data.stats.{{id}}" data-roll-type="skillcheck" data-rolling-value="{{stat.base}}">
-                <div class="flexrow no-wrap ">
-                    <div class="icon_d100" title="{{ localize stat.label }}">
-                    </div>
-                    <div class="field-label no-wrap left" title="{{ localize stat.label }}">
-                        {{ localize stat.label }}
-                    </div>
-                </div>
-            </div>
-    </div>
-    <div class="flex1 center cell caracvalue">
-        <input class="field-value" name="data.stats.{{id}}.base" type="text" value="{{stat.base}}" data-dtype="Number"/>
-    </div>
-</div>
-{{/each}}
+{{> "systems/aria/templates/actors/character/parts/stats/attributes/character-attributes-str.hbs"}}
+{{> "systems/aria/templates/actors/character/parts/stats/attributes/character-attributes-dex.hbs"}}
+{{> "systems/aria/templates/actors/character/parts/stats/attributes/character-attributes-end.hbs"}}
+{{> "systems/aria/templates/actors/character/parts/stats/attributes/character-attributes-int.hbs"}}
+{{> "systems/aria/templates/actors/character/parts/stats/attributes/character-attributes-cha.hbs"}}
 
     <div class="flexcol origine">
         <div class="flex1 center">

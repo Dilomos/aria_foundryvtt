@@ -1,1 +1,1 @@
-/systems/aria/ui/icons/professions/profession.jpg
+/systems/aria/ui/icons/professions/profession.webp

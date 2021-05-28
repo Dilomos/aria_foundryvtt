@@ -1,39 +1,37 @@
-<form class="{{cssClass}}" autocomplete="off">
-    <header class="sheet-header flexrow header-background no-wrap">
-        <img class="profession" src="{{item.img}}" title="{{item.name}}" data-edit="img">
-        <div class="header-details flexrow">
-            <h1 class="charname">
-                <input name="name" type="text" value="{{item.name}}" placeholder="Item Name"/>
-            </h1>
-            <div class="item-subtitle">
-                <h4 class="item-type">{{localize (concat "ARIA.category." item.type)}}</h4>
-                <span class="item-status">
-                    {{#if item.data.subtype}}
-                        {{localize (concat "ARIA.category." item.data.subtype)}}
-                    {{/if}}
-                </span>
-            </div>
+<header class="sheet-header flexrow header-background no-wrap">
+    <img class="profession" src="{{item.img}}" title="{{item.name}}" data-edit="img">
+    <div class="header-details flexrow">
+        <h1 class="charname">
+            <input name="name" type="text" value="{{item.name}}" placeholder="Item Name"/>
+        </h1>
+        <div class="item-subtitle">
+            <h4 class="item-type">{{localize (concat "ARIA.category." item.type)}}</h4>
+            <span class="item-status">
+                {{#if item.data.subtype}}
+                    {{localize (concat "ARIA.category." item.data.subtype)}}
+                {{/if}}
+            </span>
         </div>
-    </header>
-    {{!-- Sheet Body --}}
-    <section class="sheet-body">
-        <h3 class="form-header">{{localize "ARIA.details.description"}}</h3>
-        <div class="flexrow description">
-            {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
-        </div>
-        <div class="details">
-            {{#if (equals item.type "item")}}
-                {{> "systems/aria/templates/items/parts/details/item-details.hbs"}}
-            {{/if}}
-            {{#if (equals item.type "competence")}}
-                {{> "systems/aria/templates/items/parts/details/competence-details.hbs"}}
-            {{/if}}
-            {{#if (equals item.type "profession")}}
-                {{> "systems/aria/templates/items/parts/details/profession-details.hbs"}}
-            {{/if}}
-            {{#if (equals item.type "origine")}}
-                {{> "systems/aria/templates/items/parts/details/origines-details.hbs"}}
-            {{/if}}
-        </div>
-    </section>
-</form>
+    </div>
+</header>
+{{!-- Sheet Body --}}
+<section class="sheet-body">
+    <h3 class="form-header">{{localize "ARIA.details.description"}}</h3>
+    <div class="flexrow description">
+        {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+    </div>
+    <div class="details">
+        {{#if (equals item.type "item")}}
+            {{> "systems/aria/templates/items/parts/details/item-details.hbs"}}
+        {{/if}}
+        {{#if (equals item.type "competence")}}
+            {{> "systems/aria/templates/items/parts/details/competence-details.hbs"}}
+        {{/if}}
+        {{#if (equals item.type "profession")}}
+            {{> "systems/aria/templates/items/parts/details/profession-details.hbs"}}
+        {{/if}}
+        {{#if (equals item.type "origine")}}
+            {{> "systems/aria/templates/items/parts/details/origines-details.hbs"}}
+        {{/if}}
+    </div>
+</section>

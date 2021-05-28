@@ -1,0 +1,41 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <div class="wrap  aria-bg-stars">
+
+        <div class="header">
+            <div class="flexrow no-wrap">
+                <div class="flex1 left" id="banner-left"></div>
+                 <div class="flex1 center" id="logo-stars"><img src="/systems/aria/ui/STARS.webp"/></div>
+                <div class="flex1 right" id="banner-right"></div>
+            </div>
+        </div>
+        
+{{> "systems/aria/templates/actors/character/parts/character-header_stars.hbs"}}
+
+        <div class="flexrow main mainHeight_stars">
+            <div class="content flex3">
+                {{!-- Sheet Tab Navigation --}}
+                <nav class="sheet-tabs tabs" data-group="primary">
+                    <a class="item titleFont" data-tab="stats">{{ localize "ARIA.tabs.stats" }}</a>
+                    <a class="item titleFont" data-tab="competences">{{ localize "ARIA.tabs.competences" }}</a>
+                    <a class="item titleFont" data-tab="inventory">{{ localize "ARIA.tabs.inventory" }}</a>
+                </nav>
+                {{!-- Sheet Body --}}
+                <section class="sheet-body">
+                    {{!-- Stats Tab --}}
+                    <div class="tab stats" data-group="primary" data-tab="stats">
+                        {{> "systems/aria/templates/actors/character/parts/stats/character-stats_stars.hbs"}}
+                    </div>
+                    {{!-- Competences Tab --}}
+                    <div class="tab competences" data-group="primary" data-tab="competences">
+                        {{> "systems/aria/templates/actors/character/parts/competences/character-competences.hbs"}}
+                    </div>
+                    {{!-- Inventory Tab --}}
+                    <div class="tab inventory" data-group="primary" data-tab="inventory">
+                        {{> "systems/aria/templates/actors/character/parts/inventory/character-inventory_stars.hbs"}}
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</form>
+

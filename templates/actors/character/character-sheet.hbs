@@ -1,5 +1,5 @@
 <form class="{{cssClass}}" autocomplete="off">
-    <div class="wrap">
+    <div class="wrap aria-bg-std">
 
         <div class="header">
             <div class="flexrow no-wrap">
@@ -11,13 +11,13 @@
         
 {{> "systems/aria/templates/actors/character/parts/character-header.hbs"}}
 
-        <div class="flexrow main">
+        <div class="flexrow main mainHeight_std">
             <div class="content flex3">
                 {{!-- Sheet Tab Navigation --}}
                 <nav class="sheet-tabs tabs" data-group="primary">
-                    <a class="item charlemagne" data-tab="stats">{{ localize "ARIA.tabs.stats" }}</a>
-                    <a class="item compendium-pack charlemagne" data-pack="aria.competences" data-open="0" data-tab="competences">{{ localize "ARIA.tabs.competences" }}</a>
-                    <a class="item compendium-pack charlemagne" data-pack="aria.arme" data-open="0" data-tab="inventory">{{ localize "ARIA.tabs.inventory" }}</a>
+                    <a class="item titleFont" data-tab="stats">{{ localize "ARIA.tabs.stats" }}</a>
+                    <a class="item titleFont" data-tab="competences">{{ localize "ARIA.tabs.competences" }}</a>
+                    <a class="item titleFont" data-tab="inventory">{{ localize "ARIA.tabs.inventory" }}</a>
                 </nav>
                 {{!-- Sheet Body --}}
                 <section class="sheet-body">
