@@ -115,6 +115,19 @@ export class AriaActorSheet extends ActorSheet {
             itemData.data.score = (itemData.data.score < 100) ? itemData.data.score : 100;
             return this.actor.updateOwnedItem(itemData).then(() => this.render(true));
         });
+
+        html.find('.capa_bonus').change(ev => {
+            ev.preventDefault();
+            const li = $(ev.currentTarget).closest(".item");
+            const item = this.actor.getOwnedItem(li.data("itemId"));
+            let itemData = item.data;
+            if( (ev.currentTarget.value.charAt(0) == '-') ||(ev.currentTarget.value.charAt(0) == '+') )
+                itemData.data.bonus = ev.currentTarget.value;
+            else
+                itemData.data.bonus = '+'+ev.currentTarget.value;
+            return this.actor.updateOwnedItem(itemData).then(() => this.render(true));
+        });
+        
         
 
         html.find('.item-name, .item-edit').click(this._onEditItem.bind(this));

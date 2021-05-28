@@ -131,6 +131,9 @@
       .capa_percent{
         padding-top: 3px;
         font-size: 16px;
+        min-width: 15px;
+        width: 15px;
+        max-width: 15px;
       }
 
       .origine{
@@ -171,23 +174,43 @@
       }
 
       .competence_name .comp_tooltiptextwidth {
-        width: calc(100% + 250px);
+        width: calc(100% + 220px);
       }
       .competence_name .comp_tooltiptextleft {
-        left: calc(100% + 220px);
+        left: calc(100% + 200px);
       }
       .competence_name .compspe_tooltiptextleft {
-        left: calc(-100% - 268px);
+        left: calc(-100% - 240px);
+      }
+
+      .competence_name .comp_tooltiptextwidth_noBonus {
+        width: calc(100% + 170px);
+      }
+      .competence_name .comp_tooltiptextleft_noBonus {
+        left: calc(100% + 150px);
+      }
+      .competence_name .compspe_tooltiptextleft_noBonus {
+        left: calc(-100% - 190px);
       }
 
       .competence_name .comp_tooltiptextwidth_noLinkCol {
         width: calc(100% + 170px);
       }
       .competence_name .comp_tooltiptextleft_noLinkCol {
-        left: calc(100% + 140px);
+        left: calc(100% + 150px);
       }
       .competence_name .compspe_tooltiptextleft_noLinkCol {
-        left: calc(-100% - 188px);
+        left: calc(-100% - 190px);
+      }
+
+      .competence_name .comp_tooltiptextwidth_noLinkCol_noBonus {
+        width: calc(100% + 120px);
+      }
+      .competence_name .comp_tooltiptextleft_noLinkCol_noBonus {
+        left: calc(100% + 100px);
+      }
+      .competence_name .compspe_tooltiptextleft_noLinkCol_noBonus {
+        left: calc(-100% - 140px);
       }
 
       .competence_name .comp_tooltiptext {
@@ -413,6 +436,7 @@
 .compendium-pack {
   cursor: pointer;
   min-height: 26px;
+  padding: 7px 0px 0px 0px !important;
 }
 
 .row {

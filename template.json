@@ -185,7 +185,8 @@
       "language": false,
       "link1": "",
       "link2": "",
-      "score": 0
+      "score": 0,
+      "bonus":0
     },
     "profession": {
       "templates": [
