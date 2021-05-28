@@ -18,8 +18,8 @@ export const registerSystemSettings = function() {
         });
 
         game.settings.register("aria", "showBonusCol", {
-          name: "Afficher la colonne Bonus/Malus pour les compétences",
-          hint: "",
+          name: "Afficher la colonne Bonus/Malus",
+          hint: "Ajoute la colonne pour les compétences",
           scope: "world",
           config: true,
           default: true,
