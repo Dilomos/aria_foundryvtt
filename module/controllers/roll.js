@@ -27,15 +27,42 @@ export class AriaRoll {
     static competencyCheck(data, actor, event,modifier) {
         const elt = $(event.currentTarget)[0];
         let key = elt.attributes["data-rolling-value"].value;
-        let cmpValue = eval(`${key}`)+modifier;
+        let bonus = elt.attributes["data-rolling-bonus"].value;
+
+        if( (bonus.charAt(0) == '-') || (bonus.charAt(0) == '+') ){
+
+        }else{
+            bonus= '+' + bonus;
+        }
+
+        if(modifier)
+        {
+            if( (modifier.charAt(0) == '-') || (modifier.charAt(0) == '+') ){
+
+            }else{
+                modifier= '+' + modifier;
+            }
+        } else{
+            modifier="+0";
+        }
+
+        let keyValue = eval(`${key}`);
+        let bonusValue = eval(`${bonus}`);
+        let modifierValue = eval(`${modifier}`);
+
+        let cmpValue = keyValue+ bonusValue+ modifierValue;
         let label = elt.attributes["title"].value;
-        let calcLabel;
-        if(modifier<0)
-            calcLabel = eval(`${key}`)+"%"+modifier;
-        else if(modifier == 0)
-            calcLabel = eval(`${key}`)+"%";
-        else
-            calcLabel = eval(`${key}`)+"%+"+modifier;
+        let calcLabel = eval(`${key}`);
+
+        if(modifierValue<0)
+            calcLabel = calcLabel + modifier;
+        else if(modifierValue > 0)
+            calcLabel = calcLabel + "+" + modifierValue;
+
+        if(bonusValue<0)
+            calcLabel = calcLabel + bonus;
+        else if(bonusValue > 0)
+            calcLabel = calcLabel + "+" + bonusValue;            
 
         let r = new AriaSkillRoll(label,calcLabel,cmpValue);
         r.roll(actor);

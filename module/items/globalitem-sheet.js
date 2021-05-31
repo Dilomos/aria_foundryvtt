@@ -37,18 +37,6 @@ export class GlobalAriaItemSheet extends ItemSheet {
             $(event.currentTarget).removeClass('dragging');
         });
 
-        // Click to open
-        html.find('.compendium-pack').click(ev => {
-            ev.preventDefault();
-            let li = $(ev.currentTarget), pack = game.packs.get(li.data("pack"));
-            if ( li.attr("data-open") === "1" ) pack.close();
-            else {
-                li.attr("data-open", "1");
-                li.find("i.folder").removeClass("fa-folder").addClass("fa-folder-open");
-                pack.render(true);
-            }
-        });
-
         // Display item sheet
         html.find('.item-name').click(this._onEditItem.bind(this));
         html.find('.item-edit').click(this._onEditItem.bind(this));
@@ -170,30 +158,19 @@ export class GlobalAriaItemSheet extends ItemSheet {
     }
 
     /** @override */
-    getData() {
-        const data = super.getData();
+    getData(options) {
+        const data = super.getData(options);
+        //const itemData = data.data;
         data.labels = this.item.labels;
-
-        // Include CONFIG values
-        data.config = game.aria.config;
-
+        data.config = CONFIG.ARIA;
+    
         // Item Type, Status, and Details
-        data.itemType = data.item.type.titleCase();
-        // data.itemStatus = this._getItemStatus(data.item);
-        data.itemProperties = this._getItemProperties(data.item);
-        // data.isPhysical = data.item.data.hasOwnProperty("quantity");
+        data.itemType = game.i18n.localize(`ITEM.Type${data.item.type.titleCase()}`);
+        data.itemProperties = this._getItemProperties(itemData);
 
-        // Potential consumption targets
-        // data.abilityConsumptionTargets = this._getItemConsumptionTargets(data.item);
-
-        // Action Details
-        // data.hasAttackRoll = this.item.hasAttack;
-        // data.isHealing = data.item.data.actionType === "heal";
-        // data.isFlatDC = getProperty(data.item.data, "save.scaling") === "flat";
-
-        // Vehicles
-        // data.isCrewed = data.item.data.activation?.type === 'crew';
-        // data.isMountable = this._isItemMountable(data.item);
+        // Re-define the template data references (backwards compatible)
+        //data.item = itemData;
+        //data.data = itemData.data;
         return data;
     }
 

@@ -29,7 +29,7 @@
             {{#each (getCompetences actor.items) as |competence id|}}
                 <ol class="item-list">
                     <li class="item flexrow" data-item-id="{{_id}}" data-item-type="item">
-                        <div class="rollable no-wrap" title="{{competence.name}}" data-rolling-value="{{competence.data.score}}{{competence.data.bonus}}" data-roll-type="competencycheck">
+                        <div class="rollable no-wrap" title="{{competence.name}}" data-rolling-value="{{competence.data.score}}" data-rolling-bonus="{{competence.data.bonus}}" data-roll-type="competencycheck">
                             <div class="flexrow no-wrap ">
                                 <div class="icon_d100">
                                 </div>
@@ -95,7 +95,7 @@
             {{#each (getCompetencesSpe actor.items) as |competence id|}}
                 <ol class="item-list">
                     <li class="item flexrow" data-item-id="{{_id}}" data-item-type="item">
-                        <div class="flex1 rollable no-wrap" title="{{competence.name}}" data-rolling-value="{{competence.data.score}}{{competence.data.bonus}}" data-roll-type="competencycheck">
+                        <div class="flex1 rollable no-wrap" title="{{competence.name}}" data-rolling-value="{{competence.data.score}}" data-rolling-bonus="{{competence.data.bonus}}" data-roll-type="competencycheck">
                             <div class="flexrow no-wrap ">
                                 <div class="icon_d100">
                                 </div>

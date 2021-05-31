@@ -22,22 +22,8 @@ export class AriaActorSheet extends ActorSheet {
         html.find('.compendium-pack').click(ev => {
             ev.preventDefault();
             let li = $(ev.currentTarget), pack = game.packs.get(li.data("pack"));
-            if (li.attr("data-open") === "1") pack.close();
-            else {
-                li.attr("data-open", "1");
-                pack.render(true);
-            }
-        });
-        
-        // Click to open
-        html.find('.item-create.compendium-pack').click(ev => {
-            ev.preventDefault();
-            let li = $(ev.currentTarget), pack = game.packs.get(li.data("pack"));
-            if (li.attr("data-open") === "1") pack.close();
-            else {
-                li.attr("data-open", "1");
-                pack.render(true);
-            }
+            //li.attr("data-open", "1");
+            pack.render(true);
         });
 
         // Click to open
@@ -136,6 +122,50 @@ export class AriaActorSheet extends ActorSheet {
             return this._onDeleteItem(ev);
         });
     }
+
+/** @override */
+/*getData(options) {
+
+    // Basic data
+    let isOwner = this.actor.isOwner;
+    const data = {
+      owner: isOwner,
+      limited: this.actor.limited,
+      options: this.options,
+      editable: this.isEditable,
+      config: CONFIG.ARIA
+    };
+
+    // The Actor's data
+    const actorData = this.actor.data.toObject(false);
+    data.actor = actorData;
+    data.data = actorData.data;
+
+    // Owned Items
+    data.items = actorData.items;
+    for ( let i of data.items ) {
+      const item = this.actor.items.get(i._id);
+      i.labels = item.labels;
+    }
+    data.items.sort((a, b) => (a.sort || 0) - (b.sort || 0));
+
+    // Labels and filters
+    //data.labels = this.actor.labels || {};
+    //data.filters = this._filters;
+
+    // Update traits
+    //this._prepareTraits(actorData.data.traits);
+
+    // Prepare owned items
+    //this._prepareItems(data);
+
+    // Prepare active effects
+    //data.effects = prepareActiveEffectCategories(this.actor.effects);
+
+    // Return data to the sheet
+    return data
+  }*/
+    
 
     async _onEditItem(event) {
         event.preventDefault();
@@ -245,36 +275,36 @@ export class AriaActorSheet extends ActorSheet {
                          one: {
                           icon: '<i class="fas fa-minus"></i>',
                           label: "30",
-                          callback: () => AriaRoll.competencyCheck(this.getData().items, this.actor, event, -30)
+                          callback: () => AriaRoll.competencyCheck(this.getData().items, this.actor, event, "-30")
                          },
                          two: {
                           icon: '<i class="fas fa-minus"></i>',
                           label: "20",
-                          callback: () => AriaRoll.competencyCheck(this.getData().items, this.actor, event, -20)
+                          callback: () => AriaRoll.competencyCheck(this.getData().items, this.actor, event, "-20")
                          },
                          three: {
                           icon: '<i class="fas fa-minus"></i>',
                           label: "10",
-                          callback: () => AriaRoll.competencyCheck(this.getData().items, this.actor, event, -10)
+                          callback: () => AriaRoll.competencyCheck(this.getData().items, this.actor, event, "-10")
                          },
                          four: {
                           label: "aucun",
-                          callback: () => AriaRoll.competencyCheck(this.getData().items, this.actor, event, +0)
+                          callback: () => AriaRoll.competencyCheck(this.getData().items, this.actor, event, "+0")
                          },
                          five: {
                           icon: '<i class="fas fa-plus"></i>',
                           label: "10",
-                          callback: () => AriaRoll.competencyCheck(this.getData().items, this.actor, event, +10)
+                          callback: () => AriaRoll.competencyCheck(this.getData().items, this.actor, event, "+10")
                          },
                          six: {
                             icon: '<i class="fas fa-plus"></i>',
                             label: "20",
-                            callback: () => AriaRoll.competencyCheck(this.getData().items, this.actor, event, +20)
+                            callback: () => AriaRoll.competencyCheck(this.getData().items, this.actor, event, "+20")
                            },
                         seven: {
                             icon: '<i class="fas fa-plus"></i>',
                             label: "30",
-                            callback: () => AriaRoll.competencyCheck(this.getData().items, this.actor, event, +30)
+                            callback: () => AriaRoll.competencyCheck(this.getData().items, this.actor, event, "+30")
                            },
                         },
                         default: "five",
@@ -283,7 +313,7 @@ export class AriaActorSheet extends ActorSheet {
                    break;
                 }
                 else{
-                    return AriaRoll.competencyCheck(this.getData().items, this.actor, event,0);
+                    return AriaRoll.competencyCheck(this.getData().items, this.actor, event,"+0");
                 }
             case "weapon" :
                 return AriaRoll.rollWeapon(this.getData().data, this.actor, event);
