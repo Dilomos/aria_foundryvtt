@@ -10,12 +10,12 @@ export class AriaDamageRoll {
         const messageTemplate = "systems/aria/templates/chat/weapon-card.hbs";
 
         let rollData = {
-            user: game.user._id,
+            user: game.user.id,
             speaker: ChatMessage.getSpeaker({actor: actor}),
         };
 
         let r = new Roll(this._formula);
-        r.roll();
+        r.evaluate({async:false});
 
         const calc = r.result;
         const mod = (r.terms.length > 1);
@@ -40,7 +40,7 @@ export class AriaDamageRoll {
         };
 
         let chatData = {
-            user: game.user._id,
+            user: game.user.id,
             speaker: ChatMessage.getSpeaker({actor: actor}),
             roll: r,
             content: await renderTemplate(messageTemplate,templateContextData),

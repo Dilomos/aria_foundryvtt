@@ -7,9 +7,7 @@ export class Profession {
             ui.notifications.error("Vous avez déjà une profession.");
             return false;
         } else {
-            let competences = duplicate(itemData.data.competences);
-            competences.push(itemData);
-            return actor.createOwnedItem(competences)
+            return actor.createEmbeddedDocuments("Item",[itemData]);
         }
     }
 
@@ -19,7 +17,7 @@ export class Profession {
             title: "Supprimer le profession ?",
             content: `<p>Etes-vous sûr de vouloir supprimer la profession de ${actor.name} ?</p>`,
             yes: () => {
-                return actor.deleteOwnedItem(entity._id);
+                return actor.deleteEmbeddedDocuments("Item",[entity.id]);
             },
             defaultYes: false
         });

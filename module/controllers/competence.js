@@ -10,12 +10,12 @@ export class Competence {
         if(special)
         {
             const data = {name: "Nom de la Compétence", type: "competence", data: {special: true}};
-            return actor.createOwnedItem(data, {renderSheet: true}); // Returns one Entity, saved to the database
+            return actor.createEmbeddedDocuments("Item",[data], {renderSheet: true}); // Returns one Entity, saved to the database
         }
         else
         {
             const data = {name: "Nom de la Compétence", type: "competence", data: {}};
-            return actor.createOwnedItem(data, {renderSheet: true}); // Returns one Entity, saved to the database
+            return actor.createEmbeddedDocuments("Item",[data], {renderSheet: true}); // Returns one Entity, saved to the database
         }
     }
 }

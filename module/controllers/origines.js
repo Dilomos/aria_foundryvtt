@@ -7,9 +7,7 @@ export class Origines {
             ui.notifications.error("Vous avez déjà une origine.");
             return false;
         } else {
-            let competences = duplicate(itemData.data.competences);
-            competences.push(itemData);
-            return actor.createOwnedItem(competences)
+            return actor.createEmbeddedDocuments("Item",[itemData]);
         }
     }
 
@@ -20,7 +18,7 @@ export class Origines {
             title: "Supprimer l'origine' ?",
             content: `<p>Etes-vous sûr de vouloir supprimer l'origine de ${actor.name} ?</p>`,
             yes: () => {
-                return actor.deleteOwnedItem(entity.data._id);
+                return actor.deleteEmbeddedDocuments("Item",[entity.id]);
             },
             defaultYes: false
         });

@@ -18,12 +18,12 @@ export class AriaSkillRoll {
         const messageTemplate = "systems/aria/templates/chat/carac-card.hbs";
 
         let rollData = {
-            user: game.user._id,
+            user: game.user.id,
             speaker: ChatMessage.getSpeaker({actor: actor}),
         };
 
         let r = new Roll(this._formula);
-        r.roll();
+        r.evaluate({async:false});
 
         let renderedRoll = await r.render();
 
@@ -49,7 +49,7 @@ export class AriaSkillRoll {
         };
 
         let chatData = {
-            user: game.user._id,
+            user: game.user.id,
             speaker: ChatMessage.getSpeaker({actor: actor}),
             roll: r,
             content: await renderTemplate(messageTemplate,templateContextData),

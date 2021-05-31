@@ -69,49 +69,49 @@ export class AriaActorSheet extends ActorSheet {
         html.find('.item-equip').click(ev => {
             ev.preventDefault();
             const elt = $(ev.currentTarget).parents(".item");
-            const item = this.actor.getOwnedItem(elt.data("itemId"));
-            let itemData = item.data;
+            const item = this.actor.items.get(elt.data("itemId"));
+            let itemData = item.toObject();
             itemData.data.equiped = !itemData.data.equiped;
-            return this.actor.updateOwnedItem(itemData).then(() => this.render(true));
+            return this.actor.updateEmbeddedDocuments("Item",[itemData]);
         });
 
         html.find('.item-qty').click(ev => {
             ev.preventDefault();
             const li = $(ev.currentTarget).closest(".item");
-            const item = this.actor.getOwnedItem(li.data("itemId"));
-            let itemData = item.data;
+            const item = this.actor.items.get(li.data("itemId"));
+            let itemData = item.toObject();
             itemData.data.qty = (itemData.data.qty) ? itemData.data.qty + 1 : 1;
-            return this.actor.updateOwnedItem(itemData).then(() => this.render(true));
+            return this.actor.updateEmbeddedDocuments("Item",[itemData]);
         });
         html.find('.item-qty').contextmenu(ev => {
             ev.preventDefault();
             const li = $(ev.currentTarget).closest(".item");
-            const item = this.actor.getOwnedItem(li.data("itemId"));
-            let itemData = item.data;
+            const item = this.actor.items.get(li.data("itemId"));
+            let itemData = item.toObject();
             itemData.data.qty = (itemData.data.qty > 0) ? itemData.data.qty -1 : 0;
-            return this.actor.updateOwnedItem(itemData).then(() => this.render(true));
+            return this.actor.updateEmbeddedDocuments("Item",[itemData]);
         });
 
-        html.find('.capa_score').change(ev => {
+        html.find('.capa_score').change(async ev => {
             ev.preventDefault();
             const li = $(ev.currentTarget).closest(".item");
-            const item = this.actor.getOwnedItem(li.data("itemId"));
-            let itemData = item.data;
+            const item = this.actor.items.get(li.data("itemId"));
+            let itemData = item.toObject();
             itemData.data.score = (ev.currentTarget.value > 0) ? ev.currentTarget.value : 0;
             itemData.data.score = (itemData.data.score < 100) ? itemData.data.score : 100;
-            return this.actor.updateOwnedItem(itemData).then(() => this.render(true));
+            return await this.actor.updateEmbeddedDocuments("Item",[itemData]);
         });
 
         html.find('.capa_bonus').change(ev => {
             ev.preventDefault();
             const li = $(ev.currentTarget).closest(".item");
-            const item = this.actor.getOwnedItem(li.data("itemId"));
-            let itemData = item.data;
+            const item = this.actor.items.get(li.data("itemId"));
+            let itemData = item.toObject();
             if( (ev.currentTarget.value.charAt(0) == '-') ||(ev.currentTarget.value.charAt(0) == '+') )
                 itemData.data.bonus = ev.currentTarget.value;
             else
                 itemData.data.bonus = '+'+ev.currentTarget.value;
-            return this.actor.updateOwnedItem(itemData).then(() => this.render(true));
+            return this.actor.updateEmbeddedDocuments("Item",[itemData]);
         });
         
         
@@ -124,7 +124,7 @@ export class AriaActorSheet extends ActorSheet {
     }
 
 /** @override */
-/*getData(options) {
+getData(options) {
 
     // Basic data
     let isOwner = this.actor.isOwner;
@@ -164,7 +164,7 @@ export class AriaActorSheet extends ActorSheet {
 
     // Return data to the sheet
     return data
-  }*/
+  }
     
 
     async _onEditItem(event) {
@@ -176,7 +176,7 @@ export class AriaActorSheet extends ActorSheet {
 
         let entity = null;
         // look first in actor onwed items
-        entity = this.actor.getOwnedItem(id);
+        entity = this.actor.items.get(id);
         if(!entity) {
             // look into world/compendiums items
             entity = await Traversal.getEntity(id, type, pack);
@@ -197,10 +197,10 @@ export class AriaActorSheet extends ActorSheet {
         event.preventDefault();
         const li = $(event.currentTarget).parents(".item");
         const itemId = li.data("itemId");
-        const entity = this.actor.items.find(item => item._id === itemId);
+        const entity = this.actor.items.find(item => item.id === itemId);
         switch (entity.data.type) {
             case "competence" :
-                return this.actor.deleteOwnedItem(itemId);
+                return this.actor.deleteEmbeddedDocuments("Item",[itemId]);
                 // return Competence.removeFromActor(this.actor, event, entity);
                 break;
             case "profession" :
@@ -210,7 +210,7 @@ export class AriaActorSheet extends ActorSheet {
                 return Origines.removeFromActor(this.actor, event, entity);
                 break;
             default: {
-                return this.actor.deleteOwnedItem(itemId);
+                return this.actor.deleteEmbeddedDocuments("Item",[itemId]);
             }
         }
     }
@@ -365,7 +365,7 @@ export class AriaActorSheet extends ActorSheet {
      * @private
      */
     async _onDropItem(event, data) {
-        if (!this.actor.owner) return false;
+        if (!this.actor.isOwner) return false;
         // let authorized = true;
 
         // let itemData = await this._getItemDropData(event, data);
@@ -381,10 +381,10 @@ export class AriaActorSheet extends ActorSheet {
                 // if (itemData.type === "competence") itemData.data.checked = true;
                 // Handle item sorting within the same Actor
                 const actor = this.actor;
-                let sameActor = (data.actorId === actor._id) || (actor.isToken && (data.tokenId === actor.token.id));
+                let sameActor = (data.actorId === actor.id) || (actor.isToken && (data.tokenId === actor.token.id));
                 if (sameActor) return this._onSortItem(event, itemData);
                 // Create the owned item
-                return this.actor.createEmbeddedEntity("OwnedItem", itemData);
+                return this.actor.createEmbeddedDocuments("Item", [itemData]);
         }
     }
 

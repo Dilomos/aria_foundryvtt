@@ -114,7 +114,6 @@ export class GlobalAriaItemSheet extends ItemSheet {
     _onDropCompetenceItem(event, itemData) {
         event.preventDefault();
         let data = duplicate(this.item.data);
-        const id = itemData._id;
         if(data.data.competences){
             let caps = data.data.competences;
             caps.push(itemData);
@@ -160,7 +159,7 @@ export class GlobalAriaItemSheet extends ItemSheet {
     /** @override */
     getData(options) {
         const data = super.getData(options);
-        //const itemData = data.data;
+        const itemData = data.data;
         data.labels = this.item.labels;
         data.config = CONFIG.ARIA;
     
@@ -169,8 +168,8 @@ export class GlobalAriaItemSheet extends ItemSheet {
         data.itemProperties = this._getItemProperties(itemData);
 
         // Re-define the template data references (backwards compatible)
-        //data.item = itemData;
-        //data.data = itemData.data;
+        data.item = itemData;
+        data.data = itemData.data;
         return data;
     }
 

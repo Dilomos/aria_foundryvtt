@@ -8,7 +8,7 @@
 import {System,ARIA} from "./config.js";
 import { registerSystemSettings } from "./settings.js";
 import { preloadHandlebarsTemplates } from "./templates.js";
-//import { AriaTokenDocument } from "./token.js";
+import { AriaTokenDocument } from "./token.js";
 
 import {AriaActor} from "./actors/actor.js";
 import {AriaItem} from "./items/item.js";
@@ -42,7 +42,7 @@ Hooks.once("init", async function () {
     // Define custom Entity classes
     CONFIG.Actor.entityClass = AriaActor;
     CONFIG.Item.entityClass = AriaItem;
-    //CONFIG.Token.documentClass = AriaTokenDocument;
+    CONFIG.Token.documentClass = AriaTokenDocument;
 
     // Create a namespace within the game global
     game.aria = {

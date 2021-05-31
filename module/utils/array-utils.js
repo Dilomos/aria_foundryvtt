@@ -10,7 +10,7 @@ export class ArrayUtils {
     static removeObjectById(array, elem) {
         let index;
         array.forEach(element => {
-            if(element._id == elem)
+            if(element.id == elem)
             {
                 index = array.indexOf(element);
             }
