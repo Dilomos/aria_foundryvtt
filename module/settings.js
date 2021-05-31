@@ -11,6 +11,7 @@ export const registerSystemSettings = function() {
             "stars": "Stars",
             "contemporain": "Contemporain",
           },
+          default: "aria",        // The default value for the setting
           onChange: value => { // A callback function which triggers when the setting is changed
             console.log(value);
             window.location.reload()
