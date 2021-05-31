@@ -8,7 +8,7 @@
 import {System,ARIA} from "./config.js";
 import { registerSystemSettings } from "./settings.js";
 import { preloadHandlebarsTemplates } from "./templates.js";
-import { getBarAttribute } from "./canvas.js";
+//import { AriaTokenDocument } from "./token.js";
 
 import {AriaActor} from "./actors/actor.js";
 import {AriaItem} from "./items/item.js";
@@ -26,7 +26,7 @@ Hooks.once("init", async function () {
     console.info("Aria System Initializing...");
 
     // Register System Settings
-    registerSystemSettings();
+    registerSystemSettings();    
 
     /**
      * Set an initiative formula for the system
@@ -42,6 +42,7 @@ Hooks.once("init", async function () {
     // Define custom Entity classes
     CONFIG.Actor.entityClass = AriaActor;
     CONFIG.Item.entityClass = AriaItem;
+    //CONFIG.Token.documentClass = AriaTokenDocument;
 
     // Create a namespace within the game global
     game.aria = {
@@ -63,7 +64,7 @@ Hooks.once("init", async function () {
 
         // Register actor sheets
     Actors.registerSheet("aria", AriaCharacterSheet, {
-        types: ["character"], 
+        types: ["character","npc"], 
         makeDefault: true,
         label: "ARIA.SheetClassCharacter"
     });
@@ -101,7 +102,23 @@ Hooks.once("setup", function() {
 
   });
 
-Hooks.on("canvasInit", function() {
-    // Extend Token Resource Bars
-  Token.prototype.getBarAttribute = getBarAttribute;
-  });
+
+  /* -------------------------------------------- */
+
+/**
+ * Once the entire VTT framework is initialized, check to see if we should perform a data migration
+ */
+Hooks.once("ready", function() {
+
+    if( (game.settings.get("aria", "ariaVersion") == "aria")
+    || (game.settings.get("aria", "ariaVersion") == "stars")
+    || (game.settings.get("aria", "ariaVersion") == "contemporain") )
+    {
+      console.info("Aria Skin : "+game.settings.get("aria", "ariaVersion"));
+    }
+    else{
+      game.settings.set("aria", "ariaVersion", "aria");
+      console.info("Aria Skin Reset : "+game.settings.get("aria", "ariaVersion"));
+    }
+
+});

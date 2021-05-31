@@ -2,13 +2,6 @@ import {Traversal} from "./utils/traversal.js";
 
 export const registerHandlebarsHelpers = function () {
 
-    Handlebars.registerHelper('getEmbeddedItems', function (type, ids) {
-        if (ids) {
-            const items = Traversal.getItemsOfType(type);
-            return ids.map(id => items.find(i => i._id === id));
-        } else return null;
-    });
-
 
     Handlebars.registerHelper('getOrigines', function (items) {
         return items.find(item => item.type === "origine");
@@ -191,18 +184,6 @@ export const registerHandlebarsHelpers = function () {
     Handlebars.registerHelper('splitWeaponMod', function (formula) {
         let terms = formula.split("+");
         return terms[1];
-    });
-
-    Handlebars.registerHelper('getCompetencesByIds', function (ids) {
-        if (ids) {
-            const caps = Traversal.getItemsOfType("competence").filter(c => ids.includes(c._id));
-            caps.sort(function (a, b) {
-                const indexA = ids.indexOf(a._id);
-                const indexB = ids.indexOf(b._id);
-                return (indexA > indexB) ? 1 : -1
-            });
-            return caps;
-        } else return null;
     });
 
     Handlebars.registerHelper('isNull', function (val) {
