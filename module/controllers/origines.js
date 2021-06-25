@@ -7,7 +7,9 @@ export class Origines {
             ui.notifications.error("Vous avez déjà une origine.");
             return false;
         } else {
-            return actor.createEmbeddedDocuments("Item",[itemData]);
+            let competences = duplicate(itemData.data.competences);
+            competences.push(itemData);
+            return actor.createEmbeddedDocuments("Item",competences);
         }
     }
 
