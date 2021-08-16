@@ -40,8 +40,8 @@ Hooks.once("init", async function () {
 
     CONFIG.ARIA = ARIA;
     // Define custom Entity classes
-    CONFIG.Actor.entityClass = AriaActor;
-    CONFIG.Item.entityClass = AriaItem;
+    CONFIG.Actor.documentClass = AriaActor;
+    CONFIG.Item.documentClass = AriaItem;
     CONFIG.Token.documentClass = AriaTokenDocument;
 
     // Create a namespace within the game global

@@ -149,18 +149,6 @@ getData(options) {
     }
     data.items.sort((a, b) => (a.sort || 0) - (b.sort || 0));
 
-    // Labels and filters
-    //data.labels = this.actor.labels || {};
-    //data.filters = this._filters;
-
-    // Update traits
-    //this._prepareTraits(actorData.data.traits);
-
-    // Prepare owned items
-    //this._prepareItems(data);
-
-    // Prepare active effects
-    //data.effects = prepareActiveEffectCategories(this.actor.effects);
 
     // Return data to the sheet
     return data
