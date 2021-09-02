@@ -36,7 +36,6 @@ ARIA.itemSubCategories = {
     "mount" : "ARIA.category.mount",
     "ammunition" : "ARIA.category.ammunition",
     "potion" : "ARIA.category.potion",
-    "pif" : "ARIA.category.pif",
     "cloath" : "ARIA.category.cloath"
 };
 
