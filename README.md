@@ -5,8 +5,8 @@
 Jeu de la série Game of Rôles imaginée par [FibreTigre](https://www.fibretigre.com/).
 Popularisé sur Twitch / Youtube, lien :  [Saison 1](https://www.youtube.com/playlist?list=PLTJVtKcBdMNWKJxAnpSf1fj4CUp49148Z), [Saison 2](https://www.youtube.com/playlist?list=PLTJVtKcBdMNV9tpuHa_YRKlsMspnXFEbx), [Saison 3](https://www.youtube.com/playlist?list=PL4ILyHtnURFrTkuFoje8KhBIoV63ATuwe) et [son final](https://www.youtube.com/playlist?list=PLTJVtKcBdMNW2XAbHVhU1FWR9e_4N8vsm).
 Jeu publié chez [Elder Craft](https://www.elder-craft.com/).<br><br>
-Developeur du système : Dilomos (Jonathan Bernard) Contacter moi sur les Discord : La Fonderie / Elder-Craft (communauté) / FibreTigre
-**em@il** : dilomos@gmail.com
+Developeur du système : Dilomos (Jonathan Bernard) Contacter moi sur les Discord : La Fonderie / Elder-Craft (communauté) / FibreTigre.<br>
+**em@il** : dilomos@gmail.com<br>
 **Suggestions et bugs** : [https://gitreports.com/issue/Dilomos/aria_foundryvtt](https://gitreports.com/issue/Dilomos/aria_foundryvtt).  
 
 Manifest : [https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/master/system.json](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/master/system.json).  
