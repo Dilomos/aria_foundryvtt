@@ -1,3 +1,4 @@
+import { ARIA } from "./config.js";
 import {Traversal} from "./utils/traversal.js";
 
 export const registerHandlebarsHelpers = function () {
@@ -17,109 +18,52 @@ export const registerHandlebarsHelpers = function () {
         return inventory;
     });
 
-    Handlebars.registerHelper('getRanged', function (items) {
-        let caps = items.filter(item => item.type === "item");
-        let weapons = caps.filter(item => item.data.subtype == "ranged");
-        weapons.sort(function (a, b) {
-            const aKey = a.name.slugify({strict: true});
-            const bKey = b.name.slugify({strict: true});
-            return (aKey > bKey) ? 1 : -1
-        });
-        return weapons;
-    });
-
-    Handlebars.registerHelper('getAmmunition', function (items) {
-        let caps = items.filter(item => item.type === "item");
-        let weapons = caps.filter(item => item.data.subtype == "ammunition");
-        weapons.sort(function (a, b) {
-            const aKey = a.name.slugify({strict: true});
-            const bKey = b.name.slugify({strict: true});
-            return (aKey > bKey) ? 1 : -1
-        });
-        return weapons;
-    });
-
-    Handlebars.registerHelper('getMelee', function (items) {
-        let caps = items.filter(item => item.type === "item");
-        let weapons = caps.filter(item => item.data.subtype == "melee");
-        weapons.sort(function (a, b) {
-            const aKey = a.name.slugify({strict: true});
-            const bKey = b.name.slugify({strict: true});
-            return (aKey > bKey) ? 1 : -1
-        });
-        return weapons;
-    });
-
-
-    Handlebars.registerHelper('getArmor', function (items) {
-        let caps = items.filter(item => item.type === "item");
-        let weapons = caps.filter(item => item.data.subtype == "armor");
-        weapons.sort(function (a, b) {
-            const aKey = a.name.slugify({strict: true});
-            const bKey = b.name.slugify({strict: true});
-            return (aKey > bKey) ? 1 : -1
-        });
-        return weapons;
-    });
-
-    Handlebars.registerHelper('getShield', function (items) {
-        let caps = items.filter(item => item.type === "item");
-        let weapons = caps.filter(item => item.data.subtype == "shield");
-        weapons.sort(function (a, b) {
-            const aKey = a.name.slugify({strict: true});
-            const bKey = b.name.slugify({strict: true});
-            return (aKey > bKey) ? 1 : -1
-        });
-        return weapons;
-    });
-
-    Handlebars.registerHelper('getJewel', function (items) {
-        let caps = items.filter(item => item.type === "item");
-        let weapons = caps.filter(item => item.data.subtype == "jewel");
-        weapons.sort(function (a, b) {
-            const aKey = a.name.slugify({strict: true});
-            const bKey = b.name.slugify({strict: true});
-            return (aKey > bKey) ? 1 : -1
-        });
-        return weapons;
-    });  
     
-    Handlebars.registerHelper('getCloath', function (items) {
-        let caps = items.filter(item => item.type === "item");
-        let weapons = caps.filter(item => item.data.subtype == "cloath");
-        weapons.sort(function (a, b) {
-            const aKey = a.name.slugify({strict: true});
-            const bKey = b.name.slugify({strict: true});
-            return (aKey > bKey) ? 1 : -1
-        });
-        return weapons;
-    });
+    Handlebars.registerHelper('getArraySubCategorywithItems', function (items) {
+        let subCat=ARIA.itemSubCategories;
+        var itemByCat = [];
+        for (const [key, value] of Object.entries(subCat)) {
 
-    Handlebars.registerHelper('getMount', function (items) {
-        let caps = items.filter(item => item.type === "item");
-        let weapons = caps.filter(item => item.data.subtype == "mount");
-        weapons.sort(function (a, b) {
-            const aKey = a.name.slugify({strict: true});
-            const bKey = b.name.slugify({strict: true});
-            return (aKey > bKey) ? 1 : -1
-        });
-        return weapons;
-    });
+            let caps = items.filter(item => item.type === "item");
+            let weapons = caps.filter(item => item.data.subtype == key);
+            weapons.sort(function (a, b) {
+                const aKey = a.name.slugify({strict: true});
+                const bKey = b.name.slugify({strict: true});
+                return (aKey > bKey) ? 1 : -1
+            });
 
-    Handlebars.registerHelper('getTrapping', function (items) {
-        let caps = items.filter(item => item.type === "item");
-        let weapons = caps.filter(item => item.data.subtype == "trapping");
-        weapons.sort(function (a, b) {
-            const aKey = a.name.slugify({strict: true});
-            const bKey = b.name.slugify({strict: true});
-            return (aKey > bKey) ? 1 : -1
-        });
-        return weapons;
-    });
+            itemByCat.push({
+                key: key,
+                value: value,
+                items: weapons
+            });
+        }
 
-    Handlebars.registerHelper('getOtherItem', function (items) {
+        //Add all items with no categories
         let caps = items.filter(item => item.type === "item");
         let weapons = caps.filter(item => item.data.subtype == "");
+        weapons.sort(function (a, b) {
+            const aKey = a.name.slugify({strict: true});
+            const bKey = b.name.slugify({strict: true});
+            return (aKey > bKey) ? 1 : -1
+        });
+
+        itemByCat.push({
+            key: "",
+            value: game.i18n.localize("ARIA.category.other"),
+            items: weapons
+        });
+
+        return itemByCat;
+    });
+
+    Handlebars.registerHelper('getItemSubCategories', function () {
+        return ARIA.itemSubCategories;
+    });
+
+    Handlebars.registerHelper('getItemsBySubCategory', function (subCat, items) {
+        let caps = items.filter(item => item.type === "item");
+        let weapons = caps.filter(item => item.data.subtype == subCat);
         weapons.sort(function (a, b) {
             const aKey = a.name.slugify({strict: true});
             const bKey = b.name.slugify({strict: true});

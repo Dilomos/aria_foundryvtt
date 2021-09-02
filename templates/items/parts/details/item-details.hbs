@@ -5,15 +5,9 @@
         <select name="data.subtype" data-type="String" style="width:100%">
             {{#select data.subtype}}
                 <option value="">{{localize "ARIA.None"}}</option>
-                <option value="armor">{{localize "ARIA.category.armor"}}</option>
-                <option value="melee">{{localize "ARIA.category.melee"}}</option>
-                <option value="ranged">{{localize "ARIA.category.ranged"}}</option>
-                <option value="shield">{{localize "ARIA.category.shield"}}</option>
-                <option value="jewel">{{localize "ARIA.category.jewel"}}</option>
-                <option value="ammunition">{{localize "ARIA.category.ammunition"}}</option>
-                <option value="mount">{{localize "ARIA.category.mount"}}</option>
-                <option value="cloath">{{localize "ARIA.category.cloath"}}</option>
-                <option value="trapping">{{localize "ARIA.category.other"}}</option>
+            {{#each (getItemSubCategories)  as |catName cat|}}
+                <option value="{{cat}}">{{catName}}</option>
+            {{/each}}
             {{/select}}
         </select>
     </div>

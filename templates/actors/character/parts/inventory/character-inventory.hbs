@@ -57,75 +57,17 @@
             </div>
         </li>
         {{#if (notEmpty (getInventory actor.items))}}
+        
+        {{#each (getArraySubCategorywithItems actor.items)}}
+                {{#if (notEmpty this.items)}}
+                    <li class="inventory-header flexrow"><h3 class="item-name center flexrow">{{this.value}}</h3></li>
+                {{#each this.items}}
+                        {{> "systems/aria/templates/actors/character/parts/inventory/character-inventory-item.hbs" this}}
+                    {{/each}}
+                {{/if}}
+        {{/each}}
 
-        {{#if (notEmpty (getMelee actor.items))}}
-            <li class="inventory-header flexrow"><h3 class="item-name center flexrow">{{localize "ARIA.category.melee"}}</h3></li>
-            {{#each (getMelee actor.items) as |item id|}}
-                {{> "systems/aria/templates/actors/character/parts/inventory/character-inventory-item.hbs" item}}
-            {{/each}}
-        {{/if}}
-
-        {{#if (notEmpty (getRanged actor.items))}}
-            <li class="inventory-header flexrow"><h3 class="item-name center flexrow">{{localize "ARIA.category.ranged"}}</h3></li>
-            {{#each (getRanged actor.items) as |item id|}}
-                {{> "systems/aria/templates/actors/character/parts/inventory/character-inventory-item.hbs" item}}
-            {{/each}}
-        {{/if}}
-
-        {{#if (notEmpty (getAmmunition actor.items))}}
-            <li class="inventory-header flexrow"><h3 class="item-name center flexrow">{{localize "ARIA.category.ammunition"}}</h3></li>
-            {{#each (getAmmunition actor.items) as |item id|}}
-                {{> "systems/aria/templates/actors/character/parts/inventory/character-inventory-item.hbs" item}}
-            {{/each}}
-        {{/if}}
-
-        {{#if (notEmpty (getArmor actor.items))}}
-            <li class="inventory-header flexrow"><h3 class="item-name center flexrow">{{localize "ARIA.category.armor"}}</h3></li>
-            {{#each (getArmor actor.items) as |item id|}}
-                {{> "systems/aria/templates/actors/character/parts/inventory/character-inventory-item.hbs" item}}
-            {{/each}}
-        {{/if}}
-
-        {{#if (notEmpty (getShield actor.items))}}
-            <li class="inventory-header flexrow"><h3 class="item-name center flexrow">{{localize "ARIA.category.shield"}}</h3></li>
-            {{#each (getShield actor.items) as |item id|}}
-                {{> "systems/aria/templates/actors/character/parts/inventory/character-inventory-item.hbs" item}}
-            {{/each}}
-        {{/if}}
-
-        {{#if (notEmpty (getCloath actor.items))}}
-            <li class="inventory-header flexrow"><h3 class="item-name center flexrow">{{localize "ARIA.category.cloath"}}</h3></li>
-            {{#each (getCloath actor.items) as |item id|}}
-                {{> "systems/aria/templates/actors/character/parts/inventory/character-inventory-item.hbs" item}}
-            {{/each}}
-        {{/if}}
-
-        {{#if (notEmpty (getJewel actor.items))}}
-            <li class="inventory-header flexrow"><h3 class="item-name center flexrow">{{localize "ARIA.category.jewel"}}</h3></li>
-            {{#each (getJewel actor.items) as |item id|}}
-                {{> "systems/aria/templates/actors/character/parts/inventory/character-inventory-item.hbs" item}}
-            {{/each}}
-        {{/if}}
-
-        {{#if (notEmpty (getTrapping actor.items))}}
-            <li class="inventory-header flexrow"><h3 class="item-name center flexrow">{{localize "ARIA.category.trapping"}}</h3></li>
-            {{#each (getTrapping actor.items) as |item id|}}
-                {{> "systems/aria/templates/actors/character/parts/inventory/character-inventory-item.hbs" item}}
-            {{/each}}
-        {{/if}}
-
-        {{#if (notEmpty (getOtherItem actor.items))}}
-            {{#each (getOtherItem actor.items) as |item id|}}
-                {{> "systems/aria/templates/actors/character/parts/inventory/character-inventory-item.hbs" item}}
-            {{/each}}
-        {{/if}}
-
-        {{#if (notEmpty (getMount actor.items))}}
-            <li class="inventory-header flexrow"><h3 class="item-name center flexrow">{{localize "ARIA.category.mount"}}</h3></li>
-            {{#each (getMount actor.items) as |item id|}}
-                {{> "systems/aria/templates/actors/character/parts/inventory/character-inventory-item.hbs" item}}
-            {{/each}}
-        {{/if}}
+     
 
         {{else}}
             <p>Votre inventaire est vide.</p>

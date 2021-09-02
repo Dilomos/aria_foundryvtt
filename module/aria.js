@@ -80,12 +80,12 @@ Hooks.once("init", async function () {
 Hooks.once("setup", function() {
 
     const toLocalize = [
-        "itemProperties", "languages"
+        "itemProperties", "itemSubCategories", "languages"
       ];
 
   // Exclude some from sorting where the default order matters
   const noSort = [
-    "itemProperties", "languages"
+    "itemProperties", "itemSubCategories", "languages"
   ];
 
   // Localize and sort CONFIG objects

@@ -22,6 +22,24 @@ ARIA.itemProperties = {
     "2Handed": "ARIA.properties.2Handed"
 };
 
+ARIA.itemSubCategories = {
+    "alchemy" : "ARIA.category.alchemy",
+    "ranged" : "ARIA.category.ranged",
+    "melee" : "ARIA.category.melee",
+    "armor" : "ARIA.category.armor",
+    "jewel" : "ARIA.category.jewel",
+    "shield" : "ARIA.category.shield",
+    "consumable" : "ARIA.category.consumable",
+    "document" : "ARIA.category.document",
+    "trapping" : "ARIA.category.other",
+    "ingredient" : "ARIA.category.ingredient",
+    "mount" : "ARIA.category.mount",
+    "ammunition" : "ARIA.category.ammunition",
+    "potion" : "ARIA.category.potion",
+    "pif" : "ARIA.category.pif",
+    "cloath" : "ARIA.category.cloath"
+};
+
 // Languages
 ARIA.languages = {
     "common": "ARIA.languages.Common",

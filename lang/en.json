@@ -221,6 +221,11 @@
   "ARIA.category.currency" : "Currency",
   "ARIA.category.other": "Other",
   "ARIA.category.cloath": "Cloath",
+  "ARIA.category.alchemy": "Alchemy",
+  "ARIA.category.consumable": "Consumable",
+  "ARIA.category.document": "Document",
+  "ARIA.category.ingredient": "Ingredient",
+  "ARIA.category.potion": "Potion",
 
   "ARIA.rarity.common" : "Common",
   "ARIA.rarity.moderate" : "Moderate",
