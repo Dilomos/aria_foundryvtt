@@ -13,4 +13,4 @@ Manifest : [https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/master/sys
 Projet : [https://github.com/Dilomos/aria_foundryvtt](https://github.com/Dilomos/aria_foundryvtt).
 
 
-Si le coeur vous en dit n'hésitez pas à faire un don : https://www.paypal.com/donate?hosted_button_id=D3PP8J9JFUVFG
+Si le coeur vous en dit n'hésitez pas à faire un don : [<img src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_donate_LG.gif">](https://www.paypal.com/donate?hosted_button_id=D3PP8J9JFUVFG)
