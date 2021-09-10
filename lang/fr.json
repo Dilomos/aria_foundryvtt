@@ -290,8 +290,7 @@
   "ARIA.properties.creature" : "Créature",
 
   "ARIA.SheetClassCharacter" : "Fiche de Personnage ARIA par défaut",
-  "ARIA.SheetStarsClassCharacter" : "Fiche de Personnage STARS",
-  "ARIA.SheetModernClassCharacter" : "Fiche de Personnage ARIA Contemporain",
+  "ARIA.SheetClassLoot" : "Fiche de loot ARIA par défaut",
   "ARIA.SheetClassEncounter" : "Fiche de Rencontre ARIA par défaut",
   "ARIA.SheetClassItem" : "Fiche d'Objet ARIA par défaut",
   "ARIA.SheetStarsClassItem" : "Fiche d'Objet STARS",

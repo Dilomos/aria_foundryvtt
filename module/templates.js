@@ -28,6 +28,10 @@ export const preloadHandlebarsTemplates = async function () {
         "systems/aria/templates/actors/character/parts/inventory/character-inventory.hbs",
         "systems/aria/templates/actors/character/parts/inventory/character-inventory-item.hbs",
 
+        "systems/aria/templates/actors/loot/parts/inventory/loot-inventory.hbs",
+        "systems/aria/templates/actors/loot/parts/inventory/loot-inventory-item.hbs",
+        "systems/aria/templates/actors/loot/parts/loot-header.hbs",
+
         // ITEMS DETAILS
         "systems/aria/templates/items/item-sheet.hbs",
         "systems/aria/templates/items/parts/details/item-details.hbs",

@@ -658,6 +658,13 @@ strong {
   overflow: hidden;
 }
 
+.aria.actor .window-content .loot-img {
+  cursor: pointer;
+  border: none;
+  max-height: 100px;
+  margin: 2px;
+}
+
 .aria.actor .window-content > form {
   padding: 0;
   margin: 0;
@@ -764,6 +771,24 @@ strong {
   height: calc(100% - 150px);
   min-height: calc(100% - 150px);
   max-height: calc(100% - 150px);
+}
+
+.aria.actor .window-content > form .wrap .mainLootHeight_std {
+  height: calc(100% - 230px);
+  min-height: calc(100% - 230px);
+  max-height: calc(100% - 230px);
+}
+
+.aria.actor .window-content > form .wrap .mainLootHeight_stars {
+  height: calc(100% - 180px);
+  min-height: calc(100% - 180px);
+  max-height: calc(100% - 180px);
+}
+
+.aria.actor .window-content > form .wrap .mainLootHeight_modern {
+  height: calc(100% - 180px);
+  min-height: calc(100% - 180px);
+  max-height: calc(100% - 180px);
 }
 
 .aria.actor .window-content > form .wrap .main {
@@ -1189,7 +1214,12 @@ strong {
   min-height: 16px;
   height: 16px;
   max-height: 16px;
-  margin-top: 9px;
+  margin: auto;
+}
+
+.aria.actor .window-content > form .wrap .icon_d100:hover {
+  -webkit-filter: drop-shadow(0 0 8px #4f7783);
+  filter: drop-shadow(0 0 8px #4f7783);
 }
 
 .aria.actor .window-content > form .wrap .cancel_margin_top {
@@ -1581,6 +1611,11 @@ strong {
   min-height: 80px;
   /*color: $c-darkgreen;*/
   background-color: transparent;
+}
+
+.aria.actor .nameLoot {
+  min-height: 40px;
+  background: rgba(255, 255, 255, 0) !important;
 }
 
 .aria.actor .inventory h2 {
@@ -2085,17 +2120,6 @@ strong {
 .aria.item .window-content .capa_percent {
   padding-top: 3px;
   font-size: 16px;
-}
-
-.aria.item .window-content .icon_d100 {
-  background: center/contain no-repeat url("../ui/d100.png");
-  min-width: 16px;
-  width: 16px;
-  max-width: 16px;
-  min-height: 16px;
-  height: 16px;
-  max-height: 16px;
-  margin-top: 9px;
 }
 
 .aria.item .window-content .cancel_margin_top {

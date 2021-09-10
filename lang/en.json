@@ -289,6 +289,7 @@
   "ARIA.properties.creature" : "Creature",
 
   "ARIA.SheetClassCharacter" : "Default ARIA Character Sheet",
+  "ARIA.SheetClassLoot" : "Fiche de loot ARIA par défaut",
   "ARIA.SheetClassEncounter" : "Default ARIA Encounter Sheet",
   "ARIA.SheetClassItem" : "Default ARIA Item Sheet",
 

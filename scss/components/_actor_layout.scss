@@ -6,6 +6,13 @@
   margin: 0;
   overflow: hidden;
 
+  .loot-img {
+    cursor: pointer;
+    border: none;
+    max-height: 100px;
+    margin: 2px;
+  }
+
   &>form {
     padding: 0;
     margin: 0;
@@ -115,6 +122,24 @@
         height: calc(100% - 150px);
         min-height: calc(100% - 150px);
         max-height: calc(100% - 150px);
+      }
+
+      .mainLootHeight_std{
+        height: calc(100% - 230px);
+        min-height: calc(100% - 230px);
+        max-height: calc(100% - 230px);
+      }
+
+      .mainLootHeight_stars{
+        height: calc(100% - 180px);
+        min-height: calc(100% - 180px);
+        max-height: calc(100% - 180px);
+      }
+
+      .mainLootHeight_modern{
+        height: calc(100% - 180px);
+        min-height: calc(100% - 180px);
+        max-height: calc(100% - 180px);
       }
 
       .main {

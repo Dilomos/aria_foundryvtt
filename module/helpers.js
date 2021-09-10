@@ -120,6 +120,13 @@ export const registerHandlebarsHelpers = function () {
         return equipedWeapons;
     });
 
+    Handlebars.registerHelper('isWeapon', function (item) {
+        if( item.data.properties.weapon === true ||  item.data.subtype == "melee" ||  item.data.subtype == "ranged")
+            return true;
+        else
+            return false;
+    });
+
     Handlebars.registerHelper('splitWeaponDice', function (formula) {
         let terms = formula.split("+");
         return terms[0];

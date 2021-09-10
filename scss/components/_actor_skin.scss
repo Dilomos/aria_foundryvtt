@@ -157,7 +157,11 @@
         min-height: 16px;
         height: 16px;
         max-height: 16px;
-        margin-top:9px;
+        margin:auto;
+      }
+
+      .icon_d100:hover{
+        filter: drop-shadow(0 0 8px #4f7783);
       }
 
       .cancel_margin_top{
@@ -538,6 +542,11 @@ div:hover>div.profession-controls {
 /* ----------------------------------------- */
 /*  Custom classes                           */
 /* ----------------------------------------- */
+.nameLoot{
+  min-height: 40px;
+  background:rgba(255, 255, 255, 0) !important;
+}
+
 .inventory h2{
   font-size: 16px;
   text-transform: uppercase;

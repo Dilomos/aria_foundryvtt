@@ -9,6 +9,7 @@ import {AriaRoll} from "../controllers/roll.js";
 import {Traversal} from "../utils/traversal.js";
 import { AriaItem } from "../items/item.js";
 
+
 export class AriaActorSheet extends ActorSheet {
 
     /** @override */
@@ -315,6 +316,7 @@ getData(options) {
     /** @override */
     async _onDrop(event) {
         event.preventDefault();
+        
         // Get dropped data
         let data;
         try {
@@ -365,14 +367,44 @@ getData(options) {
             case "origine" :
                 return await Origines.addToActor(this.actor, event, itemData);
             default:
-                // activate the competence as it is droped on an actor sheet
-                // if (itemData.type === "competence") itemData.data.checked = true;
                 // Handle item sorting within the same Actor
                 const actor = this.actor;
+                // Create the owned item
                 let sameActor = (data.actorId === actor.id) || (actor.isToken && (data.tokenId === actor.token.id));
                 if (sameActor) return this._onSortItem(event, itemData);
-                // Create the owned item
-                return this.actor.createEmbeddedDocuments("Item", [itemData]);
+ 
+                if(data.actorId) {
+                    if(!actor.data._id) {
+                        console.warn("no data._id?",target);
+                        return; 
+                    }
+
+                    let sourceActor = game.actors.get(data.actorId);
+                    if(sourceActor) {
+
+                        let chooseDifDialog = new Dialog({
+                            title: "Difficulté",
+                            content: "<p>Etes-vous sure de vouloir deplacer cet objet</p>",
+                            buttons: {
+                            one: {
+                            label: "Oui",
+                            callback: () => {this.actor.createEmbeddedDocuments("Item", [itemData]);sourceActor.deleteEmbeddedDocuments("Item",[item.id]);}
+                            },
+                            two: {
+                            label: "Non",
+                            callback: () => {}
+                            },
+                            },
+                            default: "one",
+                            });
+                        chooseDifDialog.render(true);
+                    }
+                }
+                else{
+                    this.actor.createEmbeddedDocuments("Item", [itemData]);
+                }
+
+                return;
         }
     }
 

@@ -2,7 +2,8 @@
   "Actor": {
     "types": [
       "character",
-      "npc"
+      "npc",
+      "loot"
     ],
     "templates": {
       "stats": {
@@ -131,6 +132,11 @@
     "npc": {
       "templates": [
         "stats",
+        "common"
+      ]
+    },
+    "loot": {
+      "templates": [
         "common"
       ]
     }

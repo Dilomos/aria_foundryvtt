@@ -40,8 +40,6 @@
         <li class="inventory-header flexrow">
             <h3 class="item-name flexrow"></h3>
             <div class="item-detail">Qté</div>
-            <div class="item-detail">Equiper</div>
-             <div class="item-detail">Roll</div>
             <div class="item-controls">
                 <a class="item-control item-create new-item" title="Ajouter un objet"><i class="fas fa-plus"></i></a>   
         {{#if (isAriaTypeSetting "aria")}}
@@ -63,7 +61,7 @@
                 {{#if (notEmpty this.items)}}
                     <li class="inventory-header flexrow"><h3 class="item-name center flexrow">{{this.value}}</h3></li>
                 {{#each this.items}}
-                        {{> "systems/aria/templates/actors/character/parts/inventory/character-inventory-item.hbs" this}}
+                        {{> "systems/aria/templates/actors/loot/parts/inventory/loot-inventory-item.hbs" this}}
                     {{/each}}
                 {{/if}}
         {{/each}}

@@ -15,6 +15,7 @@ import {AriaItem} from "./items/item.js";
 
 import {AriaItemSheet} from "./items/item-sheet.js";
 import {AriaCharacterSheet} from "./actors/character-sheet.js";
+import {AriaLootSheet} from "./actors/loot-sheet.js";
 
 import { registerHandlebarsHelpers } from "./helpers.js";
 
@@ -68,6 +69,15 @@ Hooks.once("init", async function () {
         makeDefault: true,
         label: "ARIA.SheetClassCharacter"
     });
+
+      // Register actor sheets
+      Actors.registerSheet("aria", AriaLootSheet, {
+        types: ["loot"], 
+        makeDefault: true,
+        label: "ARIA.SheetClassLoot"
+    });
+
+    
 
     // Preload Handlebars Templates
     preloadHandlebarsTemplates();
