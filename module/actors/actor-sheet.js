@@ -370,10 +370,13 @@ getData(options) {
                 // Handle item sorting within the same Actor
                 const actor = this.actor;
                 // Create the owned item
-                let sameActor = (data.actorId === actor.id) || (actor.isToken && (data.tokenId === actor.token.id));
+                let sameActor = (data.actorId === actor.id) && ((!actor.isToken && !data.tokenId) || (data.tokenId === actor.token.id));
                 if (sameActor) return this._onSortItem(event, itemData);
  
-                if(data.actorId) {
+                let globalSettingMoveItem = game.settings.get("aria","moveItem"); 
+                let moveItem = globalSettingMoveItem ^ event.shiftKey;
+
+                if(data.actorId && moveItem) {
                     if(!actor.data._id) {
                         console.warn("no data._id?",target);
                         return; 
@@ -388,7 +391,20 @@ getData(options) {
                             buttons: {
                             one: {
                             label: "Oui",
-                            callback: () => {this.actor.createEmbeddedDocuments("Item", [itemData]);sourceActor.deleteEmbeddedDocuments("Item",[item.id]);}
+                            callback: () => {
+
+                                if (!data.tokenId){
+                                    sourceActor.deleteEmbeddedDocuments("Item",[item.id]);
+                                }
+                                else{
+                                    let token = TokenLayer.instance.placeables.find(token=>token.id === data.tokenId);
+                                    let oldItem = token?.document.getEmbeddedCollection('Item').get(data.data._id);
+                                    oldItem?.delete();
+                                }
+
+                                this.actor.createEmbeddedDocuments("Item", [itemData]);
+                                
+                            }
                             },
                             two: {
                             label: "Non",

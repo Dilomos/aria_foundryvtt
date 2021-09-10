@@ -31,4 +31,18 @@ export const registerSystemSettings = function() {
           }
       });
 
+      game.settings.register("aria", "moveItem", {
+        name: "Mode de déplacement des items",
+        hint: "Comportement du drag & drop d'un item sur une fiche de personnage (Maintenir MAJ lors du drop pour inverser)",
+        scope: "world",
+        type: String,
+        choices: {
+            "0" : "Clonner l'item",
+            "1" : "Déplacer l'item"
+        },
+        default: "1",
+        config: true,
+        onChange: lang => window.location.reload()
+    });  
+
 };
