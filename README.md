@@ -11,3 +11,6 @@ Developeur du système : Dilomos (Jonathan Bernard) Contacter moi sur les Discor
 
 Manifest : [https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/master/system.json](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/master/system.json).  
 Projet : [https://github.com/Dilomos/aria_foundryvtt](https://github.com/Dilomos/aria_foundryvtt).
+
+
+Si le coeur vous en dit n'hésitez pas à faire un don : https://www.paypal.com/donate?hosted_button_id=D3PP8J9JFUVFG
