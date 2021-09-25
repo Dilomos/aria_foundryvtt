@@ -98,6 +98,14 @@
       "tag" : "deplacements"
     },
     {
+      "name": "cartes-magie-daria",
+      "label": "Cartes Magie d'Aria",
+      "system": "aria",
+      "path": "packs/cartes-magie-daria.db",
+      "entity": "Item",
+      "tag" : "cartes-magie-daria"
+    },
+    {
       "name": "professions",
       "label": "Professions",
       "system": "aria",
