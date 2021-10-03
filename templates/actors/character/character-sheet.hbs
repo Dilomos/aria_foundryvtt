@@ -28,13 +28,13 @@
 {{> "systems/aria/templates/actors/character/parts/character-header.hbs"}}
 
     {{#if (isAriaTypeSetting "aria")}}
-    <div class="flexrow main mainHeight_std">
+    <div class="flexrow main mainHeight_std" style="overflow: visible;">
     {{/if}}
     {{#if (isAriaTypeSetting "stars")}}
-    <div class="flexrow main mainHeight_stars">
+    <div class="flexrow main mainHeight_stars" style="overflow: visible;">
     {{/if}}
     {{#if (isAriaTypeSetting "contemporain")}}
-    <div class="flexrow main mainHeight_modern">
+    <div class="flexrow main mainHeight_modern" style="overflow: visible;">
     {{/if}}  
             <div class="content flex3">
                 {{!-- Sheet Tab Navigation --}}
@@ -44,9 +44,9 @@
                     <a class="item titleFont" data-tab="inventory">{{ localize "ARIA.tabs.inventory" }}</a>
                 </nav>
                 {{!-- Sheet Body --}}
-                <section class="sheet-body">
+                <section class="sheet-body" style="overflow: visible;">
                     {{!-- Stats Tab --}}
-                    <div class="tab stats" data-group="primary" data-tab="stats">
+                    <div class="tab stats" data-group="primary" data-tab="stats" style="overflow: visible;">
                         {{> "systems/aria/templates/actors/character/parts/stats/character-stats.hbs"}}
                     </div>
                     {{!-- Competences Tab --}}
