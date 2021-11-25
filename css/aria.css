@@ -894,7 +894,7 @@ strong {
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  min-height: calc(100% - 330px);
+  min-height: 100px;
   height: calc(100% - 330px);
   max-height: calc(100% - 330px);
 }
