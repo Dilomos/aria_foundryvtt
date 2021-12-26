@@ -2,7 +2,7 @@
   "name": "aria",
   "title": "Aria - GOR",
   "description": "<p>Système Foundry VTT pour Aria Game pf Roles le jeu de role de FibreTigre edité par Elder Craft.</p>",
-  "version": "1.7.5",
+  "version": "1.7.8",
   "minimumCoreVersion": "0.8.5",
   "compatibleCoreVersion": "0.8.9",
   "templateVersion": 2,
@@ -18,6 +18,14 @@
   ],
   "packs": [
     {
+      "name": "cartesmagiquesdaria",
+      "label": "Cartes magiques d'Aria",
+	  "system": "aria",
+	  "path": "packs/cartes-magiques-daria.db",
+      "entity": "Cards",
+      "tag" : "cartesmagiquesdaria"
+    },
+	{
       "name": "competences",
       "label": "Compétences",
       "system": "aria",
@@ -96,14 +104,6 @@
       "path": "./packs/deplacements.db",
       "entity": "Item",
       "tag" : "deplacements"
-    },
-    {
-      "name": "cartes-magie-daria",
-      "label": "Cartes Magie d'Aria",
-      "system": "aria",
-      "path": "packs/cartes-magie-daria.db",
-      "entity": "Item",
-      "tag" : "cartes-magie-daria"
     },
     {
       "name": "professions",
@@ -252,6 +252,6 @@
   "secondaryTokenAttribute": null,
   "url": "https://github.com/Dilomos/aria_foundryvtt",
   "manifest": "https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/system.json",
-  "download": "https://github.com/Dilomos/aria_foundryvtt/archive/v1.7.5.zip",
+  "download": "https://github.com/Dilomos/aria_foundryvtt/archive/v1.7.8.zip",
   "license": "licence.txt"
 }
