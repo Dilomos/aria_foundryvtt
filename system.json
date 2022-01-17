@@ -18,6 +18,14 @@
   ],
   "packs": [
     {
+      "name": "cartesmagiquesdaria",
+      "label": "Cartes magiques d'Aria",
+	  "system": "aria",
+	  "path": "packs/cartes-magiques-daria.db",
+      "entity": "Cards",
+      "tag" : "cartesmagiquesdaria"
+    },
+	{
       "name": "competences",
       "label": "Compétences",
       "system": "aria",
@@ -96,14 +104,6 @@
       "path": "./packs/deplacements.db",
       "entity": "Item",
       "tag" : "deplacements"
-    },
-    {
-      "name": "cartes-magie-daria",
-      "label": "Cartes Magie d'Aria",
-      "system": "aria",
-      "path": "packs/cartes-magie-daria.db",
-      "entity": "Item",
-      "tag" : "cartes-magie-daria"
     },
     {
       "name": "professions",
