@@ -4,7 +4,7 @@
   "description": "<p>Système Foundry VTT pour Aria Game pf Roles le jeu de role de FibreTigre edité par Elder Craft.</p>",
   "version": "1.8.0",
   "minimumCoreVersion": "0.8.5",
-  "compatibleCoreVersion": "0.9.269",
+  "compatibleCoreVersion": "9.269",
   "templateVersion": 2,
   "author": "Dilomos/Jonathan BERNARD",
   "esmodules": [
