@@ -347,6 +347,24 @@ getData(options) {
         return false;
     }
 
+    async _addItemToInventory(itemData) {
+
+        const items = this.actor.items;
+        let inventory = items.filter(item => item.type === "item");
+        
+        const similarItem = inventory.find(i => {
+            return (i.data.data.properties.stackable === true) && (i.name === itemData.name);
+          });
+
+        if ( !similarItem ){
+            this.actor.createEmbeddedDocuments("Item", [itemData]);
+        }else{
+            similarItem.update({
+                "data.qty": similarItem.data.data.qty + Math.max(itemData.data.qty, 1)
+              }); 
+        }
+
+    }
     /**
      * Handle dropping of an item reference or item data onto an Actor Sheet
      * @param {DragEvent} event     The concluding DragEvent which contains drop data
@@ -402,7 +420,7 @@ getData(options) {
                                     oldItem?.delete();
                                 }
 
-                                this.actor.createEmbeddedDocuments("Item", [itemData]);
+                                this._addItemToInventory(itemData);
                                 
                             }
                             },
@@ -417,7 +435,7 @@ getData(options) {
                     }
                 }
                 else{
-                    this.actor.createEmbeddedDocuments("Item", [itemData]);
+                    this._addItemToInventory(itemData);
                 }
 
                 return;
