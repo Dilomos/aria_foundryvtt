@@ -20,11 +20,11 @@ export class AriaActorSheet extends ActorSheet {
         if (!this.options.editable) return;
 
         // Click to open
-        html.find('.compendium-pack').click(ev => {
+        html.find('.aria-compendium-pack').click(ev => {
             ev.preventDefault();
             let li = $(ev.currentTarget), pack = game.packs.get(li.data("pack"));
-            //li.attr("data-open", "1");
             pack.render(true);
+
         });
 
         // Click to open
@@ -72,7 +72,7 @@ export class AriaActorSheet extends ActorSheet {
             const elt = $(ev.currentTarget).parents(".item");
             const item = this.actor.items.get(elt.data("itemId"));
             let itemData = item.toObject();
-            itemData.data.equiped = !itemData.data.equiped;
+            itemData.system.equiped = !itemData.system.equiped;
             return this.actor.updateEmbeddedDocuments("Item",[itemData]);
         });
 
@@ -81,7 +81,7 @@ export class AriaActorSheet extends ActorSheet {
             const li = $(ev.currentTarget).closest(".item");
             const item = this.actor.items.get(li.data("itemId"));
             let itemData = item.toObject();
-            itemData.data.qty = (itemData.data.qty) ? itemData.data.qty + 1 : 1;
+            itemData.system.qty = (itemData.system.qty) ? itemData.system.qty + 1 : 1;
             return this.actor.updateEmbeddedDocuments("Item",[itemData]);
         });
         html.find('.item-qty').contextmenu(ev => {
@@ -89,7 +89,7 @@ export class AriaActorSheet extends ActorSheet {
             const li = $(ev.currentTarget).closest(".item");
             const item = this.actor.items.get(li.data("itemId"));
             let itemData = item.toObject();
-            itemData.data.qty = (itemData.data.qty > 0) ? itemData.data.qty -1 : 0;
+            itemData.system.qty = (itemData.system.qty > 0) ? itemData.system.qty -1 : 0;
             return this.actor.updateEmbeddedDocuments("Item",[itemData]);
         });
 
@@ -98,8 +98,8 @@ export class AriaActorSheet extends ActorSheet {
             const li = $(ev.currentTarget).closest(".item");
             const item = this.actor.items.get(li.data("itemId"));
             let itemData = item.toObject();
-            itemData.data.score = (ev.currentTarget.value > 0) ? ev.currentTarget.value : 0;
-            itemData.data.score = (itemData.data.score < 100) ? itemData.data.score : 100;
+            itemData.system.score = (ev.currentTarget.value > 0) ? ev.currentTarget.value : 0;
+            itemData.system.score = (itemData.system.score < 100) ? itemData.system.score : 100;
             return await this.actor.updateEmbeddedDocuments("Item",[itemData]);
         });
 
@@ -109,9 +109,9 @@ export class AriaActorSheet extends ActorSheet {
             const item = this.actor.items.get(li.data("itemId"));
             let itemData = item.toObject();
             if( (ev.currentTarget.value.charAt(0) == '-') ||(ev.currentTarget.value.charAt(0) == '+') )
-                itemData.data.bonus = ev.currentTarget.value;
+                itemData.system.bonus = ev.currentTarget.value;
             else
-                itemData.data.bonus = '+'+ev.currentTarget.value;
+                itemData.system.bonus = '+'+ev.currentTarget.value;
             return this.actor.updateEmbeddedDocuments("Item",[itemData]);
         });
         
@@ -125,7 +125,11 @@ export class AriaActorSheet extends ActorSheet {
     }
 
 /** @override */
-getData(options) {
+async getData(options) {
+
+    // The Actor's data
+    const source = this.actor.toObject();
+    const actorData = this.actor.toObject(false);
 
     // Basic data
     let isOwner = this.actor.isOwner;
@@ -134,21 +138,28 @@ getData(options) {
       limited: this.actor.limited,
       options: this.options,
       editable: this.isEditable,
-      config: CONFIG.ARIA
+      config: CONFIG.ARIA,
+      actor: actorData,
+      system: actorData.system,
+      items: actorData.items
     };
 
     // The Actor's data
-    const actorData = this.actor.data.toObject(false);
-    data.actor = actorData;
-    data.data = actorData.data;
+   // const actorData = this.actor.toObject(false);
+
 
     // Owned Items
-    data.items = actorData.items;
     for ( let i of data.items ) {
       const item = this.actor.items.get(i._id);
       i.labels = item.labels;
     }
     data.items.sort((a, b) => (a.sort || 0) - (b.sort || 0));
+
+    data.biographyHTML = await TextEditor.enrichHTML(data.system.description, {
+        secrets: this.actor.isOwner,
+        async: true,
+        relativeTo: this.actor
+      });
 
 
     // Return data to the sheet
@@ -187,7 +198,7 @@ getData(options) {
         const li = $(event.currentTarget).parents(".item");
         const itemId = li.data("itemId");
         const entity = this.actor.items.find(item => item.id === itemId);
-        switch (entity.data.type) {
+        switch (entity.type) {
             case "competence" :
                 return this.actor.deleteEmbeddedDocuments("Item",[itemId]);
                 // return Competence.removeFromActor(this.actor, event, entity);
@@ -225,27 +236,27 @@ getData(options) {
                      one: {
                       icon: '<i class="fas fa-times"></i>',
                       label: "1",
-                      callback: () => AriaRoll.skillCheck(this.getData().data, this.actor, event, 1)
+                      callback: () => AriaRoll.skillCheck(this.getData().system, this.actor, event, 1)
                      },
                      two: {
                       icon: '<i class="fas fa-times"></i>',
                       label: "2",
-                      callback: () => AriaRoll.skillCheck(this.getData().data, this.actor, event, 2)
+                      callback: () => AriaRoll.skillCheck(this.getData().system, this.actor, event, 2)
                      },
                      three: {
                       icon: '<i class="fas fa-times"></i>',
                       label: "3",
-                      callback: () => AriaRoll.skillCheck(this.getData().data, this.actor, event, 3)
+                      callback: () => AriaRoll.skillCheck(this.getData().system, this.actor, event, 3)
                      },
                      four: {
                       icon: '<i class="fas fa-times"></i>',
                       label: "4",
-                      callback: () => AriaRoll.skillCheck(this.getData().data, this.actor, event, 4)
+                      callback: () => AriaRoll.skillCheck(this.getData().system, this.actor, event, 4)
                      },
                      five: {
                       icon: '<i class="fas fa-times"></i>',
                       label: "5",
-                      callback: () => AriaRoll.skillCheck(this.getData().data, this.actor, event, 5)
+                      callback: () => AriaRoll.skillCheck(this.getData().system, this.actor, event, 5)
                      },
                     },
                     default: "five",
@@ -253,7 +264,7 @@ getData(options) {
                chooseDifDialog.render(true);
                break;
 
-                //return AriaRoll.skillCheck(this.getData().data, this.actor, event);
+                //return AriaRoll.skillCheck(this.getData().system, this.actor, event);
             case "competencycheck" :
                 if(forceConfig)
                 {
@@ -305,7 +316,7 @@ getData(options) {
                     return AriaRoll.competencyCheck(this.getData().items, this.actor, event,"+0");
                 }
             case "weapon" :
-                return AriaRoll.rollWeapon(this.getData().data, this.actor, event);
+                return AriaRoll.rollWeapon(this.getData().system, this.actor, event);
         }
     }
 
@@ -353,14 +364,14 @@ getData(options) {
         let inventory = items.filter(item => item.type === "item");
         
         const similarItem = inventory.find(i => {
-            return (i.data.data.properties.stackable === true) && (i.name === itemData.name);
+            return (i.system.properties.stackable === true) && (i.name === itemData.name);
           });
 
         if ( !similarItem ){
             this.actor.createEmbeddedDocuments("Item", [itemData]);
         }else{
             similarItem.update({
-                "data.qty": similarItem.data.data.qty + Math.max(itemData.data.qty, 1)
+                "system.qty": similarItem.system.qty + Math.max(itemData.system.qty, 1)
               }); 
         }
 
@@ -378,7 +389,7 @@ getData(options) {
 
         // let itemData = await this._getItemDropData(event, data);
         const item = await Item.fromDropData(data);
-        const itemData = duplicate(item.data);
+        const itemData = item.toObject();
         switch (itemData.type) {
             case "profession" :
                 return await Profession.addToActor(this.actor, event, itemData);
@@ -388,19 +399,25 @@ getData(options) {
                 // Handle item sorting within the same Actor
                 const actor = this.actor;
                 // Create the owned item
-                let sameActor = (data.actorId === actor.id) && ((!actor.isToken && !data.tokenId) || (data.tokenId === actor.token.id));
+                const source = await fromUuid(data.uuid);
+                const sourceActor = source.actor;
+                if(sourceActor)
+                {
+                //const sourceToken = source.actor.token;
+                let sameActor = (sourceActor.id === actor.id);// && ((!actor.isToken && !sourceActor.isToken) || (sourceActor.token.id === actor.token.id));
+
+
                 if (sameActor) return this._onSortItem(event, itemData);
  
                 let globalSettingMoveItem = game.settings.get("aria","moveItem"); 
                 let moveItem = globalSettingMoveItem ^ event.shiftKey;
 
-                if(data.actorId && moveItem) {
-                    if(!actor.data._id) {
+                if(sourceActor.id && moveItem) {
+                    if(!actor._id) {
                         console.warn("no data._id?",target);
                         return; 
                     }
 
-                    let sourceActor = game.actors.get(data.actorId);
                     if(sourceActor) {
 
                         let chooseDifDialog = new Dialog({
@@ -411,15 +428,15 @@ getData(options) {
                             label: "Oui",
                             callback: () => {
 
-                                if (!data.tokenId){
+                                /*if (!sourceToken.id){
                                     sourceActor.deleteEmbeddedDocuments("Item",[item.id]);
                                 }
                                 else{
-                                    let token = TokenLayer.instance.placeables.find(token=>token.id === data.tokenId);
-                                    let oldItem = token?.document.getEmbeddedCollection('Item').get(data.data._id);
+                                    let token = TokenLayer.instance.placeables.find(token=>token.id === sourceToken.id);
+                                    let oldItem = token?.document.getEmbeddedCollection('Item').get(source.system._id);
                                     oldItem?.delete();
-                                }
-
+                                }*/
+                                sourceActor.deleteEmbeddedDocuments("Item",[item.id]);
                                 this._addItemToInventory(itemData);
                                 
                             }
@@ -437,6 +454,10 @@ getData(options) {
                 else{
                     this._addItemToInventory(itemData);
                 }
+            }
+            else{
+                this._addItemToInventory(itemData);
+            }
 
                 return;
         }

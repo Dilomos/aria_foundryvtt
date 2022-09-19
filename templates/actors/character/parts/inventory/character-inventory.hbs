@@ -3,19 +3,19 @@
      <div class="flex1 center">Bourse</div>
     <div class="flex1 center coin">
         <i title="Couronne" class="fas fa-coins" style="color:goldenrod"></i>
-        <input class="field-value coin-field" name="data.currency.gp.qty" type="number" value="{{actor.data.currency.gp.qty}}" placeholder="Couronne" data-dtype="Number"/>
+        <input class="field-value coin-field" name="system.currency.gp.qty" type="number" value="{{system.currency.gp.qty}}" placeholder="Couronne" data-dtype="Number"/>
     </div>
     <div class="flex1 center coin">
         <i title="Orbe" class="fas fa-coins" style="color:silver"></i>
-        <input class="field-value center coin-field" name="data.currency.sp.qty" type="number" value="{{actor.data.currency.sp.qty}}" placeholder="Orbe" data-dtype="Number"/>
+        <input class="field-value center coin-field" name="system.currency.sp.qty" type="number" value="{{system.currency.sp.qty}}" placeholder="Orbe" data-dtype="Number"/>
     </div>
     <div class="flex1 center coin">
         <i title="Sceptre" class="fas fa-coins" style="color:saddlebrown"></i>
-        <input class="field-value coin-field" name="data.currency.cp.qty" type="number" value="{{actor.data.currency.cp.qty}}" placeholder="Sceptre" data-dtype="Number"/>
+        <input class="field-value coin-field" name="system.currency.cp.qty" type="number" value="{{system.currency.cp.qty}}" placeholder="Sceptre" data-dtype="Number"/>
     </div>
         <div class="flex1 center coin">
         <i title="Roi" class="fas fa-coins" style="color:dimgray"></i>
-        <input class="field-value coin-field" name="data.currency.fp.qty" type="number" value="{{actor.data.currency.fp.qty}}" placeholder="Roi" data-dtype="Number"/>
+        <input class="field-value coin-field" name="system.currency.fp.qty" type="number" value="{{system.currency.fp.qty}}" placeholder="Roi" data-dtype="Number"/>
     </div>
 
     {{else}}
@@ -30,7 +30,7 @@
     {{/if}} 
     
     <div class="flex2 center coin">
-         <input class="field-value coin-field" name="data.currency.fp.qty" type="number" value="{{actor.data.currency.fp.qty}}" placeholder="0" data-dtype="Number"/>
+         <input class="field-value coin-field" name="system.currency.fp.qty" type="number" value="{{system.currency.fp.qty}}" placeholder="0" data-dtype="Number"/>
         <i title="Credits" class="fas fa-coins" style="color:dimgray"></i>
     </div>
     {{/if}} 
@@ -38,20 +38,20 @@
 
     <ol class="inventory-list">
         <li class="inventory-header flexrow">
-            <h3 class="item-name flexrow"></h3>
+            <div class="item-name flexrow"></div>
             <div class="item-detail">Qté</div>
             <div class="item-detail">Equiper</div>
              <div class="item-detail">Roll</div>
             <div class="item-controls">
                 <a class="item-control item-create new-item" title="Ajouter un objet"><i class="fas fa-plus"></i></a>   
         {{#if (isAriaTypeSetting "aria")}}
-                <a class="item-control item-create compendium-pack" data-pack="aria.arme" data-open="0" title="Ajouter un objet">
+                <a class="item-control item-create aria-compendium-pack" data-pack="aria.arme" data-open="0" title="Ajouter un objet">
         {{/if}}
         {{#if (isAriaTypeSetting "stars")}}
-                <a class="item-control item-create compendium-pack" data-pack="aria.objetsstars" data-open="0" title="Ajouter un objet">
+                <a class="item-control item-create aria-compendium-pack" data-pack="aria.objetsstars" data-open="0" title="Ajouter un objet">
         {{/if}}
         {{#if (isAriaTypeSetting "contemporain")}}
-                <a class="item-control item-create compendium-pack" data-pack="aria.objetscont" data-open="0" title="Ajouter un objet">
+                <a class="item-control item-create aria-compendium-pack" data-pack="aria.objetscont" data-open="0" title="Ajouter un objet">
         {{/if}} 
                     <i class="fas fa-folder-plus"></i>
                 </a>
@@ -61,7 +61,7 @@
         
         {{#each (getArraySubCategorywithItems actor.items)}}
                 {{#if (notEmpty this.items)}}
-                    <li class="inventory-header flexrow"><h3 class="item-name center flexrow">{{this.value}}</h3></li>
+                    <li class="inventory-header flexrow"><div class="item-name center flexrow">{{this.value}}</div></li>
                 {{#each this.items}}
                         {{> "systems/aria/templates/actors/character/parts/inventory/character-inventory-item.hbs" this}}
                     {{/each}}

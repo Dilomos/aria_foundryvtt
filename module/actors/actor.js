@@ -10,8 +10,11 @@ export class AriaActor extends Actor {
     /** @override */
   static async create(data, options={}) {
     data.items = data.items || [];
+
+    let caps = game.aria.config.competences;
+
     if ( data.type === "character" ) {
-        let caps = game.aria.config.competences;
+        
         mergeObject(data.items, caps, {overwrite: false});
     }
     let enti = super.create(data, options);
@@ -47,23 +50,13 @@ export class AriaActor extends Actor {
         return items.find(i => i.type === "origine")
     }
 
-    /* -------------------------------------------- */
-
-    getActiveCompetences(items) {
-        return items.filter(i => i.type === "competence" && i.data.rank)
-    }
-
-
       /** @override */
   async modifyTokenAttribute(attribute, value, isDelta, isBar) {
     if ( attribute === "attributes.hp" ) {
-      const hp = getProperty(this.data.data, attribute);
+      const hp = this.system.attributes.hp;
 
-      let actorData = this.data;
-      let attributes = actorData.data.attributes;
-
-      attributes.hp.bonus = attributes.hp.max - value;
-      return this.update({'data.attributes.hp.bonus': attributes.hp.bonus});
+      hp.bonus = this.system.attributes.hp.max - value;
+      return this.update({'system.attributes.hp.bonus': hp.bonus});
     }
     return super.modifyTokenAttribute(attribute, value, isDelta, isBar);
   }

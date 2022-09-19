@@ -90,7 +90,7 @@ export class GlobalAriaItemSheet extends ItemSheet {
      */
     async _onDropItem(event, data) {
         const item = await Item.fromDropData(data);
-        const itemData = duplicate(item.data);
+        const itemData = duplicate(this.item.toObject(false));
         switch (itemData.type) {
             case "competence" :
                 return await this._onDropCompetenceItem(event, itemData);
@@ -113,9 +113,9 @@ export class GlobalAriaItemSheet extends ItemSheet {
 
     _onDropCompetenceItem(event, itemData) {
         event.preventDefault();
-        let data = duplicate(this.item.data);
-        if(data.data.competences){
-            let caps = data.data.competences;
+        let data = duplicate(this.item.toObject(false));
+        if(this.item.system.competences){
+            let caps = this.item.system.competences;
             caps.push(itemData);
             return this.item.update(data);
         }
@@ -142,13 +142,13 @@ export class GlobalAriaItemSheet extends ItemSheet {
 
     _onDeleteItem(ev){
         ev.preventDefault();
-        let data = duplicate(this.item.data);
+        let data = duplicate(this.item.toObject(false));
         const li = $(ev.currentTarget).closest(".item");
         const id = li.data("itemId");
         const itemType = li.data("itemType");
         let array = null;
         switch(itemType){
-            case "competence" : array = data.data.competences; break;
+            case "competence" : array = this.item.system.competences; break;
         }
         if(array) {
             ArrayUtils.removeObjectById(array, id)
@@ -157,9 +157,9 @@ export class GlobalAriaItemSheet extends ItemSheet {
     }
 
     /** @override */
-    getData(options) {
+    async getData(options) {
         const data = super.getData(options);
-        const itemData = data.data;
+        const itemData = this.item.toObject(false);
         data.labels = this.item.labels;
         data.config = CONFIG.ARIA;
     
@@ -169,7 +169,12 @@ export class GlobalAriaItemSheet extends ItemSheet {
 
         // Re-define the template data references (backwards compatible)
         data.item = itemData;
-        data.data = itemData.data;
+        data.system = itemData.system;
+
+        data.descriptionHTML = await TextEditor.enrichHTML(data.system.description, {
+            async: true
+          });
+        
         return data;
     }
 
@@ -187,7 +192,7 @@ export class GlobalAriaItemSheet extends ItemSheet {
         // const labels = this.item.labels;
 
         if ( item.type === "item" ) {
-            const entries = Object.entries(item.data.properties)
+            const entries = Object.entries(item.system.properties)
             props.push(...entries.filter(e => e[1] === true).map(e => {
                 return game.aria.config.itemProperties[e[0]]
             }));

@@ -1,9 +1,9 @@
-<h3 class="form-header">Type d'objet</h3>
+<div class="form-header">Type d'objet</div>
 <div class="form-group">
     <label>Sous-catégorie</label>
     <div class="form-fields">
-        <select name="data.subtype" data-type="String" style="width:100%">
-            {{#select data.subtype}}
+        <select name="system.subtype" data-type="String" style="width:100%">
+            {{#select system.subtype}}
                 <option value="">{{localize "ARIA.None"}}</option>
             {{#each (getItemSubCategories)  as |catName cat|}}
                 <option value="{{cat}}">{{catName}}</option>
@@ -15,13 +15,13 @@
 
 {{> "systems/aria/templates/items/parts/details/equipment-details.hbs"}}
 
-{{#if (or (or (equals data.subtype "melee") (equals data.subtype "ranged")) data.properties.weapon) }}
+{{#if (or (or (equals system.subtype "melee") (equals system.subtype "ranged")) system.properties.weapon) }}
     {{> "systems/aria/templates/items/parts/details/weapon-details.hbs"}}
 {{/if}}
-{{#if (or (equals data.subtype "ranged") data.properties.ranged) }}
+{{#if (or (equals system.subtype "ranged") system.properties.ranged) }}
     {{> "systems/aria/templates/items/parts/details/ranged-details.hbs"}}
 {{/if}}
-{{#if (or (or (equals data.subtype "armor") (equals data.subtype "shield")) data.properties.protection) }}
+{{#if (or (or (equals system.subtype "armor") (equals system.subtype "shield")) system.properties.protection) }}
     {{> "systems/aria/templates/items/parts/details/protection-details.hbs"}}
 {{/if}}
 

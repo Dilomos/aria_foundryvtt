@@ -23,13 +23,13 @@
         </div>
 
         {{#if (isAriaTypeSetting "aria")}}
-                <div class="flex2 center cell drop-field compendium-pack" data-pack="aria.origines" data-open="0">
+                <div class="flex2 center cell drop-field aria-compendium-pack" data-pack="aria.origines" data-open="0">
         {{/if}}
         {{#if (isAriaTypeSetting "stars")}}
-                <div class="flex2 center cell drop-field compendium-pack" data-pack="aria.originesstars" data-open="0">
+                <div class="flex2 center cell drop-field aria-compendium-pack" data-pack="aria.originesstars" data-open="0">
         {{/if}}
         {{#if (isAriaTypeSetting "contemporain")}}
-               <div class="flex2 center cell drop-field compendium-pack" data-pack="aria.originescont" data-open="0">
+               <div class="flex2 center cell drop-field aria-compendium-pack" data-pack="aria.originescont" data-open="0">
         {{/if}} 
             {{#if (getOrigines actor.items)}}
                 {{#with (getOrigines actor.items)}}
@@ -47,7 +47,7 @@
  {{#if (isAriaTypeSetting "stars")}}  
     <div class="flexcol no-wrap">
         <div id="mental_icon" class="flex1 center">
-            <input class="field-label-icon-mental field-value" name="data.attributes.mental.value" type="text" value="{{actor.data.attributes.mental.value}}" placeholder="0" data-dtype="Number"/>
+            <input class="field-label-icon-mental field-value" name="system.attributes.mental.value" type="text" value="{{system.attributes.mental.value}}" placeholder="0" data-dtype="Number"/>
         </div>
         <div class="flex1 center">
             <div class="field-label">{{ localize 'ARIA.attributes.mental.label' }}</div>

@@ -7,15 +7,13 @@ export class Origines {
             ui.notifications.error("Vous avez déjà une origine.");
             return false;
         } else {
-            let competences = duplicate(itemData.data.competences);
+            let competences = duplicate(itemData.system.competences);
             competences.push(itemData);
             return actor.createEmbeddedDocuments("Item",competences);
         }
     }
 
     static removeFromActor(actor, event, entity) {
-        const actorData = actor.data;
-        const originesData = entity.data;
         return Dialog.confirm({
             title: "Supprimer l'origine' ?",
             content: `<p>Etes-vous sûr de vouloir supprimer l'origine de ${actor.name} ?</p>`,

@@ -1,16 +1,16 @@
 <div class="flexrow no-wrap">
     <div class="caracname">
-            <div class="flex1 rollable no-wrap" data-rolling="data.stats.int" data-roll-type="skillcheck" data-rolling-value="{{data.stats.int.base}}">
+            <div class="flex1 rollable no-wrap" data-rolling="data.stats.int" data-roll-type="skillcheck" data-rolling-value="{{system.stats.int.base}}">
                 <div class="flexrow no-wrap ">
-                    <div class="icon_d100" title="{{ localize data.stats.int.label }}">
+                    <div class="icon_d100" title="{{ localize system.stats.int.label }}">
                     </div>
-                    <div class="field-label no-wrap left" title="{{ localize data.stats.int.label }}">
-                        {{ localize data.stats.int.label }}
+                    <div class="field-label no-wrap left" title="{{ localize system.stats.int.label }}">
+                        {{ localize system.stats.int.label }}
                     </div>
                 </div>
             </div>
     </div>
     <div class="flex1 center cell caracvalue">
-        <input class="field-value" name="data.stats.int.base" type="text" value="{{data.stats.int.base}}" data-dtype="Number"/>
+        <input class="field-value" name="system.stats.int.base" type="text" value="{{system.stats.int.base}}" data-dtype="Number"/>
     </div>
 </div>

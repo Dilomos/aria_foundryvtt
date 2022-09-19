@@ -11,8 +11,8 @@ export const registerHandlebarsHelpers = function () {
     Handlebars.registerHelper('getInventory', function (items) {
         let inventory = items.filter(item => item.type === "item");
         inventory.sort(function (a, b) {
-            const aKey = a.data.subtype + "-" + a.name.slugify({strict: true});
-            const bKey = b.data.subtype + "-" + b.name.slugify({strict: true});
+            const aKey = a.system.subtype + "-" + a.name.slugify({strict: true});
+            const bKey = b.system.subtype + "-" + b.name.slugify({strict: true});
             return (aKey > bKey) ? 1 : -1
         });
         return inventory;
@@ -25,7 +25,7 @@ export const registerHandlebarsHelpers = function () {
         for (const [key, value] of Object.entries(subCat)) {
 
             let caps = items.filter(item => item.type === "item");
-            let weapons = caps.filter(item => item.data.subtype == key);
+            let weapons = caps.filter(item => item.system.subtype == key);
             weapons.sort(function (a, b) {
                 const aKey = a.name.slugify({strict: true});
                 const bKey = b.name.slugify({strict: true});
@@ -41,7 +41,7 @@ export const registerHandlebarsHelpers = function () {
 
         //Add all items with no categories
         let caps = items.filter(item => item.type === "item");
-        let weapons = caps.filter(item => item.data.subtype == "");
+        let weapons = caps.filter(item => item.system.subtype == "");
         weapons.sort(function (a, b) {
             const aKey = a.name.slugify({strict: true});
             const bKey = b.name.slugify({strict: true});
@@ -63,7 +63,7 @@ export const registerHandlebarsHelpers = function () {
 
     Handlebars.registerHelper('getItemsBySubCategory', function (subCat, items) {
         let caps = items.filter(item => item.type === "item");
-        let weapons = caps.filter(item => item.data.subtype == subCat);
+        let weapons = caps.filter(item => item.system.subtype == subCat);
         weapons.sort(function (a, b) {
             const aKey = a.name.slugify({strict: true});
             const bKey = b.name.slugify({strict: true});
@@ -73,10 +73,10 @@ export const registerHandlebarsHelpers = function () {
     });
 
     Handlebars.registerHelper('getEquiped', function (items) {
-        let equiped = items.filter(item => item.type === "item" && item.data.equiped);
+        let equiped = items.filter(item => item.type === "item" && item.system.equiped);
         equiped.sort(function (a, b) {
-            const aKey = a.data.subtype + "-" + a.name.slugify({strict: true});
-            const bKey = b.data.subtype + "-" + b.name.slugify({strict: true});
+            const aKey = a.system.subtype + "-" + a.name.slugify({strict: true});
+            const bKey = b.system.subtype + "-" + b.name.slugify({strict: true});
             return (aKey > bKey) ? 1 : -1
         });
         return equiped;
@@ -94,7 +94,7 @@ export const registerHandlebarsHelpers = function () {
         let caps = items.filter(item => item.type === "competence").sort(function (a, b) {
             return a.name.localeCompare(b.name);
           });
-        let caps_normal = caps.filter(item => item.data.special === false);
+        let caps_normal = caps.filter(item => item.system.special === false);
         return caps_normal;
     });
 
@@ -103,25 +103,25 @@ export const registerHandlebarsHelpers = function () {
             return a.name.localeCompare(b.name);
           });
           
-          let caps_special = caps.filter(item => item.data.special === true);
+          let caps_special = caps.filter(item => item.system.special === true);
           return caps_special;
     });
 
     Handlebars.registerHelper('getWeapons', function (items) {
         let caps = items.filter(item => item.type === "item");
-        let weapons = caps.filter(item => item.data.properties.weapon === true ||  item.data.subtype == "melee" ||  item.data.subtype == "ranged");
+        let weapons = caps.filter(item => item.system.properties.weapon === true ||  item.system.subtype == "melee" ||  item.system.subtype == "ranged");
         return weapons;
     });
 
     Handlebars.registerHelper('getEquipedWeapons', function (items) {
         let caps = items.filter(item => item.type === "item");
-        let weapons = caps.filter(item => item.data.properties.weapon === true ||  item.data.subtype == "melee" ||  item.data.subtype == "ranged");
-        let equipedWeapons = weapons.filter(item => item.data.equiped === true);
+        let weapons = caps.filter(item => item.system.properties.weapon === true ||  item.system.subtype == "melee" ||  item.system.subtype == "ranged");
+        let equipedWeapons = weapons.filter(item => item.system.equiped === true);
         return equipedWeapons;
     });
 
     Handlebars.registerHelper('isWeapon', function (item) {
-        if( item.data.properties.weapon === true ||  item.data.subtype == "melee" ||  item.data.subtype == "ranged")
+        if( item.system.properties.weapon === true ||  item.system.subtype == "melee" ||  item.system.subtype == "ranged")
             return true;
         else
             return false;
@@ -222,7 +222,7 @@ export const registerHandlebarsHelpers = function () {
     });
 
     Handlebars.registerHelper('findCompetence', function (key) {
-        return Traversal.getAllCompetencesData().find(c => c.data.key === key);
+        return Traversal.getAllCompetencesData().find(c => c.system.key === key);
     });
 
     // If you need to add Handlebars helpers, here are a few useful examples:
@@ -245,7 +245,7 @@ export const registerHandlebarsHelpers = function () {
     });
 
     Handlebars.registerHelper('includesKey', function (items, type, key) {
-        return items.filter(i => i.type === type).map(i => i.data.key).includes(key);
+        return items.filter(i => i.type === type).map(i => i.system.key).includes(key);
     });
 
 }

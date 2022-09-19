@@ -17,7 +17,7 @@
             <span class="field-label"><br>JE SUIS GENIAL.E<br> PARCE QUE ...</span>
         </div>  
         <div class="flex1 center">
-                <input class="field-value" name="data.genial" type="text" value="{{data.genial}}" placeholder="..." data-dtype="String"/>
+                <input class="field-value" name="system.genial" type="text" value="{{system.genial}}" placeholder="..." data-dtype="String"/>
         </div>
     {{/if}}
     </div>
@@ -35,13 +35,13 @@
          <!-- PROFESSION -->
         <div class="flexrow">
             {{#if (isAriaTypeSetting "aria")}}
-                <div class="flex4 center cell drop-field compendium-pack" data-pack="aria.professions" data-open="0">
+                <div class="flex4 center cell drop-field aria-compendium-pack" data-pack="aria.professions" data-open="0">
             {{/if}}
             {{#if (isAriaTypeSetting "stars")}}
-                <div class="flex4 center cell drop-field compendium-pack" data-pack="aria.professionsstars" data-open="0">
+                <div class="flex4 center cell drop-field aria-compendium-pack" data-pack="aria.professionsstars" data-open="0">
             {{/if}}
             {{#if (isAriaTypeSetting "contemporain")}}
-                <div class="flex4 center cell drop-field compendium-pack" data-pack="aria.professionscont" data-open="0">
+                <div class="flex4 center cell drop-field aria-compendium-pack" data-pack="aria.professionscont" data-open="0">
             {{/if}}
                 {{#if (getProfession actor.items)}}
                     {{#with (getProfession actor.items)}}
@@ -51,7 +51,7 @@
                         </div>
                     {{/with}}
                 {{else}}
-                    <div class="empty">Ajoutez une Profession</div>
+                    <div class="empty">Ajoutez une Profession&nbsp; <i class="fas fa-atlas"></i> </div>
                 {{/if}}
             </div>
         </div>
@@ -61,7 +61,7 @@
             <span class="field-label"><br>MAIS LA SOCIETE A DES PROBLEMES <br> AVEC MOI PARCE QUE...</span>
         </div> 
         <div class="flex1 center">
-            <input class="field-value" name="data.mais" type="text" value="{{data.mais}}" placeholder="..." data-dtype="String"/>
+            <input class="field-value" name="system.mais" type="text" value="{{system.mais}}" placeholder="..." data-dtype="String"/>
         </div>
         {{/if}}
     </div>

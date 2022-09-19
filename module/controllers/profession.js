@@ -7,14 +7,13 @@ export class Profession {
             ui.notifications.error("Vous avez déjà une profession.");
             return false;
         } else {
-            let competences = duplicate(itemData.data.competences);
+            let competences = duplicate(itemData.system.competences);
             competences.push(itemData);
             return actor.createEmbeddedDocuments("Item",competences);
         }
     }
 
     static removeFromActor(actor, event, entity) {
-        const professionData = entity.data;
         return Dialog.confirm({
             title: "Supprimer le profession ?",
             content: `<p>Etes-vous sûr de vouloir supprimer la profession de ${actor.name} ?</p>`,

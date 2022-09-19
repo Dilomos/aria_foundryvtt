@@ -5,12 +5,12 @@
             <h4>{{name}}</h4>
         </div>
            
-        <div class="item-detail {{#if data.properties.stackable}}item-qty unlocked{{else}}locked{{/if}}">
-            {{#if data.properties.stackable}}{{data.qty}}{{/if}}
+        <div class="item-detail {{#if system.properties.stackable}}item-qty unlocked{{else}}locked{{/if}}">
+            {{#if system.properties.stackable}}{{system.qty}}{{/if}}
         </div>
         <div class="item-detail">
-            {{#if data.properties.equipable}}
-                {{#if data.equiped}}
+            {{#if system.properties.equipable}}
+                {{#if system.equiped}}
                     <a class="item-control item-equip" title="Unequip Item"><div class="fas fa-shield-alt"></div></a>
                 {{else}}
                     <a class="item-control item-equip" title="Equip Item" style="color:lightgray;"><div class="fas fa-shield-alt"></div></a>
@@ -20,7 +20,7 @@
 
         <div class="item-detail">
             {{#if (isWeapon this)}}
-                <a class="item-control rollable" data-roll-formula="{{data.dmgBase}}" data-roll-weapon-name="{{name}}" data-roll-weapon-img="{{img}}" data-roll-type="weapon">
+                <a class="item-control rollable" data-roll-formula="{{system.dmgBase}}" data-roll-weapon-name="{{name}}" data-roll-weapon-img="{{img}}" data-roll-type="weapon">
                     <div class="icon_d100"></div>
                 </a>
             {{/if}}

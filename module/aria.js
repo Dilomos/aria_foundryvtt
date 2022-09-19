@@ -24,7 +24,7 @@ import {Macros} from "./system/macros.js";
 
 Hooks.once("init", async function () {
 
-    console.info("Aria System Initializing...");
+    console.info("Aria : System Initializing...");
 
     // Register System Settings
     registerSystemSettings();    
@@ -56,6 +56,8 @@ Hooks.once("init", async function () {
     Actors.unregisterSheet("core", ActorSheet);
     Items.unregisterSheet("core", ItemSheet);
 
+    console.info("Aria : Standard sheets unregistered");
+
     // Register item sheets
     Items.registerSheet("aria", AriaItemSheet, {
         types: ["item", "competence", "profession", "origine"],
@@ -77,6 +79,7 @@ Hooks.once("init", async function () {
         label: "ARIA.SheetClassLoot"
     });
 
+    console.info("Aria : New sheets registered");
     
 
     // Preload Handlebars Templates
@@ -85,9 +88,13 @@ Hooks.once("init", async function () {
     // Register Handlebars helpers
     registerHandlebarsHelpers();
 
+    console.info("Aria : Init Done");
+
 });
 
 Hooks.once("setup", function() {
+
+  console.info("Aria : Setup...");
 
     const toLocalize = [
         "itemProperties", "itemSubCategories", "languages"
@@ -110,6 +117,8 @@ Hooks.once("setup", function() {
     }, {});
   }
 
+  console.info("Aria : Setup done");
+
   });
 
 
@@ -119,6 +128,8 @@ Hooks.once("setup", function() {
  * Once the entire VTT framework is initialized, check to see if we should perform a data migration
  */
 Hooks.once("ready", function() {
+
+  console.info("Aria : Ready...");
 
     if( (game.settings.get("aria", "ariaVersion") == "aria")
     || (game.settings.get("aria", "ariaVersion") == "stars")

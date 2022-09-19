@@ -17,8 +17,8 @@
                 <div class="item-subtitle">
                     <h4 class="item-type">{{localize (concat "ARIA.category." item.type)}}</h4>
                     <span class="item-status">
-                        {{#if item.data.subtype}}
-                            {{localize (concat "ARIA.category." item.data.subtype)}}
+                        {{#if item.system.subtype}}
+                            {{localize (concat "ARIA.category." item.system.subtype)}}
                         {{/if}}
                     </span>
                 </div>
@@ -26,9 +26,9 @@
         </header>
         {{!-- Sheet Body --}}
         <section class="sheet-body">
-            <h3 class="form-header">{{localize "ARIA.details.description"}}</h3>
+            <div class="form-header">{{localize "ARIA.details.description"}}</div>
             <div class="flexrow description">
-                {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+                {{editor descriptionHTML target="system.description" button=true owner=owner editable=editable}}
             </div>
             <div class="details">
                 {{#if (equals item.type "item")}}

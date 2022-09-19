@@ -68,16 +68,16 @@ ARIA.getProfessions = async function () {
     let professionsexceptions;
 
     if(game.settings.get("aria", "ariaVersion") == "aria"){
-        professions = await game.packs.get("aria.professions").getDocuments().then(index => index.map(entity => entity.data));
-        professionsactualplay = await game.packs.get("aria.professionsactualplay").getDocuments().then(index => index.map(entity => entity.data));
-        professionsexceptions = await game.packs.get("aria.professionsexceptions").getDocuments().then(index => index.map(entity => entity.data));
+        professions = await game.packs.get("aria.professions").getDocuments().then(index => index.map(entity => entity.toObject(false)));
+        professionsactualplay = await game.packs.get("aria.professionsactualplay").getDocuments().then(index => index.map(entity => entity.toObject(false)));
+        professionsexceptions = await game.packs.get("aria.professionsexceptions").getDocuments().then(index => index.map(entity => entity.toObject(false)));
         ARIA.professions = professions.concat(professionsactualplay).concat(professionsexceptions);
     }else{
         if(game.settings.get("aria", "ariaVersion") == "stars"){
-            professions = await game.packs.get("aria.professionsstars").getDocuments().then(index => index.map(entity => entity.data));
+            professions = await game.packs.get("aria.professionsstars").getDocuments().then(index => index.map(entity => entity.toObject(false)));
             ARIA.professions = professions;
         }else{
-            professions = await game.packs.get("aria.professionscont").getDocuments().then(index => index.map(entity => entity.data));
+            professions = await game.packs.get("aria.professionscont").getDocuments().then(index => index.map(entity => entity.toObject(false)));
             ARIA.professions = professions;
         }
     }
@@ -90,12 +90,12 @@ ARIA.getOrigines = async function () {
     let origines;
     
     if(game.settings.get("aria", "ariaVersion") == "aria"){
-        origines = await game.packs.get("aria.origines").getDocuments().then(index => index.map(entity => entity.data));
+        origines = await game.packs.get("aria.origines").getDocuments().then(index => index.map(entity => entity.toObject(false)));
     }else{
         if(game.settings.get("aria", "ariaVersion") == "stars"){
-            origines = await game.packs.get("aria.originesstars").getDocuments().then(index => index.map(entity => entity.data));
+            origines = await game.packs.get("aria.originesstars").getDocuments().then(index => index.map(entity => entity.toObject(false)));
         }else{
-            origines = await game.packs.get("aria.originescont").getDocuments().then(index => index.map(entity => entity.data));
+            origines = await game.packs.get("aria.originescont").getDocuments().then(index => index.map(entity => entity.toObject(false)));
         }
     }
     ARIA.origines = origines;
@@ -108,12 +108,12 @@ ARIA.getCompetences = async function () {
     let competences;
 
     if(game.settings.get("aria", "ariaVersion") == "aria"){
-        competences = await game.packs.get("aria.competences").getDocuments().then(index => index.map(entity => entity.data));
+        competences = await game.packs.get("aria.competences").getDocuments().then(index => index.map(entity => entity.toObject(false)));
     }else{
         if(game.settings.get("aria", "ariaVersion") == "stars"){
-            competences = await game.packs.get("aria.competencesstars").getDocuments().then(index => index.map(entity => entity.data));
+            competences = await game.packs.get("aria.competencesstars").getDocuments().then(index => index.map(entity => entity.toObject(false)));
         }else{
-            competences = await game.packs.get("aria.competencescont").getDocuments().then(index => index.map(entity => entity.data));
+            competences = await game.packs.get("aria.competencescont").getDocuments().then(index => index.map(entity => entity.toObject(false)));
         }
     }
     ARIA.competences = competences;
@@ -126,15 +126,15 @@ ARIA.getCompetencesSpe = async function () {
     let competencesspeexception;
     
     if(game.settings.get("aria", "ariaVersion") == "aria"){
-        competencesspepretire = await game.packs.get("aria.competencesspepretire").getDocuments().then(index => index.map(entity => entity.data));
-        competencesspeexception = await game.packs.get("aria.competencesspeexception").getDocuments().then(index => index.map(entity => entity.data));
+        competencesspepretire = await game.packs.get("aria.competencesspepretire").getDocuments().then(index => index.map(entity => entity.toObject(false)));
+        competencesspeexception = await game.packs.get("aria.competencesspeexception").getDocuments().then(index => index.map(entity => entity.toObject(false)));
         ARIA.competencesSpe = competencesspepretire.concat(competencesspeexception);
     }else{
         if(game.settings.get("aria", "ariaVersion") == "stars"){
-            competencesspepretire = await game.packs.get("aria.competencesspepretirestars").getDocuments().then(index => index.map(entity => entity.data));
+            competencesspepretire = await game.packs.get("aria.competencesspepretirestars").getDocuments().then(index => index.map(entity => entity.toObject(false)));
             ARIA.competencesSpe = competencesspepretire;
         }else{
-            competencesspepretire = await game.packs.get("aria.competencesspepretirestars").getDocuments().then(index => index.map(entity => entity.data));
+            competencesspepretire = await game.packs.get("aria.competencesspepretirestars").getDocuments().then(index => index.map(entity => entity.toObject(false)));
             ARIA.competencesSpe = competencesspepretire;
         }
     }

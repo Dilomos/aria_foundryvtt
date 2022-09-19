@@ -61,18 +61,18 @@
             "key" : "hp",
             "label" : "ARIA.attributes.hp.label",
             "abbrev" : "ARIA.attributes.hp.abbrev",
-            "base": 0,
+            "base": 10,
             "bonus": 0,
-            "value": 0,
-            "max": 0
+            "value": 10,
+            "max": 10
           },
           "def": {
             "key" : "def",
             "label" : "ARIA.attributes.def.label",
             "abbrev" : "ARIA.attributes.def.abbrev",
-            "base": 10,
+            "base": 0,
             "bonus": 0,
-            "value": 10
+            "value": 0
           },
           "hit": {
             "key" : "hit",

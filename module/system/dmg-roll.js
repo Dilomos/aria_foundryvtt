@@ -54,7 +54,7 @@ export class AriaDamageRoll {
     /* -------------------------------------------- */
 
     _buildDamageRollMessage() {
-        let subtitle = `<h3><strong>${this._label}</strong></h3>`;
+        let subtitle = `<div><strong>${this._label}</strong></div>`;
         return `<h2 class="damage">Jet de dommages</h2>${subtitle}`;
     }
 

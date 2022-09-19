@@ -25,7 +25,7 @@ export class Traversal {
         switch(type){
             case "competence" :
                 compendium = game.aria.config.competences;
-                ingame = game.items.filter(item => item.type === "competence").map(entity => entity.data);
+                ingame = game.items.filter(item => item.type === "competence").map(entity => entity.toObject(false));
                 break;
         }
         return ingame.concat(compendium);
@@ -36,7 +36,7 @@ export class Traversal {
      */
 
     static getInGameEntitiesDataOfType (type) {
-        return game.items.filter(item => item.type === type).map(entity => entity.data);
+        return game.items.filter(item => item.type === type).map(entity => entity.toObject(false));
     }
 
     //world + compendium can create duplicate

@@ -1,19 +1,19 @@
 <div class="attrvertalign">
     {{#if (notEmpty (getEquipedWeapons actor.items))}}
     {{#each (getEquipedWeapons actor.items) as |weapon id|}}
-        <div class="flexrow rollable no-wrap" data-roll-formula="{{weapon.data.dmgBase}}" data-roll-weapon-name="{{weapon.name}}" data-roll-weapon-img="{{weapon.img}}" data-roll-type="weapon">
+        <div class="flexrow rollable no-wrap" data-roll-formula="{{weapon.system.dmgBase}}" data-roll-weapon-name="{{weapon.name}}" data-roll-weapon-img="{{weapon.img}}" data-roll-type="weapon">
             <div class="flex1 center">
                 {{weapon.name}}
             </div>
             <div id="degat_icon" class="flex2 center">
                 <div class="field-label-icon-attack field-value">
-                {{ splitWeaponDice weapon.data.dmgBase }}
+                {{ splitWeaponDice weapon.system.dmgBase }}
                 </div>
             </div>
             <div class="center">
                 <div class="field-label-icon-attack field-value weaponMod">
-                     {{#if (splitWeaponMod weapon.data.dmgBase) }}
-                     +{{ splitWeaponMod weapon.data.dmgBase }}
+                     {{#if (splitWeaponMod weapon.system.dmgBase) }}
+                     +{{ splitWeaponMod weapon.system.dmgBase }}
                      {{/if}}
                 </div>
             </div>
