@@ -629,6 +629,153 @@ strong {
   color: red;
 }
 
+/* ----------------------------------------- */
+/*  JOURNAL                                  */
+/* ----------------------------------------- */
+.sheet.journal-entry .journal-entry-content,
+.editor.prosemirror {
+  background: #fff;
+}
+
+.journal-page-content h1,
+.journal-page-content h2,
+.journal-page-content h3,
+.journal-page-content h4,
+.journal-page-content h5,
+.journal-page-content h6 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 0px;
+  letter-spacing: 0px;
+  font-weight: normal;
+  border: none;
+}
+
+.journal-page-content h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #2c3f45;
+  font-size: 2.5rem;
+}
+
+.journal-page-content h2 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #5a6a72;
+  font-size: 2.2rem;
+}
+
+.journal-page-content h3 {
+  color: #5a6a72;
+  font-size: 2rem;
+}
+
+.journal-page-content h4 {
+  color: #8998a0;
+  font-size: 1.8rem;
+  margin-left: 10px;
+}
+
+.journal-page-content h5 {
+  font-size: 1.5rem;
+  color: #bfa27c;
+  margin-bottom: 5px;
+  margin-left: 20px;
+}
+
+.journal-page-content h6 {
+  font-size: 1.2rem;
+  color: #8998a0;
+  margin-bottom: 0px;
+  margin-left: 30px;
+}
+
+.journal-page-content blockquote {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  border: 0px;
+  padding: 5px 10px;
+  background: #dce2e6;
+  color: #5a6a72;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.journal-page-content blockquote::before {
+  content: "";
+  background-image: url("../ui/icons/pins/texte.png");
+  background-size: 50px 50px;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  float: left;
+  padding-right: 5px;
+  padding-bottom: 2px;
+  margin-top: -9px;
+}
+
+.journal-page-content pre {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  border: 0px;
+  padding: 5px 10px;
+  background: #f2ebe3;
+  white-space: normal;
+}
+
+code {
+  font-family: var(--font-primary) !important;
+}
+
+.journal-page-content pre::before {
+  content: "";
+  background-image: url("../ui/icons/pins/regles.png");
+  background-size: 50px 50px;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  float: left;
+  padding-right: 5px;
+  padding-bottom: 2px;
+  margin-top: -9px;
+}
+
+.journal-page-content .secret {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  border: 0px;
+  padding: 5px 10px;
+  background: #959595;
+  color: #ffffff;
+}
+
+.journal-page-content .secret.revealed {
+  background: #8a9b89;
+}
+
+.journal-page-content .secret::before {
+  content: "";
+  background-image: url("../ui/icons/pins/MJ.png");
+  background-size: 50px 50px;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  float: left;
+  padding-right: 5px;
+  padding-bottom: 2px;
+  margin-top: -9px;
+}
+
+.journal-page-content .secret.revealed::before {
+  content: "";
+  background-image: url("../ui/icons/pins/UnlockMJ.png");
+  background-size: 50px 50px;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+}
+
 /* Styles limited to aria sheets */
 .aria {
   /* Form Groups */
