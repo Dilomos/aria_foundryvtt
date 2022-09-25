@@ -721,7 +721,7 @@ strong {
   border: 0px;
   padding: 5px 10px;
   background: #f2ebe3;
-  white-space: normal;
+  white-space: pre-line;
 }
 
 code {
@@ -774,6 +774,42 @@ code {
   background-repeat: no-repeat;
   width: 50px;
   height: 50px;
+}
+
+.journal-page-content blockquote h1,
+.journal-page-content blockquote h2,
+.journal-page-content blockquote h3,
+.journal-page-content blockquote h4,
+.journal-page-content blockquote h5,
+.journal-page-content blockquote h6 {
+  color: #5a6a72;
+  text-align: center;
+  text-transform: none;
+  font-size: 1.5rem;
+}
+
+.journal-page-content pre h1,
+.journal-page-content pre h2,
+.journal-page-content pre h3,
+.journal-page-content pre h4,
+.journal-page-content pre h5,
+.journal-page-content pre h6 {
+  color: #000000;
+  text-align: center;
+  text-transform: none;
+  font-size: 1.5rem;
+}
+
+.journal-page-content .secret h1,
+.journal-page-content .secret h2,
+.journal-page-content .secret h3,
+.journal-page-content .secret h4,
+.journal-page-content .secret h5,
+.journal-page-content .secret h6 {
+  color: #ffffff;
+  text-align: center;
+  text-transform: none;
+  font-size: 1.5rem;
 }
 
 /* Styles limited to aria sheets */
