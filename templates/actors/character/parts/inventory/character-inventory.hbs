@@ -1,3 +1,4 @@
+{{#if (isEnabled "showBourse")}}
 <div class="flexrow no-wrap currencies" style="max-height:20px">
     {{#if (isAriaTypeSetting "aria")}}
      <div class="flex1 center">Bourse</div>
@@ -35,6 +36,7 @@
     </div>
     {{/if}} 
 </div>
+{{/if}}
 
     <ol class="inventory-list">
         <li class="inventory-header flexrow">

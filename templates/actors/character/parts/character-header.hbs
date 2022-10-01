@@ -11,7 +11,7 @@
             </div>
         </div>
 
-    {{#if (or (isAriaTypeSetting "aria") (isAriaTypeSetting "stars"))}}
+    {{#if (and (or (isAriaTypeSetting "aria") (isAriaTypeSetting "stars")) (isEnabled "showGenialMais"))}}
             <!-- /NAME -->
         <div class="flex1 center">
             <span class="field-label"><br>JE SUIS GENIAL.E<br> PARCE QUE ...</span>
@@ -56,7 +56,7 @@
             </div>
         </div>
         
-        {{#if (or (isAriaTypeSetting "aria") (isAriaTypeSetting "stars"))}}
+        {{#if (and (or (isAriaTypeSetting "aria") (isAriaTypeSetting "stars")) (isEnabled "showGenialMais"))}}
         <div class="flex1 center">
             <span class="field-label"><br>MAIS LA SOCIETE A DES PROBLEMES <br> AVEC MOI PARCE QUE...</span>
         </div> 
