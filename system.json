@@ -103,6 +103,13 @@
       "type": "Item"
     },
     {
+      "name": "monnaie",
+      "label": "Monnaie",
+      "system": "aria",
+      "path": "./packs/monnaie.db",
+      "type": "Item"
+    },
+    {
       "name": "professions",
       "label": "Professions",
       "system": "aria",
