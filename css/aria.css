@@ -690,126 +690,185 @@ strong {
   margin-left: 30px;
 }
 
-.journal-page-content blockquote {
-  margin-top: 15px;
-  margin-bottom: 10px;
-  margin-left: 0px;
-  border: 0px;
-  padding: 5px 10px;
-  background: #dce2e6;
-  color: #5a6a72;
-  font-style: italic;
-  font-weight: normal;
-}
-
-.journal-page-content blockquote::before {
-  content: "";
-  background-image: url("../ui/icons/pins/texte.png");
-  background-size: 50px 50px;
-  background-repeat: no-repeat;
-  width: 50px;
-  height: 50px;
-  float: left;
-  padding-right: 5px;
-  padding-bottom: 2px;
-  margin-top: -9px;
-}
-
-.journal-page-content pre {
-  margin-top: 15px;
-  margin-bottom: 10px;
-  border: 0px;
-  padding: 5px 10px;
-  background: #f2ebe3;
-  white-space: pre-line;
-}
-
-code {
-  font-family: var(--font-primary) !important;
-}
-
-.journal-page-content pre::before {
-  content: "";
-  background-image: url("../ui/icons/pins/regles.png");
-  background-size: 50px 50px;
-  background-repeat: no-repeat;
-  width: 50px;
-  height: 50px;
-  float: left;
-  padding-right: 5px;
-  padding-bottom: 2px;
-  margin-top: -9px;
-}
-
-.journal-page-content .secret {
-  margin-top: 15px;
-  margin-bottom: 10px;
-  border: 0px;
-  padding: 5px 10px;
-  background: #959595;
-  color: #ffffff;
-}
-
-.journal-page-content .secret.revealed {
-  background: #8a9b89;
-}
-
-.journal-page-content .secret::before {
-  content: "";
-  background-image: url("../ui/icons/pins/MJ.png");
-  background-size: 50px 50px;
-  background-repeat: no-repeat;
-  width: 50px;
-  height: 50px;
-  float: left;
-  padding-right: 5px;
-  padding-bottom: 2px;
-  margin-top: -9px;
-}
-
-.journal-page-content .secret.revealed::before {
-  content: "";
-  background-image: url("../ui/icons/pins/UnlockMJ.png");
-  background-size: 50px 50px;
-  background-repeat: no-repeat;
-  width: 50px;
-  height: 50px;
-}
-
-.journal-page-content blockquote h1,
-.journal-page-content blockquote h2,
-.journal-page-content blockquote h3,
-.journal-page-content blockquote h4,
-.journal-page-content blockquote h5,
-.journal-page-content blockquote h6 {
+.aria-texte h1,
+.aria-texte h2,
+.aria-texte h3,
+.aria-texte h4,
+.aria-texte h5,
+.aria-texte h6 {
   color: #5a6a72;
   text-align: center;
   text-transform: none;
   font-size: 1.5rem;
 }
 
-.journal-page-content pre h1,
-.journal-page-content pre h2,
-.journal-page-content pre h3,
-.journal-page-content pre h4,
-.journal-page-content pre h5,
-.journal-page-content pre h6 {
+.aria-regle h1,
+.aria-regle h2,
+.aria-regle h3,
+.aria-regle h4,
+.aria-regle h5,
+.aria-regle h6 {
   color: #000000;
   text-align: center;
   text-transform: none;
   font-size: 1.5rem;
 }
 
-.journal-page-content .secret h1,
-.journal-page-content .secret h2,
-.journal-page-content .secret h3,
-.journal-page-content .secret h4,
-.journal-page-content .secret h5,
-.journal-page-content .secret h6 {
+.secret h1,
+.secret h2,
+.secret h3,
+.secret h4,
+.secret h5,
+.secret h6 {
   color: #ffffff;
   text-align: center;
   text-transform: none;
   font-size: 1.5rem;
+}
+
+.aria-block {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  border: 0px;
+  padding: 5px 10px;
+}
+
+.aria-block::before {
+  content: "";
+  background-size: 50px 50px;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  float: left;
+  padding-right: 5px;
+  padding-bottom: 2px;
+  margin-top: -9px;
+}
+
+.aria-texte {
+  background: #dce2e6;
+  color: #5a6a72;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.aria-texte::before {
+  background-image: url("../ui/icons/pins/texte.png");
+}
+
+.aria-regle {
+  background: #f2ebe3;
+  white-space: pre-line;
+}
+
+.aria-regle::before {
+  background-image: url("../ui/icons/pins/regles.png");
+}
+
+.aria-point-cle,
+.aria-quete-principale,
+.aria-quete-parallele,
+.aria-quete-personnelle,
+.aria-quete-principale-fin,
+.aria-quete-parallele-fin,
+.aria-quete-personnelle-fin,
+.aria-quete-resolue,
+.aria-quete-exception,
+.aria-quete-alchimiste,
+.aria-quete-magicien,
+.aria-quete-noble,
+.aria-quete-combattant,
+.aria-quete-ennemi,
+.secret {
+  background: #959595;
+  color: #ffffff;
+}
+
+.secret.revealed {
+  background: #8a9b89;
+}
+
+.secret::before {
+  background-image: url("../ui/icons/pins/MJ.png");
+  content: "";
+  background-size: 50px 50px;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  float: left;
+  padding-right: 5px;
+  padding-bottom: 2px;
+  margin-top: -9px;
+}
+
+.secret.revealed::before {
+  background-image: url("../ui/icons/pins/UnlockMJ.png");
+  content: "";
+  background-size: 50px 50px;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  float: left;
+  padding-right: 5px;
+  padding-bottom: 2px;
+  margin-top: -9px;
+}
+
+.aria-point-cle::before {
+  background-image: url("../ui/icons/pins/pointCle.png");
+}
+
+.aria-quete-principale::before {
+  background-image: url("../ui/icons/pins/quetePrincipale.png");
+}
+
+.aria-quete-parallele::before {
+  background-image: url("../ui/icons/pins/queteSecondaire.png");
+}
+
+.aria-quete-personnelle::before {
+  background-image: url("../ui/icons/pins/quetePersonnelle.png");
+}
+
+.aria-quete-principale-fin::before {
+  background-image: url("../ui/icons/pins/achevementPrincipale.png");
+}
+
+.aria-quete-parallele-fin::before {
+  background-image: url("../ui/icons/pins/achevementSecondaire.png");
+}
+
+.aria-quete-personnelle-fin::before {
+  background-image: url("../ui/icons/pins/achevementPersonnel.png");
+}
+
+.aria-quete-resolue::before {
+  background-image: url("../ui/icons/pins/queteAchevee.png");
+}
+
+.aria-quete-exception::before {
+  background-image: url("../ui/icons/pins/persoException.png");
+}
+
+.aria-quete-alchimiste::before {
+  background-image: url("../ui/icons/pins/alchimiste.png");
+}
+
+.aria-quete-magicien::before {
+  background-image: url("../ui/icons/pins/magicien.png");
+}
+
+.aria-quete-noble::before {
+  background-image: url("../ui/icons/pins/noble.png");
+}
+
+.aria-quete-combattant::before {
+  background-image: url("../ui/icons/pins/combattant.png");
+}
+
+.aria-quete-ennemi::before {
+  background-image: url("../ui/icons/pins/dieuEnnemi.png");
 }
 
 /* Styles limited to aria sheets */
