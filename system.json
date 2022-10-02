@@ -5,14 +5,13 @@
   "version": "2.2.1",
   "compatibility": {
     "minimum": "10",
-    "verified": "10",
-    "maximum": "10"
+    "verified": "10.286"
   },
-  "templateVersion": 2,
   "authors": [
     {
       "name": "Dilomos dilomos@gmail.com",
-      "url": "https://github.com/Dilomos/aria_foundryvtt/"
+      "url": "https://github.com/Dilomos/aria_foundryvtt/",
+      "flags": {}
     }
   ],
   "esmodules": [
@@ -20,217 +19,272 @@
     "module/hooks/system-ready.js",
     "module/hooks/hotbar-drop.js"
   ],
-  "scripts": [],
   "styles": [
-    "./css/aria.css"
+    "css/aria.css"
   ],
   "packs": [
     {
       "name": "cartesmagiquesdaria",
       "label": "Cartes magiques d'Aria",
-	    "system": "aria",
-	    "path": "packs/cartes-magiques-daria.db",
-      "type": "Cards"
+      "system": "aria",
+      "path": "packs/cartes-magiques-daria.db",
+      "type": "Cards",
+      "private": false,
+      "flags": {}
     },
-	{
+    {
       "name": "competences",
       "label": "Compétences",
       "system": "aria",
-      "path": "./packs/competences.db",
-      "type": "Item"
+      "path": "packs/competences.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
     },
     {
       "name": "competencesspepretire",
       "label": "Compétences spéciales prétirés",
       "system": "aria",
-      "path": "./packs/competencesspepretire.db",
-      "type": "Item"
+      "path": "packs/competencesspepretire.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
     },
     {
       "name": "competencesspeexception",
       "label": "Compétences spéciales exceptions",
       "system": "aria",
-      "path": "./packs/competencesspeexception.db",
-      "type": "Item"
+      "path": "packs/competencesspeexception.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
     },
     {
       "name": "accessoires",
       "label": "Accessoires",
       "system": "aria",
-      "path": "./packs/accessoires.db",
-      "type": "Item"
+      "path": "packs/accessoires.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
     },
     {
       "name": "arme",
       "label": "Armes",
       "system": "aria",
-      "path": "./packs/armes.db",
-      "type": "Item"
+      "path": "packs/armes.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
     },
     {
       "name": "armesdist",
       "label": "Armes à distance",
       "system": "aria",
-      "path": "./packs/armes_distance.db",
-      "type": "Item"
+      "path": "packs/armes_distance.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
     },
     {
       "name": "armure",
       "label": "Armures",
       "system": "aria",
-      "path": "./packs/armures.db",
-      "type": "Item"
+      "path": "packs/armures.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
     },
     {
       "name": "vetement",
       "label": "Vêtements",
       "system": "aria",
-      "path": "./packs/vetements.db",
-      "type": "Item"
+      "path": "packs/vetements.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
     },
     {
       "name": "nourriture",
       "label": "Nourriture",
       "system": "aria",
-      "path": "./packs/nourritures.db",
-      "type": "Item"
+      "path": "packs/nourritures.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
     },
     {
       "name": "deplacement",
       "label": "Déplacements",
       "system": "aria",
-      "path": "./packs/deplacements.db",
-      "type": "Item"
+      "path": "packs/deplacements.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
     },
     {
       "name": "professions",
       "label": "Professions",
       "system": "aria",
-      "path": "./packs/professions.db",
-      "type": "Item"
+      "path": "packs/professions.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
     },
     {
       "name": "professionsactualplay",
       "label": "Professions de l'Actual Play",
       "system": "aria",
-      "path": "./packs/professionsactualplay.db",
-      "type": "Item"
+      "path": "packs/professionsactualplay.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
     },
     {
       "name": "professionsexceptions",
       "label": "Professions des personnages d'exception",
       "system": "aria",
-      "path": "./packs/professionsexceptions.db",
-      "type": "Item"
+      "path": "packs/professionsexceptions.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
     },
     {
       "name": "origines",
       "label": "Origines",
       "system": "aria",
-      "path": "./packs/origines.db",
-      "type": "Item"
+      "path": "packs/origines.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
     },
     {
       "name": "langues",
       "label": "Langues",
       "system": "aria",
-      "path": "./packs/langues.db",
-      "type": "Item"
+      "path": "packs/langues.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
     },
     {
       "name": "competencesstars",
       "label": "Compétences Stars",
       "system": "aria",
-      "path": "./packs/competencesstars.db",
-      "type": "Item"
+      "path": "packs/competencesstars.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
     },
     {
       "name": "competencesspepretirestars",
       "label": "Compétences spéciales prétirés Stars",
       "system": "aria",
-      "path": "./packs/competencesspepretirestars.db",
-      "type": "Item"
-    }, {
+      "path": "packs/competencesspepretirestars.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
       "name": "competencescont",
       "label": "Compétences Contemporaines",
       "system": "aria",
-      "path": "./packs/competencescont.db",
-      "type": "Item"
+      "path": "packs/competencescont.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
     },
     {
       "name": "objetscont",
       "label": "Objets Contemporains",
       "system": "aria",
-      "path": "./packs/objetscont.db",
-      "type": "Item"
+      "path": "packs/objetscont.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
     },
     {
       "name": "objetsstars",
       "label": "Objets Stars",
       "system": "aria",
-      "path": "./packs/objetsstars.db",
-      "type": "Item"
+      "path": "packs/objetsstars.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
     },
     {
       "name": "professionscont",
       "label": "Professions Contemporaines",
       "system": "aria",
-      "path": "./packs/professionscont.db",
-      "type": "Item"
+      "path": "packs/professionscont.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
     },
     {
       "name": "professionsstars",
       "label": "Professions Stars",
       "system": "aria",
-      "path": "./packs/professionsstars.db",
-      "type": "Item"
+      "path": "packs/professionsstars.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
     },
     {
       "name": "originescont",
       "label": "Origines Contemporaines",
       "system": "aria",
-      "path": "./packs/originescont.db",
-      "type": "Item"
+      "path": "packs/originescont.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
     },
     {
       "name": "originesstars",
       "label": "Origines Stars",
       "system": "aria",
-      "path": "./packs/originesstars.db",
-      "type": "Item"
+      "path": "packs/originesstars.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
     },
     {
       "name": "languescont",
       "label": "Langues Contemporaines",
       "system": "aria",
-      "path": "./packs/languescont.db",
-      "type": "Item"
+      "path": "packs/languescont.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
     },
     {
       "name": "languesstars",
       "label": "Langues Stars",
       "system": "aria",
-      "path": "./packs/languesstars.db",
-      "type": "Item"
+      "path": "packs/languesstars.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
     }
   ],
   "languages": [
     {
       "lang": "fr",
       "name": "Français",
-      "path": "lang/fr.json"
+      "path": "lang/fr.json",
+      "flags": {}
     },
     {
       "lang": "en",
       "name": "English",
-      "path": "lang/fr.json"
+      "path": "lang/fr.json",
+      "flags": {}
     }
   ],
   "socket": true,
   "gridDistance": 1.5,
   "gridUnits": "m",
   "primaryTokenAttribute": "attributes.hp",
-  "secondaryTokenAttribute": null,
   "url": "https://github.com/Dilomos/aria_foundryvtt",
   "manifest": "https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/system.json",
   "download": "https://github.com/Dilomos/aria_foundryvtt/archive/v2.2.1.zip",
