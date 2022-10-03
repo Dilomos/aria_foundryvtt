@@ -1,5 +1,6 @@
 import {AriaSkillRoll} from "../system/skill-roll.js";
 import {AriaDamageRoll} from "../system/dmg-roll.js";
+import {AriaInitiativeRoll} from "../system/init-roll.js";
 
 export class AriaRoll {
     static options() {
@@ -14,10 +15,9 @@ export class AriaRoll {
      */
     static skillCheck(data, actor, event,multiplier) {
         const elt = $(event.currentTarget)[0];
-        let key = elt.attributes["data-rolling"].value;
         let base = elt.attributes["data-rolling-value"].value;
         let cmpValue = eval(`${base}`)*multiplier;
-        let label = eval(`${key}.label`);
+        let label = elt.attributes["data-rolling"].value;
         label = (label) ? game.i18n.localize(label) : null;
         let calcLabel = eval(`${base}`) +"x"+multiplier;
         let r = new AriaSkillRoll(label,calcLabel,cmpValue);
@@ -82,6 +82,23 @@ export class AriaRoll {
         let img = elt.attributes["data-roll-weapon-img"].value;
 
         let r = new AriaDamageRoll(label,formula,img);
+        r.roll(actor);
+    }
+
+        /**
+     *  Handles initiative check rolls
+     * @param elt DOM element which raised the roll event
+     * @param key the key of the attribute to roll
+     * @private
+     */
+    static rollInitiative(data, actor, event) {
+
+        const elt = $(event.currentTarget)[0];
+        let formula = elt.attributes["data-roll-formula"].value;
+        let label = "Initiative";
+        let img = "";
+
+        let r = new AriaInitiativeRoll(label,formula,img);
         r.roll(actor);
     }
 }

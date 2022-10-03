@@ -12,6 +12,8 @@ export const preloadHandlebarsTemplates = async function () {
         
         "systems/aria/templates/actors/character/parts/stats/character-attacks.hbs",
         "systems/aria/templates/actors/character/parts/stats/character-hp.hbs",
+        "systems/aria/templates/actors/character/parts/stats/character-hp-init.hbs",
+        "systems/aria/templates/actors/character/parts/stats/character-initiative.hbs",
         "systems/aria/templates/actors/character/parts/stats/character-attributes.hbs",
 
         "systems/aria/templates/actors/character/parts/stats/attributes/character-attributes-str.hbs",

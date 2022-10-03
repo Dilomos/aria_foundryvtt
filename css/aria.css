@@ -1099,6 +1099,7 @@ strong {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   /* tiré de la moitié de sa propre hauteur */
+  min-width: 100px;
 }
 
 .aria.actor .window-content > form .wrap .main .sidebar {
@@ -1358,6 +1359,14 @@ strong {
 .aria.actor .window-content > form .wrap .field-label-icon-mental {
   margin-bottom: 7px;
   margin-right: 10px;
+  min-width: 42px;
+  width: 42px;
+  max-width: 42px;
+}
+
+.aria.actor .window-content > form .wrap .field-label-icon-initiative {
+  margin-bottom: -2px;
+  margin-right: 5px;
   min-width: 42px;
   width: 42px;
   max-width: 42px;
@@ -1695,6 +1704,14 @@ strong {
 
 .aria.actor #hit_icon {
   background: center/contain no-repeat url("../ui/blessure.png");
+  min-height: 80px;
+  height: 80px;
+  max-height: 80px;
+  font-size: 30px;
+}
+
+.aria.actor #initiative_icon {
+  background: center/contain no-repeat url("../ui/initiative.png");
   min-height: 80px;
   height: 80px;
   max-height: 80px;

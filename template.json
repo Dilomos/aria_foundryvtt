@@ -89,7 +89,8 @@
             "base": 0,
             "bonus": 0,
             "value": 0
-          }
+          },
+          "initiative": 0
         },
         "currency": {
           "gp": {

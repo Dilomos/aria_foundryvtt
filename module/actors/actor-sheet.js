@@ -317,6 +317,8 @@ async getData(options) {
                 }
             case "weapon" :
                 return AriaRoll.rollWeapon(this.getData().system, this.actor, event);
+            case "initiative" :
+                return AriaRoll.rollInitiative(this.getData().system, this.actor, event);
         }
     }
 

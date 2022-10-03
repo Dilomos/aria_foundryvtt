@@ -13,7 +13,6 @@ export const registerSystemSettings = function() {
           },
           default: "aria",        // The default value for the setting
           onChange: value => { // A callback function which triggers when the setting is changed
-            console.log(value);
             window.location.reload()
           }
         });
@@ -26,7 +25,6 @@ export const registerSystemSettings = function() {
           default: true,
           type: Boolean,
           onChange: value => { // A callback function which triggers when the setting is changed
-            console.log(value);
             window.location.reload()
           }
       });
@@ -53,7 +51,6 @@ export const registerSystemSettings = function() {
           default: true,
           type: Boolean,
           onChange: value => { // A callback function which triggers when the setting is changed
-            console.log(value);
             window.location.reload()
           }
       });
@@ -66,7 +63,6 @@ export const registerSystemSettings = function() {
           default: true,
           type: Boolean,
           onChange: value => { // A callback function which triggers when the setting is changed
-            console.log(value);
             window.location.reload()
           }
       });
@@ -79,7 +75,6 @@ export const registerSystemSettings = function() {
           default: true,
           type: Boolean,
           onChange: value => { // A callback function which triggers when the setting is changed
-            console.log(value);
             window.location.reload()
           }
       });
@@ -92,9 +87,20 @@ export const registerSystemSettings = function() {
           default: true,
           type: Boolean,
           onChange: value => { // A callback function which triggers when the setting is changed
-            console.log(value);
             window.location.reload()
           }
       });
+
+      game.settings.register("aria", "allowInitiative", {
+        name: "Utilisation de l'initiative",
+        hint: "Fait apparaitre l'initiative sur la fiche de personnage",
+        scope: "world",
+        config: true,
+        default: false,
+        type: Boolean,
+        onChange: value => { // A callback function which triggers when the setting is changed
+          window.location.reload()
+        }
+    });
 
 };

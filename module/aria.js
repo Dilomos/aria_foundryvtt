@@ -45,6 +45,8 @@ Hooks.once("init", async function () {
     CONFIG.Item.documentClass = AriaItem;
     CONFIG.Token.documentClass = AriaTokenDocument;
 
+    CONFIG.Combat.initiative.formula = "@attributes.initiative+1d6 ";
+
     // Create a namespace within the game global
     game.aria = {
         skin : "base",

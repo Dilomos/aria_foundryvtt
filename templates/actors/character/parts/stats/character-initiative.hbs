@@ -1,0 +1,24 @@
+<div class="attrvertalign">
+
+<div class="flexcol no-wrap">
+    <div class="flexcol no-wrap">
+        <div id="hit_icon" class="flex1 center">
+            <input class="{{#if (gte system.attributes.hp.bonus system.attributes.hp.max)}}dead-color{{/if}} field-label-icon-hit field-value" name="system.attributes.hp.bonus" type="text" value="{{system.attributes.hp.bonus}}" placeholder="Blessure" data-dtype="Number"/>
+        </div>
+        <div class="flex1 center">
+            <div class="field-label">{{ localize 'ARIA.attributes.hit.label' }}</div>
+        </div>
+    </div>
+    <div class="flexcol no-wrap">
+        
+        <div id="initiative_icon" class="flex1 center">
+            <input class="field-label-icon-initiative field-value" name="system.attributes.initiative" type="text" value="{{system.attributes.initiative}}" placeholder="Initiative" data-dtype="Number"/>
+        </div>
+        <div class="rollable" data-roll-formula="{{system.attributes.initiative}}" data-roll-type="initiative">
+            <div class="flex1 center">
+                <div class="field-label">{{ localize 'ARIA.ui.init' }}</div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

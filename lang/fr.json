@@ -47,6 +47,7 @@
   "ARIA.ui.summary" : "Résumé",
   "ARIA.ui.description" : "Description",
   "ARIA.ui.inPath" : "Dans une Voie",
+  "ARIA.ui.init": "Initiative",
   "ARIA.ui.def": "Protection",
   "ARIA.ui.defBase": "Défense (Base)",
   "ARIA.ui.defBonus": "Défense (Bonus)",

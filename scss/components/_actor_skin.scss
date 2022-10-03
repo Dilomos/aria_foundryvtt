@@ -57,7 +57,13 @@
         max-width: 42px;
       }
 
-      
+      .field-label-icon-initiative {
+        margin-bottom: -2px;
+        margin-right: 5px;
+        min-width: 42px;
+        width: 42px;
+        max-width: 42px;
+      }
 
       .field-label-icon-hit {
         margin-bottom: -2px;
@@ -386,6 +392,14 @@
 
 #hit_icon{
   background: center / contain no-repeat url("../ui/blessure.png");
+  min-height: 80px;
+  height: 80px;
+  max-height: 80px;
+  font-size: 30px;
+}
+
+#initiative_icon{
+  background: center / contain no-repeat url("../ui/initiative.png");
   min-height: 80px;
   height: 80px;
   max-height: 80px;
