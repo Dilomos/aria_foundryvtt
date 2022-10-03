@@ -148,10 +148,13 @@
 .aria-quete-magicien,
 .aria-quete-noble,
 .aria-quete-combattant,
-.aria-quete-ennemi,
-.secret {
+.aria-quete-ennemi {
   background: #959595;
   color: #ffffff;
+}
+
+.secret {
+  color: #3a3939;
 }
 
 .secret.revealed {
