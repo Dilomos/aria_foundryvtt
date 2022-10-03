@@ -229,6 +229,63 @@ async getData(options) {
         const rolltype = elt.attributes["data-roll-type"].value;
         switch (rolltype) {
             case "skillcheck" :
+
+                let globalSettingCarac100 = game.settings.get("aria","carac100"); 
+
+                if(globalSettingCarac100) 
+                {
+                    if(forceConfig)
+                    {
+                        let chooseDifDialog = new Dialog({
+                            title: "Modificateur de difficulté",
+                            content: "<p>Choisissez le modificateur à appliquer au jet de compétence</p>",
+                            buttons: {
+                             one: {
+                              icon: '<i class="fas fa-minus"></i>',
+                              label: "30",
+                              callback: () => AriaRoll.skillCheck(this.getData().system, this.actor, event, 1,"-30")
+                             },
+                             two: {
+                              icon: '<i class="fas fa-minus"></i>',
+                              label: "20",
+                              callback: () => AriaRoll.skillCheck(this.getData().system, this.actor, event, 1,"-20")
+                             },
+                             three: {
+                              icon: '<i class="fas fa-minus"></i>',
+                              label: "10",
+                              callback: () => AriaRoll.skillCheck(this.getData().system, this.actor, event, 1,"-10")
+                             },
+                             four: {
+                              label: "aucun",
+                              callback: () => AriaRoll.skillCheck(this.getData().system, this.actor, event, 1)
+                             },
+                             five: {
+                              icon: '<i class="fas fa-plus"></i>',
+                              label: "10",
+                              callback: () => AriaRoll.skillCheck(this.getData().system, this.actor, event, 1,"+10")
+                             },
+                             six: {
+                                icon: '<i class="fas fa-plus"></i>',
+                                label: "20",
+                                callback: () => AriaRoll.skillCheck(this.getData().system, this.actor, event, 1,"+20")
+                               },
+                            seven: {
+                                icon: '<i class="fas fa-plus"></i>',
+                                label: "30",
+                                callback: () => AriaRoll.skillCheck(this.getData().system, this.actor, event, 1,"+30")
+                               },
+                            },
+                            default: "five",
+                           });
+                       chooseDifDialog.render(true);
+                    }
+                    else{
+                        return AriaRoll.skillCheck(this.getData().system, this.actor, event, 1);
+                    }
+                }
+                else
+                {
+
                 let chooseDifDialog = new Dialog({
                     title: "Difficulté",
                     content: "<p>Choisissez le multiple de caractéristique</p>",
@@ -262,6 +319,7 @@ async getData(options) {
                     default: "five",
                    });
                chooseDifDialog.render(true);
+                }
                break;
 
                 //return AriaRoll.skillCheck(this.getData().system, this.actor, event);
@@ -310,11 +368,11 @@ async getData(options) {
                         default: "five",
                        });
                    chooseDifDialog.render(true);
-                   break;
                 }
                 else{
                     return AriaRoll.competencyCheck(this.getData().items, this.actor, event,"+0");
                 }
+                break;
             case "weapon" :
                 return AriaRoll.rollWeapon(this.getData().system, this.actor, event);
             case "initiative" :

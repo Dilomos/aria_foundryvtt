@@ -92,7 +92,7 @@ export const registerSystemSettings = function() {
       });
 
       game.settings.register("aria", "allowInitiative", {
-        name: "Utilisation de l'initiative",
+        name: "Utilisation de l'initiative (Règles avancées)",
         hint: "Fait apparaitre l'initiative sur la fiche de personnage",
         scope: "world",
         config: true,
@@ -102,5 +102,29 @@ export const registerSystemSettings = function() {
           window.location.reload()
         }
     });
+
+    game.settings.register("aria", "hideCompLink", {
+      name: "Masquer les liens des compétences (Règles avancées)",
+      hint: "Dans les règles avancées les compétences ne sont plus liées aux caractéristiques",
+      scope: "world",
+      config: true,
+      default: false,
+      type: Boolean,
+      onChange: value => { // A callback function which triggers when the setting is changed
+        window.location.reload()
+      }
+  });
+
+  game.settings.register("aria", "carac100", {
+    name: "Caractéristiques sur 100 (Règles avancées)",
+    hint: "Dans les règles avancées les caractéristiques sont également des pourcentage, cette option permet également l'application de Bonus/Malus",
+    scope: "world",
+    config: true,
+    default: false,
+    type: Boolean,
+    onChange: value => { // A callback function which triggers when the setting is changed
+      window.location.reload()
+    }
+});
 
 };

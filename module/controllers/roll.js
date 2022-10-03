@@ -13,13 +13,27 @@ export class AriaRoll {
      * @param key the key of the attribute to roll
      * @private
      */
-    static skillCheck(data, actor, event,multiplier) {
+    static skillCheck(data, actor, event,multiplier,bonus = "+0") {
         const elt = $(event.currentTarget)[0];
         let base = elt.attributes["data-rolling-value"].value;
-        let cmpValue = eval(`${base}`)*multiplier;
+        let cmpValue = eval((eval(`${base}`)*multiplier)+(eval(`${bonus}`)));
         let label = elt.attributes["data-rolling"].value;
         label = (label) ? game.i18n.localize(label) : null;
-        let calcLabel = eval(`${base}`) +"x"+multiplier;
+        let calcLabel;
+        if(multiplier != 1){
+            if(bonus != "+0"){
+                calcLabel = "("+eval(`${base}`) +"x"+multiplier+")"+bonus;
+            }else{
+                calcLabel = eval(`${base}`) +"x"+multiplier;
+            }
+        }else{
+            if(bonus != "+0"){
+                calcLabel = eval(`${base}`) +bonus;
+            }else{
+                calcLabel = eval(`${base}`);
+            }
+        }
+
         let r = new AriaSkillRoll(label,calcLabel,cmpValue);
         r.roll(actor);
     }

@@ -1071,20 +1071,23 @@ strong {
 }
 
 .aria.actor .window-content > form .wrap .main .caracvalue {
-  min-width: 36px;
-  width: 36px;
-  max-width: 36px;
+  min-width: 50px;
+  width: 50px;
+  max-width: 50px;
 }
 
 .aria.actor .window-content > form .wrap .main .caracname {
-  min-width: 120px;
-  width: 120px;
-  max-width: 120px;
+  min-width: 130px;
   font-size: 20px;
 }
 
 .aria.actor .window-content > form .wrap .main .hpcol {
   min-width: 140px;
+}
+
+.aria.actor .window-content > form .wrap .main .hpcol1 {
+  min-width: 140px;
+  margin-right: -90px;
 }
 
 .aria.actor .window-content > form .wrap .main .degatcol {
@@ -1103,7 +1106,7 @@ strong {
 }
 
 .aria.actor .window-content > form .wrap .main .sidebar {
-  max-width: 250px;
+  max-width: 200px;
   min-width: 50px;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -1441,10 +1444,11 @@ strong {
 
 .aria.actor .window-content > form .wrap .capa_percent {
   padding-top: 3px;
-  font-size: 16px;
+  font-size: 12px;
   min-width: 15px;
   width: 15px;
   max-width: 15px;
+  margin-left: -5px;
 }
 
 .aria.actor .window-content > form .wrap .origine {
@@ -1735,6 +1739,31 @@ strong {
   width: 112px;
   max-width: 112px;
   font-size: 30px;
+}
+
+.aria.actor #carac_img {
+  background: center/contain no-repeat url("../ui/carac.png");
+  min-height: 330px;
+  min-width: 120px;
+  float: right;
+  margin-top: -8px;
+  margin-right: -27px;
+}
+
+.aria.actor .carac_block {
+  margin-top: 12px;
+}
+
+.aria.actor .carac_row {
+  min-height: 58px;
+}
+
+.aria.actor .carac_label {
+  min-height: 58px;
+}
+
+.aria.actor .col_carac {
+  margin-top: 0px;
 }
 
 .aria.actor .area-value {

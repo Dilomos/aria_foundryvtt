@@ -175,20 +175,23 @@
         }
   
         .caracvalue{
-          min-width: 36px;
-          width: 36px;
-          max-width: 36px;
+          min-width: 50px;
+          width: 50px;
+          max-width: 50px;
         }
   
         .caracname{
-          min-width: 120px;
-          width: 120px;
-          max-width: 120px;
+          min-width: 130px;
           font-size: 20px;
         }
 
         .hpcol{
           min-width:140px;
+        }
+
+        .hpcol1{
+          min-width:140px;
+          margin-right:-90px;
         }
         
         .degatcol{
@@ -203,7 +206,7 @@
         }
 
         .sidebar {
-          max-width: 250px;
+          max-width: 200px;
           min-width: 50px;
           align-items: stretch;
           min-height: 100%;

@@ -3,7 +3,7 @@
         <ol class="inventory-list competence-list">
             <li class="inventory-header flexrow">
                 <div class="item-name flexrow">{{ localize "ARIA.ui.skill" }}</div>
-                {{#if (isAriaTypeSetting "contemporain")}}
+                {{#if (or (isAriaTypeSetting "contemporain") (isEnabled "hideCompLink"))}}
                 {{else}}
                 <div class="item-detail competence-col-width">{{ localize "ARIA.ui.link" }}</div>
                 {{/if}}  
@@ -36,7 +36,7 @@
                                 <div class="icon_d100">
                                 </div>
                                 <div class="field-label no-wrap left competence_name">{{competence.name}}
-                                {{#if (isAriaTypeSetting "contemporain")}}
+                                 {{#if (or (isAriaTypeSetting "contemporain") (isEnabled "hideCompLink"))}}
                                     {{#if (isEnabled "showBonusCol")}}
                                     <span class="comp_tooltiptext comp_tooltiptextwidth_noLinkCol comp_tooltiptextleft_noLinkCol">
                                     {{else}}
@@ -54,7 +54,7 @@
                                 </div>
                             </div>
                         </div>
-                        {{#if (isAriaTypeSetting "contemporain")}}
+                        {{#if (or (isAriaTypeSetting "contemporain") (isEnabled "hideCompLink"))}}
                         {{else}}
                         <div class="item-detail competence-link competence-col-width">{{#if competence.system.link1}}{{competence.system.link1}}{{/if}} / {{#if competence.system.link2}}{{competence.system.link2}}{{/if}}</div>
                         {{/if}}  
@@ -84,7 +84,7 @@
         <ol class="inventory-list competence-list">
             <li class="inventory-header flexrow">
                 <div class="item-name flexrow">{{ localize "ARIA.ui.specialskill" }}</div>
-                {{#if (isAriaTypeSetting "contemporain")}}
+                {{#if (or (isAriaTypeSetting "contemporain") (isEnabled "hideCompLink"))}}
                 {{else}}
                 <div class="item-detail competence-col-width">{{ localize "ARIA.ui.link" }}</div>
                 {{/if}}  
@@ -104,7 +104,7 @@
                                 <div class="icon_d100">
                                 </div>
                                 <div class="field-label no-wrap left competence_name">{{competence.name}}
-                                {{#if (isAriaTypeSetting "contemporain")}}
+                                 {{#if (or (isAriaTypeSetting "contemporain") (isEnabled "hideCompLink"))}}
                                     {{#if (isEnabled "showBonusCol")}}
                                      <span class="compspe_tooltiptext comp_tooltiptextwidth_noLinkCol compspe_tooltiptextleft_noLinkCol">
                                     {{else}}
@@ -123,7 +123,7 @@
                             </div>
                         </div>
 
-                        {{#if (isAriaTypeSetting "contemporain")}}
+                        {{#if (or (isAriaTypeSetting "contemporain") (isEnabled "hideCompLink"))}}
                         {{else}}
                         <div class="item-detail competence-link competence-col-width">{{#if competence.system.link1}}{{competence.system.link1}}{{/if}} / {{#if competence.system.link2}}{{competence.system.link2}}{{/if}}</div>
                         {{/if}}

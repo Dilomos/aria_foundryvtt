@@ -11,8 +11,9 @@
             {{> "systems/aria/templates/actors/character/parts/stats/character-attributes.hbs"}}
         </div>
         {{/if}}
+
         {{#if (isEnabled "allowInitiative")}}
-         <div class="flex1 layout center hpcol pos_relative">
+         <div class="flex1 layout center hpcol1 pos_relative">
             <!-- HP -->
             {{> "systems/aria/templates/actors/character/parts/stats/character-hp-init.hbs"}}
         </div>
@@ -20,20 +21,17 @@
             <!-- HP -->
             {{> "systems/aria/templates/actors/character/parts/stats/character-initiative.hbs"}}
         </div>
-        <div class="flex2 layout center degatcol pos_relative">
-            <!-- ATTAQUES -->
-            {{> "systems/aria/templates/actors/character/parts/stats/character-attacks.hbs"}}
-        </div>
         {{else}}
         <div class="flex1 layout center hpcol pos_relative">
             <!-- HP -->
             {{> "systems/aria/templates/actors/character/parts/stats/character-hp.hbs"}}
         </div>
+        {{/if}}
         <div class="flex1 layout center degatcol pos_relative">
             <!-- ATTAQUES -->
             {{> "systems/aria/templates/actors/character/parts/stats/character-attacks.hbs"}}
         </div>
-        {{/if}}
+        
     </div>
 </div>
 
