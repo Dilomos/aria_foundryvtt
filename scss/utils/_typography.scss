@@ -53,6 +53,20 @@
   src: url('../fonts/PermanentMarker-Regular.ttf');
 }
 
+@font-face {
+  font-family: "CaxtonStd-LightItalic";
+  font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/CaxtonStd-LightItalic.otf');
+}
+
+@font-face {
+  font-family: "CaxtonStd-Book";
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/CaxtonStd-Book.otf');
+}
+
 //@font-face {
 //  font-family: "UnifrakturCook";
 //  src: url('../fonts/UnifrakturCook-Bold.ttf');
@@ -116,6 +130,9 @@
 $font-primary: 'AGaramondPro', serif;
 $font-secondary: 'CharlemagneStd', serif;
 $font-handwrite: "Caveat", cursive;
+
+$font-h3-journal: 'CaxtonStd-Book', serif;
+$font-h4-journal: 'CaxtonStd-LightItalic', serif;
 
 $font-modern: 'HelveticaNeueLT', serif;
 

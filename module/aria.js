@@ -149,6 +149,7 @@ Hooks.once("ready", function() {
     CONFIG.TinyMCE.style_formats.push({
       title: "Aria",
       items: [
+        { title: "Info", block: "section", classes: "aria-info", wrapper: true },
         { title: "Texte", block: "section", classes: "aria-block aria-texte", wrapper: true },
         { title: "Règle", block: "section", classes: "aria-block aria-regle", wrapper: true },
         { title: "Point clé", block: "section", classes: "aria-block aria-point-cle", wrapper: true },

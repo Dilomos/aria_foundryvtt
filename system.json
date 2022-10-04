@@ -2,7 +2,7 @@
   "id": "aria",
   "title": "Aria - GOR",
   "description": "<p>Système Foundry VTT pour Aria Game pf Roles le jeu de role de FibreTigre edité par Elder Craft.</p>",
-  "version": "2.6.1",
+  "version": "2.6.2",
   "compatibility": {
     "minimum": "10",
     "verified": "10.286"
@@ -296,6 +296,6 @@
   "primaryTokenAttribute": "attributes.hp",
   "url": "https://github.com/Dilomos/aria_foundryvtt",
   "manifest": "https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/system.json",
-  "download": "https://github.com/Dilomos/aria_foundryvtt/archive/v2.6.1.zip",
+  "download": "https://github.com/Dilomos/aria_foundryvtt/archive/v2.6.2.zip",
   "license": "licence.txt"
 }

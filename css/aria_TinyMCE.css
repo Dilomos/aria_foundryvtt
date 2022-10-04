@@ -1,11 +1,271 @@
 /* ----------------------------------------- */
+/*  Premade colors                           */
+/* ----------------------------------------- */
+.light {
+  color: lightgray;
+}
+
+.bg-light {
+  background: lightgray;
+}
+
+.darkgray {
+  color: #23221d;
+}
+
+.bg-darkgray {
+  background: #23221d;
+  color: #fff;
+}
+
+.bg-dark {
+  background: #464331c4;
+  color: #fff;
+}
+
+.darkslate {
+  color: darkslategray;
+}
+
+.bg-darkslate {
+  background: darkslategray;
+  color: #fff;
+}
+
+.darkgreen {
+  color: #003c1e;
+}
+
+.bg-darkgreen {
+  background: #003c1e;
+  color: #fff;
+}
+
+.darkblue {
+  color: midnightblue;
+}
+
+.bg-darkblue {
+  background: midnightblue;
+  color: #fff;
+}
+
+.blue {
+  color: #009ee0;
+}
+
+.bg-blue {
+  background: #009ee0;
+  color: #fff;
+}
+
+.green {
+  color: #44a12b;
+}
+
+.bg-green {
+  background: #44a12b;
+  color: #fff;
+}
+
+.black {
+  color: #000;
+}
+
+.bg-black {
+  background: #000;
+  color: #fff;
+}
+
+.red {
+  color: #cd071e;
+}
+
+.bg-red {
+  background: #cd071e;
+  color: #fff;
+}
+
+.purple {
+  color: purple;
+}
+
+.bg-purple {
+  background: purple;
+  color: #fff;
+}
+
+/* ----------------------------------------- */
+/*  LOCAL FONTS                             */
+/* ----------------------------------------- */
+@font-face {
+  font-family: "AGaramondPro";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/AGaramondPro-Regular.otf");
+}
+
+@font-face {
+  font-family: "AGaramondPro";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/AGaramondPro-Bold.otf");
+}
+
+@font-face {
+  font-family: "AGaramondPro";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/AGaramondPro-BoldItalic.otf");
+}
+
+@font-face {
+  font-family: "AGaramondPro";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/AGaramondPro-Italic.otf");
+}
+
+@font-face {
+  font-family: "CharlemagneStd";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/CharlemagneStd-Bold.otf");
+}
+
+@font-face {
+  font-family: "HelveticaNeueLT";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/HelveticaNeueLTStd-Cn.otf");
+}
+
+@font-face {
+  font-family: "PermanentMarker";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/PermanentMarker-Regular.ttf");
+}
+
+@font-face {
+  font-family: "CaxtonStd-LightItalic";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/CaxtonStd-LightItalic.otf");
+}
+
+@font-face {
+  font-family: "CaxtonStd-Book";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/CaxtonStd-Book.otf");
+}
+
+@font-face {
+  font-family: 'Modesto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../../fonts/modesto-condensed/modesto-condensed.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'Modesto Condensed';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../../fonts/modesto-condensed/modesto-condensed-bold.woff2") format("woff2");
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/WnznHAc5bAfYB2QRah7pcpNvOx-pjfJ9eIipYSxP.woff2") format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+/* cyrillic */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/WnznHAc5bAfYB2QRah7pcpNvOx-pjfJ9eIGpYSxP.woff2") format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/WnznHAc5bAfYB2QRah7pcpNvOx-pjfJ9eIupYSxP.woff2") format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/WnznHAc5bAfYB2QRah7pcpNvOx-pjfJ9eIWpYQ.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* ----------------------------------------- */
+/*  TEXT STYLES                             */
+/* ----------------------------------------- */
+.empty {
+  color: #23221d;
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+/* ----------------------------------------- */
 /*  JOURNAL                                  */
 /* ----------------------------------------- */
 .sheet.journal-entry .journal-entry-content,
-.editor.prosemirror {
+.editor.prosemirror,
+.mce-content-body {
   background: #fff;
 }
 
+.journal-page-header h1 {
+  font-family: "CharlemagneStd", serif;
+  text-align: center;
+  text-transform: uppercase;
+  color: #2c3f45;
+  font-size: 3rem;
+  border: none;
+  margin: 1em auto;
+  position: relative;
+}
+
+.journal-page-header h1::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background: #2c3f45;
+  top: 100%;
+  width: 33%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.mce-content-body h1,
+.mce-content-body h2,
+.mce-content-body h3,
+.mce-content-body h4,
+.mce-content-body h5,
+.mce-content-body h6,
 .journal-page-content h1,
 .journal-page-content h2,
 .journal-page-content h3,
@@ -18,40 +278,79 @@
   letter-spacing: 0px;
   font-weight: normal;
   border: none;
+  margin: 1em auto;
+  position: relative;
 }
 
+.mce-content-body h1,
 .journal-page-content h1 {
   text-align: center;
   text-transform: uppercase;
   color: #2c3f45;
   font-size: 2.5rem;
+  font-family: "CharlemagneStd", serif;
 }
 
+.mce-content-body h2,
 .journal-page-content h2 {
   text-align: center;
   text-transform: uppercase;
   color: #5a6a72;
   font-size: 2.2rem;
+  font-family: "CharlemagneStd", serif;
 }
 
+.mce-content-body h1::after,
+.mce-content-body h2::after,
+.journal-page-content h1::after,
+.journal-page-content h2::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.mce-content-body h1::after,
+.journal-page-content h1::after {
+  background: #2c3f45;
+  width: 20%;
+}
+
+.mce-content-body h2::after,
+.journal-page-content h2::after {
+  background: #5a6a72;
+  width: 10%;
+}
+
+.mce-content-body h3,
 .journal-page-content h3 {
-  color: #5a6a72;
-  font-size: 2rem;
-}
-
-.journal-page-content h4 {
-  color: #8998a0;
+  color: #426266;
   font-size: 1.8rem;
-  margin-left: 10px;
+  font-family: "CaxtonStd-Book", serif;
 }
 
+.mce-content-body h4,
+.journal-page-content h4 {
+  color: #8897a0;
+  font-size: 1.6rem;
+  margin-left: 10px;
+  font-family: "CaxtonStd-Book", serif;
+}
+
+.mce-content-body h5,
 .journal-page-content h5 {
-  font-size: 1.5rem;
-  color: #bfa27c;
+  font-size: 1.4rem;
+  color: #bea185;
   margin-bottom: 5px;
   margin-left: 20px;
+  font-family: "CaxtonStd-LightItalic", serif;
 }
 
+.mce-content-body h6,
 .journal-page-content h6 {
   font-size: 1.2rem;
   color: #8998a0;
@@ -59,51 +358,542 @@
   margin-left: 30px;
 }
 
-.aria-texte h1,
-.aria-texte h2,
-.aria-texte h3,
-.aria-texte h4,
-.aria-texte h5,
-.aria-texte h6 {
+.mce-content-body .aria-info h1,
+.mce-content-body .aria-info h2,
+.mce-content-body .aria-info h3,
+.mce-content-body .aria-info h4,
+.mce-content-body .aria-info h5,
+.mce-content-body .aria-info h6,
+.mce-content-body .aria-texte h1,
+.mce-content-body .aria-texte h2,
+.mce-content-body .aria-texte h3,
+.mce-content-body .aria-texte h4,
+.mce-content-body .aria-texte h5,
+.mce-content-body .aria-texte h6,
+.mce-content-body .aria-regle h1,
+.mce-content-body .aria-regle h2,
+.mce-content-body .aria-regle h3,
+.mce-content-body .aria-regle h4,
+.mce-content-body .aria-regle h5,
+.mce-content-body .aria-regle h6,
+.mce-content-body .secret h1,
+.mce-content-body .secret h2,
+.mce-content-body .secret h3,
+.mce-content-body .secret h4,
+.mce-content-body .secret h5,
+.mce-content-body .secret h6,
+.mce-content-body .aria-point-cle h1,
+.mce-content-body .aria-point-cle h2,
+.mce-content-body .aria-point-cle h3,
+.mce-content-body .aria-point-cle h4,
+.mce-content-body .aria-point-cle h5,
+.mce-content-body .aria-point-cle h6,
+.mce-content-body .aria-quete-principale h1,
+.mce-content-body .aria-quete-principale h2,
+.mce-content-body .aria-quete-principale h3,
+.mce-content-body .aria-quete-principale h4,
+.mce-content-body .aria-quete-principale h5,
+.mce-content-body .aria-quete-principale h6,
+.mce-content-body .aria-quete-parallele h1,
+.mce-content-body .aria-quete-parallele h2,
+.mce-content-body .aria-quete-parallele h3,
+.mce-content-body .aria-quete-parallele h4,
+.mce-content-body .aria-quete-parallele h5,
+.mce-content-body .aria-quete-parallele h6,
+.mce-content-body .aria-quete-personnelle h1,
+.mce-content-body .aria-quete-personnelle h2,
+.mce-content-body .aria-quete-personnelle h3,
+.mce-content-body .aria-quete-personnelle h4,
+.mce-content-body .aria-quete-personnelle h5,
+.mce-content-body .aria-quete-personnelle h6,
+.mce-content-body .aria-quete-principale-fin h1,
+.mce-content-body .aria-quete-principale-fin h2,
+.mce-content-body .aria-quete-principale-fin h3,
+.mce-content-body .aria-quete-principale-fin h4,
+.mce-content-body .aria-quete-principale-fin h5,
+.mce-content-body .aria-quete-principale-fin h6,
+.mce-content-body .aria-quete-parallele-fin h1,
+.mce-content-body .aria-quete-parallele-fin h2,
+.mce-content-body .aria-quete-parallele-fin h3,
+.mce-content-body .aria-quete-parallele-fin h4,
+.mce-content-body .aria-quete-parallele-fin h5,
+.mce-content-body .aria-quete-parallele-fin h6,
+.mce-content-body .aria-quete-personnelle-fin h1,
+.mce-content-body .aria-quete-personnelle-fin h2,
+.mce-content-body .aria-quete-personnelle-fin h3,
+.mce-content-body .aria-quete-personnelle-fin h4,
+.mce-content-body .aria-quete-personnelle-fin h5,
+.mce-content-body .aria-quete-personnelle-fin h6,
+.mce-content-body .aria-quete-resolue h1,
+.mce-content-body .aria-quete-resolue h2,
+.mce-content-body .aria-quete-resolue h3,
+.mce-content-body .aria-quete-resolue h4,
+.mce-content-body .aria-quete-resolue h5,
+.mce-content-body .aria-quete-resolue h6,
+.mce-content-body .aria-quete-exception h1,
+.mce-content-body .aria-quete-exception h2,
+.mce-content-body .aria-quete-exception h3,
+.mce-content-body .aria-quete-exception h4,
+.mce-content-body .aria-quete-exception h5,
+.mce-content-body .aria-quete-exception h6,
+.mce-content-body .aria-quete-alchimiste h1,
+.mce-content-body .aria-quete-alchimiste h2,
+.mce-content-body .aria-quete-alchimiste h3,
+.mce-content-body .aria-quete-alchimiste h4,
+.mce-content-body .aria-quete-alchimiste h5,
+.mce-content-body .aria-quete-alchimiste h6,
+.mce-content-body .aria-quete-magicien h1,
+.mce-content-body .aria-quete-magicien h2,
+.mce-content-body .aria-quete-magicien h3,
+.mce-content-body .aria-quete-magicien h4,
+.mce-content-body .aria-quete-magicien h5,
+.mce-content-body .aria-quete-magicien h6,
+.mce-content-body .aria-quete-noble h1,
+.mce-content-body .aria-quete-noble h2,
+.mce-content-body .aria-quete-noble h3,
+.mce-content-body .aria-quete-noble h4,
+.mce-content-body .aria-quete-noble h5,
+.mce-content-body .aria-quete-noble h6,
+.mce-content-body .aria-quete-combattant h1,
+.mce-content-body .aria-quete-combattant h2,
+.mce-content-body .aria-quete-combattant h3,
+.mce-content-body .aria-quete-combattant h4,
+.mce-content-body .aria-quete-combattant h5,
+.mce-content-body .aria-quete-combattant h6,
+.mce-content-body .aria-quete-ennemi h1,
+.mce-content-body .aria-quete-ennemi h2,
+.mce-content-body .aria-quete-ennemi h3,
+.mce-content-body .aria-quete-ennemi h4,
+.mce-content-body .aria-quete-ennemi h5,
+.mce-content-body .aria-quete-ennemi h6,
+.journal-page-content .aria-info h1,
+.journal-page-content .aria-info h2,
+.journal-page-content .aria-info h3,
+.journal-page-content .aria-info h4,
+.journal-page-content .aria-info h5,
+.journal-page-content .aria-info h6,
+.journal-page-content .aria-texte h1,
+.journal-page-content .aria-texte h2,
+.journal-page-content .aria-texte h3,
+.journal-page-content .aria-texte h4,
+.journal-page-content .aria-texte h5,
+.journal-page-content .aria-texte h6,
+.journal-page-content .aria-regle h1,
+.journal-page-content .aria-regle h2,
+.journal-page-content .aria-regle h3,
+.journal-page-content .aria-regle h4,
+.journal-page-content .aria-regle h5,
+.journal-page-content .aria-regle h6,
+.journal-page-content .secret h1,
+.journal-page-content .secret h2,
+.journal-page-content .secret h3,
+.journal-page-content .secret h4,
+.journal-page-content .secret h5,
+.journal-page-content .secret h6,
+.journal-page-content .aria-point-cle h1,
+.journal-page-content .aria-point-cle h2,
+.journal-page-content .aria-point-cle h3,
+.journal-page-content .aria-point-cle h4,
+.journal-page-content .aria-point-cle h5,
+.journal-page-content .aria-point-cle h6,
+.journal-page-content .aria-quete-principale h1,
+.journal-page-content .aria-quete-principale h2,
+.journal-page-content .aria-quete-principale h3,
+.journal-page-content .aria-quete-principale h4,
+.journal-page-content .aria-quete-principale h5,
+.journal-page-content .aria-quete-principale h6,
+.journal-page-content .aria-quete-parallele h1,
+.journal-page-content .aria-quete-parallele h2,
+.journal-page-content .aria-quete-parallele h3,
+.journal-page-content .aria-quete-parallele h4,
+.journal-page-content .aria-quete-parallele h5,
+.journal-page-content .aria-quete-parallele h6,
+.journal-page-content .aria-quete-personnelle h1,
+.journal-page-content .aria-quete-personnelle h2,
+.journal-page-content .aria-quete-personnelle h3,
+.journal-page-content .aria-quete-personnelle h4,
+.journal-page-content .aria-quete-personnelle h5,
+.journal-page-content .aria-quete-personnelle h6,
+.journal-page-content .aria-quete-principale-fin h1,
+.journal-page-content .aria-quete-principale-fin h2,
+.journal-page-content .aria-quete-principale-fin h3,
+.journal-page-content .aria-quete-principale-fin h4,
+.journal-page-content .aria-quete-principale-fin h5,
+.journal-page-content .aria-quete-principale-fin h6,
+.journal-page-content .aria-quete-parallele-fin h1,
+.journal-page-content .aria-quete-parallele-fin h2,
+.journal-page-content .aria-quete-parallele-fin h3,
+.journal-page-content .aria-quete-parallele-fin h4,
+.journal-page-content .aria-quete-parallele-fin h5,
+.journal-page-content .aria-quete-parallele-fin h6,
+.journal-page-content .aria-quete-personnelle-fin h1,
+.journal-page-content .aria-quete-personnelle-fin h2,
+.journal-page-content .aria-quete-personnelle-fin h3,
+.journal-page-content .aria-quete-personnelle-fin h4,
+.journal-page-content .aria-quete-personnelle-fin h5,
+.journal-page-content .aria-quete-personnelle-fin h6,
+.journal-page-content .aria-quete-resolue h1,
+.journal-page-content .aria-quete-resolue h2,
+.journal-page-content .aria-quete-resolue h3,
+.journal-page-content .aria-quete-resolue h4,
+.journal-page-content .aria-quete-resolue h5,
+.journal-page-content .aria-quete-resolue h6,
+.journal-page-content .aria-quete-exception h1,
+.journal-page-content .aria-quete-exception h2,
+.journal-page-content .aria-quete-exception h3,
+.journal-page-content .aria-quete-exception h4,
+.journal-page-content .aria-quete-exception h5,
+.journal-page-content .aria-quete-exception h6,
+.journal-page-content .aria-quete-alchimiste h1,
+.journal-page-content .aria-quete-alchimiste h2,
+.journal-page-content .aria-quete-alchimiste h3,
+.journal-page-content .aria-quete-alchimiste h4,
+.journal-page-content .aria-quete-alchimiste h5,
+.journal-page-content .aria-quete-alchimiste h6,
+.journal-page-content .aria-quete-magicien h1,
+.journal-page-content .aria-quete-magicien h2,
+.journal-page-content .aria-quete-magicien h3,
+.journal-page-content .aria-quete-magicien h4,
+.journal-page-content .aria-quete-magicien h5,
+.journal-page-content .aria-quete-magicien h6,
+.journal-page-content .aria-quete-noble h1,
+.journal-page-content .aria-quete-noble h2,
+.journal-page-content .aria-quete-noble h3,
+.journal-page-content .aria-quete-noble h4,
+.journal-page-content .aria-quete-noble h5,
+.journal-page-content .aria-quete-noble h6,
+.journal-page-content .aria-quete-combattant h1,
+.journal-page-content .aria-quete-combattant h2,
+.journal-page-content .aria-quete-combattant h3,
+.journal-page-content .aria-quete-combattant h4,
+.journal-page-content .aria-quete-combattant h5,
+.journal-page-content .aria-quete-combattant h6,
+.journal-page-content .aria-quete-ennemi h1,
+.journal-page-content .aria-quete-ennemi h2,
+.journal-page-content .aria-quete-ennemi h3,
+.journal-page-content .aria-quete-ennemi h4,
+.journal-page-content .aria-quete-ennemi h5,
+.journal-page-content .aria-quete-ennemi h6 {
+  text-transform: none;
+  font-family: "CaxtonStd-Book", serif;
+  font-size: 1.5rem;
+}
+
+.mce-content-body .aria-info h1::after,
+.mce-content-body .aria-texte h1::after,
+.mce-content-body .aria-regle h1::after,
+.mce-content-body .secret h1::after,
+.mce-content-body .aria-point-cle h1::after,
+.mce-content-body .aria-quete-principale h1::after,
+.mce-content-body .aria-quete-parallele h1::after,
+.mce-content-body .aria-quete-personnelle h1::after,
+.mce-content-body .aria-quete-principale-fin h1::after,
+.mce-content-body .aria-quete-parallele-fin h1::after,
+.mce-content-body .aria-quete-personnelle-fin h1::after,
+.mce-content-body .aria-quete-resolue h1::after,
+.mce-content-body .aria-quete-exception h1::after,
+.mce-content-body .aria-quete-alchimiste h1::after,
+.mce-content-body .aria-quete-magicien h1::after,
+.mce-content-body .aria-quete-noble h1::after,
+.mce-content-body .aria-quete-combattant h1::after,
+.mce-content-body .aria-quete-ennemi h1::after,
+.journal-page-content .aria-info h1::after,
+.journal-page-content .aria-texte h1::after,
+.journal-page-content .aria-regle h1::after,
+.journal-page-content .secret h1::after,
+.journal-page-content .aria-point-cle h1::after,
+.journal-page-content .aria-quete-principale h1::after,
+.journal-page-content .aria-quete-parallele h1::after,
+.journal-page-content .aria-quete-personnelle h1::after,
+.journal-page-content .aria-quete-principale-fin h1::after,
+.journal-page-content .aria-quete-parallele-fin h1::after,
+.journal-page-content .aria-quete-personnelle-fin h1::after,
+.journal-page-content .aria-quete-resolue h1::after,
+.journal-page-content .aria-quete-exception h1::after,
+.journal-page-content .aria-quete-alchimiste h1::after,
+.journal-page-content .aria-quete-magicien h1::after,
+.journal-page-content .aria-quete-noble h1::after,
+.journal-page-content .aria-quete-combattant h1::after,
+.journal-page-content .aria-quete-ennemi h1::after {
+  width: 0%;
+}
+
+.mce-content-body .aria-info h2::after,
+.mce-content-body .aria-texte h2::after,
+.mce-content-body .aria-regle h2::after,
+.mce-content-body .secret h2::after,
+.mce-content-body .aria-point-cle h2::after,
+.mce-content-body .aria-quete-principale h2::after,
+.mce-content-body .aria-quete-parallele h2::after,
+.mce-content-body .aria-quete-personnelle h2::after,
+.mce-content-body .aria-quete-principale-fin h2::after,
+.mce-content-body .aria-quete-parallele-fin h2::after,
+.mce-content-body .aria-quete-personnelle-fin h2::after,
+.mce-content-body .aria-quete-resolue h2::after,
+.mce-content-body .aria-quete-exception h2::after,
+.mce-content-body .aria-quete-alchimiste h2::after,
+.mce-content-body .aria-quete-magicien h2::after,
+.mce-content-body .aria-quete-noble h2::after,
+.mce-content-body .aria-quete-combattant h2::after,
+.mce-content-body .aria-quete-ennemi h2::after,
+.journal-page-content .aria-info h2::after,
+.journal-page-content .aria-texte h2::after,
+.journal-page-content .aria-regle h2::after,
+.journal-page-content .secret h2::after,
+.journal-page-content .aria-point-cle h2::after,
+.journal-page-content .aria-quete-principale h2::after,
+.journal-page-content .aria-quete-parallele h2::after,
+.journal-page-content .aria-quete-personnelle h2::after,
+.journal-page-content .aria-quete-principale-fin h2::after,
+.journal-page-content .aria-quete-parallele-fin h2::after,
+.journal-page-content .aria-quete-personnelle-fin h2::after,
+.journal-page-content .aria-quete-resolue h2::after,
+.journal-page-content .aria-quete-exception h2::after,
+.journal-page-content .aria-quete-alchimiste h2::after,
+.journal-page-content .aria-quete-magicien h2::after,
+.journal-page-content .aria-quete-noble h2::after,
+.journal-page-content .aria-quete-combattant h2::after,
+.journal-page-content .aria-quete-ennemi h2::after {
+  width: 0%;
+}
+
+.mce-content-body .aria-texte h1,
+.mce-content-body .aria-texte h2,
+.mce-content-body .aria-texte h3,
+.mce-content-body .aria-texte h4,
+.mce-content-body .aria-texte h5,
+.mce-content-body .aria-texte h6,
+.journal-page-content .aria-texte h1,
+.journal-page-content .aria-texte h2,
+.journal-page-content .aria-texte h3,
+.journal-page-content .aria-texte h4,
+.journal-page-content .aria-texte h5,
+.journal-page-content .aria-texte h6 {
   color: #5a6a72;
-  text-align: center;
-  text-transform: none;
-  font-size: 1.5rem;
 }
 
-.aria-regle h1,
-.aria-regle h2,
-.aria-regle h3,
-.aria-regle h4,
-.aria-regle h5,
-.aria-regle h6 {
+.mce-content-body .aria-regle h1,
+.mce-content-body .aria-regle h2,
+.mce-content-body .aria-regle h3,
+.mce-content-body .aria-regle h4,
+.mce-content-body .aria-regle h5,
+.mce-content-body .aria-regle h6,
+.journal-page-content .aria-regle h1,
+.journal-page-content .aria-regle h2,
+.journal-page-content .aria-regle h3,
+.journal-page-content .aria-regle h4,
+.journal-page-content .aria-regle h5,
+.journal-page-content .aria-regle h6 {
   color: #000000;
-  text-align: center;
-  text-transform: none;
-  font-size: 1.5rem;
 }
 
-.secret h1,
-.secret h2,
-.secret h3,
-.secret h4,
-.secret h5,
-.secret h6 {
-  color: #ffffff;
-  text-align: center;
-  text-transform: none;
-  font-size: 1.5rem;
+.mce-content-body .aria-info h1,
+.mce-content-body .aria-info h2,
+.mce-content-body .aria-info h3,
+.mce-content-body .aria-info h4,
+.mce-content-body .aria-info h5,
+.mce-content-body .aria-info h6,
+.mce-content-body .secret h1,
+.mce-content-body .secret h2,
+.mce-content-body .secret h3,
+.mce-content-body .secret h4,
+.mce-content-body .secret h5,
+.mce-content-body .secret h6,
+.mce-content-body .aria-point-cle h1,
+.mce-content-body .aria-point-cle h2,
+.mce-content-body .aria-point-cle h3,
+.mce-content-body .aria-point-cle h4,
+.mce-content-body .aria-point-cle h5,
+.mce-content-body .aria-point-cle h6,
+.mce-content-body .aria-quete-principale h1,
+.mce-content-body .aria-quete-principale h2,
+.mce-content-body .aria-quete-principale h3,
+.mce-content-body .aria-quete-principale h4,
+.mce-content-body .aria-quete-principale h5,
+.mce-content-body .aria-quete-principale h6,
+.mce-content-body .aria-quete-parallele h1,
+.mce-content-body .aria-quete-parallele h2,
+.mce-content-body .aria-quete-parallele h3,
+.mce-content-body .aria-quete-parallele h4,
+.mce-content-body .aria-quete-parallele h5,
+.mce-content-body .aria-quete-parallele h6,
+.mce-content-body .aria-quete-personnelle h1,
+.mce-content-body .aria-quete-personnelle h2,
+.mce-content-body .aria-quete-personnelle h3,
+.mce-content-body .aria-quete-personnelle h4,
+.mce-content-body .aria-quete-personnelle h5,
+.mce-content-body .aria-quete-personnelle h6,
+.mce-content-body .aria-quete-principale-fin h1,
+.mce-content-body .aria-quete-principale-fin h2,
+.mce-content-body .aria-quete-principale-fin h3,
+.mce-content-body .aria-quete-principale-fin h4,
+.mce-content-body .aria-quete-principale-fin h5,
+.mce-content-body .aria-quete-principale-fin h6,
+.mce-content-body .aria-quete-parallele-fin h1,
+.mce-content-body .aria-quete-parallele-fin h2,
+.mce-content-body .aria-quete-parallele-fin h3,
+.mce-content-body .aria-quete-parallele-fin h4,
+.mce-content-body .aria-quete-parallele-fin h5,
+.mce-content-body .aria-quete-parallele-fin h6,
+.mce-content-body .aria-quete-personnelle-fin h1,
+.mce-content-body .aria-quete-personnelle-fin h2,
+.mce-content-body .aria-quete-personnelle-fin h3,
+.mce-content-body .aria-quete-personnelle-fin h4,
+.mce-content-body .aria-quete-personnelle-fin h5,
+.mce-content-body .aria-quete-personnelle-fin h6,
+.mce-content-body .aria-quete-resolue h1,
+.mce-content-body .aria-quete-resolue h2,
+.mce-content-body .aria-quete-resolue h3,
+.mce-content-body .aria-quete-resolue h4,
+.mce-content-body .aria-quete-resolue h5,
+.mce-content-body .aria-quete-resolue h6,
+.mce-content-body .aria-quete-exception h1,
+.mce-content-body .aria-quete-exception h2,
+.mce-content-body .aria-quete-exception h3,
+.mce-content-body .aria-quete-exception h4,
+.mce-content-body .aria-quete-exception h5,
+.mce-content-body .aria-quete-exception h6,
+.mce-content-body .aria-quete-alchimiste h1,
+.mce-content-body .aria-quete-alchimiste h2,
+.mce-content-body .aria-quete-alchimiste h3,
+.mce-content-body .aria-quete-alchimiste h4,
+.mce-content-body .aria-quete-alchimiste h5,
+.mce-content-body .aria-quete-alchimiste h6,
+.mce-content-body .aria-quete-magicien h1,
+.mce-content-body .aria-quete-magicien h2,
+.mce-content-body .aria-quete-magicien h3,
+.mce-content-body .aria-quete-magicien h4,
+.mce-content-body .aria-quete-magicien h5,
+.mce-content-body .aria-quete-magicien h6,
+.mce-content-body .aria-quete-noble h1,
+.mce-content-body .aria-quete-noble h2,
+.mce-content-body .aria-quete-noble h3,
+.mce-content-body .aria-quete-noble h4,
+.mce-content-body .aria-quete-noble h5,
+.mce-content-body .aria-quete-noble h6,
+.mce-content-body .aria-quete-combattant h1,
+.mce-content-body .aria-quete-combattant h2,
+.mce-content-body .aria-quete-combattant h3,
+.mce-content-body .aria-quete-combattant h4,
+.mce-content-body .aria-quete-combattant h5,
+.mce-content-body .aria-quete-combattant h6,
+.mce-content-body .aria-quete-ennemi h1,
+.mce-content-body .aria-quete-ennemi h2,
+.mce-content-body .aria-quete-ennemi h3,
+.mce-content-body .aria-quete-ennemi h4,
+.mce-content-body .aria-quete-ennemi h5,
+.mce-content-body .aria-quete-ennemi h6,
+.journal-page-content .aria-info h1,
+.journal-page-content .aria-info h2,
+.journal-page-content .aria-info h3,
+.journal-page-content .aria-info h4,
+.journal-page-content .aria-info h5,
+.journal-page-content .aria-info h6,
+.journal-page-content .secret h1,
+.journal-page-content .secret h2,
+.journal-page-content .secret h3,
+.journal-page-content .secret h4,
+.journal-page-content .secret h5,
+.journal-page-content .secret h6,
+.journal-page-content .aria-point-cle h1,
+.journal-page-content .aria-point-cle h2,
+.journal-page-content .aria-point-cle h3,
+.journal-page-content .aria-point-cle h4,
+.journal-page-content .aria-point-cle h5,
+.journal-page-content .aria-point-cle h6,
+.journal-page-content .aria-quete-principale h1,
+.journal-page-content .aria-quete-principale h2,
+.journal-page-content .aria-quete-principale h3,
+.journal-page-content .aria-quete-principale h4,
+.journal-page-content .aria-quete-principale h5,
+.journal-page-content .aria-quete-principale h6,
+.journal-page-content .aria-quete-parallele h1,
+.journal-page-content .aria-quete-parallele h2,
+.journal-page-content .aria-quete-parallele h3,
+.journal-page-content .aria-quete-parallele h4,
+.journal-page-content .aria-quete-parallele h5,
+.journal-page-content .aria-quete-parallele h6,
+.journal-page-content .aria-quete-personnelle h1,
+.journal-page-content .aria-quete-personnelle h2,
+.journal-page-content .aria-quete-personnelle h3,
+.journal-page-content .aria-quete-personnelle h4,
+.journal-page-content .aria-quete-personnelle h5,
+.journal-page-content .aria-quete-personnelle h6,
+.journal-page-content .aria-quete-principale-fin h1,
+.journal-page-content .aria-quete-principale-fin h2,
+.journal-page-content .aria-quete-principale-fin h3,
+.journal-page-content .aria-quete-principale-fin h4,
+.journal-page-content .aria-quete-principale-fin h5,
+.journal-page-content .aria-quete-principale-fin h6,
+.journal-page-content .aria-quete-parallele-fin h1,
+.journal-page-content .aria-quete-parallele-fin h2,
+.journal-page-content .aria-quete-parallele-fin h3,
+.journal-page-content .aria-quete-parallele-fin h4,
+.journal-page-content .aria-quete-parallele-fin h5,
+.journal-page-content .aria-quete-parallele-fin h6,
+.journal-page-content .aria-quete-personnelle-fin h1,
+.journal-page-content .aria-quete-personnelle-fin h2,
+.journal-page-content .aria-quete-personnelle-fin h3,
+.journal-page-content .aria-quete-personnelle-fin h4,
+.journal-page-content .aria-quete-personnelle-fin h5,
+.journal-page-content .aria-quete-personnelle-fin h6,
+.journal-page-content .aria-quete-resolue h1,
+.journal-page-content .aria-quete-resolue h2,
+.journal-page-content .aria-quete-resolue h3,
+.journal-page-content .aria-quete-resolue h4,
+.journal-page-content .aria-quete-resolue h5,
+.journal-page-content .aria-quete-resolue h6,
+.journal-page-content .aria-quete-exception h1,
+.journal-page-content .aria-quete-exception h2,
+.journal-page-content .aria-quete-exception h3,
+.journal-page-content .aria-quete-exception h4,
+.journal-page-content .aria-quete-exception h5,
+.journal-page-content .aria-quete-exception h6,
+.journal-page-content .aria-quete-alchimiste h1,
+.journal-page-content .aria-quete-alchimiste h2,
+.journal-page-content .aria-quete-alchimiste h3,
+.journal-page-content .aria-quete-alchimiste h4,
+.journal-page-content .aria-quete-alchimiste h5,
+.journal-page-content .aria-quete-alchimiste h6,
+.journal-page-content .aria-quete-magicien h1,
+.journal-page-content .aria-quete-magicien h2,
+.journal-page-content .aria-quete-magicien h3,
+.journal-page-content .aria-quete-magicien h4,
+.journal-page-content .aria-quete-magicien h5,
+.journal-page-content .aria-quete-magicien h6,
+.journal-page-content .aria-quete-noble h1,
+.journal-page-content .aria-quete-noble h2,
+.journal-page-content .aria-quete-noble h3,
+.journal-page-content .aria-quete-noble h4,
+.journal-page-content .aria-quete-noble h5,
+.journal-page-content .aria-quete-noble h6,
+.journal-page-content .aria-quete-combattant h1,
+.journal-page-content .aria-quete-combattant h2,
+.journal-page-content .aria-quete-combattant h3,
+.journal-page-content .aria-quete-combattant h4,
+.journal-page-content .aria-quete-combattant h5,
+.journal-page-content .aria-quete-combattant h6,
+.journal-page-content .aria-quete-ennemi h1,
+.journal-page-content .aria-quete-ennemi h2,
+.journal-page-content .aria-quete-ennemi h3,
+.journal-page-content .aria-quete-ennemi h4,
+.journal-page-content .aria-quete-ennemi h5,
+.journal-page-content .aria-quete-ennemi h6 {
+  color: #ffffff !important;
 }
 
-.aria-block {
+.mce-content-body .aria-block,
+.journal-page-content .aria-block {
   margin-top: 15px;
   margin-bottom: 10px;
-  margin-left: 0px;
-  border: 0px;
-  padding: 5px 10px;
+  border: 0px !important;
+  padding: 5px 10px !important;
+  border-top: 0px !important;
+  border-bottom: 0px !important;
 }
 
-.aria-block::before {
+.mce-content-body .aria-block::before,
+.journal-page-content .aria-block::before {
   content: "";
   background-size: 50px 50px;
   background-repeat: no-repeat;
@@ -115,53 +905,92 @@
   margin-top: -9px;
 }
 
-.aria-texte {
+.mce-content-body .aria-texte,
+.journal-page-content .aria-texte {
   background: #dce2e6;
   color: #5a6a72;
   font-style: italic;
   font-weight: normal;
 }
 
-.aria-texte::before {
+.mce-content-body .aria-texte::before,
+.journal-page-content .aria-texte::before {
   background-image: url("../ui/icons/pins/texte.png");
 }
 
-.aria-regle {
+.mce-content-body .aria-regle,
+.journal-page-content .aria-regle {
   background: #f2ebe3;
-  white-space: pre-line;
 }
 
-.aria-regle::before {
+.mce-content-body .aria-regle::before,
+.journal-page-content .aria-regle::before {
   background-image: url("../ui/icons/pins/regles.png");
 }
 
-.aria-point-cle,
-.aria-quete-principale,
-.aria-quete-parallele,
-.aria-quete-personnelle,
-.aria-quete-principale-fin,
-.aria-quete-parallele-fin,
-.aria-quete-personnelle-fin,
-.aria-quete-resolue,
-.aria-quete-exception,
-.aria-quete-alchimiste,
-.aria-quete-magicien,
-.aria-quete-noble,
-.aria-quete-combattant,
-.aria-quete-ennemi {
-  background: #959595;
+.mce-content-body .aria-info,
+.journal-page-content .aria-info {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  border: 0px !important;
+  padding: 5px 10px !important;
+  border-top: 0px !important;
+  border-bottom: 0px !important;
+}
+
+.mce-content-body .aria-info,
+.mce-content-body .aria-point-cle,
+.mce-content-body .aria-quete-principale,
+.mce-content-body .aria-quete-parallele,
+.mce-content-body .aria-quete-personnelle,
+.mce-content-body .aria-quete-principale-fin,
+.mce-content-body .aria-quete-parallele-fin,
+.mce-content-body .aria-quete-personnelle-fin,
+.mce-content-body .aria-quete-resolue,
+.mce-content-body .aria-quete-exception,
+.mce-content-body .aria-quete-alchimiste,
+.mce-content-body .aria-quete-magicien,
+.mce-content-body .aria-quete-noble,
+.mce-content-body .aria-quete-combattant,
+.mce-content-body .aria-quete-ennemi,
+.mce-content-body .secret,
+.journal-page-content .aria-info,
+.journal-page-content .aria-point-cle,
+.journal-page-content .aria-quete-principale,
+.journal-page-content .aria-quete-parallele,
+.journal-page-content .aria-quete-personnelle,
+.journal-page-content .aria-quete-principale-fin,
+.journal-page-content .aria-quete-parallele-fin,
+.journal-page-content .aria-quete-personnelle-fin,
+.journal-page-content .aria-quete-resolue,
+.journal-page-content .aria-quete-exception,
+.journal-page-content .aria-quete-alchimiste,
+.journal-page-content .aria-quete-magicien,
+.journal-page-content .aria-quete-noble,
+.journal-page-content .aria-quete-combattant,
+.journal-page-content .aria-quete-ennemi,
+.journal-page-content .secret {
+  background: #959595 !important;
   color: #ffffff;
 }
 
-.secret {
-  color: #3a3939;
+.mce-content-body .secret,
+.journal-page-content .secret {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  border: 0px !important;
+  padding: 5px 10px !important;
+  border-top: 0px !important;
+  border-bottom: 0px !important;
 }
 
-.secret.revealed {
-  background: #8a9b89;
+.mce-content-body .secret.revealed,
+.journal-page-content .secret.revealed {
+  background: #8a9b89  !important;
 }
 
-.secret::before {
+.mce-content-body .secret::before,
+.journal-page-content .secret::before {
   background-image: url("../ui/icons/pins/MJ.png");
   content: "";
   background-size: 50px 50px;
@@ -174,7 +1003,8 @@
   margin-top: -9px;
 }
 
-.secret.revealed::before {
+.mce-content-body .secret.revealed::before,
+.journal-page-content .secret.revealed::before {
   background-image: url("../ui/icons/pins/UnlockMJ.png");
   content: "";
   background-size: 50px 50px;
@@ -187,58 +1017,72 @@
   margin-top: -9px;
 }
 
-.aria-point-cle::before {
+.mce-content-body .aria-point-cle::before,
+.journal-page-content .aria-point-cle::before {
   background-image: url("../ui/icons/pins/pointCle.png");
 }
 
-.aria-quete-principale::before {
+.mce-content-body .aria-quete-principale::before,
+.journal-page-content .aria-quete-principale::before {
   background-image: url("../ui/icons/pins/quetePrincipale.png");
 }
 
-.aria-quete-parallele::before {
+.mce-content-body .aria-quete-parallele::before,
+.journal-page-content .aria-quete-parallele::before {
   background-image: url("../ui/icons/pins/queteSecondaire.png");
 }
 
-.aria-quete-personnelle::before {
+.mce-content-body .aria-quete-personnelle::before,
+.journal-page-content .aria-quete-personnelle::before {
   background-image: url("../ui/icons/pins/quetePersonnelle.png");
 }
 
-.aria-quete-principale-fin::before {
+.mce-content-body .aria-quete-principale-fin::before,
+.journal-page-content .aria-quete-principale-fin::before {
   background-image: url("../ui/icons/pins/achevementPrincipale.png");
 }
 
-.aria-quete-parallele-fin::before {
+.mce-content-body .aria-quete-parallele-fin::before,
+.journal-page-content .aria-quete-parallele-fin::before {
   background-image: url("../ui/icons/pins/achevementSecondaire.png");
 }
 
-.aria-quete-personnelle-fin::before {
+.mce-content-body .aria-quete-personnelle-fin::before,
+.journal-page-content .aria-quete-personnelle-fin::before {
   background-image: url("../ui/icons/pins/achevementPersonnel.png");
 }
 
-.aria-quete-resolue::before {
+.mce-content-body .aria-quete-resolue::before,
+.journal-page-content .aria-quete-resolue::before {
   background-image: url("../ui/icons/pins/queteAchevee.png");
 }
 
-.aria-quete-exception::before {
+.mce-content-body .aria-quete-exception::before,
+.journal-page-content .aria-quete-exception::before {
   background-image: url("../ui/icons/pins/persoException.png");
 }
 
-.aria-quete-alchimiste::before {
+.mce-content-body .aria-quete-alchimiste::before,
+.journal-page-content .aria-quete-alchimiste::before {
   background-image: url("../ui/icons/pins/alchimiste.png");
 }
 
-.aria-quete-magicien::before {
+.mce-content-body .aria-quete-magicien::before,
+.journal-page-content .aria-quete-magicien::before {
   background-image: url("../ui/icons/pins/magicien.png");
 }
 
-.aria-quete-noble::before {
+.mce-content-body .aria-quete-noble::before,
+.journal-page-content .aria-quete-noble::before {
   background-image: url("../ui/icons/pins/noble.png");
 }
 
-.aria-quete-combattant::before {
+.mce-content-body .aria-quete-combattant::before,
+.journal-page-content .aria-quete-combattant::before {
   background-image: url("../ui/icons/pins/combattant.png");
 }
 
-.aria-quete-ennemi::before {
+.mce-content-body .aria-quete-ennemi::before,
+.journal-page-content .aria-quete-ennemi::before {
   background-image: url("../ui/icons/pins/dieuEnnemi.png");
 }
