@@ -12,9 +12,7 @@ export const registerSystemSettings = function() {
             "contemporain": "Contemporain",
           },
           default: "aria",        // The default value for the setting
-          onChange: value => { // A callback function which triggers when the setting is changed
-            window.location.reload()
-          }
+          requiresReload: true
         });
 
         game.settings.register("aria", "showBonusCol", {
@@ -24,9 +22,7 @@ export const registerSystemSettings = function() {
           config: true,
           default: true,
           type: Boolean,
-          onChange: value => { // A callback function which triggers when the setting is changed
-            window.location.reload()
-          }
+          requiresReload: true
       });
 
       game.settings.register("aria", "moveItem", {
@@ -40,7 +36,7 @@ export const registerSystemSettings = function() {
         },
         default: "1",
         config: true,
-        onChange: lang => window.location.reload()
+        requiresReload: true
     }); 
 	
         game.settings.register("aria", "showOrigine", {
@@ -50,9 +46,7 @@ export const registerSystemSettings = function() {
           config: true,
           default: true,
           type: Boolean,
-          onChange: value => { // A callback function which triggers when the setting is changed
-            window.location.reload()
-          }
+          requiresReload: true
       });
 	  
         game.settings.register("aria", "showGenialMais", {
@@ -62,9 +56,7 @@ export const registerSystemSettings = function() {
           config: true,
           default: true,
           type: Boolean,
-          onChange: value => { // A callback function which triggers when the setting is changed
-            window.location.reload()
-          }
+          requiresReload: true
       });
 	  
         game.settings.register("aria", "showBourse", {
@@ -74,9 +66,7 @@ export const registerSystemSettings = function() {
           config: true,
           default: true,
           type: Boolean,
-          onChange: value => { // A callback function which triggers when the setting is changed
-            window.location.reload()
-          }
+          requiresReload: true
       });
 	  
         game.settings.register("aria", "allowEditComp", {
@@ -86,9 +76,7 @@ export const registerSystemSettings = function() {
           config: true,
           default: true,
           type: Boolean,
-          onChange: value => { // A callback function which triggers when the setting is changed
-            window.location.reload()
-          }
+          requiresReload: true
       });
 
       game.settings.register("aria", "allowInitiative", {
@@ -98,9 +86,7 @@ export const registerSystemSettings = function() {
         config: true,
         default: false,
         type: Boolean,
-        onChange: value => { // A callback function which triggers when the setting is changed
-          window.location.reload()
-        }
+        requiresReload: true
     });
 
     game.settings.register("aria", "hideCompLink", {
@@ -110,9 +96,7 @@ export const registerSystemSettings = function() {
       config: true,
       default: false,
       type: Boolean,
-      onChange: value => { // A callback function which triggers when the setting is changed
-        window.location.reload()
-      }
+      requiresReload: true
   });
 
   game.settings.register("aria", "carac100", {
@@ -122,9 +106,7 @@ export const registerSystemSettings = function() {
     config: true,
     default: false,
     type: Boolean,
-    onChange: value => { // A callback function which triggers when the setting is changed
-      window.location.reload()
-    }
+    requiresReload: true
 });
 
 };
