@@ -117,7 +117,7 @@ export const registerSystemSettings = function() {
 
   game.settings.register("aria", "carac100", {
     name: "Caractéristiques sur 100 (Règles avancées)",
-    hint: "Dans les règles avancées les caractéristiques sont également des pourcentage, cette option permet également l'application de Bonus/Malus",
+    hint: "Dans les règles avancées les caractéristiques sont également des pourcentage, de plus un bonus de dégat et calculer automatiquement en fonctions de la Force et de la Dextérité ",
     scope: "world",
     config: true,
     default: false,

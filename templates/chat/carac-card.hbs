@@ -1,30 +1,58 @@
-<div class="chat-card" data-actor-id="{{actor.id}}">
-    <header class="card-header flexrow">
-        <img src="{{actor.img}}" title="{{actor.name}}"/>
-         <div class="flexcol">
-            <div>
-                <h2>Jet = 
-                {{#if isSuccess}}
-                    {{#if isCritical}} 
-                        <span class="success critical">{{result}} : Critique !!</span>
+<div class="chat-card  aria-roll-chat" data-actor-id="{{actor.id}}">
+
+    <div class="roll-card regular-roll-card">
+        <header class="card-header flexrow">
+            <img src="{{actor.img}}" title="{{actor.name}}"/>
+            <div class="flexcol">
+                <div>
+                    <h2>Jet = 
+                    {{#if isSuccess}}
+                        {{#if isCritical}} 
+                            <span class="success critical">{{result}} : Critique !!</span>
+                        {{else}}
+                            <span class="success">{{result}} : Succès !</span>
+                        {{/if}}
                     {{else}}
-                        <span class="success">{{result}} : Succès !</span>
-                    {{/if}}
-                {{else}}
-                    {{#if isFumble}}
-                        <span class="failure fumble">{{result}} : Critique !!</span>
-                    {{else}}
-                        <span class="failure">{{result}} : Echec...</span>
-                    {{/if}}
-                {{/if}}   
-                </h2>
+                        {{#if isFumble}}
+                            <span class="failure fumble">{{result}} : Critique !!</span>
+                        {{else}}
+                            <span class="failure">{{result}} : Echec...</span>
+                        {{/if}}
+                    {{/if}}   
+                    </h2>
+                </div>
+                <div>
+                <p>
+                    <strong>{{label}}</strong><br>
+                    Difficulté : {{calcLabel}} = <strong>{{cmpValue}}%</strong>
+                    </p>
+                </div>
             </div>
-            <div>
+        </header>
+    </div>
+
+
+     <div class="blind-roll-card flexcol roll-card">
+
+        <header class="card-header flexrow">
+            <img src="{{actor.img}}" title="{{actor.name}}"/>
+
+            <div class="flexcol">
+                <div class="flexrow">
+                    <h2>Jet = <i><b>?</b></i></h2>
+                </div>
+
+                <i><b>MJ uniquement</b></i>
+                <div>
               <p>
                   <strong>{{label}}</strong><br>
-                  Difficulté : {{calcLabel}} = <strong>{{cmpValue}}%</strong>
                 </p>
             </div>
-         </div>
-    </header>
+            </div>
+
+        </header>
+
+    </div>
+
+
 </div>

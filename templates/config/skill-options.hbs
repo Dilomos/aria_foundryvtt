@@ -1,0 +1,84 @@
+<form>  
+    
+{{#if showBonus}}
+    <div class="rollOptionGroup">
+        <div class="divTitle">
+            <label class="optionTitle">Modificateur de difficulté</label>
+        </div>
+        <div class="divTitle">
+            <input type="radio" id="-30" name="bonusMalus" value="-30" >
+            <label for="-30">-30</label>
+
+            <input type="radio" id="-20" name="bonusMalus" value="-20" >
+            <label for="-20">-20</label>
+
+            <input type="radio" id="-10" name="bonusMalus" value="-10" >
+            <label for="-10">-10</label>
+
+            <input type="radio" id="0" name="bonusMalus" value="0" checked>
+            <label for="0">0</label>
+
+            <input type="radio" id="10" name="bonusMalus" value="+10" >
+            <label for="10">+10</label>
+
+            <input type="radio" id="20" name="bonusMalus" value="+20" >
+            <label for="20">+20</label>
+
+            <input type="radio" id="30" name="bonusMalus" value="+30" >
+            <label for="30">+30</label>
+        </div>
+    </div>
+
+    <hr>
+{{/if}}  
+
+
+{{#if showMulti}}
+    <div class="rollOptionGroup">
+        <div class="divTitle">
+            <label class="optionTitle">Multiplicateur</label>
+        </div>
+        <div class="divTitle">
+            <input type="radio" id="1" name="multi" value="1" >
+            <label for="1"><i class="fas fa-times"></i>1</label>
+
+            <input type="radio" id="2" name="multi" value="2" >
+            <label for="2"><i class="fas fa-times"></i>2</label>
+
+            <input type="radio" id="3" name="multi" value="3" >
+            <label for="3"><i class="fas fa-times"></i>3</label>
+
+            <input type="radio" id="4" name="multi" value="4" >
+            <label for="4"><i class="fas fa-times"></i>4</label>
+
+            <input type="radio" id="5" name="multi" value="5" checked>
+            <label for="5"><i class="fas fa-times"></i>5</label>
+        </div>
+    </div>
+    <hr>
+{{/if}}  
+
+
+{{#if showGM}}
+    <div class="rollOptionGroup">
+        <div class="divTitle">
+            <label class="optionTitle">Type de lancé</label>
+        </div>
+        <div class="divTitle">
+            <input type="radio" id="PUBLIC" name="rollType" value="PUBLIC" checked>
+            <label for="PUBLIC">Public</label>
+
+            <input type="radio" id="BLIND" name="rollType" value="BLIND" {{checked checkGM}}>
+            <label for="BLIND">GM</label>
+
+            <input type="radio" id="SELF" name="rollType" value="SELF" >
+            <label for="SELF">Moi</label>
+
+            <input type="radio" id="PRIVATE" name="rollType" value="PRIVATE" >
+            <label for="PRIVATE">Moi et GM</label>
+        </div>
+    </div>
+
+{{/if}} 
+
+</form>

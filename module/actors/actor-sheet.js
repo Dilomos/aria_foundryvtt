@@ -219,14 +219,62 @@ async getData(options) {
     /* ROLL EVENTS CALLBACKS                        */
     /* -------------------------------------------- */
 
+    async getRollOptions(templatePath,dialogTitle,data={}) {
+        const template = templatePath;
+
+        const html = await renderTemplate(template, {
+            ...data
+        });
+    
+        return new Promise(resolve => {
+            const data = {
+                title: dialogTitle,
+                content: html,
+                buttons: {
+                    normal: {
+                        label: "Lancer les Dés",
+                        callback: html => {
+                            const fd = new FormDataExtended(html[0].querySelector("form"));
+                            resolve(fd.object)
+                        }
+                    },
+                    cancel: {
+                        label: "Annuler",
+                        callback: html => resolve({cancelled: true}),
+                    }
+                },
+                default: "normal",
+                close: () => resolve({cancelled: true}),
+            }
+            new Dialog(data, {id:"configRollDialog",width:350}).render(true);
+        });
+    };
+
     /**
      * Initiates a roll from any kind depending on the "data-roll-type" attribute
      * @param event the roll event
      * @private
      */
-    _onRoll(event,forceConfig) {
+    async _onRoll(event,forceConfig) {
         const elt = $(event.currentTarget)[0];
         const rolltype = elt.attributes["data-roll-type"].value;
+        let extraOptions ={
+            rollType : "PUBLIC",
+            bonusMalus : "+0",
+            multi : 1,
+        };
+
+        const configJet = {
+            showGM : true,
+          };
+
+          if (event.shiftKey)
+          {
+            configJet.checkGM = true;
+            extraOptions.rollType = "BLIND";
+          }
+
+
         switch (rolltype) {
             case "skillcheck" :
 
@@ -236,147 +284,57 @@ async getData(options) {
                 {
                     if(forceConfig)
                     {
-                        let chooseDifDialog = new Dialog({
-                            title: "Modificateur de difficulté",
-                            content: "<p>Choisissez le modificateur à appliquer au jet de compétence</p>",
-                            buttons: {
-                             one: {
-                              icon: '<i class="fas fa-minus"></i>',
-                              label: "30",
-                              callback: () => AriaRoll.skillCheck(this.getData().system, this.actor, event, 1,"-30")
-                             },
-                             two: {
-                              icon: '<i class="fas fa-minus"></i>',
-                              label: "20",
-                              callback: () => AriaRoll.skillCheck(this.getData().system, this.actor, event, 1,"-20")
-                             },
-                             three: {
-                              icon: '<i class="fas fa-minus"></i>',
-                              label: "10",
-                              callback: () => AriaRoll.skillCheck(this.getData().system, this.actor, event, 1,"-10")
-                             },
-                             four: {
-                              label: "aucun",
-                              callback: () => AriaRoll.skillCheck(this.getData().system, this.actor, event, 1)
-                             },
-                             five: {
-                              icon: '<i class="fas fa-plus"></i>',
-                              label: "10",
-                              callback: () => AriaRoll.skillCheck(this.getData().system, this.actor, event, 1,"+10")
-                             },
-                             six: {
-                                icon: '<i class="fas fa-plus"></i>',
-                                label: "20",
-                                callback: () => AriaRoll.skillCheck(this.getData().system, this.actor, event, 1,"+20")
-                               },
-                            seven: {
-                                icon: '<i class="fas fa-plus"></i>',
-                                label: "30",
-                                callback: () => AriaRoll.skillCheck(this.getData().system, this.actor, event, 1,"+30")
-                               },
-                            },
-                            default: "five",
-                           });
-                       chooseDifDialog.render(true);
+                        configJet.showBonus = true;
+                        extraOptions = await this.getRollOptions("systems/aria/templates/config/skill-options.hbs","Configuration du jet de caractéristique",configJet);
+                        if (extraOptions.cancelled) return;     
+                        extraOptions.multi = 1;                   
                     }
-                    else{
-                        return AriaRoll.skillCheck(this.getData().system, this.actor, event, 1);
-                    }
+                    return AriaRoll.skillCheck(this.getData().system, this.actor, event,extraOptions.multi,extraOptions.rollType,extraOptions.bonusMalus);
                 }
                 else
                 {
-
-                let chooseDifDialog = new Dialog({
-                    title: "Difficulté",
-                    content: "<p>Choisissez le multiple de caractéristique</p>",
-                    buttons: {
-                     one: {
-                      icon: '<i class="fas fa-times"></i>',
-                      label: "1",
-                      callback: () => AriaRoll.skillCheck(this.getData().system, this.actor, event, 1)
-                     },
-                     two: {
-                      icon: '<i class="fas fa-times"></i>',
-                      label: "2",
-                      callback: () => AriaRoll.skillCheck(this.getData().system, this.actor, event, 2)
-                     },
-                     three: {
-                      icon: '<i class="fas fa-times"></i>',
-                      label: "3",
-                      callback: () => AriaRoll.skillCheck(this.getData().system, this.actor, event, 3)
-                     },
-                     four: {
-                      icon: '<i class="fas fa-times"></i>',
-                      label: "4",
-                      callback: () => AriaRoll.skillCheck(this.getData().system, this.actor, event, 4)
-                     },
-                     five: {
-                      icon: '<i class="fas fa-times"></i>',
-                      label: "5",
-                      callback: () => AriaRoll.skillCheck(this.getData().system, this.actor, event, 5)
-                     },
-                    },
-                    default: "five",
-                   });
-               chooseDifDialog.render(true);
+                    configJet.showBonus = true;
+                    configJet.showMulti = true;
+                    extraOptions = await this.getRollOptions("systems/aria/templates/config/skill-options.hbs","Configuration du jet de caractéristique",configJet);
+                    if (extraOptions.cancelled) return;
+                    if(extraOptions.bonusMalus == "0")
+                        extraOptions.bonusMalus = "+0";
+                    return AriaRoll.skillCheck(this.getData().system, this.actor, event, extraOptions.multi,extraOptions.rollType,extraOptions.bonusMalus);
                 }
                break;
 
-                //return AriaRoll.skillCheck(this.getData().system, this.actor, event);
+
             case "competencycheck" :
                 if(forceConfig)
-                {
-                    let chooseDifDialog = new Dialog({
-                        title: "Modificateur de difficulté",
-                        content: "<p>Choisissez le modificateur à appliquer au jet de compétence</p>",
-                        buttons: {
-                         one: {
-                          icon: '<i class="fas fa-minus"></i>',
-                          label: "30",
-                          callback: () => AriaRoll.competencyCheck(this.getData().items, this.actor, event, "-30")
-                         },
-                         two: {
-                          icon: '<i class="fas fa-minus"></i>',
-                          label: "20",
-                          callback: () => AriaRoll.competencyCheck(this.getData().items, this.actor, event, "-20")
-                         },
-                         three: {
-                          icon: '<i class="fas fa-minus"></i>',
-                          label: "10",
-                          callback: () => AriaRoll.competencyCheck(this.getData().items, this.actor, event, "-10")
-                         },
-                         four: {
-                          label: "aucun",
-                          callback: () => AriaRoll.competencyCheck(this.getData().items, this.actor, event, "+0")
-                         },
-                         five: {
-                          icon: '<i class="fas fa-plus"></i>',
-                          label: "10",
-                          callback: () => AriaRoll.competencyCheck(this.getData().items, this.actor, event, "+10")
-                         },
-                         six: {
-                            icon: '<i class="fas fa-plus"></i>',
-                            label: "20",
-                            callback: () => AriaRoll.competencyCheck(this.getData().items, this.actor, event, "+20")
-                           },
-                        seven: {
-                            icon: '<i class="fas fa-plus"></i>',
-                            label: "30",
-                            callback: () => AriaRoll.competencyCheck(this.getData().items, this.actor, event, "+30")
-                           },
-                        },
-                        default: "five",
-                       });
-                   chooseDifDialog.render(true);
-                }
-                else{
-                    return AriaRoll.competencyCheck(this.getData().items, this.actor, event,"+0");
-                }
+                    {
+                        configJet.showBonus = true;
+                        extraOptions = await this.getRollOptions("systems/aria/templates/config/skill-options.hbs","Configuration du jet de compétence",configJet);
+                        if (extraOptions.cancelled) return;
+                        if(extraOptions.bonusMalus == "0")
+                            extraOptions.bonusMalus = "+0";
+                    }
+                    return AriaRoll.competencyCheck(this.getData().items, this.actor, event,extraOptions.bonusMalus,extraOptions.rollType);
                 break;
+
+
             case "weapon" :
-                return AriaRoll.rollWeapon(this.getData().system, this.actor, event);
+                if(forceConfig)
+                {
+                    configJet.checkGM = true;
+                    extraOptions = await this.getRollOptions("systems/aria/templates/config/skill-options.hbs","Configuration du jet d'attaque",configJet);
+                    if (extraOptions.cancelled) return;                    
+                }
+                return AriaRoll.rollWeapon(this.getData().system, this.actor, event,extraOptions.rollType);
+
+
             case "initiative" :
-                return AriaRoll.rollInitiative(this.getData().system, this.actor, event);
+                if(forceConfig)
+                {
+                    configJet.checkGM = true;
+                    extraOptions = await this.getRollOptions("systems/aria/templates/config/skill-options.hbs","Configuration du jet d'initiative",configJet);
+                    if (extraOptions.cancelled) return;
+                }
+                return AriaRoll.rollInitiative(this.getData().system, this.actor, event,extraOptions.rollType);
         }
     }
 

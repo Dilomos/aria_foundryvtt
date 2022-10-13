@@ -1,30 +1,59 @@
-<div class="chat-card" data-actor-id="{{actor.id}}">
-    <header class="card-header flexrow">
-        <img src="{{actor.img}}" title="{{actor.name}}"/>
-        
-        <div class="flexcol">
-            <div class="flexrow">
-                 <h2>Jet de Dégats = 
-                 {{#if isFumble}}
-                   <span class="failure">
-                {{else}}
-                     <span class="success">
-                {{/if}}
-                {{result}}
-                {{#if mod}}
-                <span class="mini">({{calc}})</span>
-                {{/if}}
-                </span></h2>
-            </div>
-            <div class="flexrow">
-                <div class="flexcol">
-                <strong class="item-name">{{label}}</strong>
-                <br>
-                {{formula}}
+<div class="chat-card aria-roll-chat" data-actor-id="{{actor.id}}">
+
+    <div class="roll-card regular-roll-card">
+        <header class="card-header flexrow">
+            <img src="{{actor.img}}" title="{{actor.name}}"/>
+            
+            <div class="flexcol">
+                <div class="flexrow">
+                    <h2>Jet de Dégats = 
+                    {{#if isFumble}}
+                    <span class="failure">
+                    {{else}}
+                        <span class="success">
+                    {{/if}}
+                    {{result}}
+                    {{#if mod}}
+                    <span class="mini">({{calc}})</span>
+                    {{/if}}
+                    </span></h2>
                 </div>
-                <img class="item-img" src="{{img}}" title="{{label}}"/>
+                <div class="flexrow">
+                    <div class="flexcol">
+                    <strong class="item-name">{{label}}</strong>
+                    <br>
+                    {{formula}}
+                    </div>
+                    <img class="item-img" src="{{img}}" title="{{label}}"/>
+                </div>
             </div>
-        </div>
-        
-    </header>
+            
+        </header>
+     </div>
+
+
+     <div class="blind-roll-card flexcol roll-card">
+
+        <header class="card-header flexrow">
+            <img src="{{actor.img}}" title="{{actor.name}}"/>
+
+            <div class="flexcol">
+                <div class="flexrow">
+                    <h2>Jet de Dégats = <i><b>?</b></i></h2>
+                </div>
+
+                <i><b>MJ uniquement</b></i>
+                <div class="flexrow">
+                    <div class="flexcol">
+                    <strong class="item-name">{{label}}</strong>
+                    <br>
+                    {{formula}}
+                    </div>
+                    <img class="item-img" src="{{img}}" title="{{label}}"/>
+                </div>
+            </div>
+
+        </header>
+
+    </div>
 </div>

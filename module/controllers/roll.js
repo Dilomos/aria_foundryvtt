@@ -13,7 +13,7 @@ export class AriaRoll {
      * @param key the key of the attribute to roll
      * @private
      */
-    static skillCheck(data, actor, event,multiplier,bonus = "+0") {
+    static skillCheck(data, actor, event,multiplier,rollType = "PUBLIC",bonus = "+0") {
         const elt = $(event.currentTarget)[0];
         let base = elt.attributes["data-rolling-value"].value;
         let cmpValue = eval((eval(`${base}`)*multiplier)+(eval(`${bonus}`)));
@@ -35,10 +35,10 @@ export class AriaRoll {
         }
 
         let r = new AriaSkillRoll(label,calcLabel,cmpValue);
-        r.roll(actor);
+        r.roll(actor,rollType);
     }
 
-    static competencyCheck(data, actor, event,modifier) {
+    static competencyCheck(data, actor, event,modifier,rollType = "PUBLIC") {
         const elt = $(event.currentTarget)[0];
         let key = elt.attributes["data-rolling-value"].value;
         let bonus = elt.attributes["data-rolling-bonus"].value;
@@ -79,7 +79,7 @@ export class AriaRoll {
             calcLabel = calcLabel + "+" + bonusValue;            
 
         let r = new AriaSkillRoll(label,calcLabel,cmpValue);
-        r.roll(actor);
+        r.roll(actor,rollType);
     }
 
     /**
@@ -88,15 +88,44 @@ export class AriaRoll {
      * @param key the key of the attribute to roll
      * @private
      */
-    static rollWeapon(data, actor, event) {
+    static rollWeapon(data, actor, event,rollType = "PUBLIC") {
 
         const elt = $(event.currentTarget)[0];
         let formula = elt.attributes["data-roll-formula"].value;
         let label = elt.attributes["data-roll-weapon-name"].value;
         let img = elt.attributes["data-roll-weapon-img"].value;
 
+        let globalSettingCarac100 = game.settings.get("aria","carac100"); 
+
+        if(globalSettingCarac100)
+        {
+            let valTMP = actor.system.stats.str.base +actor.system.stats.dex.base;
+
+            if(valTMP < 41)
+            {
+                formula+='+1';
+            }else{
+                if(valTMP < 81)
+                {
+                    formula+='+2';
+                }else{
+                    if(valTMP < 121)
+                    {
+                        formula+='+3';
+                    }else{
+                        if(valTMP < 141)
+                        {
+                            formula+='+4';
+                        }else{
+                            formula+='+5';
+                        } 
+                    } 
+                }
+            }
+        }
+
         let r = new AriaDamageRoll(label,formula,img);
-        r.roll(actor);
+        r.roll(actor,rollType);
     }
 
         /**
@@ -105,7 +134,7 @@ export class AriaRoll {
      * @param key the key of the attribute to roll
      * @private
      */
-    static rollInitiative(data, actor, event) {
+    static rollInitiative(data, actor, event,rollType = "PUBLIC") {
 
         const elt = $(event.currentTarget)[0];
         let formula = elt.attributes["data-roll-formula"].value;
@@ -113,6 +142,6 @@ export class AriaRoll {
         let img = "";
 
         let r = new AriaInitiativeRoll(label,formula,img);
-        r.roll(actor);
+        r.roll(actor,rollType);
     }
 }

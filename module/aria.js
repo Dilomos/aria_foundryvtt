@@ -21,6 +21,8 @@ import { registerHandlebarsHelpers } from "./helpers.js";
 
 import {Macros} from "./system/macros.js";
 
+import * as AriaChat from "./chat.js";
+
 
 Hooks.once("init", async function () {
 
@@ -171,3 +173,5 @@ Hooks.once("ready", function() {
     });
 
 });
+
+Hooks.on("renderChatMessage", (app, html, data) => {AriaChat.sortCustomAgeChatCards(app, html, data)});

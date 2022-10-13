@@ -5,7 +5,7 @@ export class AriaDamageRoll {
         this._img = img;
     }
 
-    async roll(actor){
+    async roll(actor,rollType){
 
         const messageTemplate = "systems/aria/templates/chat/weapon-card.hbs";
 
@@ -40,14 +40,28 @@ export class AriaDamageRoll {
         };
 
         let chatData = {
-            user: game.user.id,
-            speaker: ChatMessage.getSpeaker({actor: actor}),
-            roll: r,
-            content: await renderTemplate(messageTemplate,templateContextData),
-            sound: CONFIG.sounds.dice,
-            type: CONST.CHAT_MESSAGE_TYPES.ROLL
-        };
-      
+                user: game.user.id,
+                speaker: ChatMessage.getSpeaker({actor: actor}),
+                roll: r,
+                content: await renderTemplate(messageTemplate,templateContextData),
+                sound: CONFIG.sounds.dice
+            };
+
+        switch (rollType) {
+            case "PUBLIC" :
+                chatData = await ChatMessage.applyRollMode(chatData, CONST.DICE_ROLL_MODES.PUBLIC);
+                break;
+            case "BLIND" :
+                chatData = await ChatMessage.applyRollMode(chatData, CONST.DICE_ROLL_MODES.BLIND);
+                break;
+            case "SELF" :
+                chatData = await ChatMessage.applyRollMode(chatData, CONST.DICE_ROLL_MODES.SELF);
+                break;
+            case "PRIVATE" :
+                chatData = await ChatMessage.applyRollMode(chatData, CONST.DICE_ROLL_MODES.PRIVATE);
+                break;
+        }
+
         ChatMessage.create(chatData);
     }
 
