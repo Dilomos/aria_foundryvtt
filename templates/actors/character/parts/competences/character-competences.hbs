@@ -36,19 +36,27 @@
                                 <div class="icon_d100">
                                 </div>
                                 <div class="field-label no-wrap left competence_name">{{competence.name}}
-                                 {{#if (or (isAriaTypeSetting "contemporain") (isEnabled "hideCompLink"))}}
-                                    {{#if (isEnabled "showBonusCol")}}
-                                    <span class="comp_tooltiptext comp_tooltiptextwidth_noLinkCol comp_tooltiptextleft_noLinkCol">
-                                    {{else}}
-                                    <span class="comp_tooltiptext comp_tooltiptextwidth_noLinkCol_noBonus comp_tooltiptextleft_noLinkCol_noBonus">
-                                    {{/if}}  
-                                {{else}}
-                                    {{#if (isEnabled "showBonusCol")}}
+                                    {{#if (and (isEnabled "showBonusCol") (isEnabled "allowEditComp"))}}
+										{{#if (or (isAriaTypeSetting "contemporain") (isEnabled "hideCompLink"))}}
+									<span class="comp_tooltiptext comp_tooltiptextwidth_no1Col comp_tooltiptextleft_no1Col">
+										{{else}}
                                     <span class="comp_tooltiptext comp_tooltiptextwidth comp_tooltiptextleft">
+										{{/if}} 
                                     {{else}}
-                                    <span class="comp_tooltiptext comp_tooltiptextwidth_noBonus comp_tooltiptextleft_noBonus">
+										{{#if (or (isEnabled "showBonusCol") (isEnabled "allowEditComp"))}}
+											{{#if (or (isAriaTypeSetting "contemporain") (isEnabled "hideCompLink"))}}
+										<span class="comp_tooltiptext comp_tooltiptextwidth_no2Col comp_tooltiptextleft_no2Col">
+											{{else}}
+										<span class="comp_tooltiptext comp_tooltiptextwidth_no1Col comp_tooltiptextleft_no1Col">
+											{{/if}} 
+										{{else}}
+											{{#if (or (isAriaTypeSetting "contemporain") (isEnabled "hideCompLink"))}}
+										<span class="comp_tooltiptext comp_tooltiptextwidth_no3Col comp_tooltiptextleft_no3Col">
+											{{else}}
+										<span class="comp_tooltiptext comp_tooltiptextwidth_no2Col comp_tooltiptextleft_no2Col">
+											{{/if}} 
+										{{/if}}									
                                     {{/if}} 
-                                {{/if}}  
                                         <h1>{{competence.name}} :</h1>{{{competence.system.description}}}
                                     </span>
                                 </div>
@@ -106,15 +114,15 @@
                                 <div class="field-label no-wrap left competence_name">{{competence.name}}
                                  {{#if (or (isAriaTypeSetting "contemporain") (isEnabled "hideCompLink"))}}
                                     {{#if (isEnabled "showBonusCol")}}
-                                     <span class="compspe_tooltiptext comp_tooltiptextwidth_noLinkCol compspe_tooltiptextleft_noLinkCol">
+                                     <span class="compspe_tooltiptext comp_tooltiptextwidth_no1Col compspe_tooltiptextleft_no1Col">
                                     {{else}}
-                                     <span class="compspe_tooltiptext comp_tooltiptextwidth_noLinkCol_noBonus compspe_tooltiptextleft_noLinkCol_noBonus">
+                                     <span class="compspe_tooltiptext comp_tooltiptextwidth_no2Col compspe_tooltiptextleft_no2Col">
                                     {{/if}}  
                                 {{else}}
                                     {{#if (isEnabled "showBonusCol")}}
                                     <span class="compspe_tooltiptext comp_tooltiptextwidth compspe_tooltiptextleft">
                                     {{else}}
-                                    <span class="compspe_tooltiptext comp_tooltiptextwidth_noBonus compspe_tooltiptextleft_noBonus">
+                                    <span class="compspe_tooltiptext comp_tooltiptextwidth_no1Col compspe_tooltiptextleft_no1Col">
                                     {{/if}} 
                                 {{/if}}  
                                         <h1>{{competence.name}} :</h1>{{{competence.system.description}}}

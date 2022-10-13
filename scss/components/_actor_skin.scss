@@ -194,34 +194,34 @@
         left: calc(-100% - 240px);
       }
 
-      .competence_name .comp_tooltiptextwidth_noBonus {
+      .competence_name .comp_tooltiptextwidth_no1Col {
         width: calc(100% + 170px);
       }
-      .competence_name .comp_tooltiptextleft_noBonus {
+      .competence_name .comp_tooltiptextleft_no1Col {
         left: calc(100% + 150px);
       }
-      .competence_name .compspe_tooltiptextleft_noBonus {
+      .competence_name .compspe_tooltiptextleft_no1Col {
         left: calc(-100% - 190px);
       }
 
-      .competence_name .comp_tooltiptextwidth_noLinkCol {
-        width: calc(100% + 170px);
-      }
-      .competence_name .comp_tooltiptextleft_noLinkCol {
-        left: calc(100% + 150px);
-      }
-      .competence_name .compspe_tooltiptextleft_noLinkCol {
-        left: calc(-100% - 190px);
-      }
-
-      .competence_name .comp_tooltiptextwidth_noLinkCol_noBonus {
+      .competence_name .comp_tooltiptextwidth_no2Col {
         width: calc(100% + 120px);
       }
-      .competence_name .comp_tooltiptextleft_noLinkCol_noBonus {
+      .competence_name .comp_tooltiptextleft_no2Col {
         left: calc(100% + 100px);
       }
-      .competence_name .compspe_tooltiptextleft_noLinkCol_noBonus {
+      .competence_name .compspe_tooltiptextleft_no2Col {
         left: calc(-100% - 140px);
+      }
+	  
+      .competence_name .comp_tooltiptextwidth_no3Col {
+        width: calc(100% + 70px);
+      }
+      .competence_name .comp_tooltiptextleft_no3Col {
+        left: calc(100% + 50px);
+      }
+      .competence_name .compspe_tooltiptextleft_no3Col {
+        left: calc(-100% - 90px);
       }
 
       .competence_name .comp_tooltiptext {

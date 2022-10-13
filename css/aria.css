@@ -2134,40 +2134,40 @@ strong {
   left: calc(-100% - 240px);
 }
 
-.aria.actor .window-content > form .wrap .competence_name .comp_tooltiptextwidth_noBonus {
+.aria.actor .window-content > form .wrap .competence_name .comp_tooltiptextwidth_no1Col {
   width: calc(100% + 170px);
 }
 
-.aria.actor .window-content > form .wrap .competence_name .comp_tooltiptextleft_noBonus {
+.aria.actor .window-content > form .wrap .competence_name .comp_tooltiptextleft_no1Col {
   left: calc(100% + 150px);
 }
 
-.aria.actor .window-content > form .wrap .competence_name .compspe_tooltiptextleft_noBonus {
+.aria.actor .window-content > form .wrap .competence_name .compspe_tooltiptextleft_no1Col {
   left: calc(-100% - 190px);
 }
 
-.aria.actor .window-content > form .wrap .competence_name .comp_tooltiptextwidth_noLinkCol {
-  width: calc(100% + 170px);
-}
-
-.aria.actor .window-content > form .wrap .competence_name .comp_tooltiptextleft_noLinkCol {
-  left: calc(100% + 150px);
-}
-
-.aria.actor .window-content > form .wrap .competence_name .compspe_tooltiptextleft_noLinkCol {
-  left: calc(-100% - 190px);
-}
-
-.aria.actor .window-content > form .wrap .competence_name .comp_tooltiptextwidth_noLinkCol_noBonus {
+.aria.actor .window-content > form .wrap .competence_name .comp_tooltiptextwidth_no2Col {
   width: calc(100% + 120px);
 }
 
-.aria.actor .window-content > form .wrap .competence_name .comp_tooltiptextleft_noLinkCol_noBonus {
+.aria.actor .window-content > form .wrap .competence_name .comp_tooltiptextleft_no2Col {
   left: calc(100% + 100px);
 }
 
-.aria.actor .window-content > form .wrap .competence_name .compspe_tooltiptextleft_noLinkCol_noBonus {
+.aria.actor .window-content > form .wrap .competence_name .compspe_tooltiptextleft_no2Col {
   left: calc(-100% - 140px);
+}
+
+.aria.actor .window-content > form .wrap .competence_name .comp_tooltiptextwidth_no3Col {
+  width: calc(100% + 70px);
+}
+
+.aria.actor .window-content > form .wrap .competence_name .comp_tooltiptextleft_no3Col {
+  left: calc(100% + 50px);
+}
+
+.aria.actor .window-content > form .wrap .competence_name .compspe_tooltiptextleft_no3Col {
+  left: calc(-100% - 90px);
 }
 
 .aria.actor .window-content > form .wrap .competence_name .comp_tooltiptext {
