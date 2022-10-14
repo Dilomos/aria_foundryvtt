@@ -52,21 +52,26 @@ export class AriaSkillRoll {
             user: game.user.id,
             speaker: ChatMessage.getSpeaker({actor: actor}),
             roll: r,
+            type: CONST.CHAT_MESSAGE_TYPES.ROLL,
             content: await renderTemplate(messageTemplate,templateContextData),
             sound: CONFIG.sounds.dice
         };
 
     switch (rollType) {
-        case "PUBLIC" :
+        case 'PUBLIC' :
+            await game.settings.set("core", "rollMode", CONST.DICE_ROLL_MODES.PUBLIC);
             chatData = await ChatMessage.applyRollMode(chatData, CONST.DICE_ROLL_MODES.PUBLIC);
             break;
-        case "BLIND" :
+        case 'BLIND' :
+            await game.settings.set("core", "rollMode", CONST.DICE_ROLL_MODES.BLIND);
             chatData = await ChatMessage.applyRollMode(chatData, CONST.DICE_ROLL_MODES.BLIND);
             break;
-        case "SELF" :
+        case 'SELF' :
+            await game.settings.set("core", "rollMode", CONST.DICE_ROLL_MODES.SELF);
             chatData = await ChatMessage.applyRollMode(chatData, CONST.DICE_ROLL_MODES.SELF);
             break;
-        case "PRIVATE" :
+        case 'PRIVATE' :
+            await game.settings.set("core", "rollMode", CONST.DICE_ROLL_MODES.PRIVATE);
             chatData = await ChatMessage.applyRollMode(chatData, CONST.DICE_ROLL_MODES.PRIVATE);
             break;
     }

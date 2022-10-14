@@ -3,10 +3,18 @@
     <div class="roll-card regular-roll-card">
         <header class="card-header flexrow">
             <img src="{{actor.img}}" title="{{actor.name}}"/>
-            
+
+
             <div class="flexcol">
                 <div class="flexrow">
-                    <h2>Jet d'initiative = {{result}} </h2>
+                    <h2>Jet = {{result}} </h2>
+                </div>
+                <div class="flexrow">
+                    <div class="flexcol">
+                    <strong class="item-name">Initiative</strong>
+                    <br>
+                    {{formula}}
+                    </div>
                 </div>
             </div>
             
@@ -16,16 +24,20 @@
     <div class="blind-roll-card flexcol roll-card">
 
         <header class="card-header flexrow">
-            <img src="{{actor.img}}" title="{{actor.name}}"/>
+            <img src="icons/svg/mystery-man.svg" title="Inconnu"/>
 
             <div class="flexcol">
                 <div class="flexrow">
-                    <h2>Jet d'initiative = <i><b>?</b></i></h2>
+                    <h2>Jet = <i><b>?</b></i></h2>
                 </div>
-
-                <i><b>MJ uniquement</b></i>
+                <div class="flexrow">
+                    <div class="flexcol">
+                    <strong class="item-name">Caché</strong>
+                    <br>
+                    {{formula}}
+                    </div>
+                </div>
             </div>
-
         </header>
 
     </div>

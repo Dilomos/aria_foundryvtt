@@ -43,24 +43,29 @@ export class AriaDamageRoll {
                 user: game.user.id,
                 speaker: ChatMessage.getSpeaker({actor: actor}),
                 roll: r,
+                type: CONST.CHAT_MESSAGE_TYPES.ROLL,
                 content: await renderTemplate(messageTemplate,templateContextData),
                 sound: CONFIG.sounds.dice
             };
 
-        switch (rollType) {
-            case "PUBLIC" :
-                chatData = await ChatMessage.applyRollMode(chatData, CONST.DICE_ROLL_MODES.PUBLIC);
-                break;
-            case "BLIND" :
-                chatData = await ChatMessage.applyRollMode(chatData, CONST.DICE_ROLL_MODES.BLIND);
-                break;
-            case "SELF" :
-                chatData = await ChatMessage.applyRollMode(chatData, CONST.DICE_ROLL_MODES.SELF);
-                break;
-            case "PRIVATE" :
-                chatData = await ChatMessage.applyRollMode(chatData, CONST.DICE_ROLL_MODES.PRIVATE);
-                break;
-        }
+            switch (rollType) {
+                case 'PUBLIC' :
+                    await game.settings.set("core", "rollMode", CONST.DICE_ROLL_MODES.PUBLIC);
+                    chatData = await ChatMessage.applyRollMode(chatData, CONST.DICE_ROLL_MODES.PUBLIC);
+                    break;
+                case 'BLIND' :
+                    await game.settings.set("core", "rollMode", CONST.DICE_ROLL_MODES.BLIND);
+                    chatData = await ChatMessage.applyRollMode(chatData, CONST.DICE_ROLL_MODES.BLIND);
+                    break;
+                case 'SELF' :
+                    await game.settings.set("core", "rollMode", CONST.DICE_ROLL_MODES.SELF);
+                    chatData = await ChatMessage.applyRollMode(chatData, CONST.DICE_ROLL_MODES.SELF);
+                    break;
+                case 'PRIVATE' :
+                    await game.settings.set("core", "rollMode", CONST.DICE_ROLL_MODES.PRIVATE);
+                    chatData = await ChatMessage.applyRollMode(chatData, CONST.DICE_ROLL_MODES.PRIVATE);
+                    break;
+            }
 
         ChatMessage.create(chatData);
     }

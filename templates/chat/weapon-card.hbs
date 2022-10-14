@@ -6,21 +6,12 @@
             
             <div class="flexcol">
                 <div class="flexrow">
-                    <h2>Jet de Dégats = 
-                    {{#if isFumble}}
-                    <span class="failure">
-                    {{else}}
-                        <span class="success">
-                    {{/if}}
-                    {{result}}
-                    {{#if mod}}
-                    <span class="mini">({{calc}})</span>
-                    {{/if}}
-                    </span></h2>
+                    <h2>Jet = {{result}}</h2>
                 </div>
                 <div class="flexrow">
                     <div class="flexcol">
-                    <strong class="item-name">{{label}}</strong>
+                    <b>Dégats</b><br>
+                    <b>{{label}}</b>
                     <br>
                     {{formula}}
                     </div>
@@ -35,24 +26,20 @@
      <div class="blind-roll-card flexcol roll-card">
 
         <header class="card-header flexrow">
-            <img src="{{actor.img}}" title="{{actor.name}}"/>
+            <img src="icons/svg/mystery-man.svg" title="Inconnu"/>
 
             <div class="flexcol">
                 <div class="flexrow">
-                    <h2>Jet de Dégats = <i><b>?</b></i></h2>
+                    <h2>Jet = <i><b>?</b></i></h2>
                 </div>
-
-                <i><b>MJ uniquement</b></i>
                 <div class="flexrow">
                     <div class="flexcol">
-                    <strong class="item-name">{{label}}</strong>
+                    <strong class="item-name">Caché</strong>
                     <br>
                     {{formula}}
                     </div>
-                    <img class="item-img" src="{{img}}" title="{{label}}"/>
                 </div>
             </div>
-
         </header>
 
     </div>

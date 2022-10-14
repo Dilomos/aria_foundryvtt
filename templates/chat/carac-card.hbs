@@ -25,7 +25,7 @@
                 <p>
                     <strong>{{label}}</strong><br>
                     Difficulté : {{calcLabel}} = <strong>{{cmpValue}}%</strong>
-                    </p>
+                </p>
                 </div>
             </div>
         </header>
@@ -35,23 +35,21 @@
      <div class="blind-roll-card flexcol roll-card">
 
         <header class="card-header flexrow">
-            <img src="{{actor.img}}" title="{{actor.name}}"/>
+            <img src="icons/svg/mystery-man.svg" title="Inconnu"/>
 
             <div class="flexcol">
                 <div class="flexrow">
                     <h2>Jet = <i><b>?</b></i></h2>
                 </div>
-
-                <i><b>MJ uniquement</b></i>
-                <div>
-              <p>
-                  <strong>{{label}}</strong><br>
-                </p>
+                <div class="flexrow">
+                    <div class="flexcol">
+                    <strong class="item-name">Caché</strong>
+                    <br>
+                    {{formula}}
+                    </div>
+                </div>
             </div>
-            </div>
-
         </header>
-
     </div>
 
 

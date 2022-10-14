@@ -5,7 +5,11 @@
  * @param {object} data             Data containing Message data
  */
  export async function sortCustomAgeChatCards(chatCard, html, data) {
-    // Toggle chat card visibility of AGE Roll Cards 
+    if (chatCard.content.search("aria-roll-chat") != -1)
+    {
+        const element = html.find(".message-content").html(chatCard.content);
+    }
+
     if (html.find(".aria-roll-chat").length > 0) _handleAgeRollVisibility(html, chatCard, data);
 };
 
