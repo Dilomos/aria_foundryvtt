@@ -31,7 +31,7 @@ export class AriaSkillRoll {
         
         const result = r.total;
         this._isSuccess = result <= this._cmpValue;
-        this._isFumble = (result >= 95);
+        this._isFumble = (result >= 96);
         this._isCritical = (result <= 5);
     
         

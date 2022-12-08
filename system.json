@@ -2,7 +2,7 @@
   "id": "aria",
   "title": "Aria - GOR",
   "description": "<p>Système Foundry VTT pour Aria Game pf Roles le jeu de role de FibreTigre edité par Elder Craft.</p>",
-  "version": "2.7.5",
+  "version": "2.7.6",
   "compatibility": {
     "minimum": "10",
     "verified": "10.288"
