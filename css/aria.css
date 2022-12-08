@@ -238,6 +238,11 @@ strong {
   cursor: pointer;
 }
 
+.window-app .calc-comp:hover, .window-app .calc-comp:focus {
+  text-shadow: 0 0 8px #4f7783;
+  cursor: pointer;
+}
+
 .window-app.aria.sheet.actor {
   min-width: 765px;
   width: 765px;
@@ -2313,6 +2318,37 @@ strong {
 .aria.actor .window-content > form .aria-bg-stars .titleFont {
   font-family: "HelveticaNeueLT", serif;
   line-height: 22px;
+}
+
+.aria.actor .window-content > form .calc-comp .calc-comp-tooltip {
+  visibility: hidden;
+  background: url("../ui/fond_hover_comp.png");
+  background-size: cover;
+  color: #fffdea;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 10;
+  margin-left: 0px;
+  bottom: 0;
+  opacity: 0;
+  min-width: 250px;
+}
+
+.aria.actor .window-content > form .calc-comp:hover .calc-comp-tooltip {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+
+.aria.actor .window-content > form .calc-comp:hover .calc-comp-tooltip p {
+  margin: 0 5px 0 5px;
+  text-shadow: initial;
+  cursor: auto;
+  font-weight: 100;
+  line-height: 18px;
 }
 
 .aria.actor #logo-stars > img {

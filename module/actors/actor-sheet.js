@@ -118,6 +118,8 @@ export class AriaActorSheet extends ActorSheet {
         
 
         html.find('.item-name, .item-edit').click(this._onEditItem.bind(this));
+
+        html.find('.calc-comp').click(this._onCalcComp.bind(this));
         
         html.find('.item-delete').click(ev => {
             return this._onDeleteItem(ev);
@@ -182,6 +184,99 @@ async getData(options) {
             entity = await Traversal.getEntity(id, type, pack);
         }
         if(entity) return entity.sheet.render(true);
+    }
+
+
+    async _onCalcComp(event) {
+        event.preventDefault();
+
+        let chooseDifDialog = new Dialog({
+            title: "Calcul des compétences",
+            content: "<p>Voulez-vous (re)calculer automatiquement les pourcentages des compétences de ce personnage en fonction de ses valeurs de caractéristiques ?<br/><br/>ex : \"Discrétion\"  ( (Dextérité+Charisme) / 2 ) x 5 <br/><br/>Attention les valeurs actuelles seront remplacées.<br/><br/></p>",
+            buttons: {
+            one: {
+            label: "Oui",
+            callback: () => {
+                this._updateCompValue();
+            }
+            },
+            two: {
+            label: "Non",
+            callback: () => {}
+            },
+            },
+            default: "two",
+            });
+        chooseDifDialog.render(true);
+
+    }
+
+    async _updateCompValue() {
+        let comps = this.actor.items.filter(item => item.type === "competence");
+        let comps_normal = comps.filter(item => item.system.special === false);
+
+        comps_normal.forEach(element => {
+
+            let itemData = element.toObject();
+
+            itemData.system.score = 0;
+            if(itemData.system.link1 == game.i18n.localize("ARIA.stats.str.abbrev") )
+            {
+                itemData.system.score += this.actor.system.stats.str.base;
+            }
+            if(itemData.system.link1 == game.i18n.localize("ARIA.stats.dex.abbrev") )
+            {
+                itemData.system.score += this.actor.system.stats.dex.base;
+            }
+            if(itemData.system.link1 == game.i18n.localize("ARIA.stats.end.abbrev") )
+            {
+                itemData.system.score += this.actor.system.stats.end.base;
+            }
+            if(itemData.system.link1 == game.i18n.localize("ARIA.stats.int.abbrev") )
+            {
+                itemData.system.score += this.actor.system.stats.int.base;
+            }
+            if(itemData.system.link1 == game.i18n.localize("ARIA.stats.cha.abbrev") )
+            {
+                itemData.system.score += this.actor.system.stats.cha.base;
+            }
+            if(itemData.system.link1 == game.i18n.localize("ARIA.stats.intu.abbrev") )
+            {
+                itemData.system.score += this.actor.system.stats.intu.base;
+            }
+
+            if(itemData.system.link2 == game.i18n.localize("ARIA.stats.str.abbrev") )
+            {
+                itemData.system.score += this.actor.system.stats.str.base;
+            }
+            if(itemData.system.link2 == game.i18n.localize("ARIA.stats.dex.abbrev") )
+            {
+                itemData.system.score += this.actor.system.stats.dex.base;
+            }
+            if(itemData.system.link2 == game.i18n.localize("ARIA.stats.end.abbrev") )
+            {
+                itemData.system.score += this.actor.system.stats.end.base;
+            }
+            if(itemData.system.link2 == game.i18n.localize("ARIA.stats.int.abbrev") )
+            {
+                itemData.system.score += this.actor.system.stats.int.base;
+            }
+            if(itemData.system.link2 == game.i18n.localize("ARIA.stats.cha.abbrev") )
+            {
+                itemData.system.score += this.actor.system.stats.cha.base;
+            }
+            if(itemData.system.link2 == game.i18n.localize("ARIA.stats.intu.abbrev") )
+            {
+                itemData.system.score += this.actor.system.stats.intu.base;
+            }
+
+
+            itemData.system.score = Math.floor(itemData.system.score/2)*5;
+
+            itemData.system.score = (itemData.system.score < 100) ? itemData.system.score : 100;
+            
+            this.actor.updateEmbeddedDocuments("Item",[itemData]);
+        });
     }
 
     /* -------------------------------------------- */

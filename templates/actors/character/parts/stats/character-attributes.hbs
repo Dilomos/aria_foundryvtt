@@ -14,4 +14,12 @@
         {{> "systems/aria/templates/actors/character/parts/stats/attributes/character-attributes-intu.hbs"}}
         {{/if}}
 </div>
+
+{{#if (isEnabled "carac100")}}
+{{else}}
+     <div class="calc-comp"><i class="fas fa-address-card"></i><span class="calc-comp-tooltip"><p>Calcul automatique des compétence</p></span></div>
+{{/if}}  
+
 </div>
+
+

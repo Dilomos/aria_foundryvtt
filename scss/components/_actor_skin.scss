@@ -365,6 +365,37 @@
         line-height: 22px;
       }
     }
+
+   
+    .calc-comp .calc-comp-tooltip {
+      visibility: hidden;
+      //background-color: $c-greenbluelowtrans;
+      background: url("../ui/fond_hover_comp.png");
+      background-size: cover;
+      color: #fffdea;
+      border-radius: 6px;
+      padding: 5px 0;
+      position: absolute;
+      z-index: 10;
+      margin-left: 0px;
+      bottom:0;
+      opacity: 0;
+      min-width: 250px;
+    }
+
+    .calc-comp:hover .calc-comp-tooltip {
+      visibility: visible;
+      opacity: 1;
+      transition: 1s;
+      p{
+        margin:0 5px 0 5px;
+        text-shadow: initial;
+        cursor: auto;
+        font-weight: 100;
+        line-height: 18px;
+      }
+    }
+    
   }
 }
 
