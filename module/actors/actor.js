@@ -9,14 +9,22 @@ export class AriaActor extends Actor {
 
     /** @override */
   static async create(data, options={}) {
-    data.items = data.items || [];
 
-    let caps = game.aria.config.competences;
+    if (typeof data.items === 'undefined') {
 
-    if ( data.type === "character" ) {
-        
-        mergeObject(data.items, caps, {overwrite: false});
-    }
+      data.items = [];
+
+      let caps = game.aria.config.competences;
+
+      if ( data.type === "character" ) {
+          
+          mergeObject(data.items, caps, {overwrite: false});
+      }
+  }
+
+    //data.items = data.items || [];
+
+   
     let enti = super.create(data, options);
 
     return enti;
