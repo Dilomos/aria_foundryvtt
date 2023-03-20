@@ -117,7 +117,7 @@ export class AriaActorSheet extends ActorSheet {
         
         
 
-        html.find('.item-name, .item-edit').click(this._onEditItem.bind(this));
+        html.find('.item-edit').click(this._onEditItem.bind(this));
 
         html.find('.calc-comp').click(this._onCalcComp.bind(this));
         

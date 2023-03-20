@@ -2118,61 +2118,51 @@ strong {
   margin-top: 3px;
 }
 
+.aria.actor .window-content > form .wrap .item-name .item_tooltiptext {
+  visibility: hidden;
+  background: url("../ui/fond_hover_comp.png");
+  background-size: cover;
+  color: #fffdea;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  margin-left: 0px;
+  width: 60%;
+  left: 35%;
+  opacity: 0;
+  top: 335px;
+}
+
+.aria.actor .window-content > form .wrap .item-name:hover .item_tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+
+.aria.actor .window-content > form .wrap .item-name:hover .item_tooltiptext p {
+  margin: 0 5px 0 5px;
+  text-shadow: initial;
+  cursor: auto;
+  font-weight: 100;
+  line-height: 18px;
+}
+
+.aria.actor .window-content > form .wrap .item-name:hover .item_tooltiptext h1 {
+  margin: 0 5px 0 5px;
+  font-weight: 700;
+  line-height: 18px;
+  font-size: 16px;
+  border-bottom: 1px solid #000000;
+}
+
 .aria.actor .window-content > form .wrap .competence_name {
   margin: 0 0 0 0;
   padding-left: 5px;
   font-size: 16px;
   font-weight: bold;
   color: #000;
-  position: relative;
-}
-
-.aria.actor .window-content > form .wrap .competence_name .comp_tooltiptextwidth {
-  width: calc(100% + 220px);
-}
-
-.aria.actor .window-content > form .wrap .competence_name .comp_tooltiptextleft {
-  left: calc(100% + 200px);
-}
-
-.aria.actor .window-content > form .wrap .competence_name .compspe_tooltiptextleft {
-  left: calc(-100% - 240px);
-}
-
-.aria.actor .window-content > form .wrap .competence_name .comp_tooltiptextwidth_no1Col {
-  width: calc(100% + 170px);
-}
-
-.aria.actor .window-content > form .wrap .competence_name .comp_tooltiptextleft_no1Col {
-  left: calc(100% + 150px);
-}
-
-.aria.actor .window-content > form .wrap .competence_name .compspe_tooltiptextleft_no1Col {
-  left: calc(-100% - 190px);
-}
-
-.aria.actor .window-content > form .wrap .competence_name .comp_tooltiptextwidth_no2Col {
-  width: calc(100% + 120px);
-}
-
-.aria.actor .window-content > form .wrap .competence_name .comp_tooltiptextleft_no2Col {
-  left: calc(100% + 100px);
-}
-
-.aria.actor .window-content > form .wrap .competence_name .compspe_tooltiptextleft_no2Col {
-  left: calc(-100% - 140px);
-}
-
-.aria.actor .window-content > form .wrap .competence_name .comp_tooltiptextwidth_no3Col {
-  width: calc(100% + 70px);
-}
-
-.aria.actor .window-content > form .wrap .competence_name .comp_tooltiptextleft_no3Col {
-  left: calc(100% + 50px);
-}
-
-.aria.actor .window-content > form .wrap .competence_name .compspe_tooltiptextleft_no3Col {
-  left: calc(-100% - 90px);
 }
 
 .aria.actor .window-content > form .wrap .competence_name .comp_tooltiptext {
@@ -2183,10 +2173,12 @@ strong {
   border-radius: 6px;
   padding: 5px 0;
   position: absolute;
-  z-index: 10;
+  z-index: 100;
   margin-left: 0px;
-  bottom: 0;
   opacity: 0;
+  width: 50%;
+  left: 49%;
+  top: 300px;
 }
 
 .aria.actor .window-content > form .wrap .competence_name:hover .comp_tooltiptext {
@@ -2222,8 +2214,10 @@ strong {
   padding: 5px 0;
   position: absolute;
   z-index: 10;
-  bottom: 0;
   opacity: 0;
+  width: 50%;
+  right: 49%;
+  top: 300px;
 }
 
 .aria.actor .window-content > form .wrap .competence_name:hover .compspe_tooltiptext {
@@ -3433,7 +3427,7 @@ strong {
 
 .aria nav.sheet-tabs {
   border: none;
-  height: 40px;
+  height: 30px;
 }
 
 .aria nav.sheet-tabs.tabs {
