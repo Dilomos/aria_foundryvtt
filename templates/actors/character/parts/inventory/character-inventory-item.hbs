@@ -1,6 +1,10 @@
 <ol class="item-list">
     <li class="item flexrow" data-item-id="{{_id}}" draggable="true">
+        {{#if (isWeapon this)}}
         <div class="item-name flexrow rollable" data-roll-formula="{{system.dmgBase}}" data-roll-weapon-name="{{name}}" data-roll-weapon-img="{{img}}" data-roll-type="weapon">
+        {{else}}
+        <div class="item-name flexrow"></div>
+        {{/if}}
                 <div class="item-image flex1" style="background: center/contain no-repeat url('{{img}}')">
                 </div>
                 <h4>{{name}}</h4>
