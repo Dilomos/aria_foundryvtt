@@ -64,8 +64,17 @@ export class AriaActor extends Actor {
       const hp = this.system.attributes.hp;
 
       hp.bonus = this.system.attributes.hp.max - value;
-      return this.update({'system.attributes.hp.bonus': hp.bonus});
+      hp.value = this.system.attributes.hp.max - hp.bonus;
+      return this.update({'system.attributes.hp': hp});
     }
     return super.modifyTokenAttribute(attribute, value, isDelta, isBar);
   }
+
+      /** @override */
+      async modifyActorBlessureAttribute( value) {
+          const hp = this.system.attributes.hp;
+          hp.bonus = value;
+          hp.value = this.system.attributes.hp.max - hp.bonus;
+          return this.update({'system.attributes.hp': hp});
+      }
 }

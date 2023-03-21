@@ -114,7 +114,12 @@ export class AriaActorSheet extends ActorSheet {
                 itemData.system.bonus = '+'+ev.currentTarget.value;
             return this.actor.updateEmbeddedDocuments("Item",[itemData]);
         });
-        
+
+        html.find('.hp_blessure').change(ev => {
+            ev.preventDefault();
+
+            return this.actor.modifyActorBlessureAttribute(ev.currentTarget.value);
+        });
         
 
         html.find('.item-edit').click(this._onEditItem.bind(this));
