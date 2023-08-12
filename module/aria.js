@@ -17,6 +17,9 @@ import {AriaItemSheet} from "./items/item-sheet.js";
 import {AriaCharacterSheet} from "./actors/character-sheet.js";
 import {AriaLootSheet} from "./actors/loot-sheet.js";
 
+import {AriaPlayerHand} from "./cards/player-hand.js";
+import {AriaCards} from "./cards/cards.js";
+
 import { registerHandlebarsHelpers } from "./helpers.js";
 
 import {Macros} from "./system/macros.js";
@@ -26,7 +29,7 @@ import * as AriaChat from "./chat.js";
 
 Hooks.once("init", async function () {
 
-    console.info("Aria : System Initializing...");
+    console.info("----------   Aria : System Initializing...");
 
     // Register System Settings
     registerSystemSettings();    
@@ -48,6 +51,8 @@ Hooks.once("init", async function () {
     CONFIG.Token.documentClass = AriaTokenDocument;
 
     CONFIG.Combat.initiative.formula = "@attributes.initiative+1d6 ";
+
+    CONFIG.Cards.documentClass = AriaCards;
 
     // Create a namespace within the game global
     game.aria = {
@@ -83,6 +88,8 @@ Hooks.once("init", async function () {
         label: "ARIA.SheetClassLoot"
     });
 
+    DocumentSheetConfig.registerSheet(Cards, "core", AriaPlayerHand, { label: "Aria Player Hand", types: ["hand"], makeDefault: true });
+    
     console.info("Aria : New sheets registered");
     
 
@@ -175,3 +182,41 @@ Hooks.once("ready", function() {
 });
 
 Hooks.on("renderChatMessage", (app, html, data) => {AriaChat.sortCustomAgeChatCards(app, html, data)});
+
+Hooks.on('updateActor', (actor, change, options, userId) => {
+  //updating playerList with users character up-to-date data
+  ui.players.render(true);
+
+  if (actor.type === "character") {
+
+    let items = actor.items;
+    let caps = items.filter(item => item.type === "competence").sort(function (a, b) {
+        return a.name.localeCompare(b.name);
+      });
+    let caps_spe = caps.filter(item => item.system.special === true);
+    let caps_magie = caps.filter(item => item.name === "Modélisation");
+    if(caps_magie.length > 0)
+    {
+        let hand = actor.getDefaultHand()
+        //If the update includes permissions, sync them to the hand
+        if (hand && change.ownership && game.userId === userId) {
+            //DO NOT PUT ANYTHING ELSE IN THIS UPDATE! diff:false, recursive:false can easily nuke stuff
+            hand.update({ ownership: actor.getCardOwnership() }, { diff: false, recursive: false })
+        }
+
+        let deck = actor.getDefaultDeck()
+        //If the update includes permissions, sync them to the deck
+        if (deck && change.ownership && game.userId === userId) {
+            //DO NOT PUT ANYTHING ELSE IN THIS UPDATE! diff:false, recursive:false can easily nuke stuff
+            deck.update({ ownership: actor.getCardOwnership() }, { diff: false, recursive: false })
+        }
+
+        let discard = actor.getDefaultDiscard()
+        //If the update includes permissions, sync them to the hand
+        if (discard && change.ownership && game.userId === userId) {
+            //DO NOT PUT ANYTHING ELSE IN THIS UPDATE! diff:false, recursive:false can easily nuke stuff
+            discard.update({ ownership: actor.getCardOwnership() }, { diff: false, recursive: false })
+        }
+    }
+  }
+});

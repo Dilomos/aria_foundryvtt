@@ -5,18 +5,26 @@
             <img src="{{actor.img}}" title="{{actor.name}}"/>
             <div class="flexcol">
                 <div>
-                    <h2>Jet = 
+                    <h2 class="dice-title-card">Jet = 
                     {{#if isSuccess}}
                         {{#if isCritical}} 
-                            <span class="success critical">{{result}} : Critique !!</span>
+                            {{#if isPerfect}} 
+                                <span class="success critical">{{result}} : Réussite totale !!!</span>
+                            {{else}}
+                                 <span class="success critical">{{result}} : Réussite critique !</span>
+                            {{/if}}
                         {{else}}
-                            <span class="success">{{result}} : Succès !</span>
+                            <span class="success">{{result}} : Réussite.</span>
                         {{/if}}
                     {{else}}
                         {{#if isFumble}}
-                            <span class="failure fumble">{{result}} : Critique !!</span>
+                            {{#if isTotalFumble}}
+                                <span class="failure fumble">{{result}} : Echec total !!!</span>
+                            {{else}}
+                                <span class="failure fumble">{{result}} : Echec critique !</span>
+                            {{/if}}
                         {{else}}
-                            <span class="failure">{{result}} : Echec...</span>
+                            <span class="failure">{{result}} : Echec.</span>
                         {{/if}}
                     {{/if}}   
                     </h2>

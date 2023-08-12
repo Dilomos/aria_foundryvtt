@@ -120,6 +120,18 @@ export const registerHandlebarsHelpers = function () {
         return equipedWeapons;
     });
 
+    Handlebars.registerHelper('useMagic', function (actor) {
+
+        let items = actor.items;
+        let caps = items.filter(item => item.type === "competence").sort(function (a, b) {
+            return a.name.localeCompare(b.name);
+          });
+        let caps_spe = caps.filter(item => item.system.special === true);
+        let caps_magie = caps.filter(item => item.name === "Modélisation");
+
+        return caps_magie.length > 0;
+    });
+
     Handlebars.registerHelper('isWeapon', function (item) {
         if( item.system.properties.weapon === true ||  item.system.subtype == "melee" ||  item.system.subtype == "ranged")
             return true;
@@ -248,4 +260,21 @@ export const registerHandlebarsHelpers = function () {
         return items.filter(i => i.type === type).map(i => i.system.key).includes(key);
     });
 
+    Handlebars.registerHelper('ifequal', function (a, b, options) {
+        if (a == b) { return options.fn(this); }
+        return options.inverse(this);
+    });
+
+
+    Handlebars.registerHelper('isActorHand', function (actor, handId) {
+        return actor.getDefaultHand().id == handId;
+    });
+
+    Handlebars.registerHelper('isActorDeck', function (actor, handId) {
+        return actor.getDefaultDeck().id == handId;
+    });
+
+    Handlebars.registerHelper('isActorDiscard', function (actor, handId) {
+        return actor.getDefaultDiscard().id == handId;
+    });
 }

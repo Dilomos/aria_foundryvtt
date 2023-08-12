@@ -619,6 +619,11 @@ strong {
   font-weight: bold;
 }
 
+.chat-card .card-header .dice-title-card {
+  font-size: 1.2em;
+  border-bottom: 0;
+}
+
 .chat-card .card-header .critical {
   color: green;
   font-weight: bold;
@@ -2096,6 +2101,14 @@ strong {
   vertical-align: middle;
   margin-top: -10px;
   padding: 0;
+}
+
+.aria.actor .window-content > form .wrap .carte_magie {
+  border: 0;
+  width: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
 }
 
 .aria.actor .window-content > form .wrap .icon_d100 {

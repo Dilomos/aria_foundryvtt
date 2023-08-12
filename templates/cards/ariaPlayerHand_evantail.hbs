@@ -1,0 +1,39 @@
+<form class="{{cssClass}}" autocomplete="off">
+	<div class="flexrow">
+		<h2 class="areaTitles">
+			<span class="card-control rollable" type="button" title="Pioche"
+				data-action="drawCard">
+                Piocher une Carte
+				<i class="fas fa-plus"></i>
+			</span>
+		</h2>
+
+	</div>
+	<div id="handedCards">
+
+
+		<ol class="cards ariaCards">
+			{{#each cards as |card|}}
+			<li class="card flexrow"
+				data-card-id="{{card.id}}">
+				<img class="card-face" src="{{card.img}}" alt="{{card.name}}" height="48">
+
+				<div class="aria-card-controls flexcol">
+					<a class="card-control aria-card-controls-button" title="Jouer" data-action="play">
+						<i class="fas fa-play-circle" style="color:white"></i>
+					</a>
+					<a class="card-control aria-card-controls-button" title="Défausser"
+						data-action="discard">
+						<i class="fas fa-inbox" style="color:white"></i>
+					</a>
+				</div>
+			</li>
+			{{/each}}
+
+
+		</ol>
+
+	</div>
+	<!-- Sheet Footer -->
+
+</form>

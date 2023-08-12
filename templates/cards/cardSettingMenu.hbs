@@ -1,0 +1,67 @@
+<form>
+
+    <div class="flexrow">
+
+        <div>
+            <h2 class="areaTitles">Paquets des Personnages</h2>
+
+            <div class="characters-list">
+                <div class="flexrow">
+                    <div class="flexcol card-setting-col card-setting-col-label">Personnages</div>
+                    <div class="flexcol card-setting-col card-setting-col-label">Main</div>
+                    <div class="flexcol card-setting-col card-setting-col-label">Deck</div>
+                    <div class="flexcol card-setting-col card-setting-col-label">Défausse</div>
+                </div>
+
+                {{#each decksByActorID as |actorDeck index|}}
+                <div class="formFields flexrow">
+                    <div class="flexcol card-setting-col"><label class="selectCardsLabel" >{{actorDeck.name}}</label></div>
+
+                    <div class="flexcol card-setting-col">
+                    <select name="handsByActorID.{{actorDeck.id}}" data-type="String"
+                        class="selectCards selectActorHand formFields">
+                        {{#each ../deckList as |deck index|}}
+                        {{#ifequal deck.type "hand"}}
+                        <option value="{{deck.id}}" {{#if (isActorHand actorDeck deck.id) }}selected {{/if}}>
+                            {{deck.name}}
+                        </option>
+                        {{/ifequal}}
+                        {{/each}}
+                    </select></div>
+
+                    <div class="flexcol card-setting-col">
+                    <select name="decksByActorID.{{actorDeck.id}}" data-type="String"
+                        class="selectCards selectActorDeck formFields">
+                        {{#each ../deckList as |deck index|}}
+                        {{#ifequal deck.type "deck"}}
+                        <option value="{{deck.id}}" {{#if (isActorDeck actorDeck deck.id) }}selected {{/if}}>
+                            {{deck.name}}
+                        </option>
+                        {{/ifequal}}
+                        {{/each}}
+                    </select></div>
+
+                    <div class="flexcol card-setting-col">
+                    <select name="discardsByActorID.{{actorDeck.id}}" data-type="String"
+                        class="selectCards selectActorDiscard formFields">
+                        {{#each ../deckList as |deck index|}}
+                        {{#ifequal deck.type "pile"}}
+                        <option value="{{deck.id}}" {{#if (isActorDiscard actorDeck deck.id) }}selected {{/if}}>
+                            {{deck.name}}
+                        </option>
+                        {{/ifequal}}
+                        {{/each}}
+                    </select></div>
+
+                </div>
+                {{/each}}
+
+            </div>
+        </div>
+
+    </div>
+    <div class="footer flexrow">
+        <button type="submit" name="submit">Enregistrer</button>
+        <button type="cancel" name="cancel">Annuler</button>
+    </div>
+</form>

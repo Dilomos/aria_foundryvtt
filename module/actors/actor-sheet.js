@@ -129,6 +129,8 @@ export class AriaActorSheet extends ActorSheet {
         html.find('.item-delete').click(ev => {
             return this._onDeleteItem(ev);
         });
+
+        html.find('.carte_magie').click(this.onOpenMagicCards.bind(this));
     }
 
 /** @override */
@@ -580,6 +582,20 @@ async getData(options) {
                 return;
         }
     }
+
+
+        async onOpenMagicCards(event) {
+
+            if (!this.object.getDefaultHand()) {
+                await this.object.createDefaultCards();
+            }
+
+            let cardHand = this.object.getDefaultHand();
+            if (cardHand) {
+                cardHand.sheet.render(true);
+            }     
+        }
+
 
     /* -------------------------------------------- */
 

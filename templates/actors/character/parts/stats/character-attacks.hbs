@@ -1,5 +1,11 @@
 <div class="attrvertalign">
 
+    {{#if (useMagic actor)}}
+        <div class="flexcol">
+            <img class="carte_magie" src="/systems/aria/ui/cartesMagie.webp"/>
+        </div>
+    {{/if}}
+
      {{#if (isAriaTypeSetting "stars")}}  
     <div class="flexcol no-wrap">
         <div id="mental_icon" class="flex1 center">

@@ -2,10 +2,10 @@
   "id": "aria",
   "title": "Aria - GOR",
   "description": "<p>Système Foundry VTT pour Aria Game pf Roles le jeu de role de FibreTigre edité par Elder Craft.</p>",
-  "version": "2.10.1",
+  "version": "3.1.1",
   "compatibility": {
-    "minimum": "10",
-    "verified": "10.291"
+    "minimum": "11",
+    "verified": "11.306"
   },
   "authors": [
     {
@@ -20,14 +20,15 @@
     "module/hooks/hotbar-drop.js"
   ],
   "styles": [
-    "css/aria.css"
+    "css/aria.css",
+    "css/cards.css"
   ],
   "packs": [
     {
       "name": "cartesmagiquesdaria",
       "label": "Cartes magiques d'Aria",
       "system": "aria",
-      "path": "packs/cartes-magiques-daria.db",
+      "path": "packs/cartes-magiques-daria",
       "type": "Cards",
       "private": false,
       "flags": {}
@@ -36,7 +37,7 @@
       "name": "competences",
       "label": "Compétences",
       "system": "aria",
-      "path": "packs/competences.db",
+      "path": "packs/competences",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -45,7 +46,7 @@
       "name": "competencesspepretire",
       "label": "Compétences spéciales prétirés",
       "system": "aria",
-      "path": "packs/competencesspepretire.db",
+      "path": "packs/competencesspepretire",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -54,7 +55,7 @@
       "name": "competencesspeexception",
       "label": "Compétences spéciales exceptions",
       "system": "aria",
-      "path": "packs/competencesspeexception.db",
+      "path": "packs/competencesspeexception",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -63,7 +64,7 @@
       "name": "accessoires",
       "label": "Accessoires",
       "system": "aria",
-      "path": "packs/accessoires.db",
+      "path": "packs/accessoires",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -72,7 +73,7 @@
       "name": "arme",
       "label": "Armes",
       "system": "aria",
-      "path": "packs/armes.db",
+      "path": "packs/armes",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -81,7 +82,7 @@
       "name": "armesdist",
       "label": "Armes à distance",
       "system": "aria",
-      "path": "packs/armes_distance.db",
+      "path": "packs/armes_distance",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -90,7 +91,7 @@
       "name": "armure",
       "label": "Armures",
       "system": "aria",
-      "path": "packs/armures.db",
+      "path": "packs/armures",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -99,7 +100,7 @@
       "name": "vetement",
       "label": "Vêtements",
       "system": "aria",
-      "path": "packs/vetements.db",
+      "path": "packs/vetements",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -108,7 +109,7 @@
       "name": "nourriture",
       "label": "Nourriture",
       "system": "aria",
-      "path": "packs/nourritures.db",
+      "path": "packs/nourritures",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -117,7 +118,7 @@
       "name": "deplacement",
       "label": "Déplacements",
       "system": "aria",
-      "path": "packs/deplacements.db",
+      "path": "packs/deplacements",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -126,7 +127,7 @@
       "name": "monnaie",
       "label": "Monnaie",
       "system": "aria",
-      "path": "packs/monnaie.db",
+      "path": "packs/monnaie",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -135,7 +136,7 @@
       "name": "professions",
       "label": "Professions",
       "system": "aria",
-      "path": "packs/professions.db",
+      "path": "packs/professions",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -144,7 +145,7 @@
       "name": "professionsactualplay",
       "label": "Professions de l'Actual Play",
       "system": "aria",
-      "path": "packs/professionsactualplay.db",
+      "path": "packs/professionsactualplay",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -153,7 +154,7 @@
       "name": "professionsexceptions",
       "label": "Professions des personnages d'exception",
       "system": "aria",
-      "path": "packs/professionsexceptions.db",
+      "path": "packs/professionsexceptions",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -162,7 +163,7 @@
       "name": "origines",
       "label": "Origines",
       "system": "aria",
-      "path": "packs/origines.db",
+      "path": "packs/origines",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -171,7 +172,7 @@
       "name": "langues",
       "label": "Langues",
       "system": "aria",
-      "path": "packs/langues.db",
+      "path": "packs/langues",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -180,7 +181,7 @@
       "name": "competencesstars",
       "label": "Compétences Stars",
       "system": "aria",
-      "path": "packs/competencesstars.db",
+      "path": "packs/competencesstars",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -189,7 +190,7 @@
       "name": "competencesspepretirestars",
       "label": "Compétences spéciales prétirés Stars",
       "system": "aria",
-      "path": "packs/competencesspepretirestars.db",
+      "path": "packs/competencesspepretirestars",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -198,7 +199,7 @@
       "name": "competencescont",
       "label": "Compétences Contemporaines",
       "system": "aria",
-      "path": "packs/competencescont.db",
+      "path": "packs/competencescont",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -207,7 +208,7 @@
       "name": "objetscont",
       "label": "Objets Contemporains",
       "system": "aria",
-      "path": "packs/objetscont.db",
+      "path": "packs/objetscont",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -216,7 +217,7 @@
       "name": "objetsstars",
       "label": "Objets Stars",
       "system": "aria",
-      "path": "packs/objetsstars.db",
+      "path": "packs/objetsstars",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -225,7 +226,7 @@
       "name": "professionscont",
       "label": "Professions Contemporaines",
       "system": "aria",
-      "path": "packs/professionscont.db",
+      "path": "packs/professionscont",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -234,7 +235,7 @@
       "name": "professionsstars",
       "label": "Professions Stars",
       "system": "aria",
-      "path": "packs/professionsstars.db",
+      "path": "packs/professionsstars",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -243,7 +244,7 @@
       "name": "originescont",
       "label": "Origines Contemporaines",
       "system": "aria",
-      "path": "packs/originescont.db",
+      "path": "packs/originescont",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -252,7 +253,7 @@
       "name": "originesstars",
       "label": "Origines Stars",
       "system": "aria",
-      "path": "packs/originesstars.db",
+      "path": "packs/originesstars",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -261,7 +262,7 @@
       "name": "languescont",
       "label": "Langues Contemporaines",
       "system": "aria",
-      "path": "packs/languescont.db",
+      "path": "packs/languescont",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -270,7 +271,7 @@
       "name": "languesstars",
       "label": "Langues Stars",
       "system": "aria",
-      "path": "packs/languesstars.db",
+      "path": "packs/languesstars",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -296,6 +297,6 @@
   "primaryTokenAttribute": "attributes.hp",
   "url": "https://github.com/Dilomos/aria_foundryvtt",
   "manifest": "https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/system.json",
-  "download": "https://github.com/Dilomos/aria_foundryvtt/archive/v2.10.1.zip",
+  "download": "https://github.com/Dilomos/aria_foundryvtt/archive/v3.1.1.zip",
   "license": "licence.txt"
 }

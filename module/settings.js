@@ -1,3 +1,5 @@
+import cardsSettingMenu from './cards/cardSettingMenu.js';
+
 export const registerSystemSettings = function() {
 
     game.settings.register("aria", "ariaVersion", {
@@ -108,5 +110,32 @@ export const registerSystemSettings = function() {
     type: Boolean,
     requiresReload: true
 });
+
+
+    // the deck setting menu
+    game.settings.registerMenu("aria", "cardSetting", {
+      name: "Configuration des paquets de cartes de Magie",
+      label: "Configurer", // The text label used in the button
+      hint: "Configuration des paquets de cartes de Magie",
+      icon: "fas fa-bars",
+      title: "Configuration des paquets de cartes de Magie", // A Font Awesome icon used in the submenu button
+      type: cardsSettingMenu, // A FormApplication subclass
+      restricted: true // only GM can manage default decks
+  });
+
+    // the deck setting 
+    game.settings.register('aria', 'deckSetting', {
+      scope: 'world',
+      config: false,
+      type: Object,
+      default: {
+          decksByActorID: {},
+          handsByActorID: {},
+          discardsByActorID: {},
+          actorsByDeckID: {},
+          actorsByHandsID: {},
+          actorsByDiscardsID: {}
+      }
+  });
 
 };

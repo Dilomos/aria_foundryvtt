@@ -1,1 +1,1493 @@
-{"_id":"kPrdYbcgmg7xIj5J","name":"Cartes magiques d'Aria","type":"deck","description":"Deck contenant les 54 cartes de la noble magie d'Aria.","img":"systems/aria/ui/icons/deck/gray_back.png","data":{},"cards":[{"name":"As de Trèfle","faces":[{"name":"As de Trèfle","img":"systems/aria/ui/icons/deck/ace_of_clubs.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":14,"suit":"Trèfle","_id":"705EGOHDTjsQlJgZ","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nTrèfle : Matérialisation des éléments.","data":{},"face":0,"drawn":false,"sort":53,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"2 de Trèfle","faces":[{"name":"2 de Trèfle","img":"systems/aria/ui/icons/deck/2_of_clubs.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":2,"suit":"Trèfle","_id":"E6g5WT8yJTkqMxjF","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nTrèfle : Matérialisation des éléments.","data":{},"face":0,"drawn":false,"sort":41,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"3 de Trèfle","faces":[{"name":"3 de Trèfle","img":"systems/aria/ui/icons/deck/3_of_clubs.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":3,"suit":"Trèfle","_id":"SolBtRWDp1PvIqHp","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nTrèfle : Matérialisation des éléments.","data":{},"face":0,"drawn":false,"sort":42,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"4 de Trèfle","faces":[{"name":"4 de Trèfle","img":"systems/aria/ui/icons/deck/4_of_clubs.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":4,"suit":"Trèfle","_id":"SlPC428FksqndaZk","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nTrèfle : Matérialisation des éléments.","data":{},"face":0,"drawn":false,"sort":43,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"5 de Trèfle","faces":[{"name":"5 de Trèfle","img":"systems/aria/ui/icons/deck/5_of_clubs.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":5,"suit":"Trèfle","_id":"6JvUYrwdUoOUuKJ7","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nTrèfle : Matérialisation des éléments.","data":{},"face":0,"drawn":false,"sort":44,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"6 de Trèfle","faces":[{"name":"6 de Trèfle","img":"systems/aria/ui/icons/deck/6_of_clubs.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":6,"suit":"Trèfle","_id":"S5ZuDRZzah1BJPQy","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nTrèfle : Matérialisation des éléments.","data":{},"face":0,"drawn":false,"sort":45,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"7 de Trèfle","faces":[{"name":"7 de Trèfle","img":"systems/aria/ui/icons/deck/7_of_clubs.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":7,"suit":"Trèfle","_id":"h5VzQQDrgaxkSkkF","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nTrèfle : Matérialisation des éléments.","data":{},"face":0,"drawn":false,"sort":46,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"8 de Trèfle","faces":[{"name":"8 de Trèfle","img":"systems/aria/ui/icons/deck/8_of_clubs.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":8,"suit":"Trèfle","_id":"phCG80ACqwcJEE6T","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nTrèfle : Matérialisation des éléments.","data":{},"face":0,"drawn":false,"sort":47,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"9 de Trèfle","faces":[{"name":"9 de Trèfle","img":"systems/aria/ui/icons/deck/9_of_clubs.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":9,"suit":"Trèfle","_id":"AG8f8LWVuCAbYOTq","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nTrèfle : Matérialisation des éléments.","data":{},"face":0,"drawn":false,"sort":48,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"10 de Trèfle","faces":[{"name":"10 de Trèfle","img":"systems/aria/ui/icons/deck/10_of_clubs.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":10,"suit":"Trèfle","_id":"BCKQfWbJHrfv9JS7","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nTrèfle : Matérialisation des éléments.","data":{},"face":0,"drawn":false,"sort":49,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"Valet de Trèfle","faces":[{"name":"Valet de Trèfle","img":"systems/aria/ui/icons/deck/jack_of_clubs.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":11,"suit":"Trèfle","_id":"i7CTQ2gF5lubgB7l","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nTrèfle : Matérialisation des éléments.","data":{},"face":0,"drawn":false,"sort":50,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"Dame de Trèfle","faces":[{"name":"Dame de Trèfle","img":"systems/aria/ui/icons/deck/queen_of_clubs.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":12,"suit":"Trèfle","_id":"U6vmEInWldGRXZWb","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nTrèfle : Matérialisation des éléments.","data":{},"face":0,"drawn":false,"sort":51,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"Roi de Trèfle","faces":[{"name":"Roi de Trèfle","img":"systems/aria/ui/icons/deck/king_of_clubs.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":13,"suit":"Trèfle","_id":"nItqBBfKJysk6for","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nTrèfle : Matérialisation des éléments.","data":{},"face":0,"drawn":false,"sort":52,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"As de Pique","faces":[{"name":"As de Pique","img":"systems/aria/ui/icons/deck/ace_of_spades.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":14,"suit":"Pique","_id":"FU2pXIFOHAIZESIX","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nPique : Affectation du monde spirituel.","data":{},"face":0,"drawn":false,"sort":40,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"2 de Pique","faces":[{"name":"2 de Pique","img":"systems/aria/ui/icons/deck/2_of_spades.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":2,"suit":"Pique","_id":"2dTmA7FTQOXmIPgj","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nPique : Affectation du monde spirituel.","data":{},"face":0,"drawn":false,"sort":28,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"3 de Pique","faces":[{"name":"3 de Pique","img":"systems/aria/ui/icons/deck/3_of_spades.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":3,"suit":"Pique","_id":"OQdvDz7voLGD4eLw","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nPique : Affectation du monde spirituel.","data":{},"face":0,"drawn":false,"sort":29,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"4 de Pique","faces":[{"name":"4 de Pique","img":"systems/aria/ui/icons/deck/4_of_spades.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":4,"suit":"Pique","_id":"IKifow12O6ZcwT9V","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nPique : Affectation du monde spirituel.","data":{},"face":0,"drawn":false,"sort":30,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"5 de Pique","faces":[{"name":"5 de Pique","img":"systems/aria/ui/icons/deck/5_of_spades.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":5,"suit":"Pique","_id":"EBNIeUcCoFc43mmn","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nPique : Affectation du monde spirituel.","data":{},"face":0,"drawn":false,"sort":31,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"6 de Pique","faces":[{"name":"6 de Pique","img":"systems/aria/ui/icons/deck/6_of_spades.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":6,"suit":"Pique","_id":"41cx6za79JRrQ85C","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nPique : Affectation du monde spirituel.","data":{},"face":0,"drawn":false,"sort":32,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"7 de Pique","faces":[{"name":"7 de Pique","img":"systems/aria/ui/icons/deck/7_of_spades.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":7,"suit":"Pique","_id":"KU0SLzD8i6REiDE2","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nPique : Affectation du monde spirituel.","data":{},"face":0,"drawn":false,"sort":33,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"8 de Pique","faces":[{"name":"8 de Pique","img":"systems/aria/ui/icons/deck/8_of_spades.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":8,"suit":"Pique","_id":"1SeRNHBjPxr6DnsN","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nPique : Affectation du monde spirituel.","data":{},"face":0,"drawn":false,"sort":34,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"9 de Pique","faces":[{"name":"9 de Pique","img":"systems/aria/ui/icons/deck/9_of_spades.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":9,"suit":"Pique","_id":"Ztyw9aQB2o0Bxx5F","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nPique : Affectation du monde spirituel.","data":{},"face":0,"drawn":false,"sort":35,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"10 de Pique","faces":[{"name":"10 de Pique","img":"systems/aria/ui/icons/deck/10_of_spades.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":10,"suit":"Pique","_id":"n42OKTEFCGtPoOyf","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nPique : Affectation du monde spirituel.","data":{},"face":0,"drawn":false,"sort":36,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"Valet de Pique","faces":[{"name":"Valet de Pique","img":"systems/aria/ui/icons/deck/jack_of_spades.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":11,"suit":"Pique","_id":"4znbA5HECLthw60p","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nPique : Affectation du monde spirituel.","data":{},"face":0,"drawn":false,"sort":37,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"Dame de Pique","faces":[{"name":"Dame de Pique","img":"systems/aria/ui/icons/deck/queen_of_spades.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":12,"suit":"Pique","_id":"cV88EO9erKu7B1pf","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nPique : Affectation du monde spirituel.","data":{},"face":0,"drawn":false,"sort":38,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"Roi de Pique","faces":[{"name":"Roi de Pique","img":"systems/aria/ui/icons/deck/king_of_spades.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":13,"suit":"Pique","_id":"JVUv6iOybeutfXXO","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nPique : Affectation du monde spirituel.","data":{},"face":0,"drawn":false,"sort":39,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"As de Carreau","faces":[{"name":"As de Carreau","img":"systems/aria/ui/icons/deck/ace_of_diamonds.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":14,"suit":"Carreau","_id":"MYc2nvlIMEYnELyc","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nCarreau : Manipulation de la matière.","data":{},"face":0,"drawn":false,"sort":12,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"2 de Carreau","faces":[{"name":"2 de Carreau","img":"systems/aria/ui/icons/deck/2_of_diamonds.png","text":"Carte magique renfermant un pouvoir de la magie d'Aria.\nCarreau : Manipulation de la matière."}],"width":2,"height":3,"rotation":0,"type":"base","value":2,"suit":"Carreau","_id":"LXdYZpRxYxSHyETz","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nCarreau : Manipulation de la matière.","data":{},"face":0,"drawn":false,"sort":0,"flags":{"core":{"sheetClass":"core.CardConfig"}},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"3 de Carreau","faces":[{"name":"3 de Carreau","img":"systems/aria/ui/icons/deck/3_of_diamonds.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":3,"suit":"Carreau","_id":"2KMGziPcLESEjrj0","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nCarreau : Manipulation de la matière.","data":{},"face":0,"drawn":false,"sort":1,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"4 de Carreau","faces":[{"name":"4 de Carreau","img":"systems/aria/ui/icons/deck/4_of_diamonds.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":4,"suit":"Carreau","_id":"uY2VuWwjs5WoUGHr","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nCarreau : Manipulation de la matière.","data":{},"face":0,"drawn":false,"sort":2,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"5 de Carreau","faces":[{"name":"5 de Carreau","img":"systems/aria/ui/icons/deck/5_of_diamonds.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":5,"suit":"Carreau","_id":"XDMEIvsfFzanXGyN","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nCarreau : Manipulation de la matière.","data":{},"face":0,"drawn":false,"sort":3,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"6 de Carreau","faces":[{"name":"6 de Carreau","img":"systems/aria/ui/icons/deck/6_of_diamonds.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":6,"suit":"Carreau","_id":"TGwhovaKNV8dGdBn","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nCarreau : Manipulation de la matière.","data":{},"face":0,"drawn":false,"sort":4,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"7 de Carreau","faces":[{"name":"7 de Carreau","img":"systems/aria/ui/icons/deck/7_of_diamonds.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":7,"suit":"Carreau","_id":"XVJKjXeU3aQCe7CU","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nCarreau : Manipulation de la matière.","data":{},"face":0,"drawn":false,"sort":5,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"8 de Carreau","faces":[{"name":"8 de Carreau","img":"systems/aria/ui/icons/deck/8_of_diamonds.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":8,"suit":"Carreau","_id":"ZfVNrQPkdMEcePFX","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nCarreau : Manipulation de la matière.","data":{},"face":0,"drawn":false,"sort":6,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"9 de Carreau","faces":[{"name":"9 de Carreau","img":"systems/aria/ui/icons/deck/9_of_diamonds.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":9,"suit":"Carreau","_id":"Og3tr6XxNAx3YjFu","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nCarreau : Manipulation de la matière.","data":{},"face":0,"drawn":false,"sort":7,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"10 de Carreau","faces":[{"name":"10 de Carreau","img":"systems/aria/ui/icons/deck/10_of_diamonds.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":10,"suit":"Carreau","_id":"pbk8o7YkEDHaAiAw","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nCarreau : Manipulation de la matière.","data":{},"face":0,"drawn":false,"sort":8,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"Valet de Carreau","faces":[{"name":"Valet de Carreau","img":"systems/aria/ui/icons/deck/jack_of_diamonds.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":11,"suit":"Carreau","_id":"eOln7IwgqkJlhsMI","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nCarreau : Manipulation de la matière.","data":{},"face":0,"drawn":false,"sort":9,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"Dame de Carreau","faces":[{"name":"Dame de Carreau","img":"systems/aria/ui/icons/deck/queen_of_diamonds.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":12,"suit":"Carreau","_id":"nsAVQirqpt5PR7T8","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nCarreau : Manipulation de la matière.","data":{},"face":0,"drawn":false,"sort":10,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"Roi de Carreau","faces":[{"name":"Roi de Carreau","img":"systems/aria/ui/icons/deck/king_of_diamonds.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":13,"suit":"Carreau","_id":"sn0Ch0XwuQhR4mRr","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nCarreau : Manipulation de la matière.","data":{},"face":0,"drawn":false,"sort":11,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"As de Cœur","faces":[{"name":"As de Cœur","img":"systems/aria/ui/icons/deck/ace_of_hearts.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":14,"suit":"Cœur","_id":"68Rszzur93WTieOf","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nCœur : Affectation des sentiments.","data":{},"face":0,"drawn":false,"sort":25,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"2 de Cœur","faces":[{"name":"2 de Cœur","img":"systems/aria/ui/icons/deck/2_of_hearts.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":2,"suit":"Cœur","_id":"M2TA4WR2PAKobvo6","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nCœur : Affectation des sentiments.","data":{},"face":0,"drawn":false,"sort":13,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"3 de Cœur","faces":[{"name":"3 de Cœur","img":"systems/aria/ui/icons/deck/3_of_hearts.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":3,"suit":"Cœur","_id":"8kTcV9JqinktNKiC","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nCœur : Affectation des sentiments.","data":{},"face":0,"drawn":false,"sort":14,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"4 de Cœur","faces":[{"name":"4 de Cœur","img":"systems/aria/ui/icons/deck/4_of_hearts.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":4,"suit":"Cœur","_id":"HdBoqlcAqZicyneI","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nCœur : Affectation des sentiments.","data":{},"face":0,"drawn":false,"sort":15,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"5 de Cœur","faces":[{"name":"5 de Cœur","img":"systems/aria/ui/icons/deck/5_of_hearts.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":5,"suit":"Cœur","_id":"56ObPoaoIByYcurT","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nCœur : Affectation des sentiments.","data":{},"face":0,"drawn":false,"sort":16,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"6 de Cœur","faces":[{"name":"6 de Cœur","img":"systems/aria/ui/icons/deck/6_of_hearts.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":6,"suit":"Cœur","_id":"MUfzk0VzbSbRudRa","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nCœur : Affectation des sentiments.","data":{},"face":0,"drawn":false,"sort":17,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"7 de Cœur","faces":[{"name":"7 de Cœur","img":"systems/aria/ui/icons/deck/7_of_hearts.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":7,"suit":"Cœur","_id":"WfuGxPchPvcmCa9n","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nCœur : Affectation des sentiments.","data":{},"face":0,"drawn":false,"sort":18,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"8 de Cœur","faces":[{"name":"8 de Cœur","img":"systems/aria/ui/icons/deck/8_of_hearts.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":8,"suit":"Cœur","_id":"5z7Yqt2rZaBNAjGF","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nCœur : Affectation des sentiments.","data":{},"face":0,"drawn":false,"sort":19,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"9 de Cœur","faces":[{"name":"9 de Cœur","img":"systems/aria/ui/icons/deck/9_of_hearts.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":9,"suit":"Cœur","_id":"s6KscB2FMiG70le6","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nCœur : Affectation des sentiments.","data":{},"face":0,"drawn":false,"sort":20,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"10 de Cœur","faces":[{"name":"10 de Cœur","img":"systems/aria/ui/icons/deck/10_of_hearts.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":10,"suit":"Cœur","_id":"2GgwzY1oXtGn5sS5","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nCœur : Affectation des sentiments.","data":{},"face":0,"drawn":false,"sort":21,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"Valet de Cœur","faces":[{"name":"Valet de Cœur","img":"systems/aria/ui/icons/deck/jack_of_hearts.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":11,"suit":"Cœur","_id":"BoG7FpiM5ExA9FPT","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nCœur : Affectation des sentiments.","data":{},"face":0,"drawn":false,"sort":22,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"Dame de Cœur","faces":[{"name":"Dame de Cœur","img":"systems/aria/ui/icons/deck/queen_of_hearts.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":12,"suit":"Cœur","_id":"zH3jKtwLbEMF0SCX","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nCœur : Affectation des sentiments.","data":{},"face":0,"drawn":false,"sort":23,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"name":"Roi de Cœur","faces":[{"name":"Roi de Cœur","img":"systems/aria/ui/icons/deck/king_of_hearts.png","text":""}],"width":2,"height":3,"rotation":0,"type":"base","value":13,"suit":"Cœur","_id":"GvlhqAeMMECpsX7z","description":"Carte magique renfermant un pouvoir de la magie d'Aria.\nCœur : Affectation des sentiments.","data":{},"face":0,"drawn":false,"sort":24,"flags":{},"back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"origin":"kPrdYbcgmg7xIj5J"},{"_id":"9tVlpuvYH60wsCrD","name":"Joker Rouge","description":"Carte magique renfermant un pouvoir de la magie d'Aria.","type":"base","data":{},"suit":"Joker","back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"faces":[{"name":"Joker Rouge","img":"systems/aria/ui/icons/deck/red_joker.png","text":""}],"face":0,"drawn":false,"origin":"kPrdYbcgmg7xIj5J","rotation":0,"sort":26,"flags":{},"value":15,"width":2,"height":3},{"_id":"SlX53lBzopBSgvjn","name":"Joker Noir","description":"Carte magique renfermant un pouvoir de la magie d'Aria.","type":"base","data":{},"suit":"Joker","back":{"name":"Carte magique d'Aria","text":"","img":"systems/aria/ui/icons/deck/gray_back.png"},"faces":[{"name":"Joker Noir","img":"systems/aria/ui/icons/deck/black_joker.png","text":""}],"face":0,"drawn":false,"origin":"kPrdYbcgmg7xIj5J","rotation":0,"sort":27,"flags":{},"value":15,"width":2,"height":3}],"width":2,"height":3,"rotation":0,"displayCount":true,"folder":null,"sort":0,"permission":{"default":0,"G2KmmW2oq5ORUslr":3},"flags":{"exportSource":{"world":"testworld","system":"dnd5e","coreVersion":"9.222","systemVersion":"1.4.3"},"core":{"sourceId":"Cards.zsl4oGDvSE2e3qr4"}}}
+{
+    "_id": "kPrdYbcgmg7xIj5J",
+    "name": "Cartes magiques d'Aria",
+    "type": "deck",
+    "description": "Deck contenant les 54 cartes de la noble magie d'Aria.",
+    "img": "systems/aria/ui/icons/deck/gray_back.png",
+    "data": {},
+    "cards": [{
+            "name": "As de Trèfle",
+            "faces": [{
+                    "name": "As de Trèfle",
+                    "img": "systems/aria/ui/icons/deck/ace_of_clubs.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 14,
+            "suit": "Trèfle",
+            "_id": "705EGOHDTjsQlJgZ",
+            "description": "Matérialisation des éléments\nSoulever un vent capable de devaster une capitale.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 53,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "2 de Trèfle",
+            "faces": [{
+                    "name": "2 de Trèfle",
+                    "img": "systems/aria/ui/icons/deck/2_of_clubs.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 2,
+            "suit": "Trèfle",
+            "_id": "E6g5WT8yJTkqMxjF",
+            "description": "Matérialisation des éléments\nAllumer une bougie.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 41,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "3 de Trèfle",
+            "faces": [{
+                    "name": "3 de Trèfle",
+                    "img": "systems/aria/ui/icons/deck/3_of_clubs.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 3,
+            "suit": "Trèfle",
+            "_id": "SolBtRWDp1PvIqHp",
+            "description": "Matérialisation des éléments\nRemplir une gourde d'eau.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 42,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "4 de Trèfle",
+            "faces": [{
+                    "name": "4 de Trèfle",
+                    "img": "systems/aria/ui/icons/deck/4_of_clubs.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 4,
+            "suit": "Trèfle",
+            "_id": "SlPC428FksqndaZk",
+            "description": "Matérialisation des éléments\nRemplir une gourde d'eau.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 43,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "5 de Trèfle",
+            "faces": [{
+                    "name": "5 de Trèfle",
+                    "img": "systems/aria/ui/icons/deck/5_of_clubs.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 5,
+            "suit": "Trèfle",
+            "_id": "6JvUYrwdUoOUuKJ7",
+            "description": "Matérialisation des éléments\nRemplir une gourde d'eau.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 44,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "6 de Trèfle",
+            "faces": [{
+                    "name": "6 de Trèfle",
+                    "img": "systems/aria/ui/icons/deck/6_of_clubs.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 6,
+            "suit": "Trèfle",
+            "_id": "S5ZuDRZzah1BJPQy",
+            "description": "Matérialisation des éléments\nRemplir une gourde d'eau.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 45,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "7 de Trèfle",
+            "faces": [{
+                    "name": "7 de Trèfle",
+                    "img": "systems/aria/ui/icons/deck/7_of_clubs.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 7,
+            "suit": "Trèfle",
+            "_id": "h5VzQQDrgaxkSkkF",
+            "description": "Matérialisation des éléments\nFaire se lever un vent capable de pousser un navire.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 46,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "8 de Trèfle",
+            "faces": [{
+                    "name": "8 de Trèfle",
+                    "img": "systems/aria/ui/icons/deck/8_of_clubs.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 8,
+            "suit": "Trèfle",
+            "_id": "phCG80ACqwcJEE6T",
+            "description": "Matérialisation des éléments\nFaire se lever un vent capable de pousser un navire.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 47,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "9 de Trèfle",
+            "faces": [{
+                    "name": "9 de Trèfle",
+                    "img": "systems/aria/ui/icons/deck/9_of_clubs.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 9,
+            "suit": "Trèfle",
+            "_id": "AG8f8LWVuCAbYOTq",
+            "description": "Matérialisation des éléments\nEnvoyer une boule de feu sur un adversaire.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 48,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "10 de Trèfle",
+            "faces": [{
+                    "name": "10 de Trèfle",
+                    "img": "systems/aria/ui/icons/deck/10_of_clubs.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 10,
+            "suit": "Trèfle",
+            "_id": "BCKQfWbJHrfv9JS7",
+            "description": "Matérialisation des éléments\nEnvoyer une boule de feu sur un adversaire.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 49,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "Valet de Trèfle",
+            "faces": [{
+                    "name": "Valet de Trèfle",
+                    "img": "systems/aria/ui/icons/deck/jack_of_clubs.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 11,
+            "suit": "Trèfle",
+            "_id": "i7CTQ2gF5lubgB7l",
+            "description": "Matérialisation des éléments\nManipuler une colonne d'eau issue de la mer pendant quelques minutes.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 50,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "Dame de Trèfle",
+            "faces": [{
+                    "name": "Dame de Trèfle",
+                    "img": "systems/aria/ui/icons/deck/queen_of_clubs.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 12,
+            "suit": "Trèfle",
+            "_id": "U6vmEInWldGRXZWb",
+            "description": "Matérialisation des éléments\nAffecter la météo pour que les récoltes de l'année soit abondantes.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 51,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "Roi de Trèfle",
+            "faces": [{
+                    "name": "Roi de Trèfle",
+                    "img": "systems/aria/ui/icons/deck/king_of_clubs.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 13,
+            "suit": "Trèfle",
+            "_id": "nItqBBfKJysk6for",
+            "description": "Matérialisation des éléments\nAffecter la météo pour que les récoltes de l'année soit abondantes.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 52,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "As de Pique",
+            "faces": [{
+                    "name": "As de Pique",
+                    "img": "systems/aria/ui/icons/deck/ace_of_spades.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 14,
+            "suit": "Pique",
+            "_id": "FU2pXIFOHAIZESIX",
+            "description": "Affectation du monde spirituel\nAnimer une armée d'une centaine de squelettes sur un champ de bataille.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 40,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "2 de Pique",
+            "faces": [{
+                    "name": "2 de Pique",
+                    "img": "systems/aria/ui/icons/deck/2_of_spades.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 2,
+            "suit": "Pique",
+            "_id": "2dTmA7FTQOXmIPgj",
+            "description": "Affectation du monde spirituel\nTrouver la direction d'un cimetière proche.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 28,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "3 de Pique",
+            "faces": [{
+                    "name": "3 de Pique",
+                    "img": "systems/aria/ui/icons/deck/3_of_spades.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 3,
+            "suit": "Pique",
+            "_id": "OQdvDz7voLGD4eLw",
+            "description": "Affectation du monde spirituel\nFaire fuir un mauvais esprit faible.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 29,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "4 de Pique",
+            "faces": [{
+                    "name": "4 de Pique",
+                    "img": "systems/aria/ui/icons/deck/4_of_spades.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 4,
+            "suit": "Pique",
+            "_id": "IKifow12O6ZcwT9V",
+            "description": "Affectation du monde spirituel\nFaire fuir un mauvais esprit faible.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 30,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "5 de Pique",
+            "faces": [{
+                    "name": "5 de Pique",
+                    "img": "systems/aria/ui/icons/deck/5_of_spades.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 5,
+            "suit": "Pique",
+            "_id": "EBNIeUcCoFc43mmn",
+            "description": "Affectation du monde spirituel\nFaire fuir un mauvais esprit faible.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 31,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "6 de Pique",
+            "faces": [{
+                    "name": "6 de Pique",
+                    "img": "systems/aria/ui/icons/deck/6_of_spades.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 6,
+            "suit": "Pique",
+            "_id": "41cx6za79JRrQ85C",
+            "description": "Affectation du monde spirituel\nFaire fuir un mauvais esprit faible.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 32,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "7 de Pique",
+            "faces": [{
+                    "name": "7 de Pique",
+                    "img": "systems/aria/ui/icons/deck/7_of_spades.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 7,
+            "suit": "Pique",
+            "_id": "KU0SLzD8i6REiDE2",
+            "description": "Affectation du monde spirituel\nCommuniquer avec un esprit défunt, sur sa tombe.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 33,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "8 de Pique",
+            "faces": [{
+                    "name": "8 de Pique",
+                    "img": "systems/aria/ui/icons/deck/8_of_spades.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 8,
+            "suit": "Pique",
+            "_id": "1SeRNHBjPxr6DnsN",
+            "description": "Affectation du monde spirituel\nCommuniquer avec un esprit défunt, sur sa tombe.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 34,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "9 de Pique",
+            "faces": [{
+                    "name": "9 de Pique",
+                    "img": "systems/aria/ui/icons/deck/9_of_spades.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 9,
+            "suit": "Pique",
+            "_id": "Ztyw9aQB2o0Bxx5F",
+            "description": "Affectation du monde spirituel\nRevivre les instants marquants d'un lieu abandonné.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 35,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "10 de Pique",
+            "faces": [{
+                    "name": "10 de Pique",
+                    "img": "systems/aria/ui/icons/deck/10_of_spades.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 10,
+            "suit": "Pique",
+            "_id": "n42OKTEFCGtPoOyf",
+            "description": "Affectation du monde spirituel\nRevivre les instants marquants d'un lieu abandonné.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 36,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "Valet de Pique",
+            "faces": [{
+                    "name": "Valet de Pique",
+                    "img": "systems/aria/ui/icons/deck/jack_of_spades.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 11,
+            "suit": "Pique",
+            "_id": "4znbA5HECLthw60p",
+            "description": "Affectation du monde spirituel\nRéanimer un cadavre (fraîchement mort).",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 37,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "Dame de Pique",
+            "faces": [{
+                    "name": "Dame de Pique",
+                    "img": "systems/aria/ui/icons/deck/queen_of_spades.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 12,
+            "suit": "Pique",
+            "_id": "cV88EO9erKu7B1pf",
+            "description": "Affectation du monde spirituel\nConvoquer un esprit gardien puissant pour être guidé et protégé.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 38,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "Roi de Pique",
+            "faces": [{
+                    "name": "Roi de Pique",
+                    "img": "systems/aria/ui/icons/deck/king_of_spades.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 13,
+            "suit": "Pique",
+            "_id": "JVUv6iOybeutfXXO",
+            "description": "Affectation du monde spirituel\nConvoquer un esprit gardien puissant pour être guidé et protégé.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 39,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "As de Carreau",
+            "faces": [{
+                    "name": "As de Carreau",
+                    "img": "systems/aria/ui/icons/deck/ace_of_diamonds.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 14,
+            "suit": "Carreau",
+            "_id": "MYc2nvlIMEYnELyc",
+            "description": "Manipulation de la matière\nFaire tomber une météorite à un endroit précis.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 12,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "2 de Carreau",
+            "faces": [{
+                    "name": "2 de Carreau",
+                    "img": "systems/aria/ui/icons/deck/2_of_diamonds.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 2,
+            "suit": "Carreau",
+            "_id": "LXdYZpRxYxSHyETz",
+            "description": "Manipulation de la matière\nPousser un caillou.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 0,
+            "flags": {
+                "core": {
+                    "sheetClass": "core.CardConfig"
+                }
+            },
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "3 de Carreau",
+            "faces": [{
+                    "name": "3 de Carreau",
+                    "img": "systems/aria/ui/icons/deck/3_of_diamonds.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 3,
+            "suit": "Carreau",
+            "_id": "2KMGziPcLESEjrj0",
+            "description": "Manipulation de la matière\nFermer une porte à distance.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 1,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "4 de Carreau",
+            "faces": [{
+                    "name": "4 de Carreau",
+                    "img": "systems/aria/ui/icons/deck/4_of_diamonds.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 4,
+            "suit": "Carreau",
+            "_id": "uY2VuWwjs5WoUGHr",
+            "description": "Manipulation de la matière\nFermer une porte à distance.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 2,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "5 de Carreau",
+            "faces": [{
+                    "name": "5 de Carreau",
+                    "img": "systems/aria/ui/icons/deck/5_of_diamonds.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 5,
+            "suit": "Carreau",
+            "_id": "XDMEIvsfFzanXGyN",
+            "description": "Manipulation de la matière\nFermer une porte à distance.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 3,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "6 de Carreau",
+            "faces": [{
+                    "name": "6 de Carreau",
+                    "img": "systems/aria/ui/icons/deck/6_of_diamonds.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 6,
+            "suit": "Carreau",
+            "_id": "TGwhovaKNV8dGdBn",
+            "description": "Manipulation de la matière\nFermer une porte à distance.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 4,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "7 de Carreau",
+            "faces": [{
+                    "name": "7 de Carreau",
+                    "img": "systems/aria/ui/icons/deck/7_of_diamonds.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 7,
+            "suit": "Carreau",
+            "_id": "XVJKjXeU3aQCe7CU",
+            "description": "Manipulation de la matière\nRenverser une carriole.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 5,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "8 de Carreau",
+            "faces": [{
+                    "name": "8 de Carreau",
+                    "img": "systems/aria/ui/icons/deck/8_of_diamonds.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 8,
+            "suit": "Carreau",
+            "_id": "ZfVNrQPkdMEcePFX",
+            "description": "Manipulation de la matière\nRenverser une carriole.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 6,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "9 de Carreau",
+            "faces": [{
+                    "name": "9 de Carreau",
+                    "img": "systems/aria/ui/icons/deck/9_of_diamonds.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 9,
+            "suit": "Carreau",
+            "_id": "Og3tr6XxNAx3YjFu",
+            "description": "Manipulation de la matière\nFaire s'écrouler un mur.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 7,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "10 de Carreau",
+            "faces": [{
+                    "name": "10 de Carreau",
+                    "img": "systems/aria/ui/icons/deck/10_of_diamonds.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 10,
+            "suit": "Carreau",
+            "_id": "pbk8o7YkEDHaAiAw",
+            "description": "Manipulation de la matière\nFaire s'écrouler un mur.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 8,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "Valet de Carreau",
+            "faces": [{
+                    "name": "Valet de Carreau",
+                    "img": "systems/aria/ui/icons/deck/jack_of_diamonds.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 11,
+            "suit": "Carreau",
+            "_id": "eOln7IwgqkJlhsMI",
+            "description": "Manipulation de la matière\nFaire s'écrouler une maison.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 9,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "Dame de Carreau",
+            "faces": [{
+                    "name": "Dame de Carreau",
+                    "img": "systems/aria/ui/icons/deck/queen_of_diamonds.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 12,
+            "suit": "Carreau",
+            "_id": "nsAVQirqpt5PR7T8",
+            "description": "Manipulation de la matière\nSoulever lentement un galion englouti et le poser lentement sur la terre ferme.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 10,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "Roi de Carreau",
+            "faces": [{
+                    "name": "Roi de Carreau",
+                    "img": "systems/aria/ui/icons/deck/king_of_diamonds.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 13,
+            "suit": "Carreau",
+            "_id": "sn0Ch0XwuQhR4mRr",
+            "description": "Manipulation de la matière\nSoulever lentement un galion englouti et le poser lentement sur la terre ferme.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 11,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "As de Cœur",
+            "faces": [{
+                    "name": "As de Cœur",
+                    "img": "systems/aria/ui/icons/deck/ace_of_hearts.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 14,
+            "suit": "Cœur",
+            "_id": "68Rszzur93WTieOf",
+            "description": "Affectation des sentiments\nManipuler totalement l'esprit d'un roi.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 25,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "2 de Cœur",
+            "faces": [{
+                    "name": "2 de Cœur",
+                    "img": "systems/aria/ui/icons/deck/2_of_hearts.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 2,
+            "suit": "Cœur",
+            "_id": "M2TA4WR2PAKobvo6",
+            "description": "Affectation des sentiments\nAider à s'endormir.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 13,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "3 de Cœur",
+            "faces": [{
+                    "name": "3 de Cœur",
+                    "img": "systems/aria/ui/icons/deck/3_of_hearts.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 3,
+            "suit": "Cœur",
+            "_id": "8kTcV9JqinktNKiC",
+            "description": "Affectation des sentiments\nProvoquer une sensation de dégoût.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 14,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "4 de Cœur",
+            "faces": [{
+                    "name": "4 de Cœur",
+                    "img": "systems/aria/ui/icons/deck/4_of_hearts.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 4,
+            "suit": "Cœur",
+            "_id": "HdBoqlcAqZicyneI",
+            "description": "Affectation des sentiments\nProvoquer une sensation de dégoût.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 15,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "5 de Cœur",
+            "faces": [{
+                    "name": "5 de Cœur",
+                    "img": "systems/aria/ui/icons/deck/5_of_hearts.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 5,
+            "suit": "Cœur",
+            "_id": "56ObPoaoIByYcurT",
+            "description": "Affectation des sentiments\nProvoquer une sensation de dégoût.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 16,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "6 de Cœur",
+            "faces": [{
+                    "name": "6 de Cœur",
+                    "img": "systems/aria/ui/icons/deck/6_of_hearts.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 6,
+            "suit": "Cœur",
+            "_id": "MUfzk0VzbSbRudRa",
+            "description": "Affectation des sentiments\nProvoquer une sensation de dégoût.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 17,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "7 de Cœur",
+            "faces": [{
+                    "name": "7 de Cœur",
+                    "img": "systems/aria/ui/icons/deck/7_of_hearts.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 7,
+            "suit": "Cœur",
+            "_id": "WfuGxPchPvcmCa9n",
+            "description": "Affectation des sentiments\nSe faire apprécier d'un garde antipathique.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 18,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "8 de Cœur",
+            "faces": [{
+                    "name": "8 de Cœur",
+                    "img": "systems/aria/ui/icons/deck/8_of_hearts.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 8,
+            "suit": "Cœur",
+            "_id": "5z7Yqt2rZaBNAjGF",
+            "description": "Affectation des sentiments\nSe faire apprécier d'un garde antipathique.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 19,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "9 de Cœur",
+            "faces": [{
+                    "name": "9 de Cœur",
+                    "img": "systems/aria/ui/icons/deck/9_of_hearts.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 9,
+            "suit": "Cœur",
+            "_id": "s6KscB2FMiG70le6",
+            "description": "Affectation des sentiments\nProvoquer la peur.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 20,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "10 de Cœur",
+            "faces": [{
+                    "name": "10 de Cœur",
+                    "img": "systems/aria/ui/icons/deck/10_of_hearts.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 10,
+            "suit": "Cœur",
+            "_id": "2GgwzY1oXtGn5sS5",
+            "description": "Affectation des sentiments\nProvoquer la peur.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 21,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "Valet de Cœur",
+            "faces": [{
+                    "name": "Valet de Cœur",
+                    "img": "systems/aria/ui/icons/deck/jack_of_hearts.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 11,
+            "suit": "Cœur",
+            "_id": "BoG7FpiM5ExA9FPT",
+            "description": "Affectation des sentiments\nSubjuguer un petit groupe de gens.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 22,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "Dame de Cœur",
+            "faces": [{
+                    "name": "Dame de Cœur",
+                    "img": "systems/aria/ui/icons/deck/queen_of_hearts.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 12,
+            "suit": "Cœur",
+            "_id": "zH3jKtwLbEMF0SCX",
+            "description": "Affectation des sentiments\nDevenir invisible aux yeux de la population.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 23,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "name": "Roi de Cœur",
+            "faces": [{
+                    "name": "Roi de Cœur",
+                    "img": "systems/aria/ui/icons/deck/king_of_hearts.png",
+                    "text": ""
+                }
+            ],
+            "width": 2,
+            "height": 3,
+            "rotation": 0,
+            "type": "base",
+            "value": 13,
+            "suit": "Cœur",
+            "_id": "GvlhqAeMMECpsX7z",
+            "description": "Affectation des sentiments\nDevenir invisible aux yeux de la population.",
+            "data": {},
+            "face": 0,
+            "drawn": false,
+            "sort": 24,
+            "flags": {},
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "origin": "kPrdYbcgmg7xIj5J"
+        }, {
+            "_id": "9tVlpuvYH60wsCrD",
+            "name": "Joker Rouge",
+            "description": "Tout est possible !.",
+            "type": "base",
+            "data": {},
+            "suit": "Joker",
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "faces": [{
+                    "name": "Joker Rouge",
+                    "img": "systems/aria/ui/icons/deck/red_joker.png",
+                    "text": ""
+                }
+            ],
+            "face": 0,
+            "drawn": false,
+            "origin": "kPrdYbcgmg7xIj5J",
+            "rotation": 0,
+            "sort": 26,
+            "flags": {},
+            "value": 15,
+            "width": 2,
+            "height": 3
+        }, {
+            "_id": "SlX53lBzopBSgvjn",
+            "name": "Joker Noir",
+            "description": "Tout est possible !",
+            "type": "base",
+            "data": {},
+            "suit": "Joker",
+            "back": {
+                "name": "Carte magique d'Aria",
+                "text": "",
+                "img": "systems/aria/ui/icons/deck/gray_back.png"
+            },
+            "faces": [{
+                    "name": "Joker Noir",
+                    "img": "systems/aria/ui/icons/deck/black_joker.png",
+                    "text": ""
+                }
+            ],
+            "face": 0,
+            "drawn": false,
+            "origin": "kPrdYbcgmg7xIj5J",
+            "rotation": 0,
+            "sort": 27,
+            "flags": {},
+            "value": 15,
+            "width": 2,
+            "height": 3
+        }
+    ],
+    "width": 2,
+    "height": 3,
+    "rotation": 0,
+    "displayCount": true,
+    "folder": null,
+    "sort": 0,
+    "permission": {
+        "default": 0,
+        "G2KmmW2oq5ORUslr": 3
+    },
+    "flags": {
+        "exportSource": {
+            "world": "testworld",
+            "system": "dnd5e",
+            "coreVersion": "9.222",
+            "systemVersion": "1.4.3"
+        },
+        "core": {
+            "sourceId": "Cards.zsl4oGDvSE2e3qr4"
+        }
+    }
+}

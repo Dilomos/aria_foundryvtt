@@ -7,7 +7,9 @@ export class AriaSkillRoll {
         this._calcLabel = calcLabel;
         this._formula = "1d100";
         this._isCritical = false;
-        this._isFumble = false;
+        this._isPerfect = false;
+        this._isFumble = false;    
+        this._isTotalFumble = false;
         this._isSuccess = false;
         this._msgFlavor = "";
         this._cmpValue = cmpValue;
@@ -33,6 +35,9 @@ export class AriaSkillRoll {
         this._isSuccess = result <= this._cmpValue;
         this._isFumble = (result >= 96);
         this._isCritical = (result <= 5);
+        
+        this._isTotalFumble = (result == 100);
+        this._isPerfect = (result == 1);
     
         
 
@@ -44,6 +49,10 @@ export class AriaSkillRoll {
 
             isCritical: this._isCritical,
             isFumble: this._isFumble,
+
+            isPerfect: this._isPerfect,
+            isTotalFumble: this._isTotalFumble,
+
             isSuccess: this._isSuccess,
             result: result,
         };
