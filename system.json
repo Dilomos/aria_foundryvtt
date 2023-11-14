@@ -2,10 +2,10 @@
   "id": "aria",
   "title": "Aria - GOR",
   "description": "<p>Système Foundry VTT pour Aria Game pf Roles le jeu de role de FibreTigre edité par Elder Craft.</p>",
-  "version": "3.1.1",
+  "version": "3.2.1",
   "compatibility": {
     "minimum": "11",
-    "verified": "11.306"
+    "verified": "11.315"
   },
   "authors": [
     {
@@ -28,7 +28,7 @@
       "name": "cartesmagiquesdaria",
       "label": "Cartes magiques d'Aria",
       "system": "aria",
-      "path": "packs/cartes-magiques-daria",
+      "path": "packs/cartes-magiques-daria.db",
       "type": "Cards",
       "private": false,
       "flags": {}
@@ -37,7 +37,7 @@
       "name": "competences",
       "label": "Compétences",
       "system": "aria",
-      "path": "packs/competences",
+      "path": "packs/competences.db",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -46,7 +46,7 @@
       "name": "competencesspepretire",
       "label": "Compétences spéciales prétirés",
       "system": "aria",
-      "path": "packs/competencesspepretire",
+      "path": "packs/competencesspepretire.db",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -55,7 +55,7 @@
       "name": "competencesspeexception",
       "label": "Compétences spéciales exceptions",
       "system": "aria",
-      "path": "packs/competencesspeexception",
+      "path": "packs/competencesspeexception.db",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -64,7 +64,7 @@
       "name": "accessoires",
       "label": "Accessoires",
       "system": "aria",
-      "path": "packs/accessoires",
+      "path": "packs/accessoires.db",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -73,7 +73,7 @@
       "name": "arme",
       "label": "Armes",
       "system": "aria",
-      "path": "packs/armes",
+      "path": "packs/armes.db",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -82,7 +82,7 @@
       "name": "armesdist",
       "label": "Armes à distance",
       "system": "aria",
-      "path": "packs/armes_distance",
+      "path": "packs/armes_distance.db",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -91,7 +91,7 @@
       "name": "armure",
       "label": "Armures",
       "system": "aria",
-      "path": "packs/armures",
+      "path": "packs/armures.db",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -100,7 +100,7 @@
       "name": "vetement",
       "label": "Vêtements",
       "system": "aria",
-      "path": "packs/vetements",
+      "path": "packs/vetements.db",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -109,7 +109,7 @@
       "name": "nourriture",
       "label": "Nourriture",
       "system": "aria",
-      "path": "packs/nourritures",
+      "path": "packs/nourritures.db",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -118,7 +118,7 @@
       "name": "deplacement",
       "label": "Déplacements",
       "system": "aria",
-      "path": "packs/deplacements",
+      "path": "packs/deplacements.db",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -127,7 +127,7 @@
       "name": "monnaie",
       "label": "Monnaie",
       "system": "aria",
-      "path": "packs/monnaie",
+      "path": "packs/monnaie.db",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -136,7 +136,7 @@
       "name": "professions",
       "label": "Professions",
       "system": "aria",
-      "path": "packs/professions",
+      "path": "packs/professions.db",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -145,7 +145,7 @@
       "name": "professionsactualplay",
       "label": "Professions de l'Actual Play",
       "system": "aria",
-      "path": "packs/professionsactualplay",
+      "path": "packs/professionsactualplay.db",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -154,7 +154,7 @@
       "name": "professionsexceptions",
       "label": "Professions des personnages d'exception",
       "system": "aria",
-      "path": "packs/professionsexceptions",
+      "path": "packs/professionsexceptions.db",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -163,7 +163,7 @@
       "name": "origines",
       "label": "Origines",
       "system": "aria",
-      "path": "packs/origines",
+      "path": "packs/origines.db",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -172,7 +172,7 @@
       "name": "langues",
       "label": "Langues",
       "system": "aria",
-      "path": "packs/langues",
+      "path": "packs/langues.db",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -181,7 +181,7 @@
       "name": "competencesstars",
       "label": "Compétences Stars",
       "system": "aria",
-      "path": "packs/competencesstars",
+      "path": "packs/competencesstars.db",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -190,7 +190,7 @@
       "name": "competencesspepretirestars",
       "label": "Compétences spéciales prétirés Stars",
       "system": "aria",
-      "path": "packs/competencesspepretirestars",
+      "path": "packs/competencesspepretirestars.db",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -199,7 +199,7 @@
       "name": "competencescont",
       "label": "Compétences Contemporaines",
       "system": "aria",
-      "path": "packs/competencescont",
+      "path": "packs/competencescont.db",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -208,7 +208,7 @@
       "name": "objetscont",
       "label": "Objets Contemporains",
       "system": "aria",
-      "path": "packs/objetscont",
+      "path": "packs/objetscont.db",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -217,7 +217,7 @@
       "name": "objetsstars",
       "label": "Objets Stars",
       "system": "aria",
-      "path": "packs/objetsstars",
+      "path": "packs/objetsstars.db",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -226,7 +226,7 @@
       "name": "professionscont",
       "label": "Professions Contemporaines",
       "system": "aria",
-      "path": "packs/professionscont",
+      "path": "packs/professionscont.db",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -235,7 +235,7 @@
       "name": "professionsstars",
       "label": "Professions Stars",
       "system": "aria",
-      "path": "packs/professionsstars",
+      "path": "packs/professionsstars.db",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -244,7 +244,7 @@
       "name": "originescont",
       "label": "Origines Contemporaines",
       "system": "aria",
-      "path": "packs/originescont",
+      "path": "packs/originescont.db",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -253,7 +253,7 @@
       "name": "originesstars",
       "label": "Origines Stars",
       "system": "aria",
-      "path": "packs/originesstars",
+      "path": "packs/originesstars.db",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -262,7 +262,7 @@
       "name": "languescont",
       "label": "Langues Contemporaines",
       "system": "aria",
-      "path": "packs/languescont",
+      "path": "packs/languescont.db",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -271,10 +271,84 @@
       "name": "languesstars",
       "label": "Langues Stars",
       "system": "aria",
-      "path": "packs/languesstars",
+      "path": "packs/languesstars.db",
       "type": "Item",
       "private": false,
       "flags": {}
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "Aria",
+      "sorting": "m",
+      "color": "#f9b216",
+      "packs": [
+        "origines",
+        "langues",
+        "heroes"
+      ],
+      "folders": [
+        {
+          "name": "Compétences",
+          "sorting": "m",
+          "color": "#c68e12",
+          "packs": [
+            "competences",
+            "competencesspepretire",
+            "competencesspeexception"
+          ]
+        },
+        {
+          "name": "Professions",
+          "sorting": "m",
+          "color": "#91680d ",
+          "packs": [
+            "professions",
+            "professionsactualplay",
+            "professionsexceptions"
+          ]
+        },
+        {
+          "name": "Objets",
+          "sorting": "m",
+          "color": "#6c4d0a",
+          "packs": [
+            "accessoires",
+            "arme",
+            "armesdist",
+            "armure",
+            "vetement",
+            "nourriture",
+            "deplacement",
+            "monnaie"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Aria Stars",
+      "sorting": "m",
+      "color": "#3e5f69",
+      "packs": [
+        "objetsstars",
+        "competencesstars",
+        "competencesspepretirestars",
+        "professionsstars",
+        "originesstars",
+        "languesstars"
+      ]
+    },
+    {
+      "name": "Aria Contemporain",
+      "sorting": "m",
+      "color": "#3a2113",
+      "packs": [
+        "objetscont",
+        "competencescont",
+        "professionscont",
+        "originescont",
+        "languescont"
+      ]
     }
   ],
   "languages": [
