@@ -65,7 +65,7 @@ export default class cardsSettingMenu extends FormApplication {
             }
         }
 
-        return mergeObject(super.getData(), data);
+        return foundry.utils.mergeObject(super.getData(), data);
     }
 
     async activateListeners(html) {

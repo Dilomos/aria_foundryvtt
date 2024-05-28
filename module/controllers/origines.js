@@ -7,7 +7,7 @@ export class Origines {
             ui.notifications.error("Vous avez déjà une origine.");
             return false;
         } else {
-            let competences = duplicate(itemData.system.competences);
+            let competences = foundry.utils.duplicate(itemData.system.competences);
             competences.push(itemData);
             return actor.createEmbeddedDocuments("Item",competences);
         }

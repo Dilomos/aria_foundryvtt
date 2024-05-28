@@ -90,7 +90,7 @@ Hooks.once("init", async function () {
 
     DocumentSheetConfig.registerSheet(Cards, "core", AriaPlayerHand, { label: "Aria Player Hand", types: ["hand"], makeDefault: true });
     
-    console.info("Aria : New sheets registered");
+    //console.info("Aria : New sheets registered");
     
 
     // Preload Handlebars Templates
@@ -140,7 +140,7 @@ Hooks.once("setup", function() {
 /**
  * Once the entire VTT framework is initialized, check to see if we should perform a data migration
  */
-Hooks.once("ready", function() {
+Hooks.once("ready", async () => {
 
   console.info("Aria : Ready...");
 
@@ -178,6 +178,46 @@ Hooks.once("ready", function() {
         { title: "Quête Dieu Ennemi", block: "section", classes: "aria-block aria-quete-ennemi", wrapper: true },
       ],
     });
+
+    await game.aria.config.getProfessions();
+    await game.aria.config.getOrigines();
+    await game.aria.config.getCompetences();
+    await game.aria.config.getCompetencesSpe();
+
+    console.info("-------------------------------------System Initialized.");
+
+    // Determine whether a system migration is required and feasible
+  if ( !game.user.isGM ) return;
+  const cv = game.settings.get("aria", "systemMigrationVersion");
+  const totalDocuments = game.actors.size;
+  if ( !cv && totalDocuments === 0 ) return game.settings.set("aria", "systemMigrationVersion", game.system.version);
+  if ( cv && !foundry.utils.isNewerVersion(game.system.flags.needsMigrationVersion, cv) ) return;
+
+    let characters = game.actors.filter(act => act.type == "character");
+    for (let charac of characters) {
+
+        let items = charac.items;
+        let caps = items.filter(item => item.type === "competence").sort(function (a, b) {
+            return a.name.localeCompare(b.name);
+        });
+        let caps_magie = caps.filter(item => item.name === "Modélisation");
+        if(caps_magie.length > 0)
+        {
+            if (!charac.getDefaultHand()) {
+                await charac.createDefaultCards();
+            }
+        }
+
+        const source = foundry.utils.duplicate(charac.toObject());
+        source.prototypeToken.actorLink = true;
+        source.prototypeToken.sight.enabled = true;
+        source.prototypeToken.disposition = CONST.TOKEN_DISPOSITIONS.FRIENDLY;
+
+        await charac.update(source);
+    }
+
+    game.settings.set("aria", "systemMigrationVersion", game.system.version);
+    console.info("-------------------------------------System Migrated.");
 
 });
 

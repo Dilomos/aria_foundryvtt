@@ -90,7 +90,7 @@ export class GlobalAriaItemSheet extends ItemSheet {
      */
     async _onDropItem(event, data) {
         const item = await Item.fromDropData(data);
-        const itemData = duplicate(this.item.toObject(false));
+        const itemData = foundry.utils.duplicate(this.item.toObject(false));
         switch (itemData.type) {
             case "competence" :
                 return await this._onDropCompetenceItem(event, itemData);
@@ -113,7 +113,7 @@ export class GlobalAriaItemSheet extends ItemSheet {
 
     _onDropCompetenceItem(event, itemData) {
         event.preventDefault();
-        let data = duplicate(this.item.toObject(false));
+        let data = foundry.utils.duplicate(this.item.toObject(false));
         if(this.item.system.competences){
             let caps = this.item.system.competences;
             caps.push(itemData);
@@ -142,7 +142,7 @@ export class GlobalAriaItemSheet extends ItemSheet {
 
     _onDeleteItem(ev){
         ev.preventDefault();
-        let data = duplicate(this.item.toObject(false));
+        let data = foundry.utils.duplicate(this.item.toObject(false));
         const li = $(ev.currentTarget).closest(".item");
         const id = li.data("itemId");
         const itemType = li.data("itemType");

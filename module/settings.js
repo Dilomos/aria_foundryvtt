@@ -2,6 +2,14 @@ import cardsSettingMenu from './cards/cardSettingMenu.js';
 
 export const registerSystemSettings = function() {
 
+    game.settings.register("aria", "systemMigrationVersion", {
+      name: "System Migration Version",
+      scope: "world",
+      config: false,
+      type: String,
+      default: ""
+    });
+
     game.settings.register("aria", "ariaVersion", {
         name: "Choisissez la version d'Aria",
         hint: "",
@@ -15,16 +23,16 @@ export const registerSystemSettings = function() {
           },
           default: "aria",        // The default value for the setting
           requiresReload: true
-        });
+      });
 
-        game.settings.register("aria", "showBonusCol", {
-          name: "Afficher la colonne Bonus/Malus",
-          hint: "Ajoute la colonne pour les compétences",
-          scope: "world",
-          config: true,
-          default: true,
-          type: Boolean,
-          requiresReload: true
+    game.settings.register("aria", "showBonusCol", {
+        name: "Afficher la colonne Bonus/Malus",
+        hint: "Ajoute la colonne pour les compétences",
+        scope: "world",
+        config: true,
+        default: true,
+        type: Boolean,
+        requiresReload: true
       });
 
       game.settings.register("aria", "moveItem", {

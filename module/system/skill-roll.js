@@ -25,7 +25,9 @@ export class AriaSkillRoll {
         };
 
         let r = new Roll(this._formula);
-        r.evaluate({async:false});
+        await r.evaluate();
+        //r.evaluate({async:false});
+        //r.evaluateSync({minimize:false, maximize:false, allowStrings:false, strict:true});
 
         let renderedRoll = await r.render();
 
@@ -61,7 +63,6 @@ export class AriaSkillRoll {
             user: game.user.id,
             speaker: ChatMessage.getSpeaker({actor: actor}),
             roll: r,
-            type: CONST.CHAT_MESSAGE_TYPES.ROLL,
             content: await renderTemplate(messageTemplate,templateContextData),
             sound: CONFIG.sounds.dice
         };

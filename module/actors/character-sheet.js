@@ -20,7 +20,7 @@ export class AriaCharacterSheet extends AriaActorSheet {
 
     /** @override */
     static get defaultOptions() {
-        return mergeObject(super.defaultOptions, {
+        return foundry.utils.mergeObject(super.defaultOptions, {
             classes: ["aria", "sheet", "actor", "character"],
             template: System.templatesPath + "/actors/character/character-sheet.hbs",
             width: 910,

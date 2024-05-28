@@ -8,26 +8,45 @@ import {Traversal} from "../utils/traversal.js";
 export class AriaActor extends Actor {
 
     /** @override */
-  static async create(data, options={}) {
+    static async create(data, options={}) {
 
-    if (typeof data.items === 'undefined') {
+      if (typeof data.items === 'undefined') {
 
-      data.items = [];
+        data.items = [];
 
-      let caps = game.aria.config.competences;
+        let caps = game.aria.config.competences;
 
-      if ( data.type === "character" ) {
-          
-          mergeObject(data.items, caps, {overwrite: false});
-      }
-  }
+        if ( data.type === "character" ) {
+            
+          foundry.utils.mergeObject(data.items, caps, {overwrite: false});
+        }
+    }
 
-    //data.items = data.items || [];
+      //data.items = data.items || [];
 
-   
-    let enti = super.create(data, options);
+    
+      let enti = super.create(data, options);
 
-    return enti;
+      return enti;
+    }
+
+  
+    async fixPrototypeToken(){
+      // Configure prototype token settings
+      const prototypeToken = {};
+      if ( this.type === "character" ) Object.assign(prototypeToken, {
+        sight: { enabled: true }, actorLink: true, disposition: CONST.TOKEN_DISPOSITIONS.FRIENDLY
+      });
+      this.updateSource({ prototypeToken });
+      //return this.update({'prototypeToken': prototypeToken});
+    }
+
+
+   /** @inheritdoc */
+   async _preCreate(data, options, user) {
+    if ( (await super._preCreate(data, options, user)) === false ) return false;
+
+    await this.fixPrototypeToken();
   }
 
     /** @override */
@@ -167,7 +186,7 @@ export class AriaActor extends Actor {
   }
 
   getCardOwnership() {
-      let handOwnership = duplicate(this.ownership)
+      let handOwnership = foundry.utils.duplicate(this.ownership)
       for(let key of Object.keys(handOwnership)){
           //remove any permissions that are not owner
           if(handOwnership[key] < CONST.DOCUMENT_OWNERSHIP_LEVELS.OWNER){

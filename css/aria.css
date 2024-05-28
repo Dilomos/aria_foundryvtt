@@ -280,7 +280,6 @@ strong {
   margin: 0 1px 1px 0;
   padding: 3px;
   height: 24px;
-  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -2150,7 +2149,6 @@ strong {
   visibility: visible;
   opacity: 1;
   -webkit-transition: 1s;
-  -o-transition: 1s;
   transition: 1s;
 }
 
@@ -2198,7 +2196,6 @@ strong {
   visibility: visible;
   opacity: 1;
   -webkit-transition: 1s;
-  -o-transition: 1s;
   transition: 1s;
 }
 
@@ -2237,7 +2234,6 @@ strong {
   visibility: visible;
   opacity: 1;
   -webkit-transition: 1s;
-  -o-transition: 1s;
   transition: 1s;
 }
 
@@ -2346,7 +2342,6 @@ strong {
   visibility: visible;
   opacity: 1;
   -webkit-transition: 1s;
-  -o-transition: 1s;
   transition: 1s;
 }
 
@@ -2448,7 +2443,6 @@ strong {
 }
 
 .aria.actor .ellipsis {
-  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -2517,7 +2511,6 @@ strong {
 }
 
 .aria.actor .tabs .item {
-  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -3118,7 +3111,6 @@ strong {
   visibility: visible;
   opacity: 1;
   -webkit-transition: 1s;
-  -o-transition: 1s;
   transition: 1s;
 }
 
@@ -3158,7 +3150,6 @@ strong {
   visibility: visible;
   opacity: 1;
   -webkit-transition: 1s;
-  -o-transition: 1s;
   transition: 1s;
 }
 
@@ -3451,7 +3442,6 @@ strong {
 }
 
 .aria nav.sheet-tabs.tabs .item {
-  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -3534,7 +3524,6 @@ strong {
   margin: 0;
   white-space: nowrap;
   overflow-x: hidden;
-  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;

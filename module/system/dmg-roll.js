@@ -15,7 +15,9 @@ export class AriaDamageRoll {
         };
 
         let r = new Roll(this._formula);
-        r.evaluate({async:false});
+        await r.evaluate();
+        //r.evaluate({async:false});
+        //r.evaluateSync({minimize:false, maximize:false, allowStrings:false, strict:true});
 
         const calc = r.result;
         const mod = (r.terms.length > 1);
@@ -43,7 +45,6 @@ export class AriaDamageRoll {
                 user: game.user.id,
                 speaker: ChatMessage.getSpeaker({actor: actor}),
                 roll: r,
-                type: CONST.CHAT_MESSAGE_TYPES.ROLL,
                 content: await renderTemplate(messageTemplate,templateContextData),
                 sound: CONFIG.sounds.dice
             };

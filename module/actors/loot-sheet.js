@@ -20,7 +20,7 @@ export class AriaLootSheet extends AriaActorSheet {
 
     /** @override */
     static get defaultOptions() {
-        return mergeObject(super.defaultOptions, {
+        return foundry.utils.mergeObject(super.defaultOptions, {
             classes: ["aria", "sheet", "actor", "loot"],
             template: System.templatesPath + "/actors/loot/loot-sheet.hbs",
             width: 770,
