@@ -43,8 +43,10 @@ export class AriaDamageRoll {
 
         let chatData = {
                 user: game.user.id,
+                type: CONST.CHAT_MESSAGE_STYLES.ROLL,
                 speaker: ChatMessage.getSpeaker({actor: actor}),
                 roll: r,
+                rolls: [r],
                 content: await renderTemplate(messageTemplate,templateContextData),
                 sound: CONFIG.sounds.dice
             };
