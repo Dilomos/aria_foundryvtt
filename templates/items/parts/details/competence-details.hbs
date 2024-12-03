@@ -13,29 +13,13 @@
         <label>{{localize "ARIA.ui.link"}} 1</label>
         <div class="form-fields">
             <select name="system.link1" data-type="String" style="width:100%">
-                {{#select system.link1}}
-                    <option value="">{{localize "ARIA.None"}}</option>
-                    <option value="{{localize "ARIA.stats.str.abbrev"}}">{{localize "ARIA.stats.str.label"}}</option>
-                    <option value="{{localize "ARIA.stats.dex.abbrev"}}">{{localize "ARIA.stats.dex.label"}}</option>
-                    <option value="{{localize "ARIA.stats.end.abbrev"}}">{{localize "ARIA.stats.end.label"}}</option>
-                    <option value="{{localize "ARIA.stats.int.abbrev"}}">{{localize "ARIA.stats.int.label"}}</option>
-                    <option value="{{localize "ARIA.stats.cha.abbrev"}}">{{localize "ARIA.stats.cha.label"}}</option>
-                    <option value="{{localize "ARIA.stats.intu.abbrev"}}">{{localize "ARIA.stats.intu.label"}}</option>
-                {{/select}}
+                {{selectOptions optionsCaracDrop selected=system.link1 localize=true}}
             </select>
         </div>
                 <label>&nbsp;&nbsp;&nbsp;&nbsp;{{localize "ARIA.ui.link"}} 2</label>
         <div class="form-fields">
             <select name="system.link2" data-type="String" style="width:100%">
-                {{#select system.link2}}
-                    <option value="">{{localize "ARIA.None"}}</option>
-                    <option value="{{localize "ARIA.stats.str.abbrev"}}">{{localize "ARIA.stats.str.label"}}</option>
-                    <option value="{{localize "ARIA.stats.dex.abbrev"}}">{{localize "ARIA.stats.dex.label"}}</option>
-                    <option value="{{localize "ARIA.stats.end.abbrev"}}">{{localize "ARIA.stats.end.label"}}</option>
-                    <option value="{{localize "ARIA.stats.int.abbrev"}}">{{localize "ARIA.stats.int.label"}}</option>
-                    <option value="{{localize "ARIA.stats.cha.abbrev"}}">{{localize "ARIA.stats.cha.label"}}</option>
-                    <option value="{{localize "ARIA.stats.intu.abbrev"}}">{{localize "ARIA.stats.intu.label"}}</option>
-                {{/select}}
+                 {{selectOptions optionsCaracDrop selected=system.link2 localize=true}}
             </select>
         </div>
     </div>

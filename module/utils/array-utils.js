@@ -8,9 +8,9 @@ export class ArrayUtils {
     }
 
     static removeObjectById(array, elem) {
-        let index;
+        let index = -1;
         array.forEach(element => {
-            if(element.id == elem)
+            if(element._id == elem)
             {
                 index = array.indexOf(element);
             }
@@ -18,6 +18,23 @@ export class ArrayUtils {
 
         if (index > -1) {
             array.splice(index, 1);
+        }
+    }
+
+    static findById(array, elem) {
+        let index = -1;
+        array.forEach(element => {
+            if(element._id == elem)
+            {
+                index = array.indexOf(element);
+            }
+        });
+
+        if (index > -1) {
+            return true;
+        }
+        else{
+            return false;
         }
     }
 }

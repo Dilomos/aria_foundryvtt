@@ -3,12 +3,7 @@
     <label>Sous-catégorie</label>
     <div class="form-fields">
         <select name="system.subtype" data-type="String" style="width:100%">
-            {{#select system.subtype}}
-                <option value="">{{localize "ARIA.None"}}</option>
-            {{#each (getItemSubCategories)  as |catName cat|}}
-                <option value="{{cat}}">{{catName}}</option>
-            {{/each}}
-            {{/select}}
+            {{selectOptions optionsSubCatDrop selected=system.subtype localize=true}}
         </select>
     </div>
 </div>

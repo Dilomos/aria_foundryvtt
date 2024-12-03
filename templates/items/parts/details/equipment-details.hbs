@@ -24,25 +24,7 @@
         <label>{{localize "ARIA.ui.slot"}}</label>
         <div class="form-fields">
             <select name="system.slot" data-type="String" style="width:100%">
-                {{#select system.slot}}
-                    <option value="">{{localize "ARIA.None"}}</option>
-                    <option value="hand">{{localize "ARIA.slot.hand"}}</option>
-                    <option value="head">{{localize "ARIA.slot.head"}}</option>
-                    <option value="ear">{{localize "ARIA.slot.ear"}}</option>
-                    <option value="neck">{{localize "ARIA.slot.neck"}}</option>
-                    <option value="shoulders">{{localize "ARIA.slot.shoulders"}}</option>
-                    <option value="chest">{{localize "ARIA.slot.chest"}}</option>
-                    <option value="back">{{localize "ARIA.slot.back"}}</option>
-                    <option value="arm">{{localize "ARIA.slot.arm"}}</option>
-                    <option value="finger">{{localize "ARIA.slot.finger"}}</option>
-                    <option value="wrist">{{localize "ARIA.slot.wrist"}}</option>
-                    <option value="waist">{{localize "ARIA.slot.waist"}}</option>
-                    <option value="legs">{{localize "ARIA.slot.legs"}}</option>
-                    <option value="feet">{{localize "ARIA.slot.feet"}}</option>
-                    <option value="belt">{{localize "ARIA.slot.belt"}}</option>
-                    <option value="backpack">{{localize "ARIA.slot.backpack"}}</option>
-                    <option value="quiver">{{localize "ARIA.slot.quiver"}}</option>
-                {{/select}}
+                {{selectOptions optionsBodyDrop selected=system.slot localize=true}}
             </select>
         </div>
     </div>
@@ -51,16 +33,10 @@
     <label>{{ localize "ARIA.ui.price" }}</label>&nbsp; <input type="number" name="system.price" value="{{system.price}}" data-dtype="Number"/>
 </div>
 <div class="form-group">
-    <label>{{ localize "ARIA.ui.rarity" }}</label>&nbsp; <select name="system.rarity" data-type="String" style="width:100%">
-    {{#select system.rarity}}
-        <option value="">{{localize "ARIA.None"}}</option>
-        <option value="common">{{localize "ARIA.rarity.common"}}</option>
-        <option value="moderate">{{localize "ARIA.rarity.moderate"}}</option>
-        <option value="rare">{{localize "ARIA.rarity.rare"}}</option>
-        <option value="very-rare">{{localize "ARIA.rarity.very-rare"}}</option>
-        {{#if (not system.properties.stackable)}}<option value="unique">{{localize "ARIA.rarity.unique"}}</option>{{/if}}
-    {{/select}}
-</select>
+    <label>{{ localize "ARIA.ui.rarity" }}</label>&nbsp; 
+    <select name="system.rarity" data-type="String" style="width:100%">
+        {{selectOptions optionsRarityDrop selected=system.rarity localize=true}}
+    </select>
 </div>
 {{#if system.properties.stackable}}
     <div class="form-group">

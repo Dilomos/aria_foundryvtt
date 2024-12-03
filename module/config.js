@@ -56,6 +56,45 @@ ARIA.languages = {
     "altanegrais": "ARIA.languages.Altanegrais"
   };
 
+  ARIA.caracDropdown = {
+    "": "ARIA.None",
+    "FOR": "ARIA.stats.str.label",
+    "DEX": "ARIA.stats.dex.label",
+    "END": "ARIA.stats.end.label",
+    "INT": "ARIA.stats.int.label",
+    "CHA": "ARIA.stats.cha.label",
+    "INTU": "ARIA.stats.intu.label"
+  };
+
+  ARIA.bodyDropdown = {
+    "": "ARIA.None",
+    "hand": "ARIA.slot.hand",
+    "head": "ARIA.slot.head",
+    "ear": "ARIA.slot.ear",
+    "neck": "ARIA.slot.neck",
+    "shoulders": "ARIA.slot.shoulders",
+    "chest": "ARIA.slot.chest",
+    "back": "ARIA.slot.back",
+    "arm": "ARIA.slot.arm",
+    "finger": "ARIA.slot.finger",
+    "wrist": "ARIA.slot.wrist",
+    "waist": "ARIA.slot.waist",
+    "legs": "ARIA.slot.legs",
+    "feet": "ARIA.slot.feet",
+    "belt": "ARIA.slot.belt",
+    "backpack": "ARIA.slot.backpack",
+    "quiver": "ARIA.slot.quiver"
+  };
+
+  ARIA.rarityDropdown = {
+    "": "ARIA.None",
+    "common": "ARIA.rarity.common",
+    "moderate": "ARIA.rarity.moderate",
+    "rare": "ARIA.rarity.rare",
+    "very-rare": "ARIA.rarity.very-rare",
+    "unique": "ARIA.rarity.unique"
+  };
+
 ARIA.professions = [];
 ARIA.origines = [];
 ARIA.competences = [];

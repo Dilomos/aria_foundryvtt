@@ -68,7 +68,6 @@ export class GlobalAriaItemSheet extends ItemSheet {
             return false;
         }
         if (!data) return false;
-
         // Case 1 - Dropped Item
         if (data.type === "Item") {
             return this._onDropItem(event, data);
@@ -91,9 +90,19 @@ export class GlobalAriaItemSheet extends ItemSheet {
     async _onDropItem(event, data) {
         const item = await Item.fromDropData(data);
         const itemData = foundry.utils.duplicate(this.item.toObject(false));
+        const droppedItemData = item.toObject();
+
         switch (itemData.type) {
-            case "competence" :
-                return await this._onDropCompetenceItem(event, itemData);
+            case "profession" :
+            case "origine" :
+                if(droppedItemData.type === "competence")
+                {
+                    return await this._onDropCompetenceItem(event, droppedItemData);
+                }
+                else
+                {
+                    ui.notifications.error("Seules les compétences peuvent être ajoutées.");
+                }
             default:
                 return;
         }
@@ -114,10 +123,23 @@ export class GlobalAriaItemSheet extends ItemSheet {
     _onDropCompetenceItem(event, itemData) {
         event.preventDefault();
         let data = foundry.utils.duplicate(this.item.toObject(false));
+        
+        //ui.notifications.error(" _onDropItem "+itemData.type)
+
         if(this.item.system.competences){
             let caps = this.item.system.competences;
-            caps.push(itemData);
-            return this.item.update(data);
+            //console.log(caps);
+
+            if(ArrayUtils.findById(caps, itemData._id))
+            {
+                ui.notifications.error("Cette compétence existe déja.")
+            }
+            else
+            {
+                caps.push(itemData);
+                data.system.competences = caps;
+                return this.item.update(data);
+            }
         }
         else ui.notifications.error("Ajout de cette compétence impossible.")
     }
@@ -150,8 +172,12 @@ export class GlobalAriaItemSheet extends ItemSheet {
         switch(itemType){
             case "competence" : array = this.item.system.competences; break;
         }
+        console.log(array);
+        console.log(data);
+        
         if(array) {
-            ArrayUtils.removeObjectById(array, id)
+            ArrayUtils.removeObjectById(array, id);
+            data.system.competences = array;
             return this.item.update(data);
         }
     }
@@ -170,6 +196,12 @@ export class GlobalAriaItemSheet extends ItemSheet {
         // Re-define the template data references (backwards compatible)
         data.item = itemData;
         data.system = itemData.system;
+
+        data.optionsCaracDrop=CONFIG.ARIA.caracDropdown;
+        data.optionsBodyDrop=CONFIG.ARIA.bodyDropdown;
+        data.optionsRarityDrop=CONFIG.ARIA.rarityDropdown;
+
+        data.optionsSubCatDrop=CONFIG.ARIA.itemSubCategories;
 
         data.descriptionHTML = await TextEditor.enrichHTML(data.system.description, {
             async: true
