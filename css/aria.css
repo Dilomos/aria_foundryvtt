@@ -3710,3 +3710,11 @@ strong {
 #configRollDialog .optionTitle {
   vertical-align: middle;
 }
+
+.tab[data-tab]:not(.active) {
+  display: none;
+}
+
+.tab[data-tab] {
+  display: block;
+}
