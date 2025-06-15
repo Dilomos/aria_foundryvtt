@@ -1,3 +1,5 @@
+@use "../utils/mixins";
+
 .grid {
   display: grid;
   //gap: 10px;
@@ -26,7 +28,7 @@
     margin: 0 1px 1px 0;
     padding: 3px;
     height:24px;
-    @include ellipsis;
+    @include mixins.ellipsis;
   }
   .no-border{
     border: none !important;

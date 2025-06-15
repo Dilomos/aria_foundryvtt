@@ -1,4 +1,4 @@
-export class AriaPlayerHand extends CardsHand {
+export class AriaPlayerHand extends CardHand {
 
     static get defaultOptions() {
         return foundry.utils.mergeObject(super.defaultOptions, {

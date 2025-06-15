@@ -1,37 +1,39 @@
 // Import utilities.
-@import 'utils/colors';
-@import 'utils/typography';
-@import 'utils/mixins';
-@import 'utils/variables';
+@use "sass:meta";
+@use 'utils/colors';
+@use 'utils/typography';
+@use 'utils/mixins';
+@use 'utils/variables';
 
 /* Global styles */
-@import 'global/window';
-@import 'global/grid';
-@import 'global/flex';
-@import 'global/chat';
-@import 'global/journal';
+@use 'global/window';
+@use 'global/grid';
+/*@use 'global/flex';*/
+@use 'global/chat';
+@use 'global/journal';
 
 /* Styles limited to aria sheets */
 .aria {
+  @include meta.load-css('global/flex');
 
   &.actor {
-    @import 'components/actor_layout';
-    @import 'components/actor_skin';
+    @include meta.load-css('components/actor_layout');
+    @include meta.load-css('components/actor_skin');
   }
 
   &.item {
-    @import 'components/item_layout';
-    @import 'components/item_skin';
+    @include meta.load-css('components/item_layout');
+    @include meta.load-css('components/item_skin');
   }
 
-  @import 'components/forms';
-  @import 'components/tabs';
-  @import 'components/inventory';
+  @include meta.load-css('components/forms');
+  @include meta.load-css('components/tabs');
+  @include meta.load-css('components/inventory');
 
 
 }
 
 
 #configRollDialog {
-  @import 'components/config_roll_layout';
+  @include meta.load-css('components/config_roll_layout');
 }

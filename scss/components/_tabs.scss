@@ -1,32 +1,35 @@
+@use "../utils/colors";
+@use "../utils/mixins";
+
 nav.sheet-tabs {
   border: none;
   height: 30px;
 
   &.tabs {
     font-size: 14px;
-    color: $c-darkbrown;
+    color: colors.$c-darkbrown;
     text-align: center;
     border: none;
 
     .item {
-      @include ellipsis;
+      @include mixins.ellipsis;
       padding: 2px;
-      border: 1px solid $c-border;
+      border: 1px solid colors.$c-border;
       margin: 0;
       height: 28px;
       width:100%;
-      box-shadow: 0 0 10px $c-shadow inset;
+      box-shadow: 0 0 10px colors.$c-shadow inset;
       /*padding: 3px 3px 0 3px;*/
       background:rgba(0,0,0,0.05);
       &:hover {
-        color: $c-darkbrown;
+        color: colors.$c-darkbrown;
         background:rgba(0,0,0,0.2);
         text-shadow: none;
       }
       &.active {
-        color: $c-darkbrown;
-        border: 1px inset $c-border;
-        background:$c-greenbluetrans;
+        color: colors.$c-darkbrown;
+        border: 1px inset colors.$c-border;
+        background:colors.$c-greenbluetrans;
         text-shadow: none;
       }
     }

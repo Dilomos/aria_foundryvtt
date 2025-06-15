@@ -1,3 +1,5 @@
+@use "../utils/colors";
+
 /* ----------------------------------------- */
 /*  Layout                                   */
 /* ----------------------------------------- */
@@ -246,7 +248,7 @@
             min-height: calc(100% - 30px);
             height: calc(100% - 30px);
             max-height: calc(100% - 30px);
-            border: 1px solid $c-border;
+            border: 1px solid colors.$c-border;
 
             .editor-content {
               padding: 5px;
@@ -408,5 +410,5 @@
 
 .unlocked {
   cursor: pointer;
-  color:$colorOlive;
+  color:colors.$colorOlive;
 }

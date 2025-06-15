@@ -1,3 +1,6 @@
+@use "../utils/colors";
+@use "../utils/mixins";
+
 .currencies {
   //box-shadow: 0 4px 3px -3px gray;
   margin: 0 0 5px 0;
@@ -18,14 +21,14 @@
   margin: 0;
   padding: 0 5px;
   scrollbar-width: thin;
-  color: $colorTan;
+  color: colors.$colorTan;
 
   // Inventory Item
   .item {
     line-height: 25px;
     max-height: 25px;
     padding: 0 2px; // to align with the header border
-    border-bottom: 1px solid $colorFaint;
+    border-bottom: 1px solid colors.$colorFaint;
     &:last-child { border-bottom: none; }
 
     // Item Header Name
@@ -45,11 +48,11 @@
         margin: 0;
         white-space: nowrap;
         overflow-x: hidden;
-        @include ellipsis;
+        @include mixins.ellipsis;
       }
 
       i.attuned {
-        color: $colorTan;
+        color: colors.$colorTan;
       }
     }
 
@@ -69,7 +72,7 @@
       flex: 0 0 80px;
       text-align: right;
       font-size: 11px;
-      color: $colorTan;
+      color: colors.$colorTan;
       white-space: nowrap;
     }
   }
@@ -80,7 +83,7 @@
     padding: 0;
     align-items: center;
     background: rgba(0, 0, 0, 0.05);
-    border: $borderGroove;
+    border: colors.$borderGroove;
     font-weight: bold;
     line-height: 14px;
     min-height: 30px;
@@ -96,8 +99,8 @@
   // Item names
   .item-name {
     //color: $colorOlive;
-    color: $c-black;
-    border-right: 1px solid $colorFaint;
+    color: colors.$c-black;
+    border-right: 1px solid colors.$colorFaint;
 
     .item-category{
       text-align: left;
@@ -113,9 +116,9 @@
     margin-top: 4px;
     margin-bottom: 4px;
     //color: $colorTan;
-    color: $c-black;
+    color: colors.$c-black;
     text-align: center;
-    border-right: 1px solid $colorFaint;
+    border-right: 1px solid colors.$colorFaint;
     word-break: break-word;
     white-space: nowrap;
     overflow: hidden;
@@ -127,8 +130,8 @@
 
   .item-weight {
     flex: 0 0 60px;
-    border-left: 1px solid $colorFaint;
-    border-right: 1px solid $colorFaint;
+    border-left: 1px solid colors.$colorFaint;
+    border-right: 1px solid colors.$colorFaint;
   }
 
   .item-list {
@@ -140,7 +143,7 @@
   // Item Control Buttons
   .item-controls {
     flex: 0 0 60px;
-    @include flexrow;
+    @include mixins.flexrow;
     justify-content: center;
     max-height: 25px;
     .item-control {
@@ -150,7 +153,7 @@
       flex: 0 0 22px;
       font-size: 12px;
       text-align: center;
-      color: $c-black;
+      color: colors.$c-black;
     }
   }
 
@@ -160,6 +163,6 @@
     font-size: 12px;
     line-height: 16px;
     padding: 0.25em 0.5em;
-    border-top: 1px solid $colorFaint;
+    border-top: 1px solid colors.$colorFaint;
   }
 }

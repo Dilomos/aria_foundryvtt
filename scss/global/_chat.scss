@@ -1,3 +1,5 @@
+@use "../utils/colors";
+
 .chat-card {
   font-style: normal;
   font-size: 14px;
@@ -41,7 +43,7 @@
     }
 
     .damage{
-      color: $colorDamage;
+      color: colors.$colorDamage;
       font-weight: bold;
     }
     .dice-title-card{
@@ -49,23 +51,23 @@
       border-bottom: 0;
     }
     .critical{
-      color: $colorCritical;
+      color: colors.$colorCritical;
       font-weight: bold;
     }
     .fumble{
-      color: $colorFumble;
+      color: colors.$colorFumble;
       font-weight: bold;
     }
     .success{
-      color: $colorSuccess;
+      color: colors.$colorSuccess;
       font-weight: bold;
     }
     .failure{
-      color: $colorFailure;
+      color: colors.$colorFailure;
       font-weight: bold;
     }
     .roll{
-      color: $colorRoll;
+      color: colors.$colorRoll;
       font-weight: bold;
     }
   }

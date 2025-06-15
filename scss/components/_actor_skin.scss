@@ -1,10 +1,14 @@
+@use "../utils/colors";
+@use "../utils/mixins";
+@use "../utils/typography";
+
 /* ----------------------------------------- */
 /*  Layout                                   */
 /* ----------------------------------------- */
 .window-content {
   &>form {
     .wrap {
-      color: $c-black;
+      color: colors.$c-black;
       font-weight: bolder;
       font-size: 16px;
 
@@ -91,9 +95,9 @@
         border: none;
         background: rgba(255, 255, 255, 0);
         border-radius: 0;
-        color: $c-greenblue;
+        color: colors.$c-greenblue;
         font-weight: 700;
-        font: bold 24px $font-handwrite;
+        font: bold 24px typography.$font-handwrite;
       }
 
       .dead-color{
@@ -106,7 +110,7 @@
       }
 
       .empty{
-        background-color:$c-greenblue;
+        background-color:colors.$c-greenblue;
         color:darkred;
         min-height: 30px;
         min-width: 200px;
@@ -125,9 +129,9 @@
         border: none;
         background: rgba(255, 255, 255, 0);
         border-radius: 0;
-        color: $c-greenblue;
+        color: colors.$c-greenblue;
         font-weight: 700;
-        font: bold 30px $font-handwrite;
+        font: bold 30px typography.$font-handwrite;
       }
 
       .capa_score {
@@ -223,7 +227,7 @@
         padding-left: 5px;
         font-size: 16px;
         font-weight: bold;
-        color: $c-black;
+        color: colors.$c-black;
       }
 
 
@@ -304,7 +308,7 @@
       }
 
       .item-delete:hover{
-        text-shadow: 0 0 8px $c-red;
+        text-shadow: 0 0 8px colors.$c-red;
       }
 
       .header {
@@ -347,9 +351,9 @@
       background: url("../ui/bgNormal.webp");
       background-size: cover;
 
-      font-family: $font-primary;
+      font-family: typography.$font-primary;
       .titleFont {
-        font-family: $font-secondary;
+        font-family: typography.$font-secondary;
         line-height: 22px;
       }
     }
@@ -357,9 +361,9 @@
       background: url("../ui/bgModern.webp");
       background-size: cover;
 
-      font-family: $font-modern;
+      font-family: typography.$font-modern;
       .titleFont {
-        font-family: $font-modern;
+        font-family: typography.$font-modern;
         line-height: 22px;
       }
     }
@@ -367,9 +371,9 @@
       background: url("../ui/bgStars.webp");
       background-size: cover;
 
-      font-family: $font-modern;
+      font-family: typography.$font-modern;
       .titleFont {
-        font-family: $font-modern;
+        font-family: typography.$font-modern;
         line-height: 22px;
       }
     }
@@ -494,12 +498,12 @@ margin-top:0px;
 
 .area-value {
   border: none;
-  background: $c-white;
+  background: colors.$c-white;
   font-size: 1em;
 }
 
 .ellipsis {
-  @include ellipsis;
+  @include mixins.ellipsis;
 }
 
 .titre-general{
@@ -535,28 +539,28 @@ margin-top:0px;
 
 .btn {
   cursor: pointer;
-  color: $c-darkbrown;
-  border: 1px solid $c-border;
-  box-shadow: 0 0 10px $c-shadow inset;
+  color: colors.$c-darkbrown;
+  border: 1px solid colors.$c-border;
+  box-shadow: 0 0 10px colors.$c-shadow inset;
   background:rgba(0,0,0,0.05);
   margin-left: 1px;
   &:hover{
-    color: $c-darkbrown;
+    color: colors.$c-darkbrown;
     background:rgba(0,0,0,0.3);
     text-shadow: none;
-    border: 1px outset $c-border;
+    border: 1px outset colors.$c-border;
   }
   &:active{
-    border: 1px inset $c-border;
+    border: 1px inset colors.$c-border;
     background:rgba(0,0,0,0.3);
-    color: $c-darkbrown;
+    color: colors.$c-darkbrown;
   }
 }
 
 
 .tabs {
   font-size: 14px;
-  color: $c-darkbrown;
+  color: colors.$c-darkbrown;
   text-align: center;
   margin: 0 0;
 
@@ -565,21 +569,21 @@ margin-top:0px;
     overflow: hidden;
     white-space: nowrap;
     padding: 0;
-    border: 1px solid $c-border;
+    border: 1px solid colors.$c-border;
     margin: 0;
     height: 28px;
-    box-shadow: 0 0 10px $c-shadow inset;
+    box-shadow: 0 0 10px colors.$c-shadow inset;
     /*padding: 3px 3px 0 3px;*/
     background:rgba(0,0,0,0.05);
     &:hover {
-      color: $c-darkbrown;
+      color: colors.$c-darkbrown;
       background:rgba(0,0,0,0.2);
       text-shadow: none;
     }
     &.active {
-      color: $c-darkbrown;
-      border: 1px inset $c-border;
-      background:$c-greenbluetrans;
+      color: colors.$c-darkbrown;
+      border: 1px inset colors.$c-border;
+      background:colors.$c-greenbluetrans;
       text-shadow: none;
     }
   }
@@ -592,7 +596,7 @@ margin-top:0px;
 
 .origines-controls,
 .profession-controls {
-  color: $c-darkbrown;
+  color: colors.$c-darkbrown;
   visibility: hidden;
   flex: 0 0 18px;
   border:1px solid transparent;
@@ -603,14 +607,14 @@ div:hover>div.profession-controls {
 }
 
 .sidebar .charname{
-  font-family: $font-handwrite;
+  font-family: typography.$font-handwrite;
   font-size: 2.5em;
 
-  -webkit-text-fill-color: $c-white; /* Will override color (regardless of order) */
+  -webkit-text-fill-color: colors.$c-white; /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: $c-darkgreen;
+  -webkit-text-stroke-color: colors.$c-darkgreen;
   -webkit-font-smoothing: antialiased;
-  text-shadow: 3px 3px 10px $c-black;
+  text-shadow: 3px 3px 10px colors.$c-black;
   text-align: center;
   padding: 0;
   margin: 0;
@@ -631,8 +635,8 @@ div:hover>div.profession-controls {
 .inventory h2{
   font-size: 16px;
   text-transform: uppercase;
-  color: $c-darkbrown;
-  border-bottom: 1px solid $c-lightg;
+  color: colors.$c-darkbrown;
+  border-bottom: 1px solid colors.$c-lightg;
 }
 
 label.input-label{
@@ -644,18 +648,18 @@ label.input-label{
 }
 
 .readonly {
-  box-shadow: 0 0 10px $c-shadow inset;
+  box-shadow: 0 0 10px colors.$c-shadow inset;
 }
 
 
 .label-text {
   font-size: 14px;
-  color: $c-darkbrown;
+  color: colors.$c-darkbrown;
   text-align: center;
-  border: 1px solid $c-border;
+  border: 1px solid colors.$c-border;
   margin: 0;
   height: 28px;
-  box-shadow: 0 0 10px $c-shadow inset;
+  box-shadow: 0 0 10px colors.$c-shadow inset;
   padding: 3px 3px 0 3px;
   flex-grow: 2;
   background: none;

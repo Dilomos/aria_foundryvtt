@@ -1,3 +1,5 @@
+@use "../utils/typography";
+
 /* ----------------------------------------- */
 /*  JOURNAL                                  */
 /* ----------------------------------------- */
@@ -9,7 +11,7 @@
 
 .journal-page-header{
 	h1{
-	font-family: $font-secondary;
+	font-family: typography.$font-secondary;
 	text-align: center;
 	text-transform: uppercase;
 	color: #2c3f45;
@@ -56,7 +58,7 @@
 		text-transform: uppercase;
 		color: #2c3f45;
 		font-size: 2.5rem;
-		font-family: $font-secondary;
+		font-family: typography.$font-secondary;
 	}
 
 	h2 {
@@ -64,7 +66,7 @@
 		text-transform: uppercase;
 		color: #5a6a72;
 		font-size: 2.2rem;
-		font-family: $font-secondary;
+		font-family: typography.$font-secondary;
 	}
 
 	h1::after,
@@ -90,14 +92,14 @@
 	h3 {
 		color: #426266;
 		font-size: 1.8rem;
-		font-family: $font-h3-journal;
+		font-family: typography.$font-h3-journal;
 	}
 
 	h4 {
 		color: #8897a0;
 		font-size: 1.6rem;
 		margin-left: 10px;
-		font-family: $font-h3-journal;
+		font-family: typography.$font-h3-journal;
 		
 	}
 
@@ -106,7 +108,7 @@
 		color: #bea185;
 		margin-bottom: 5px;
 		margin-left: 20px;
-		font-family: $font-h4-journal;
+		font-family: typography.$font-h4-journal;
 	}
 
 	h6 {
@@ -143,7 +145,7 @@
 		h5,
 		h6 {
 			text-transform: none;
-		font-family: $font-h3-journal;
+		font-family: typography.$font-h3-journal;
 		font-size: 1.5rem;
 		}
 

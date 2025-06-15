@@ -1,3 +1,5 @@
+@use "colors";
+
 //@import url('https://fonts.googleapis.com/css2?family=Martel:wght@400;800&family=Roboto:wght@300;400;500&display=swap');
 
 /* ----------------------------------------- */
@@ -138,7 +140,7 @@ $font-modern: 'HelveticaNeueLT', serif;
 
 .empty {
   //font: 14px $font-secondary;
-  color:$c-darkg;
+  color:colors.$c-darkg;
   font-style: italic;
 }
 strong{

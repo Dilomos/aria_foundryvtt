@@ -1,8 +1,11 @@
+@use "../utils/colors";
+@use "../utils/typography";
+
 /* ----------------------------------------- */
 /*  SKIN                                     */
 /* ----------------------------------------- */
 .window-content {
-  font-family: $font-primary;
+  font-family: typography.$font-primary;
   
   .field-value {
     width: 100%;
@@ -15,9 +18,9 @@
     border: none;
     background: rgba(255, 255, 255, 0);
     border-radius: 0;
-    color: $c-greenblue;
+    color: colors.$c-greenblue;
     font-weight: 700;
-    font: bold 20px $font-handwrite;
+    font: bold 20px typography.$font-handwrite;
   }
 
   .field-value.charname{
@@ -45,7 +48,7 @@
     padding-left: 5px;
     font-size: 16px;
     font-weight: bold;
-    color: $c-black;
+    color: colors.$c-black;
     position: relative;
   }
 
@@ -126,7 +129,7 @@
   }
 
   .item-delete:hover{
-    text-shadow: 0 0 8px $c-red;
+    text-shadow: 0 0 8px colors.$c-red;
   }
 }
 

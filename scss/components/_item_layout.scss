@@ -1,3 +1,6 @@
+@use "../utils/colors";
+@use "../utils/typography";
+
 /* ----------------------------------------- */
 /*  Layout                                   */
 /* ----------------------------------------- */
@@ -6,7 +9,7 @@
   margin: 0;
   overflow-y: hidden;
   font-size: 13px;
-  color: $c-black;
+  color: colors.$c-black;
   
   .wrap {
     padding: 0;
@@ -21,9 +24,9 @@
     background: url("../ui/bgNormal.webp");
     background-size: cover;
 
-    font-family: $font-primary;
+    font-family: typography.$font-primary;
     .titleFont {
-      font-family: $font-secondary;
+      font-family: typography.$font-secondary;
       line-height: 22px;
     }
   }
@@ -31,9 +34,9 @@
     background: url("../ui/bgModern.webp");
     background-size: cover;
 
-    font-family: $font-modern;
+    font-family: typography.$font-modern;
     .titleFont {
-      font-family: $font-modern;
+      font-family: typography.$font-modern;
       line-height: 22px;
     }
   }
@@ -41,16 +44,16 @@
     background: url("../ui/bgStars.webp");
     background-size: cover;
 
-    font-family: $font-modern;
+    font-family: typography.$font-modern;
     .titleFont {
-      font-family: $font-modern;
+      font-family: typography.$font-modern;
       line-height: 22px;
     }
   }
 
   .sheet-header {
     flex: 0 0 100px;
-    border-bottom: $borderGroove;
+    border-bottom: colors.$borderGroove;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -123,7 +126,7 @@
         margin: 0;
         padding: 0;
         list-style: none;
-        border-top: $borderGrooveGreen;
+        border-top: colors.$borderGrooveGreen;
         border-bottom: none;
 
         li {
@@ -131,7 +134,7 @@
           float: left;
           margin: 2px 0;
           padding: 0;
-          border-right: $borderGrooveGreen;
+          border-right: colors.$borderGrooveGreen;
           line-height: 34px;
 
           &:last-child {
@@ -177,7 +180,7 @@
       flex: 0 0 150px;
       margin: 5px 5px 5px 0;
       padding-right: 5px;
-      border-right: $borderGroove;
+      border-right: colors.$borderGroove;
 
       .form-group {
         margin: 0;
@@ -200,7 +203,7 @@
           margin: 3px 0;
           padding: 0 2px;
           background: rgba(0, 0, 0, 0.05);
-          border: $borderGroove;
+          border: colors.$borderGroove;
           text-align: center;
           font-size: 12px;
           line-height: 18px;
